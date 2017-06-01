@@ -11,7 +11,7 @@ namespace batch.Services.Parser.Controller
         {
             var attributes = new List<AttributModel>();
 
-            var pAttribut = "[a-zA-Z0-9-_]+=(\"[^\"]*\"+|'[^']*'+)";
+            var pAttribut = "[a-zA-Z0-9-_]+=(\"[^\"]*\"|'[^']*')";
             var mAttributes = new Regex(pAttribut).Matches(str);
 
             foreach (Match mAttribut in mAttributes)

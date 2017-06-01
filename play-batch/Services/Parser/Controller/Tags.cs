@@ -15,16 +15,16 @@ namespace batch.Services.Parser.Controller
 
         public Match GetTagPos(string tag, string str, bool inline = false)
         {
-            var pattern = inline ? $"<{tag}(\"[^\"]*\"+|'[^']*'+|[^>\"']*)*/>" 
-                                 : $"<{tag}(\"[^\"]*\"+|'[^']*'+|[^>\"']*)*>";
+            var pattern = inline ? $"<{tag}(\"[^\"]*\"|'[^']*'|[^>\"'])*/>" 
+                                 : $"<{tag}(\"[^\"]*\"|'[^']*'|[^>\"'])*>";
             var regex = new Regex(pattern);
             return regex.Match(str);
         }
 
         public Match GetTagPos(string tag, Type type, string name, string str, bool inline = false)
         {
-            var pattern = inline ? $"<{tag}(\"[^\"]*\"+|'[^']*'+|[^>\"']*)*/>"
-                                 : $"<{tag}(\"[^\"]*\"+|'[^']*'+|[^>\"']*)*>";
+            var pattern = inline ? $"<{tag}(\"[^\"]*\"|'[^']*'|[^>\"'])*/>"
+                                 : $"<{tag}(\"[^\"]*\"|'[^']*'|[^>\"'])*>";
             var regex = new Regex(pattern);
             var matches = regex.Matches(str);
 
@@ -47,8 +47,8 @@ namespace batch.Services.Parser.Controller
 
         public List<Match> GetTagsPos(string tag, string str, bool inline = false)
         {
-            var pattern = inline ? $"<{tag}(\"[^\"]*\"+|'[^']*'+|[^>\"']*)*/>"
-                                 : $"<{tag}(\"[^\"]*\"+|'[^']*'+|[^>\"']*)*>";
+            var pattern = inline ? $"<{tag}(\"[^\"]*\"|'[^']*'|[^>\"'])*/>"
+                                 : $"<{tag}(\"[^\"]*\"|'[^']*'|[^>\"'])*>";
             var regex = new Regex(pattern);
             var matches = regex.Matches(str);
 
@@ -59,8 +59,8 @@ namespace batch.Services.Parser.Controller
 
         public List<Match> GetTagsPos(string tag, Type type, string name, string str, bool inline = false)
         {
-            var pattern = inline ? $"<{tag}(\"[^\"]*\"+|'[^']*'+|[^>\"']*)*/>"
-                                 : $"<{tag}(\"[^\"]*\"+|'[^']*'+|[^>\"']*)*>";
+            var pattern = inline ? $"<{tag}(\"[^\"]*\"|'[^']*'|[^>\"'])*/>"
+                                 : $"<{tag}(\"[^\"]*\"|'[^']*'|[^>\"'])*>";
             var regex = new Regex(pattern);
             var matches = regex.Matches(str);
 

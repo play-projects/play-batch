@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 
-namespace platch.Services.Parser.Model
+namespace batch.Services.Parser.Model
 {
     public class InlineCollection : IEnumerable<InlineModel>
     {

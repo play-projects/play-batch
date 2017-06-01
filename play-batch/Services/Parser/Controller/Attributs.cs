@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using System.Linq;
-using platch.Services.Parser.Model;
+using batch.Services.Parser.Model;
 
-namespace platch.Services.Parser.Controller
+namespace batch.Services.Parser.Controller
 {
     public class Attributs
     {
@@ -11,7 +11,7 @@ namespace platch.Services.Parser.Controller
         {
             var attributes = new List<AttributModel>();
 
-            var pAttribut = "[a-zA-Z0-9-_]+=(\"[^\"]*\"|'[^']*')";
+            var pAttribut = "[a-zA-Z0-9-_]+=(\"[^\"]*\"+|'[^']*'+)";
             var mAttributes = new Regex(pAttribut).Matches(str);
 
             foreach (Match mAttribut in mAttributes)

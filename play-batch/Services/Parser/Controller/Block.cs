@@ -1,7 +1,7 @@
 ﻿using System.Text.RegularExpressions;
-using platch.Services.Parser.Model;
+using batch.Services.Parser.Model;
 
-namespace platch.Services.Parser.Controller
+namespace batch.Services.Parser.Controller
 {
     class Block
     {
@@ -20,7 +20,7 @@ namespace platch.Services.Parser.Controller
             while (count > 0)
             {
                 var sub = str.Substring(start);
-                var rStart = new Regex($"<{tag}(\"[^\"]*\"|'[^']*'|[^>\"']*)*>").Match(sub);
+                var rStart = new Regex($"<{tag}(\"[^\"]*\"+|'[^']*'+|[^>\"']*)*>").Match(sub);
                 var rEnd = new Regex($"</{tag}>").Match(sub);
 
                 if (rStart.Index < rEnd.Index && rStart.Success && rEnd.Success)

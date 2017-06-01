@@ -1,6 +1,6 @@
-﻿using platch.Services.Parser.Model;
+﻿using batch.Services.Parser.Model;
 
-namespace platch.Services.Parser.Controller
+namespace batch.Services.Parser.Controller
 {
     class Inline
     {

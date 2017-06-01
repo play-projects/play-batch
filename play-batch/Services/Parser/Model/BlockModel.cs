@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Text.RegularExpressions;
 
-namespace platch.Services.Parser.Model
+namespace batch.Services.Parser.Model
 {
     public class BlockModel: InlineModel
     {

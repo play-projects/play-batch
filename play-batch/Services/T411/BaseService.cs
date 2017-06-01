@@ -1,16 +1,15 @@
 ﻿using System;
 using System.Linq;
 using System.Text.RegularExpressions;
-using platch.Services.Parser;
-using platch.Services.Web;
+using batch.Services.Parser;
+using batch.Services.Web;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace platch.Services.T411
+namespace batch.Services.T411
 {
     public class BaseService
     {
-        public readonly string BaseUrl = "https://t411.al";
         private readonly ParserFacade parser = ParserFacade.Instance;
 
         protected Dictionary<int, string> GetSearch(string url)
@@ -67,7 +66,7 @@ namespace platch.Services.T411
 
         private string GetPageNumber(string searchUrl, int nb)
         {
-            var url = $"{BaseUrl}{searchUrl}&page={nb}#paginator";
+            var url = $"{searchUrl}&page={nb}#paginator";
             var page = WebService.Instance.GetContent(url);
             return page;
         }

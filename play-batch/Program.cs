@@ -1,7 +1,7 @@
 ﻿using System;
-using platch.Services.T411;
+using batch.Services.T411;
 
-namespace platch
+namespace batch
 {
     class Program
     {

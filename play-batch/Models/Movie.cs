@@ -1,4 +1,4 @@
-﻿namespace platch.Models
+﻿namespace batch.Models
 {
     public enum Language
     {

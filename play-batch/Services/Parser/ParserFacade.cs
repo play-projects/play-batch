@@ -1,7 +1,7 @@
-﻿using platch.Services.Parser.Controller;
-using platch.Services.Parser.Model;
+﻿using batch.Services.Parser.Controller;
+using batch.Services.Parser.Model;
 
-namespace platch.Services.Parser
+namespace batch.Services.Parser
 {
     public class ParserFacade
     {

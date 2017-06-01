@@ -60,8 +60,8 @@ namespace batch.Services.T411
             var a = parser.GetTag(str, "a");
             if (!a.Success) return string.Empty;
 
-            var href = a.Attributes.SingleOrDefault(attr => attr.Key == "title").Values;
-            return href.Count > 0 ? href[0] : string.Empty;
+            var href = a.Attributes.SingleOrDefault(attr => attr.Key == "title")?.Values;
+            return href != null && href.Count > 0 ? href[0] : string.Empty;
         }
 
         private string GetPageNumber(string searchUrl, int nb)

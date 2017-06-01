@@ -22,8 +22,8 @@ namespace batch.Services.Web
 					var response = client.GetAsync(url).Result;
 					if (!response.IsSuccessStatusCode) return string.Empty;
 
-					var content = response.Content.ReadAsByteArrayAsync().Result;
-					return Encoding.UTF8.GetString(content);
+					var content = response.Content.ReadAsStringAsync().Result;
+					return content;
 				}
 			}
 			catch (Exception ex)

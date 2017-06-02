@@ -25,6 +25,7 @@
         public string Name { get; set; }
         public string Slug { get; set; }
         public int Year { get; set; }
+        public double Size { get; set; }
         public Category Category { get; set; }
         public Language Language { get; set; }
         public Quality Quality { get; set; }
@@ -35,6 +36,7 @@
 			Name = string.Empty,
             Slug = string.Empty,
             Year = 0,
+            Size = 0,
 			Category = Category.None,
 			Language = Language.None,
 			Quality = Quality.None

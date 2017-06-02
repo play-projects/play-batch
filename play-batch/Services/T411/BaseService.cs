@@ -12,10 +12,10 @@ namespace batch.Services.T411
     {
         private readonly ParserFacade parser = ParserFacade.Instance;
 
-        protected Dictionary<int, string> GetSearch(string url)
+        protected List<(int id, string name, double size)> GetSearch(string url)
         {
             var nbOfPages = GetNumberOfPages(url);
-            var movies = new Dictionary<int, string>();
+            var movies = new List<(int, string, double)>();
             Parallel.For(0, nbOfPages + 1, new ParallelOptions { MaxDegreeOfParallelism = 25 }, nb =>
             {
                 var page = GetPageNumber(url, nb);
@@ -28,11 +28,12 @@ namespace batch.Services.T411
 
                     var id = GetId(tds[2].Value);
                     var name = GetName(tds[1].Value);
+                    var size = GetSize(tds[5].Text);
                     if (id != 0 && !string.IsNullOrEmpty(name))
                     {
                         lock (movies)
                         {
-                            movies.Add(id, name);
+                            movies.Add((id, name, size));
                             Console.WriteLine($"movies: {movies.Count}");
                         }
                     }
@@ -62,6 +63,30 @@ namespace batch.Services.T411
 
             var href = a.Attributes.SingleOrDefault(attr => attr.Key == "title")?.Values;
             return href != null && href.Count > 0 ? href[0] : string.Empty;
+        }
+
+        private double GetSize(string str)
+        {
+            var unite = Regex.Match(str, @"[a-zA-Z]+");
+            if (!unite.Success) return 0;
+            
+            var nb = Regex.Match(str, @"\d+(\.\d+)?");
+            if (!nb.Success) return 0;
+
+            double.TryParse(nb.Value.Replace(".", ","), out double size);
+            switch (unite.Value)
+            {
+                case "GB":
+                    size *= 1024 * 1024 * 1024;
+                    break;
+                case "MB":
+                    size *= 1024 * 1024;
+                    break;
+                case "KB":
+                    size *= 1024;
+                    break;
+            }
+            return Math.Round(size);
         }
 
         private string GetPageNumber(string searchUrl, int nb)

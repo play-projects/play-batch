@@ -5,6 +5,7 @@ using batch.Services.Parser;
 using batch.Services.Web;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using batch.Models;
 
 namespace batch.Services.T411
 {
@@ -12,10 +13,10 @@ namespace batch.Services.T411
     {
         private readonly ParserFacade parser = ParserFacade.Instance;
 
-        protected List<(int id, string name, double size)> GetSearch(string url)
+        protected List<Torrent> GetSearch(string url)
         {
             var nbOfPages = GetNumberOfPages(url);
-            var movies = new List<(int, string, double)>();
+            var movies = new List<Torrent>();
             Parallel.For(0, nbOfPages + 1, new ParallelOptions { MaxDegreeOfParallelism = 25 }, nb =>
             {
                 var page = GetPageNumber(url, nb);
@@ -28,12 +29,19 @@ namespace batch.Services.T411
 
                     var id = GetId(tds[2].Value);
                     var name = GetName(tds[1].Value);
-                    var size = GetSize(tds[5].Text);
                     if (id != 0 && !string.IsNullOrEmpty(name))
                     {
                         lock (movies)
                         {
-                            movies.Add((id, name, size));
+                            movies.Add(new Torrent
+                            {
+                                Id = id,
+                                Name = name,
+                                Size = GetSize(tds[5].Text),
+                                Completed = GetNumber(tds[6].Text),
+                                Seeders = GetNumber(tds[7].Text),
+                                Leechers = GetNumber(tds[8].Text)
+                            });
                             Console.WriteLine($"movies: {movies.Count}");
                         }
                     }
@@ -87,6 +95,15 @@ namespace batch.Services.T411
                     break;
             }
             return Math.Round(size);
+        }
+
+        private int GetNumber(string str)
+        {
+            var match = Regex.Match(str, @"\d+");
+            if (!match.Success) return 0;
+
+            int.TryParse(match.Value, out int nb);
+            return nb;
         }
 
         private string GetPageNumber(string searchUrl, int nb)

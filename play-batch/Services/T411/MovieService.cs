@@ -47,7 +47,7 @@ namespace batch.Services.T411
             var movies = new List<Movie>();
 	        Parallel.ForEach(searchs, s =>
 	        {
-	            var movie = GetMovieByName(s.id, s.name, s.size, search);
+	            var movie = GetMovieByName(s, search);
 	            if (movie == Movie.NotFound) return;
 	            lock (movies)
 	            {
@@ -58,21 +58,20 @@ namespace batch.Services.T411
 	        return movies;
 	    }
 
-	    private Movie GetMovieByName(int id, string name, double size, Search search)
+	    private Movie GetMovieByName(Torrent torrent, Search search)
         {
-            var pattern = @"((?:(?!\d{4}).)+)(\d{4})[^p]";
+            var pattern = @"(.+)\D(\d{4})[^p]";
             var regex = new Regex(pattern, RegexOptions.IgnoreCase);
-            var match = regex.Match(name);
+            var match = regex.Match(torrent.Name);
 
             if (!match.Success)
                 return Movie.NotFound;
 			return new Movie
 			{
-				Id = id,
-				Name = name,
+                Name = string.Empty,
                 Slug = GetTorrentSlug(match.Groups[1].Value),
                 Year = GetTorrentYear(match.Groups[2].Value),
-                Size = size,
+                Torrent = torrent,
 				Language = GetTorrentLanguage(search),
                 Category = Category.Movie,
 				Quality = GetTorrentQuality(search)

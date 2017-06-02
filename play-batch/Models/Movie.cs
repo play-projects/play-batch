@@ -21,25 +21,24 @@
 
     public class Movie
     {
-        public int Id { get; set; }
         public string Name { get; set; }
         public string Slug { get; set; }
         public int Year { get; set; }
-        public double Size { get; set; }
+        public Torrent Torrent { get; set; }
+
         public Category Category { get; set; }
         public Language Language { get; set; }
         public Quality Quality { get; set; }
 
-		public static Movie NotFound = new Movie
-		{
-			Id = 0,
-			Name = string.Empty,
+        public static Movie NotFound = new Movie
+        {
+            Name = string.Empty,
             Slug = string.Empty,
             Year = 0,
-            Size = 0,
-			Category = Category.None,
-			Language = Language.None,
-			Quality = Quality.None
-		};
+            Torrent = Torrent.NotFound,
+            Category = Category.None,
+            Language = Language.None,
+            Quality = Quality.None
+        };
     }
 }

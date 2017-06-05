@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Net;
 using System.Net.Http;
 using System.Text;
 
@@ -10,7 +11,7 @@ namespace batch.Services.Web
         public static WebService Instance = new WebService();
         private WebService() { }
 
-        private readonly int timeout = 5;
+        private readonly int timeout = 10;
 
         public string GetContent(string url)
         {
@@ -53,6 +54,29 @@ namespace batch.Services.Web
 				Console.WriteLine(ex);
 				return string.Empty;
 			}
+        }
+
+        public string GetContent(string url, Dictionary<string, string> headers)
+        {
+            try
+            {
+                using (var client = new HttpClient())
+                {
+                    client.Timeout = TimeSpan.FromSeconds(timeout);
+                    foreach (var header in headers)
+                        client.DefaultRequestHeaders.TryAddWithoutValidation(header.Key, header.Value);
+                    var reponse = client.GetAsync(url).Result;
+                    if (!reponse.IsSuccessStatusCode) return string.Empty;
+
+                    var content = reponse.Content.ReadAsStringAsync().Result;
+                    return content;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+                return string.Empty;
+            }
         }
     }
 }

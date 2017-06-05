@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Diagnostics;
-using batch.Services.T411;
+using System.Linq;
+using batch.Services.Torrents;
+using batch.Services.Tmdb;
 
 namespace batch
 {
@@ -9,9 +11,13 @@ namespace batch
         static void Main(string[] args)
         {
             var sw = Stopwatch.StartNew();
-            var movies = MovieService.Instance.GetMovies();
+            var torrents = MovieTorrentsService.Instance.GetMovies();
+            var movies = MovieExtractorsService.Instance.GetMoviesIds(torrents);
             sw.Stop();
+
+            Console.WriteLine($"torrents: {torrents.Count}");
             Console.WriteLine($"movies: {movies.Count}");
+
             Console.WriteLine($"time elapsed: {sw.ElapsedMilliseconds}ms");
             Console.ReadKey();
         }

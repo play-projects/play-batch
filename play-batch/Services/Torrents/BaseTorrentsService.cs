@@ -7,9 +7,9 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using batch.Models;
 
-namespace batch.Services.T411
+namespace batch.Services.Torrents
 {
-    public class BaseService
+    public class BaseTorrentsService
     {
         private readonly ParserFacade parser = ParserFacade.Instance;
 

@@ -1,44 +1,56 @@
-﻿namespace batch.Models
+﻿using System;
+using System.Collections.Generic;
+
+namespace batch.Models
 {
-    public enum Language
-    {
-        VF, VOSTFR, None
-    }
-
-    public enum Quality
-    {
-        Low,        // Bdrip
-        Medium,     // 720p
-        High,       // 1080p
-        VeryHigh,   // 4K
-        None
-    }
-
-    public enum Category
-    {
-        Series, Movie, None
-    }
-
     public class Movie
     {
-        public string Name { get; set; }
-        public string Slug { get; set; }
-        public int Year { get; set; }
-        public Torrent Torrent { get; set; }
+        public int TraktId { get; set; }
+        public string ImdbId { get; set; }
+        public int TmdbId { get; set; }
 
-        public Category Category { get; set; }
-        public Language Language { get; set; }
-        public Quality Quality { get; set; }
+        public List<Torrent> Torrents { get; set; }
+
+        public string Title { get; set; }
+        public string OriginalTitle { get; set; }
+        public int Year { get; set; }
+        public List<Genre> Genres { get; set; }
+        public string OriginalLanguage { get; set; }
+        public string Overview { get; set; }
+        public double Popularity { get; set; }
+        public DateTime ReleaseDate { get; set; }
+        public float VoteAverage { get; set; }
+        public int VoteCount { get; set; }
+
+        public string BackdropPath { get; set; }
+        public string PosterPath { get; set; }
+
+        public Collection Collection { get; set; }
+        public List<Person> Casting { get; set; }
 
         public static Movie NotFound = new Movie
         {
-            Name = string.Empty,
-            Slug = string.Empty,
+            TraktId = 0,
+            ImdbId = string.Empty,
+            TmdbId = 0,
+            Torrents = new List<Torrent>(),
+
+            Title = string.Empty,
+            OriginalTitle = string.Empty,
             Year = 0,
-            Torrent = Torrent.NotFound,
-            Category = Category.None,
-            Language = Language.None,
-            Quality = Quality.None
+            Genres = new List<Genre>(),
+            OriginalLanguage = string.Empty,
+            Overview = string.Empty,
+            Popularity = 0,
+            ReleaseDate = DateTime.MinValue,
+            VoteAverage = 0,
+            VoteCount = 0,
+
+            BackdropPath = string.Empty,
+            PosterPath = string.Empty,
+
+            Collection = null,
+            Casting = new List<Person>()
         };
     }
 }

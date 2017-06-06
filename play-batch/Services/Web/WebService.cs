@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Net;
 using System.Net.Http;
 using System.Text;
+using System.Threading;
 
 namespace batch.Services.Web
 {
@@ -11,7 +12,7 @@ namespace batch.Services.Web
         public static WebService Instance = new WebService();
         private WebService() { }
 
-        private readonly int timeout = 10;
+        private readonly int timeout = 30;
 
         public string GetContent(string url)
         {
@@ -69,6 +70,34 @@ namespace batch.Services.Web
                     if (!reponse.IsSuccessStatusCode) return string.Empty;
 
                     var content = reponse.Content.ReadAsStringAsync().Result;
+                    return content;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+                return string.Empty;
+            }
+        }
+
+        public string GetContentTmdb(string url)
+        {
+            try
+            {
+                using (var client = new HttpClient())
+                {
+                    client.Timeout = TimeSpan.FromSeconds(timeout);
+                    var response = client.GetAsync(url).Result;
+
+                    if ((int)response.StatusCode == 429)
+                    {
+                        var retry = response.Headers.RetryAfter.Delta.Value.Seconds;
+                        Thread.Sleep(retry * 1000);
+                        return GetContentTmdb(url);
+                    }
+                    if (!response.IsSuccessStatusCode) return string.Empty;
+
+                    var content = response.Content.ReadAsStringAsync().Result;
                     return content;
                 }
             }

@@ -1,11 +1,9 @@
 ﻿using batch.Models;
-using batch.Services.Parser;
 using batch.Services.Web;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net;
 using System.Threading.Tasks;
 
 namespace batch.Services.Tmdb
@@ -14,8 +12,6 @@ namespace batch.Services.Tmdb
     {
         public static MovieExtractorsService Instance = new MovieExtractorsService();
         private MovieExtractorsService() { }
-
-        private ParserFacade parser = ParserFacade.Instance;
 
         public List<Movie> GetMoviesIds(List<Torrent> torrents)
         {
@@ -79,6 +75,44 @@ namespace batch.Services.Tmdb
                 };
             }
             return Movie.NotFound;
+        }
+
+        public Movie GetMovie(Movie movie)
+        {
+            var apiKey = "fa25d553584aac70e9db4d47d3636ae9";
+            var language = "fr-FR";
+            var url = $"https://api.themoviedb.org/3/movie/{movie.TmdbId}?api_key={apiKey}&language={language}";
+            var content = WebService.Instance.GetContent(url);
+            if (string.IsNullOrEmpty(content)) return Movie.NotFound;
+
+            var json = JObject.Parse(content);
+            movie.Title = json["title"].ToString();
+            movie.Genres = json["genres"].Select(g => new Genre
+            {
+                Id = int.Parse(g["id"].ToString()),
+                Name = g["name"].ToString()
+            }).ToList();
+            movie.OriginalLanguage = json["original_language"].ToString();
+            movie.Overview = json["overview"].ToString();
+            movie.Tagline = json["tagline"].ToString();
+            movie.Popularity = double.Parse(json["popularity"].ToString());
+            movie.ReleaseDate = DateTime.Parse(json["release_date"].ToString());
+            movie.VoteAverage = float.Parse(json["vote_average"].ToString());
+            movie.VoteCount = int.Parse(json["vote_count"].ToString());
+            movie.Runtime = int.Parse(json["runtime"].ToString());
+            movie.BackdropPath = json["backdrop_path"].ToString();
+            movie.PosterPath = json["poster_path"].ToString();
+            if (json["belongs_to_collection"].HasValues)
+            {
+                movie.Collection = new Collection
+                {
+                    Id = int.Parse(json["belongs_to_collection"]["id"].ToString()),
+                    Name = json["belongs_to_collection"]["name"].ToString(),
+                    PosterPath = json["belongs_to_collection"]["poster_path"].ToString(),
+                    BackdropPath = json["belongs_to_collection"]["backdrop_path"].ToString()
+                };
+            }
+            return movie;
         }
     }
 }

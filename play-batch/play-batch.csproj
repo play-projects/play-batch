@@ -13,4 +13,8 @@
   <ItemGroup>
     <Folder Include="Services\Parser\" />
   </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\play-entities\play-entities.csproj" />
+  </ItemGroup>
 </Project>

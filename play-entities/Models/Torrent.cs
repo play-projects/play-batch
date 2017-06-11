@@ -3,9 +3,10 @@
     public partial class Torrent
     {
         public int Id { get; set; }
+        public int T411Id { get; set; }
         public int? MovieId { get; set; }
         public string Name { get; set; }
-        public string lug { get; set; }
+        public string Slug { get; set; }
         public int? Year { get; set; }
         public long? Size { get; set; }
         public int? Seeders { get; set; }

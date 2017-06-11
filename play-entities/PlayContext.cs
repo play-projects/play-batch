@@ -227,6 +227,8 @@ namespace entities.Models
 
                 entity.Property(e => e.LanguageId).HasColumnName("LANGUAGE_ID");
 
+                entity.Property(e => e.T411Id).HasColumnName("TORRENT_T411_ID");
+
                 entity.Property(e => e.MovieId).HasColumnName("MOVIE_ID");
 
                 entity.Property(e => e.QualityId).HasColumnName("QUALITY_ID");

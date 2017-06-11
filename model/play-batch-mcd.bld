@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?PowerDesigner AppLocale="UTF16" ID="{C97BE401-6D12-4D0F-84D7-686D545087E1}" Label="" LastModificationDate="1497047451" Name="play-batch-mcd" Objects="96" Symbols="19" Type="{5F45F978-C4F3-4E35-A3FC-AF3318663A0F}" signature="LDM_DATA_MODEL_XML" version="15.1.0.2850"?>
+<?PowerDesigner AppLocale="UTF16" ID="{C97BE401-6D12-4D0F-84D7-686D545087E1}" Label="" LastModificationDate="1497137028" Name="play-batch-mcd" Objects="99" Symbols="19" Type="{5F45F978-C4F3-4E35-A3FC-AF3318663A0F}" signature="LDM_DATA_MODEL_XML" version="15.1.0.2850"?>
 <!-- Veuillez ne pas modifier ce fichier -->
 
 <Model xmlns:a="attribute" xmlns:c="collection" xmlns:o="object">
@@ -12,10 +12,316 @@
 <a:Code>PLAY_BATCH_MCD</a:Code>
 <a:CreationDate>1497047380</a:CreationDate>
 <a:Creator>Arthur</a:Creator>
-<a:ModificationDate>1497047384</a:ModificationDate>
+<a:ModificationDate>1497137028</a:ModificationDate>
 <a:Modifier>Arthur</a:Modifier>
 <a:History>ORG {E541E082-F2E5-4B95-938D-4FD8B50F3F9E}
-DAT 1497047384</a:History>
+DAT 1497137028
+ATT FOPT</a:History>
+<a:PackageOptionsText>[FolderOptions]
+
+[FolderOptions\Common]
+GenerationCheckModel=Yes
+GenerationPath=
+GenerationOptions=
+GenerationTasks=
+GenerationTargets=
+GenerationSelections=
+
+[FolderOptions\CheckModel]
+
+[FolderOptions\CheckModel\Package]
+
+[FolderOptions\CheckModel\Package\GenrCircularityYes]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Package\GenrCircularityNo]
+CheckSeverity=Yes
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Package\ShortcutUniqCode]
+CheckSeverity=Yes
+FixRequested=No
+CheckRequested=No
+
+[FolderOptions\CheckModel\Package\ChildShortcut]
+CheckSeverity=Yes
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Domaine]
+
+[FolderOptions\CheckModel\Domaine\UniqueNom]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Domaine\UniqueCode]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Domaine\CheckNumParam]
+CheckSeverity=Yes
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Domaine\CheckPrecSupLng]
+CheckSeverity=Yes
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Domaine\CheckUndefDttp]
+CheckSeverity=Yes
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Domaine\CheckOtherDttp]
+CheckSeverity=Yes
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Entité]
+
+[FolderOptions\CheckModel\Entité\UniqueNom]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Entité\UniqueCode]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Entité\MaxLen - NAME]
+CheckSeverity=Yes
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Entité\MaxLen - CODE]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Entité\EmptyColl - PENTCOL]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Entité\EnttNbSerials]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Entité\EmptyColl - IDTFCOL]
+CheckSeverity=Yes
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Entité\EmptyCollYesYes]
+CheckSeverity=Yes
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Entité\EnttSamePrnt]
+CheckSeverity=Yes
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Entité\EnttMultInhr]
+CheckSeverity=Yes
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Entité\EnttSevInhr]
+CheckSeverity=Yes
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Entité\PidtfInhrAtt]
+CheckSeverity=Yes
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Entité.Attribut d&#39;entité]
+
+[FolderOptions\CheckModel\Entité.Attribut d&#39;entité\UniqueNom]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Entité.Attribut d&#39;entité\UniqueCode]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Entité.Attribut d&#39;entité\AttrDiffDomn]
+CheckSeverity=Yes
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Entité.Attribut d&#39;entité\CheckNumParam]
+CheckSeverity=Yes
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Entité.Attribut d&#39;entité\CheckPrecSupLng]
+CheckSeverity=Yes
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Entité.Attribut d&#39;entité\CheckUndefDttp]
+CheckSeverity=Yes
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Entité.Attribut d&#39;entité\CheckOtherDttp]
+CheckSeverity=Yes
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Entité.Identifiant]
+
+[FolderOptions\CheckModel\Entité.Identifiant\UniqueNom]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Entité.Identifiant\UniqueCode]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Entité.Identifiant\EmptyColl - PENTCOL]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Entité.Identifiant\CheckIncludeColl - Entt]
+CheckSeverity=Yes
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Entité.Identifiant\IdtfChildPIdtf]
+CheckSeverity=Yes
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Relation]
+
+[FolderOptions\CheckModel\Relation\UniqueNom]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Relation\UniqueCode]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Relation\RlshReflexiveDeptYes]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Relation\RlshReflexiveDeptNo]
+CheckSeverity=Yes
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Relation\RlshBject]
+CheckSeverity=Yes
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Relation\RlshMany]
+CheckSeverity=Yes
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Héritage]
+
+[FolderOptions\CheckModel\Héritage\UniqueNom]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Héritage\UniqueCode]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Héritage\EmptyColl - CHILDCOL]
+CheckSeverity=Yes
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Héritage\InhrComplete]
+CheckSeverity=Yes
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Réplication]
+
+[FolderOptions\CheckModel\Réplication\PartialReplication]
+CheckSeverity=Yes
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Règle de gestion]
+
+[FolderOptions\CheckModel\Règle de gestion\UniqueNom]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Règle de gestion\UniqueCode]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Règle de gestion\EmptyColl - OBJCOL]
+CheckSeverity=Yes
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Objet étendu]
+
+[FolderOptions\CheckModel\Objet étendu\UniqueNom]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Objet étendu\UniqueCode]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Lien étendu]
+
+[FolderOptions\CheckModel\Lien étendu\UniqueNom]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Lien étendu\UniqueCode]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Fichier]
+
+[FolderOptions\CheckModel\Fichier\UniqueNom]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Fichier\CheckPathExists]
+CheckSeverity=Yes
+FixRequested=No
+CheckRequested=Yes</a:PackageOptionsText>
 <a:ModelOptionsText>[ModelOptions]
 
 [ModelOptions\Logical options]
@@ -363,15 +669,30 @@ NameToCode=No
 CheckModel=Yes
 SaveLinks=Yes
 NameToCode=No
-BuildTrgr=No</a:ModelOptionsText>
-<c:GenerationOrigins>
+BuildTrgr=No
+PreserveMode=Yes</a:ModelOptionsText>
+<c:GeneratedModels>
 <o:Shortcut Id="o3">
+<a:ObjectID>B1581ED4-DA1B-4902-BD93-0E7AA118ADC7</a:ObjectID>
+<a:Name>play-batch-mcd</a:Name>
+<a:Code>PLAY_BATCH_MCD</a:Code>
+<a:CreationDate>1497047474</a:CreationDate>
+<a:Creator>Arthur</a:Creator>
+<a:ModificationDate>1497047474</a:ModificationDate>
+<a:Modifier>Arthur</a:Modifier>
+<a:TargetStereotype/>
+<a:TargetID>C68D8820-1327-46E3-AA72-8F91B71AEB50</a:TargetID>
+<a:TargetClassID>CDE44E21-9669-11D1-9914-006097355D9B</a:TargetClassID>
+</o:Shortcut>
+</c:GeneratedModels>
+<c:GenerationOrigins>
+<o:Shortcut Id="o4">
 <a:ObjectID>2774B3EE-B86D-42F5-98D3-7CCADEA124AE</a:ObjectID>
 <a:Name>play-batch-mcd</a:Name>
 <a:Code>PLAY_BATCH_MCD</a:Code>
-<a:CreationDate>1497047384</a:CreationDate>
+<a:CreationDate>1497137028</a:CreationDate>
 <a:Creator>Arthur</a:Creator>
-<a:ModificationDate>1497047384</a:ModificationDate>
+<a:ModificationDate>1497137028</a:ModificationDate>
 <a:Modifier>Arthur</a:Modifier>
 <a:TargetStereotype/>
 <a:TargetID>E541E082-F2E5-4B95-938D-4FD8B50F3F9E</a:TargetID>
@@ -379,7 +700,7 @@ BuildTrgr=No</a:ModelOptionsText>
 </o:Shortcut>
 </c:GenerationOrigins>
 <c:LogicalDiagrams>
-<o:LogicalDiagram Id="o4">
+<o:LogicalDiagram Id="o5">
 <a:ObjectID>C4674F88-A1F8-4469-953C-BA406CD1AF76</a:ObjectID>
 <a:Name>Diagramme_1</a:Name>
 <a:Code>DIAGRAMME_1</a:Code>
@@ -867,8 +1188,8 @@ Shadow=0
 <a:PageOrientation>1</a:PageOrientation>
 <a:PaperSource>15</a:PaperSource>
 <c:Symbols>
-<o:RelationshipSymbol Id="o5">
-<a:ModificationDate>1497047414</a:ModificationDate>
+<o:RelationshipSymbol Id="o6">
+<a:ModificationDate>1497137028</a:ModificationDate>
 <a:Rect>((-13800,36925), (8213,38671))</a:Rect>
 <a:ListOfPoints>((-13800,37425),(8213,37425))</a:ListOfPoints>
 <a:CornerStyle>1</a:CornerStyle>
@@ -878,17 +1199,17 @@ Shadow=0
 <a:FontList>DISPNAME 0 Arial,8,N
 NAMA 0 Arial,8,N</a:FontList>
 <c:SourceSymbol>
-<o:EntitySymbol Ref="o6"/>
+<o:EntitySymbol Ref="o7"/>
 </c:SourceSymbol>
 <c:DestinationSymbol>
-<o:EntitySymbol Ref="o7"/>
+<o:EntitySymbol Ref="o8"/>
 </c:DestinationSymbol>
 <c:Object>
-<o:Relationship Ref="o8"/>
+<o:Relationship Ref="o9"/>
 </c:Object>
 </o:RelationshipSymbol>
-<o:RelationshipSymbol Id="o9">
-<a:ModificationDate>1497047451</a:ModificationDate>
+<o:RelationshipSymbol Id="o10">
+<a:ModificationDate>1497137028</a:ModificationDate>
 <a:Rect>((8363,36737), (26625,38483))</a:Rect>
 <a:ListOfPoints>((8363,37237),(26625,37237))</a:ListOfPoints>
 <a:CornerStyle>1</a:CornerStyle>
@@ -898,17 +1219,17 @@ NAMA 0 Arial,8,N</a:FontList>
 <a:FontList>DISPNAME 0 Arial,8,N
 NAMA 0 Arial,8,N</a:FontList>
 <c:SourceSymbol>
-<o:EntitySymbol Ref="o7"/>
+<o:EntitySymbol Ref="o8"/>
 </c:SourceSymbol>
 <c:DestinationSymbol>
-<o:EntitySymbol Ref="o10"/>
+<o:EntitySymbol Ref="o11"/>
 </c:DestinationSymbol>
 <c:Object>
-<o:Relationship Ref="o11"/>
+<o:Relationship Ref="o12"/>
 </c:Object>
 </o:RelationshipSymbol>
-<o:RelationshipSymbol Id="o12">
-<a:ModificationDate>1497047420</a:ModificationDate>
+<o:RelationshipSymbol Id="o13">
+<a:ModificationDate>1497137028</a:ModificationDate>
 <a:Rect>((-11625,24362), (7550,26408))</a:Rect>
 <a:ListOfPoints>((-11625,25162),(7550,25162))</a:ListOfPoints>
 <a:CornerStyle>1</a:CornerStyle>
@@ -918,19 +1239,19 @@ NAMA 0 Arial,8,N</a:FontList>
 <a:FontList>DISPNAME 0 Arial,8,N
 NAMA 0 Arial,8,N</a:FontList>
 <c:SourceSymbol>
-<o:EntitySymbol Ref="o6"/>
+<o:EntitySymbol Ref="o7"/>
 </c:SourceSymbol>
 <c:DestinationSymbol>
-<o:EntitySymbol Ref="o13"/>
+<o:EntitySymbol Ref="o14"/>
 </c:DestinationSymbol>
 <c:Object>
-<o:Relationship Ref="o14"/>
+<o:Relationship Ref="o15"/>
 </c:Object>
 </o:RelationshipSymbol>
-<o:RelationshipSymbol Id="o15">
-<a:ModificationDate>1497047427</a:ModificationDate>
-<a:Rect>((-31949,11750), (-24525,23775))</a:Rect>
-<a:ListOfPoints>((-28237,23775),(-28237,11750))</a:ListOfPoints>
+<o:RelationshipSymbol Id="o16">
+<a:ModificationDate>1497137028</a:ModificationDate>
+<a:Rect>((-31949,12024), (-24525,23775))</a:Rect>
+<a:ListOfPoints>((-28237,23775),(-28237,12024))</a:ListOfPoints>
 <a:CornerStyle>1</a:CornerStyle>
 <a:ArrowStyle>4371</a:ArrowStyle>
 <a:LineColor>11184640</a:LineColor>
@@ -938,19 +1259,19 @@ NAMA 0 Arial,8,N</a:FontList>
 <a:FontList>DISPNAME 0 Arial,8,N
 NAMA 0 Arial,8,N</a:FontList>
 <c:SourceSymbol>
-<o:EntitySymbol Ref="o6"/>
+<o:EntitySymbol Ref="o7"/>
 </c:SourceSymbol>
 <c:DestinationSymbol>
-<o:EntitySymbol Ref="o16"/>
+<o:EntitySymbol Ref="o17"/>
 </c:DestinationSymbol>
 <c:Object>
-<o:Relationship Ref="o17"/>
+<o:Relationship Ref="o18"/>
 </c:Object>
 </o:RelationshipSymbol>
-<o:RelationshipSymbol Id="o18">
-<a:ModificationDate>1497047427</a:ModificationDate>
-<a:Rect>((-17850,11900), (3350,13946))</a:Rect>
-<a:ListOfPoints>((-17850,12700),(3350,12700))</a:ListOfPoints>
+<o:RelationshipSymbol Id="o19">
+<a:ModificationDate>1497137028</a:ModificationDate>
+<a:Rect>((-17850,12069), (3350,14115))</a:Rect>
+<a:ListOfPoints>((-17850,12869),(3350,12869))</a:ListOfPoints>
 <a:CornerStyle>1</a:CornerStyle>
 <a:ArrowStyle>4882</a:ArrowStyle>
 <a:LineColor>11184640</a:LineColor>
@@ -958,19 +1279,19 @@ NAMA 0 Arial,8,N</a:FontList>
 <a:FontList>DISPNAME 0 Arial,8,N
 NAMA 0 Arial,8,N</a:FontList>
 <c:SourceSymbol>
-<o:EntitySymbol Ref="o16"/>
+<o:EntitySymbol Ref="o17"/>
 </c:SourceSymbol>
 <c:DestinationSymbol>
-<o:EntitySymbol Ref="o19"/>
+<o:EntitySymbol Ref="o20"/>
 </c:DestinationSymbol>
 <c:Object>
-<o:Relationship Ref="o20"/>
+<o:Relationship Ref="o21"/>
 </c:Object>
 </o:RelationshipSymbol>
-<o:RelationshipSymbol Id="o21">
-<a:ModificationDate>1497047427</a:ModificationDate>
-<a:Rect>((-17925,4212), (2825,6258))</a:Rect>
-<a:ListOfPoints>((-17925,5012),(2825,5012))</a:ListOfPoints>
+<o:RelationshipSymbol Id="o22">
+<a:ModificationDate>1497137028</a:ModificationDate>
+<a:Rect>((-17925,4123), (2825,6169))</a:Rect>
+<a:ListOfPoints>((-17925,4923),(2825,4923))</a:ListOfPoints>
 <a:CornerStyle>1</a:CornerStyle>
 <a:ArrowStyle>4882</a:ArrowStyle>
 <a:LineColor>11184640</a:LineColor>
@@ -978,19 +1299,19 @@ NAMA 0 Arial,8,N</a:FontList>
 <a:FontList>DISPNAME 0 Arial,8,N
 NAMA 0 Arial,8,N</a:FontList>
 <c:SourceSymbol>
-<o:EntitySymbol Ref="o16"/>
+<o:EntitySymbol Ref="o17"/>
 </c:SourceSymbol>
 <c:DestinationSymbol>
-<o:EntitySymbol Ref="o22"/>
+<o:EntitySymbol Ref="o23"/>
 </c:DestinationSymbol>
 <c:Object>
-<o:Relationship Ref="o23"/>
+<o:Relationship Ref="o24"/>
 </c:Object>
 </o:RelationshipSymbol>
-<o:RelationshipSymbol Id="o24">
-<a:ModificationDate>1497047427</a:ModificationDate>
-<a:Rect>((-24600,-4862), (4775,4775))</a:Rect>
-<a:ListOfPoints>((-20475,4775),(-20475,-4275),(4775,-4275))</a:ListOfPoints>
+<o:RelationshipSymbol Id="o25">
+<a:ModificationDate>1497137028</a:ModificationDate>
+<a:Rect>((-24600,-4862), (4775,4581))</a:Rect>
+<a:ListOfPoints>((-20475,4581),(-20475,-4275),(4775,-4275))</a:ListOfPoints>
 <a:CornerStyle>1</a:CornerStyle>
 <a:ArrowStyle>4882</a:ArrowStyle>
 <a:LineColor>11184640</a:LineColor>
@@ -998,18 +1319,18 @@ NAMA 0 Arial,8,N</a:FontList>
 <a:FontList>DISPNAME 0 Arial,8,N
 NAMA 0 Arial,8,N</a:FontList>
 <c:SourceSymbol>
-<o:EntitySymbol Ref="o16"/>
+<o:EntitySymbol Ref="o17"/>
 </c:SourceSymbol>
 <c:DestinationSymbol>
-<o:EntitySymbol Ref="o25"/>
+<o:EntitySymbol Ref="o26"/>
 </c:DestinationSymbol>
 <c:Object>
-<o:Relationship Ref="o26"/>
+<o:Relationship Ref="o27"/>
 </c:Object>
 </o:RelationshipSymbol>
-<o:RelationshipSymbol Id="o27">
-<a:ModificationDate>1497047434</a:ModificationDate>
-<a:Rect>((-31030,51123), (-25630,62950))</a:Rect>
+<o:RelationshipSymbol Id="o28">
+<a:ModificationDate>1497137028</a:ModificationDate>
+<a:Rect>((-30992,51123), (-25668,62950))</a:Rect>
 <a:ListOfPoints>((-28330,51123),(-28330,62950))</a:ListOfPoints>
 <a:CornerStyle>1</a:CornerStyle>
 <a:ArrowStyle>5906</a:ArrowStyle>
@@ -1018,17 +1339,17 @@ NAMA 0 Arial,8,N</a:FontList>
 <a:FontList>DISPNAME 0 Arial,8,N
 NAMA 0 Arial,8,N</a:FontList>
 <c:SourceSymbol>
-<o:EntitySymbol Ref="o28"/>
+<o:EntitySymbol Ref="o29"/>
 </c:SourceSymbol>
 <c:DestinationSymbol>
-<o:EntitySymbol Ref="o29"/>
+<o:EntitySymbol Ref="o30"/>
 </c:DestinationSymbol>
 <c:Object>
-<o:Relationship Ref="o30"/>
+<o:Relationship Ref="o31"/>
 </c:Object>
 </o:RelationshipSymbol>
-<o:RelationshipSymbol Id="o31">
-<a:ModificationDate>1497047434</a:ModificationDate>
+<o:RelationshipSymbol Id="o32">
+<a:ModificationDate>1497137028</a:ModificationDate>
 <a:Rect>((-30914,35250), (-25514,51123))</a:Rect>
 <a:ListOfPoints>((-28214,51123),(-28214,35250))</a:ListOfPoints>
 <a:CornerStyle>1</a:CornerStyle>
@@ -1038,39 +1359,19 @@ NAMA 0 Arial,8,N</a:FontList>
 <a:FontList>DISPNAME 0 Arial,8,N
 NAMA 0 Arial,8,N</a:FontList>
 <c:SourceSymbol>
-<o:EntitySymbol Ref="o28"/>
+<o:EntitySymbol Ref="o29"/>
 </c:SourceSymbol>
 <c:DestinationSymbol>
-<o:EntitySymbol Ref="o6"/>
+<o:EntitySymbol Ref="o7"/>
 </c:DestinationSymbol>
 <c:Object>
-<o:Relationship Ref="o32"/>
+<o:Relationship Ref="o33"/>
 </c:Object>
 </o:RelationshipSymbol>
-<o:EntitySymbol Id="o6">
+<o:EntitySymbol Id="o7">
+<a:ModificationDate>1497137028</a:ModificationDate>
 <a:IconMode>-1</a:IconMode>
 <a:Rect>((-37810,20674), (-9590,41050))</a:Rect>
-<a:LineColor>11184640</a:LineColor>
-<a:FillColor>16777136</a:FillColor>
-<a:ShadowColor>12632256</a:ShadowColor>
-<a:FontList>STRN 0 Arial,8,N
-DISPNAME 0 Arial,8,N
-Attributes 0 Arial,8,N
-LABL 0 Arial,8,N
-EntityPrimaryAttribute 0 Arial,8,U
-EntityForeignAttribute 0 Arial,8,N
-Identifiers 0 Arial,8,N</a:FontList>
-<a:BrushStyle>6</a:BrushStyle>
-<a:GradientFillMode>65</a:GradientFillMode>
-<a:GradientEndColor>16777215</a:GradientEndColor>
-<c:Object>
-<o:Entity Ref="o33"/>
-</c:Object>
-</o:EntitySymbol>
-<o:EntitySymbol Id="o10">
-<a:ModificationDate>1497047451</a:ModificationDate>
-<a:IconMode>-1</a:IconMode>
-<a:Rect>((24470,33828), (45428,39596))</a:Rect>
 <a:LineColor>11184640</a:LineColor>
 <a:FillColor>16777136</a:FillColor>
 <a:ShadowColor>12632256</a:ShadowColor>
@@ -1088,10 +1389,10 @@ Identifiers 0 Arial,8,N</a:FontList>
 <o:Entity Ref="o34"/>
 </c:Object>
 </o:EntitySymbol>
-<o:EntitySymbol Id="o13">
-<a:ModificationDate>1497047420</a:ModificationDate>
+<o:EntitySymbol Id="o11">
+<a:ModificationDate>1497137028</a:ModificationDate>
 <a:IconMode>-1</a:IconMode>
-<a:Rect>((3551,21379), (30147,29095))</a:Rect>
+<a:Rect>((24470,33828), (45428,39596))</a:Rect>
 <a:LineColor>11184640</a:LineColor>
 <a:FillColor>16777136</a:FillColor>
 <a:ShadowColor>12632256</a:ShadowColor>
@@ -1109,10 +1410,10 @@ Identifiers 0 Arial,8,N</a:FontList>
 <o:Entity Ref="o35"/>
 </c:Object>
 </o:EntitySymbol>
-<o:EntitySymbol Id="o16">
-<a:ModificationDate>1497047427</a:ModificationDate>
+<o:EntitySymbol Id="o14">
+<a:ModificationDate>1497137028</a:ModificationDate>
 <a:IconMode>-1</a:IconMode>
-<a:Rect>((-37744,396), (-14006,14928))</a:Rect>
+<a:Rect>((3551,21379), (30147,29095))</a:Rect>
 <a:LineColor>11184640</a:LineColor>
 <a:FillColor>16777136</a:FillColor>
 <a:ShadowColor>12632256</a:ShadowColor>
@@ -1130,10 +1431,10 @@ Identifiers 0 Arial,8,N</a:FontList>
 <o:Entity Ref="o36"/>
 </c:Object>
 </o:EntitySymbol>
-<o:EntitySymbol Id="o19">
-<a:ModificationDate>1497047419</a:ModificationDate>
+<o:EntitySymbol Id="o17">
+<a:ModificationDate>1497137028</a:ModificationDate>
 <a:IconMode>-1</a:IconMode>
-<a:Rect>((-791,11215), (20089,16009))</a:Rect>
+<a:Rect>((-37744,-91), (-14006,15415))</a:Rect>
 <a:LineColor>11184640</a:LineColor>
 <a:FillColor>16777136</a:FillColor>
 <a:ShadowColor>12632256</a:ShadowColor>
@@ -1151,10 +1452,10 @@ Identifiers 0 Arial,8,N</a:FontList>
 <o:Entity Ref="o37"/>
 </c:Object>
 </o:EntitySymbol>
-<o:EntitySymbol Id="o22">
-<a:ModificationDate>1497047422</a:ModificationDate>
+<o:EntitySymbol Id="o20">
+<a:ModificationDate>1497137028</a:ModificationDate>
 <a:IconMode>-1</a:IconMode>
-<a:Rect>((-715,2441), (20165,7234))</a:Rect>
+<a:Rect>((-791,11215), (20089,16009))</a:Rect>
 <a:LineColor>11184640</a:LineColor>
 <a:FillColor>16777136</a:FillColor>
 <a:ShadowColor>12632256</a:ShadowColor>
@@ -1172,10 +1473,10 @@ Identifiers 0 Arial,8,N</a:FontList>
 <o:Entity Ref="o38"/>
 </c:Object>
 </o:EntitySymbol>
-<o:EntitySymbol Id="o25">
-<a:ModificationDate>1497047424</a:ModificationDate>
+<o:EntitySymbol Id="o23">
+<a:ModificationDate>1497137028</a:ModificationDate>
 <a:IconMode>-1</a:IconMode>
-<a:Rect>((-553,-7009), (19401,-2215))</a:Rect>
+<a:Rect>((-715,2441), (20165,7234))</a:Rect>
 <a:LineColor>11184640</a:LineColor>
 <a:FillColor>16777136</a:FillColor>
 <a:ShadowColor>12632256</a:ShadowColor>
@@ -1193,10 +1494,10 @@ Identifiers 0 Arial,8,N</a:FontList>
 <o:Entity Ref="o39"/>
 </c:Object>
 </o:EntitySymbol>
-<o:EntitySymbol Id="o29">
-<a:ModificationDate>1497047430</a:ModificationDate>
+<o:EntitySymbol Id="o26">
+<a:ModificationDate>1497137028</a:ModificationDate>
 <a:IconMode>-1</a:IconMode>
-<a:Rect>((-38908,61153), (-15092,67895))</a:Rect>
+<a:Rect>((-553,-7009), (19401,-2215))</a:Rect>
 <a:LineColor>11184640</a:LineColor>
 <a:FillColor>16777136</a:FillColor>
 <a:ShadowColor>12632256</a:ShadowColor>
@@ -1214,8 +1515,29 @@ Identifiers 0 Arial,8,N</a:FontList>
 <o:Entity Ref="o40"/>
 </c:Object>
 </o:EntitySymbol>
-<o:EntitySymbol Id="o28">
-<a:ModificationDate>1497047434</a:ModificationDate>
+<o:EntitySymbol Id="o30">
+<a:ModificationDate>1497137028</a:ModificationDate>
+<a:IconMode>-1</a:IconMode>
+<a:Rect>((-38908,61153), (-15092,67895))</a:Rect>
+<a:LineColor>11184640</a:LineColor>
+<a:FillColor>16777136</a:FillColor>
+<a:ShadowColor>12632256</a:ShadowColor>
+<a:FontList>STRN 0 Arial,8,N
+DISPNAME 0 Arial,8,N
+Attributes 0 Arial,8,N
+LABL 0 Arial,8,N
+EntityPrimaryAttribute 0 Arial,8,U
+EntityForeignAttribute 0 Arial,8,N
+Identifiers 0 Arial,8,N</a:FontList>
+<a:BrushStyle>6</a:BrushStyle>
+<a:GradientFillMode>65</a:GradientFillMode>
+<a:GradientEndColor>16777215</a:GradientEndColor>
+<c:Object>
+<o:Entity Ref="o41"/>
+</c:Object>
+</o:EntitySymbol>
+<o:EntitySymbol Id="o29">
+<a:ModificationDate>1497137028</a:ModificationDate>
 <a:IconMode>-1</a:IconMode>
 <a:Rect>((-39280,47855), (-15850,54595))</a:Rect>
 <a:AutoAdjustToText>0</a:AutoAdjustToText>
@@ -1233,11 +1555,11 @@ Identifiers 0 Arial,8,N</a:FontList>
 <a:GradientFillMode>65</a:GradientFillMode>
 <a:GradientEndColor>16777215</a:GradientEndColor>
 <c:Object>
-<o:Entity Ref="o41"/>
+<o:Entity Ref="o42"/>
 </c:Object>
 </o:EntitySymbol>
-<o:EntitySymbol Id="o7">
-<a:ModificationDate>1497047397</a:ModificationDate>
+<o:EntitySymbol Id="o8">
+<a:ModificationDate>1497137028</a:ModificationDate>
 <a:IconMode>-1</a:IconMode>
 <a:Rect>((1827,34878), (14596,39671))</a:Rect>
 <a:LineColor>11184640</a:LineColor>
@@ -1254,17 +1576,17 @@ Identifiers 0 Arial,8,N</a:FontList>
 <a:GradientFillMode>65</a:GradientFillMode>
 <a:GradientEndColor>16777215</a:GradientEndColor>
 <c:Object>
-<o:Entity Ref="o42"/>
+<o:Entity Ref="o43"/>
 </c:Object>
 </o:EntitySymbol>
 </c:Symbols>
 </o:LogicalDiagram>
 </c:LogicalDiagrams>
 <c:DefaultDiagram>
-<o:LogicalDiagram Ref="o4"/>
+<o:LogicalDiagram Ref="o5"/>
 </c:DefaultDiagram>
 <c:Entities>
-<o:Entity Id="o33">
+<o:Entity Id="o34">
 <a:ObjectID>50C093D1-040D-4DD6-8CC5-1065383B9A1E</a:ObjectID>
 <a:Name>MOVIE</a:Name>
 <a:Code>MOVIE</a:Code>
@@ -1275,7 +1597,7 @@ Identifiers 0 Arial,8,N</a:FontList>
 <a:History>ORG {58C78E38-C291-4814-AD54-53F64E801877}
 DAT 1497047384</a:History>
 <c:Identifiers>
-<o:Identifier Id="o43">
+<o:Identifier Id="o44">
 <a:ObjectID>3E4EDC9C-3EFD-446A-90FB-CD503DA35BD1</a:ObjectID>
 <a:Name>MOVIE_ID</a:Name>
 <a:Code>MOVIE_ID</a:Code>
@@ -1286,15 +1608,15 @@ DAT 1497047384</a:History>
 <a:History>ORG {C545A58D-A058-4FBD-84C0-6BB183B6A9A8}
 DAT 1497047384</a:History>
 <c:Identifier.Attributes>
-<o:EntityAttribute Ref="o44"/>
+<o:EntityAttribute Ref="o45"/>
 </c:Identifier.Attributes>
 </o:Identifier>
 </c:Identifiers>
 <c:PrimaryIdentifier>
-<o:Identifier Ref="o43"/>
+<o:Identifier Ref="o44"/>
 </c:PrimaryIdentifier>
 <c:Attributes>
-<o:EntityAttribute Id="o44">
+<o:EntityAttribute Id="o45">
 <a:ObjectID>DD70B316-FB75-46F5-BF07-D6267316CE69</a:ObjectID>
 <a:Name>MOVIE_ID</a:Name>
 <a:Code>MOVIE_ID</a:Code>
@@ -1307,7 +1629,7 @@ DAT 1497047384</a:History>
 <a:DataType>NO</a:DataType>
 <a:LogicalAttribute.Mandatory>1</a:LogicalAttribute.Mandatory>
 </o:EntityAttribute>
-<o:EntityAttribute Id="o45">
+<o:EntityAttribute Id="o46">
 <a:ObjectID>1CD4D446-7313-4E56-9527-C2FD2FCCE874</a:ObjectID>
 <a:Name>COLLECTION_ID</a:Name>
 <a:Code>COLLECTION_ID</a:Code>
@@ -1319,7 +1641,7 @@ DAT 1497047384</a:History>
 DAT 1497047384</a:History>
 <a:DataType>I</a:DataType>
 </o:EntityAttribute>
-<o:EntityAttribute Id="o46">
+<o:EntityAttribute Id="o47">
 <a:ObjectID>055069F1-5150-49C3-9D6F-4D0D26EB4826</a:ObjectID>
 <a:Name>MOVIE_TRAKT_ID</a:Name>
 <a:Code>MOVIE_TRAKT_ID</a:Code>
@@ -1331,7 +1653,7 @@ DAT 1497047384</a:History>
 DAT 1497047384</a:History>
 <a:DataType>I</a:DataType>
 </o:EntityAttribute>
-<o:EntityAttribute Id="o47">
+<o:EntityAttribute Id="o48">
 <a:ObjectID>BE2F0813-A417-497B-B8E2-EAEAE5F335F5</a:ObjectID>
 <a:Name>MOVIE_IMDB_ID</a:Name>
 <a:Code>MOVIE_IMDB_ID</a:Code>
@@ -1344,7 +1666,7 @@ DAT 1497047384</a:History>
 <a:DataType>VA10</a:DataType>
 <a:Length>10</a:Length>
 </o:EntityAttribute>
-<o:EntityAttribute Id="o48">
+<o:EntityAttribute Id="o49">
 <a:ObjectID>FA6A71F1-8756-4E85-BE8F-E1CCBF7E69F0</a:ObjectID>
 <a:Name>MOVIE_TMDB_ID</a:Name>
 <a:Code>MOVIE_TMDB_ID</a:Code>
@@ -1356,7 +1678,7 @@ DAT 1497047384</a:History>
 DAT 1497047384</a:History>
 <a:DataType>I</a:DataType>
 </o:EntityAttribute>
-<o:EntityAttribute Id="o49">
+<o:EntityAttribute Id="o50">
 <a:ObjectID>2262EB7C-5313-4413-991D-4851EA8980E1</a:ObjectID>
 <a:Name>MOVIE_TITLE</a:Name>
 <a:Code>MOVIE_TITLE</a:Code>
@@ -1369,7 +1691,7 @@ DAT 1497047384</a:History>
 <a:DataType>VA250</a:DataType>
 <a:Length>250</a:Length>
 </o:EntityAttribute>
-<o:EntityAttribute Id="o50">
+<o:EntityAttribute Id="o51">
 <a:ObjectID>C8EEC2A0-7F3D-4BF2-A57A-94A33A490558</a:ObjectID>
 <a:Name>MOVIE_ORIGINAL_TITLE</a:Name>
 <a:Code>MOVIE_ORIGINAL_TITLE</a:Code>
@@ -1382,7 +1704,7 @@ DAT 1497047384</a:History>
 <a:DataType>VA250</a:DataType>
 <a:Length>250</a:Length>
 </o:EntityAttribute>
-<o:EntityAttribute Id="o51">
+<o:EntityAttribute Id="o52">
 <a:ObjectID>470D228C-6D3B-4797-BDAF-1990EA527629</a:ObjectID>
 <a:Name>MOVIE_YEAR</a:Name>
 <a:Code>MOVIE_YEAR</a:Code>
@@ -1394,7 +1716,7 @@ DAT 1497047384</a:History>
 DAT 1497047384</a:History>
 <a:DataType>I</a:DataType>
 </o:EntityAttribute>
-<o:EntityAttribute Id="o52">
+<o:EntityAttribute Id="o53">
 <a:ObjectID>DCF51C58-0FC8-4FBA-9815-523815F43274</a:ObjectID>
 <a:Name>MOVIE_ORIGINAL_LANGUAGE</a:Name>
 <a:Code>MOVIE_ORIGINAL_LANGUAGE</a:Code>
@@ -1407,7 +1729,7 @@ DAT 1497047384</a:History>
 <a:DataType>VA25</a:DataType>
 <a:Length>25</a:Length>
 </o:EntityAttribute>
-<o:EntityAttribute Id="o53">
+<o:EntityAttribute Id="o54">
 <a:ObjectID>45A96069-44E5-49F2-B47D-5C8E55D8DBD8</a:ObjectID>
 <a:Name>MOVIE_OVERVIEW</a:Name>
 <a:Code>MOVIE_OVERVIEW</a:Code>
@@ -1420,7 +1742,7 @@ DAT 1497047384</a:History>
 <a:DataType>LVA2500</a:DataType>
 <a:Length>2500</a:Length>
 </o:EntityAttribute>
-<o:EntityAttribute Id="o54">
+<o:EntityAttribute Id="o55">
 <a:ObjectID>CE606495-17ED-4CFC-A19D-31B1F2D4E730</a:ObjectID>
 <a:Name>MOVIE_TAGLINE</a:Name>
 <a:Code>MOVIE_TAGLINE</a:Code>
@@ -1433,7 +1755,7 @@ DAT 1497047384</a:History>
 <a:DataType>VA250</a:DataType>
 <a:Length>250</a:Length>
 </o:EntityAttribute>
-<o:EntityAttribute Id="o55">
+<o:EntityAttribute Id="o56">
 <a:ObjectID>322BC8C3-DC4D-431D-8D18-8C3CF5462EB1</a:ObjectID>
 <a:Name>MOVIE_POPULARITY</a:Name>
 <a:Code>MOVIE_POPULARITY</a:Code>
@@ -1445,7 +1767,7 @@ DAT 1497047384</a:History>
 DAT 1497047384</a:History>
 <a:DataType>DC</a:DataType>
 </o:EntityAttribute>
-<o:EntityAttribute Id="o56">
+<o:EntityAttribute Id="o57">
 <a:ObjectID>2CE661AE-B625-42C0-9A04-38B6388F561E</a:ObjectID>
 <a:Name>MOVIE_RELEASE_DATE</a:Name>
 <a:Code>MOVIE_RELEASE_DATE</a:Code>
@@ -1457,7 +1779,7 @@ DAT 1497047384</a:History>
 DAT 1497047384</a:History>
 <a:DataType>D</a:DataType>
 </o:EntityAttribute>
-<o:EntityAttribute Id="o57">
+<o:EntityAttribute Id="o58">
 <a:ObjectID>D8C0275C-7AA0-4FD7-B062-1FEEAEE2FCC4</a:ObjectID>
 <a:Name>MOVIE_VOTE_AVERAGE</a:Name>
 <a:Code>MOVIE_VOTE_AVERAGE</a:Code>
@@ -1469,7 +1791,7 @@ DAT 1497047384</a:History>
 DAT 1497047384</a:History>
 <a:DataType>DC</a:DataType>
 </o:EntityAttribute>
-<o:EntityAttribute Id="o58">
+<o:EntityAttribute Id="o59">
 <a:ObjectID>DA444EEC-13CF-44D7-B974-FC5BF3C73018</a:ObjectID>
 <a:Name>MOVIE_VOTE_COUNT</a:Name>
 <a:Code>MOVIE_VOTE_COUNT</a:Code>
@@ -1481,7 +1803,7 @@ DAT 1497047384</a:History>
 DAT 1497047384</a:History>
 <a:DataType>I</a:DataType>
 </o:EntityAttribute>
-<o:EntityAttribute Id="o59">
+<o:EntityAttribute Id="o60">
 <a:ObjectID>F1D2CB88-5E4C-4878-A563-40F0E0A166D7</a:ObjectID>
 <a:Name>MOVIE_RUNTIME</a:Name>
 <a:Code>MOVIE_RUNTIME</a:Code>
@@ -1493,7 +1815,7 @@ DAT 1497047384</a:History>
 DAT 1497047384</a:History>
 <a:DataType>I</a:DataType>
 </o:EntityAttribute>
-<o:EntityAttribute Id="o60">
+<o:EntityAttribute Id="o61">
 <a:ObjectID>F292AF8D-B734-41DE-8221-F31F19C391EA</a:ObjectID>
 <a:Name>MOVIE_BACKDROP_PATH</a:Name>
 <a:Code>MOVIE_BACKDROP_PATH</a:Code>
@@ -1506,7 +1828,7 @@ DAT 1497047384</a:History>
 <a:DataType>VA100</a:DataType>
 <a:Length>100</a:Length>
 </o:EntityAttribute>
-<o:EntityAttribute Id="o61">
+<o:EntityAttribute Id="o62">
 <a:ObjectID>FB241374-B623-4D14-B2E3-C6F6668F477A</a:ObjectID>
 <a:Name>MOVIE_POSTER_PATH</a:Name>
 <a:Code>MOVIE_POSTER_PATH</a:Code>
@@ -1521,7 +1843,7 @@ DAT 1497047384</a:History>
 </o:EntityAttribute>
 </c:Attributes>
 </o:Entity>
-<o:Entity Id="o34">
+<o:Entity Id="o35">
 <a:ObjectID>C700A3DB-BC80-4680-ADA4-7FB4C7C99497</a:ObjectID>
 <a:Name>GENRE</a:Name>
 <a:Code>GENRE</a:Code>
@@ -1532,7 +1854,7 @@ DAT 1497047384</a:History>
 <a:History>ORG {F6A0A701-5AD8-47A0-8D51-FCB7A2738142}
 DAT 1497047384</a:History>
 <c:Identifiers>
-<o:Identifier Id="o62">
+<o:Identifier Id="o63">
 <a:ObjectID>8171894D-F0C2-437C-93D9-BA927955795B</a:ObjectID>
 <a:Name>GENRE_ID</a:Name>
 <a:Code>GENRE_ID</a:Code>
@@ -1543,15 +1865,15 @@ DAT 1497047384</a:History>
 <a:History>ORG {318CC188-0DCF-446B-89C6-8BEC754461EC}
 DAT 1497047384</a:History>
 <c:Identifier.Attributes>
-<o:EntityAttribute Ref="o63"/>
+<o:EntityAttribute Ref="o64"/>
 </c:Identifier.Attributes>
 </o:Identifier>
 </c:Identifiers>
 <c:PrimaryIdentifier>
-<o:Identifier Ref="o62"/>
+<o:Identifier Ref="o63"/>
 </c:PrimaryIdentifier>
 <c:Attributes>
-<o:EntityAttribute Id="o63">
+<o:EntityAttribute Id="o64">
 <a:ObjectID>38B581A4-003D-4072-A346-9A0DE4265755</a:ObjectID>
 <a:Name>GENRE_ID</a:Name>
 <a:Code>GENRE_ID</a:Code>
@@ -1564,7 +1886,7 @@ DAT 1497047384</a:History>
 <a:DataType>NO</a:DataType>
 <a:LogicalAttribute.Mandatory>1</a:LogicalAttribute.Mandatory>
 </o:EntityAttribute>
-<o:EntityAttribute Id="o64">
+<o:EntityAttribute Id="o65">
 <a:ObjectID>BE832DF1-3576-49B9-B426-78BC94513FDD</a:ObjectID>
 <a:Name>GENRE_TMDB_ID</a:Name>
 <a:Code>GENRE_TMDB_ID</a:Code>
@@ -1576,7 +1898,7 @@ DAT 1497047384</a:History>
 DAT 1497047384</a:History>
 <a:DataType>I</a:DataType>
 </o:EntityAttribute>
-<o:EntityAttribute Id="o65">
+<o:EntityAttribute Id="o66">
 <a:ObjectID>74948D38-F083-40AC-825B-EE74E7F70B65</a:ObjectID>
 <a:Name>GENRE_NAME</a:Name>
 <a:Code>GENRE_NAME</a:Code>
@@ -1591,7 +1913,7 @@ DAT 1497047384</a:History>
 </o:EntityAttribute>
 </c:Attributes>
 </o:Entity>
-<o:Entity Id="o35">
+<o:Entity Id="o36">
 <a:ObjectID>5FC8DBB3-D926-4569-900E-DC10E20EE765</a:ObjectID>
 <a:Name>COLLECTION</a:Name>
 <a:Code>COLLECTION</a:Code>
@@ -1602,7 +1924,7 @@ DAT 1497047384</a:History>
 <a:History>ORG {A4ABF797-0D4F-4821-9C3A-DCA6EF531C02}
 DAT 1497047384</a:History>
 <c:Identifiers>
-<o:Identifier Id="o66">
+<o:Identifier Id="o67">
 <a:ObjectID>62B46A7A-2ECA-4BBE-A29B-1D8DB7DD4498</a:ObjectID>
 <a:Name>COLLECTION_ID</a:Name>
 <a:Code>COLLECTION_ID</a:Code>
@@ -1613,15 +1935,15 @@ DAT 1497047384</a:History>
 <a:History>ORG {24F9197A-F671-4186-8F0D-5486E1EABAB0}
 DAT 1497047384</a:History>
 <c:Identifier.Attributes>
-<o:EntityAttribute Ref="o67"/>
+<o:EntityAttribute Ref="o68"/>
 </c:Identifier.Attributes>
 </o:Identifier>
 </c:Identifiers>
 <c:PrimaryIdentifier>
-<o:Identifier Ref="o66"/>
+<o:Identifier Ref="o67"/>
 </c:PrimaryIdentifier>
 <c:Attributes>
-<o:EntityAttribute Id="o67">
+<o:EntityAttribute Id="o68">
 <a:ObjectID>3C0EB1CE-B23D-4929-90C5-70544A74E4FB</a:ObjectID>
 <a:Name>COLLECTION_ID</a:Name>
 <a:Code>COLLECTION_ID</a:Code>
@@ -1634,7 +1956,7 @@ DAT 1497047384</a:History>
 <a:DataType>NO</a:DataType>
 <a:LogicalAttribute.Mandatory>1</a:LogicalAttribute.Mandatory>
 </o:EntityAttribute>
-<o:EntityAttribute Id="o68">
+<o:EntityAttribute Id="o69">
 <a:ObjectID>518FF165-835D-4D26-BC79-7E7333378E6E</a:ObjectID>
 <a:Name>COLLECTION_TMDB_ID</a:Name>
 <a:Code>COLLECTION_TMDB_ID</a:Code>
@@ -1646,7 +1968,7 @@ DAT 1497047384</a:History>
 DAT 1497047384</a:History>
 <a:DataType>I</a:DataType>
 </o:EntityAttribute>
-<o:EntityAttribute Id="o69">
+<o:EntityAttribute Id="o70">
 <a:ObjectID>AD4143DD-574D-4D6B-A722-B01470D90370</a:ObjectID>
 <a:Name>COLLECTION_NAME</a:Name>
 <a:Code>COLLECTION_NAME</a:Code>
@@ -1659,7 +1981,7 @@ DAT 1497047384</a:History>
 <a:DataType>VA100</a:DataType>
 <a:Length>100</a:Length>
 </o:EntityAttribute>
-<o:EntityAttribute Id="o70">
+<o:EntityAttribute Id="o71">
 <a:ObjectID>98E82895-BFD1-4D98-B73E-33C5D347D638</a:ObjectID>
 <a:Name>COLLECTION_POSTER_PATH</a:Name>
 <a:Code>COLLECTION_POSTER_PATH</a:Code>
@@ -1672,7 +1994,7 @@ DAT 1497047384</a:History>
 <a:DataType>VA100</a:DataType>
 <a:Length>100</a:Length>
 </o:EntityAttribute>
-<o:EntityAttribute Id="o71">
+<o:EntityAttribute Id="o72">
 <a:ObjectID>E80FC7AD-F52A-4437-A87C-DC87FFD9FCE1</a:ObjectID>
 <a:Name>COLLECTION_BACKDROP_PATH</a:Name>
 <a:Code>COLLECTION_BACKDROP_PATH</a:Code>
@@ -1687,18 +2009,18 @@ DAT 1497047384</a:History>
 </o:EntityAttribute>
 </c:Attributes>
 </o:Entity>
-<o:Entity Id="o36">
+<o:Entity Id="o37">
 <a:ObjectID>0E0C5656-B120-4AE5-8688-1FE81A4A3D59</a:ObjectID>
 <a:Name>TORRENT</a:Name>
 <a:Code>TORRENT</a:Code>
 <a:CreationDate>1497047384</a:CreationDate>
 <a:Creator>Arthur</a:Creator>
-<a:ModificationDate>1497047384</a:ModificationDate>
+<a:ModificationDate>1497137028</a:ModificationDate>
 <a:Modifier>Arthur</a:Modifier>
 <a:History>ORG {DD689606-4F45-406C-A6F1-F1D147ABDFCC}
 DAT 1497047384</a:History>
 <c:Identifiers>
-<o:Identifier Id="o72">
+<o:Identifier Id="o73">
 <a:ObjectID>8F4CA30D-F181-4A69-9C8F-84BE2024AB2C</a:ObjectID>
 <a:Name>TORRENT_ID</a:Name>
 <a:Code>TORRENT_ID</a:Code>
@@ -1709,15 +2031,15 @@ DAT 1497047384</a:History>
 <a:History>ORG {B454CB65-636B-4E00-98C6-DFEE0475F705}
 DAT 1497047384</a:History>
 <c:Identifier.Attributes>
-<o:EntityAttribute Ref="o73"/>
+<o:EntityAttribute Ref="o74"/>
 </c:Identifier.Attributes>
 </o:Identifier>
 </c:Identifiers>
 <c:PrimaryIdentifier>
-<o:Identifier Ref="o72"/>
+<o:Identifier Ref="o73"/>
 </c:PrimaryIdentifier>
 <c:Attributes>
-<o:EntityAttribute Id="o73">
+<o:EntityAttribute Id="o74">
 <a:ObjectID>3E80076C-8264-456B-B04A-056231D852BD</a:ObjectID>
 <a:Name>TORRENT_ID</a:Name>
 <a:Code>TORRENT_ID</a:Code>
@@ -1730,7 +2052,7 @@ DAT 1497047384</a:History>
 <a:DataType>NO</a:DataType>
 <a:LogicalAttribute.Mandatory>1</a:LogicalAttribute.Mandatory>
 </o:EntityAttribute>
-<o:EntityAttribute Id="o74">
+<o:EntityAttribute Id="o75">
 <a:ObjectID>FFD8A0C9-464C-46CD-BFA2-18F2D70772DC</a:ObjectID>
 <a:Name>MOVIE_ID</a:Name>
 <a:Code>MOVIE_ID</a:Code>
@@ -1742,7 +2064,7 @@ DAT 1497047384</a:History>
 DAT 1497047384</a:History>
 <a:DataType>I</a:DataType>
 </o:EntityAttribute>
-<o:EntityAttribute Id="o75">
+<o:EntityAttribute Id="o76">
 <a:ObjectID>C514B4E7-F63F-47B1-B623-9722DE947EF3</a:ObjectID>
 <a:Name>CATEGORY_ID</a:Name>
 <a:Code>CATEGORY_ID</a:Code>
@@ -1755,7 +2077,7 @@ DAT 1497047384</a:History>
 <a:DataType>I</a:DataType>
 <a:LogicalAttribute.Mandatory>1</a:LogicalAttribute.Mandatory>
 </o:EntityAttribute>
-<o:EntityAttribute Id="o76">
+<o:EntityAttribute Id="o77">
 <a:ObjectID>A7D0D5AA-4890-4FFE-A795-6DBE6B4F3ED1</a:ObjectID>
 <a:Name>LANGUAGE_ID</a:Name>
 <a:Code>LANGUAGE_ID</a:Code>
@@ -1768,7 +2090,7 @@ DAT 1497047384</a:History>
 <a:DataType>I</a:DataType>
 <a:LogicalAttribute.Mandatory>1</a:LogicalAttribute.Mandatory>
 </o:EntityAttribute>
-<o:EntityAttribute Id="o77">
+<o:EntityAttribute Id="o78">
 <a:ObjectID>18C8C318-6A53-498E-BF3A-06FB274DEE9F</a:ObjectID>
 <a:Name>QUALITY_ID</a:Name>
 <a:Code>QUALITY_ID</a:Code>
@@ -1781,7 +2103,19 @@ DAT 1497047384</a:History>
 <a:DataType>I</a:DataType>
 <a:LogicalAttribute.Mandatory>1</a:LogicalAttribute.Mandatory>
 </o:EntityAttribute>
-<o:EntityAttribute Id="o78">
+<o:EntityAttribute Id="o79">
+<a:ObjectID>629D174D-D85A-42FD-84A4-625709DAA65C</a:ObjectID>
+<a:Name>TORRENT_T411_ID</a:Name>
+<a:Code>TORRENT_T411_ID</a:Code>
+<a:CreationDate>1497137027</a:CreationDate>
+<a:Creator>Arthur</a:Creator>
+<a:ModificationDate>1497137028</a:ModificationDate>
+<a:Modifier>Arthur</a:Modifier>
+<a:History>ORG {12F1AD29-DA81-4BF7-A921-3EC0F5770D29}
+DAT 1497137027</a:History>
+<a:DataType>I</a:DataType>
+</o:EntityAttribute>
+<o:EntityAttribute Id="o80">
 <a:ObjectID>F33E28F3-DE09-4AF8-8DBC-2F00F3B15088</a:ObjectID>
 <a:Name>TORRENT_NAME</a:Name>
 <a:Code>TORRENT_NAME</a:Code>
@@ -1794,7 +2128,7 @@ DAT 1497047384</a:History>
 <a:DataType>VA250</a:DataType>
 <a:Length>250</a:Length>
 </o:EntityAttribute>
-<o:EntityAttribute Id="o79">
+<o:EntityAttribute Id="o81">
 <a:ObjectID>17001400-482F-40F8-83B4-342C0BFE072E</a:ObjectID>
 <a:Name>TORRENT_SLUG</a:Name>
 <a:Code>TORRENT_SLUG</a:Code>
@@ -1807,7 +2141,7 @@ DAT 1497047384</a:History>
 <a:DataType>VA250</a:DataType>
 <a:Length>250</a:Length>
 </o:EntityAttribute>
-<o:EntityAttribute Id="o80">
+<o:EntityAttribute Id="o82">
 <a:ObjectID>DD877F9E-4B8B-4AF6-9E3B-399355D72383</a:ObjectID>
 <a:Name>TORRENT_YEAR</a:Name>
 <a:Code>TORRENT_YEAR</a:Code>
@@ -1819,7 +2153,7 @@ DAT 1497047384</a:History>
 DAT 1497047384</a:History>
 <a:DataType>I</a:DataType>
 </o:EntityAttribute>
-<o:EntityAttribute Id="o81">
+<o:EntityAttribute Id="o83">
 <a:ObjectID>C7D75029-C4B9-4EFD-B44D-6A11CBB5A886</a:ObjectID>
 <a:Name>TORRENT_SIZE</a:Name>
 <a:Code>TORRENT_SIZE</a:Code>
@@ -1831,7 +2165,7 @@ DAT 1497047384</a:History>
 DAT 1497047384</a:History>
 <a:DataType>LI</a:DataType>
 </o:EntityAttribute>
-<o:EntityAttribute Id="o82">
+<o:EntityAttribute Id="o84">
 <a:ObjectID>DADAEB68-980C-4614-A4F0-BE2B053E14AB</a:ObjectID>
 <a:Name>TORRENT_SEEDERS</a:Name>
 <a:Code>TORRENT_SEEDERS</a:Code>
@@ -1843,7 +2177,7 @@ DAT 1497047384</a:History>
 DAT 1497047384</a:History>
 <a:DataType>I</a:DataType>
 </o:EntityAttribute>
-<o:EntityAttribute Id="o83">
+<o:EntityAttribute Id="o85">
 <a:ObjectID>F4B89B08-27A7-4DD2-8922-FE1A467E0001</a:ObjectID>
 <a:Name>TORRENT_LEECHERS</a:Name>
 <a:Code>TORRENT_LEECHERS</a:Code>
@@ -1855,7 +2189,7 @@ DAT 1497047384</a:History>
 DAT 1497047384</a:History>
 <a:DataType>I</a:DataType>
 </o:EntityAttribute>
-<o:EntityAttribute Id="o84">
+<o:EntityAttribute Id="o86">
 <a:ObjectID>CE50FA09-4FFC-4F75-8A96-72E615E46BDF</a:ObjectID>
 <a:Name>TORRENT_COMPLETED</a:Name>
 <a:Code>TORRENT_COMPLETED</a:Code>
@@ -1869,7 +2203,7 @@ DAT 1497047384</a:History>
 </o:EntityAttribute>
 </c:Attributes>
 </o:Entity>
-<o:Entity Id="o37">
+<o:Entity Id="o38">
 <a:ObjectID>F6A2B357-C940-45D4-B952-A6E3DEA2E38A</a:ObjectID>
 <a:Name>CATEGORY</a:Name>
 <a:Code>CATEGORY</a:Code>
@@ -1880,7 +2214,7 @@ DAT 1497047384</a:History>
 <a:History>ORG {6573E83F-D2D4-41E6-92DC-54867CA76B40}
 DAT 1497047384</a:History>
 <c:Identifiers>
-<o:Identifier Id="o85">
+<o:Identifier Id="o87">
 <a:ObjectID>BE691C70-D43E-4938-8214-7FBB86A5CD5A</a:ObjectID>
 <a:Name>CATEGORY_ID</a:Name>
 <a:Code>CATEGORY_ID</a:Code>
@@ -1891,15 +2225,15 @@ DAT 1497047384</a:History>
 <a:History>ORG {266A49DC-DB41-46C4-85BC-0F74522288F4}
 DAT 1497047384</a:History>
 <c:Identifier.Attributes>
-<o:EntityAttribute Ref="o86"/>
+<o:EntityAttribute Ref="o88"/>
 </c:Identifier.Attributes>
 </o:Identifier>
 </c:Identifiers>
 <c:PrimaryIdentifier>
-<o:Identifier Ref="o85"/>
+<o:Identifier Ref="o87"/>
 </c:PrimaryIdentifier>
 <c:Attributes>
-<o:EntityAttribute Id="o86">
+<o:EntityAttribute Id="o88">
 <a:ObjectID>4F2AF219-AA33-4414-B767-D08520416F9C</a:ObjectID>
 <a:Name>CATEGORY_ID</a:Name>
 <a:Code>CATEGORY_ID</a:Code>
@@ -1912,7 +2246,7 @@ DAT 1497047384</a:History>
 <a:DataType>NO</a:DataType>
 <a:LogicalAttribute.Mandatory>1</a:LogicalAttribute.Mandatory>
 </o:EntityAttribute>
-<o:EntityAttribute Id="o87">
+<o:EntityAttribute Id="o89">
 <a:ObjectID>18E64CDB-D98D-4354-A369-B965C650AFB9</a:ObjectID>
 <a:Name>CATEGORY_NAME</a:Name>
 <a:Code>CATEGORY_NAME</a:Code>
@@ -1927,7 +2261,7 @@ DAT 1497047384</a:History>
 </o:EntityAttribute>
 </c:Attributes>
 </o:Entity>
-<o:Entity Id="o38">
+<o:Entity Id="o39">
 <a:ObjectID>A2810974-B4E7-4BA9-9935-1D3C0C308CFF</a:ObjectID>
 <a:Name>LANGUAGE</a:Name>
 <a:Code>LANGUAGE</a:Code>
@@ -1938,7 +2272,7 @@ DAT 1497047384</a:History>
 <a:History>ORG {3F69628B-AA62-4E22-ADF0-E856CDEDC7D9}
 DAT 1497047384</a:History>
 <c:Identifiers>
-<o:Identifier Id="o88">
+<o:Identifier Id="o90">
 <a:ObjectID>FE9CBDAF-FEB5-4B27-8557-7E883C67C3CE</a:ObjectID>
 <a:Name>LANGUAGE_ID</a:Name>
 <a:Code>LANGUAGE_ID</a:Code>
@@ -1949,15 +2283,15 @@ DAT 1497047384</a:History>
 <a:History>ORG {721268EB-8A1F-4426-892C-94B574569412}
 DAT 1497047384</a:History>
 <c:Identifier.Attributes>
-<o:EntityAttribute Ref="o89"/>
+<o:EntityAttribute Ref="o91"/>
 </c:Identifier.Attributes>
 </o:Identifier>
 </c:Identifiers>
 <c:PrimaryIdentifier>
-<o:Identifier Ref="o88"/>
+<o:Identifier Ref="o90"/>
 </c:PrimaryIdentifier>
 <c:Attributes>
-<o:EntityAttribute Id="o89">
+<o:EntityAttribute Id="o91">
 <a:ObjectID>0B91E3B4-691E-48B6-9ECE-B126B35B3863</a:ObjectID>
 <a:Name>LANGUAGE_ID</a:Name>
 <a:Code>LANGUAGE_ID</a:Code>
@@ -1970,7 +2304,7 @@ DAT 1497047384</a:History>
 <a:DataType>NO</a:DataType>
 <a:LogicalAttribute.Mandatory>1</a:LogicalAttribute.Mandatory>
 </o:EntityAttribute>
-<o:EntityAttribute Id="o90">
+<o:EntityAttribute Id="o92">
 <a:ObjectID>F7547591-A3F5-4C54-B660-99736C5AA5F2</a:ObjectID>
 <a:Name>LANGUAGE_NAME</a:Name>
 <a:Code>LANGUAGE_NAME</a:Code>
@@ -1985,7 +2319,7 @@ DAT 1497047384</a:History>
 </o:EntityAttribute>
 </c:Attributes>
 </o:Entity>
-<o:Entity Id="o39">
+<o:Entity Id="o40">
 <a:ObjectID>9250AA93-A765-4CC2-98D5-A0BD726ED2E2</a:ObjectID>
 <a:Name>QUALITY</a:Name>
 <a:Code>QUALITY</a:Code>
@@ -1996,7 +2330,7 @@ DAT 1497047384</a:History>
 <a:History>ORG {91180EE7-EB68-4056-B17D-82AAC0D7CB49}
 DAT 1497047384</a:History>
 <c:Identifiers>
-<o:Identifier Id="o91">
+<o:Identifier Id="o93">
 <a:ObjectID>8941D88C-8E32-41CC-86E2-F9BC434F1A7D</a:ObjectID>
 <a:Name>QUALITY_ID</a:Name>
 <a:Code>QUALITY_ID</a:Code>
@@ -2007,15 +2341,15 @@ DAT 1497047384</a:History>
 <a:History>ORG {9AF4A085-1495-4CAB-9F0F-CC2BB0870405}
 DAT 1497047384</a:History>
 <c:Identifier.Attributes>
-<o:EntityAttribute Ref="o92"/>
+<o:EntityAttribute Ref="o94"/>
 </c:Identifier.Attributes>
 </o:Identifier>
 </c:Identifiers>
 <c:PrimaryIdentifier>
-<o:Identifier Ref="o91"/>
+<o:Identifier Ref="o93"/>
 </c:PrimaryIdentifier>
 <c:Attributes>
-<o:EntityAttribute Id="o92">
+<o:EntityAttribute Id="o94">
 <a:ObjectID>BA24B483-C7D5-4DC3-A1B5-9F3E8B0EA05C</a:ObjectID>
 <a:Name>QUALITY_ID</a:Name>
 <a:Code>QUALITY_ID</a:Code>
@@ -2028,7 +2362,7 @@ DAT 1497047384</a:History>
 <a:DataType>NO</a:DataType>
 <a:LogicalAttribute.Mandatory>1</a:LogicalAttribute.Mandatory>
 </o:EntityAttribute>
-<o:EntityAttribute Id="o93">
+<o:EntityAttribute Id="o95">
 <a:ObjectID>26395FA5-DBF2-4A82-9735-FB04BFEDD1FA</a:ObjectID>
 <a:Name>QUALITY_NAME</a:Name>
 <a:Code>QUALITY_NAME</a:Code>
@@ -2043,7 +2377,7 @@ DAT 1497047384</a:History>
 </o:EntityAttribute>
 </c:Attributes>
 </o:Entity>
-<o:Entity Id="o40">
+<o:Entity Id="o41">
 <a:ObjectID>06E23611-79E1-4C13-A2B9-4470D95DEE83</a:ObjectID>
 <a:Name>PERSON</a:Name>
 <a:Code>PERSON</a:Code>
@@ -2054,7 +2388,7 @@ DAT 1497047384</a:History>
 <a:History>ORG {5FAD731A-FC1E-47CC-B639-F6216970172A}
 DAT 1497047384</a:History>
 <c:Identifiers>
-<o:Identifier Id="o94">
+<o:Identifier Id="o96">
 <a:ObjectID>FF27EA53-6AA3-445E-9F9B-1524CA695C06</a:ObjectID>
 <a:Name>PERSON_ID</a:Name>
 <a:Code>PERSON_ID</a:Code>
@@ -2065,15 +2399,15 @@ DAT 1497047384</a:History>
 <a:History>ORG {F8097C7D-090E-4BF0-91E4-050203173668}
 DAT 1497047384</a:History>
 <c:Identifier.Attributes>
-<o:EntityAttribute Ref="o95"/>
+<o:EntityAttribute Ref="o97"/>
 </c:Identifier.Attributes>
 </o:Identifier>
 </c:Identifiers>
 <c:PrimaryIdentifier>
-<o:Identifier Ref="o94"/>
+<o:Identifier Ref="o96"/>
 </c:PrimaryIdentifier>
 <c:Attributes>
-<o:EntityAttribute Id="o95">
+<o:EntityAttribute Id="o97">
 <a:ObjectID>BFA69B6D-C8F5-4EB7-91D2-4C2D4D8D6355</a:ObjectID>
 <a:Name>PERSON_ID</a:Name>
 <a:Code>PERSON_ID</a:Code>
@@ -2086,7 +2420,7 @@ DAT 1497047384</a:History>
 <a:DataType>NO</a:DataType>
 <a:LogicalAttribute.Mandatory>1</a:LogicalAttribute.Mandatory>
 </o:EntityAttribute>
-<o:EntityAttribute Id="o96">
+<o:EntityAttribute Id="o98">
 <a:ObjectID>44D7359B-67C5-4C37-A34A-F3D04A091535</a:ObjectID>
 <a:Name>PERSON_FIRSTNAME</a:Name>
 <a:Code>PERSON_FIRSTNAME</a:Code>
@@ -2099,7 +2433,7 @@ DAT 1497047384</a:History>
 <a:DataType>VA250</a:DataType>
 <a:Length>250</a:Length>
 </o:EntityAttribute>
-<o:EntityAttribute Id="o97">
+<o:EntityAttribute Id="o99">
 <a:ObjectID>0B844C36-74A0-4298-8DB5-602360978378</a:ObjectID>
 <a:Name>PERSON_LASTNAME</a:Name>
 <a:Code>PERSON_LASTNAME</a:Code>
@@ -2112,7 +2446,7 @@ DAT 1497047384</a:History>
 <a:DataType>VA250</a:DataType>
 <a:Length>250</a:Length>
 </o:EntityAttribute>
-<o:EntityAttribute Id="o98">
+<o:EntityAttribute Id="o100">
 <a:ObjectID>A9645BCC-0D10-4DD2-8900-C4138244C210</a:ObjectID>
 <a:Name>PERSON_PROFILE_PATH</a:Name>
 <a:Code>PERSON_PROFILE_PATH</a:Code>
@@ -2127,7 +2461,7 @@ DAT 1497047384</a:History>
 </o:EntityAttribute>
 </c:Attributes>
 </o:Entity>
-<o:Entity Id="o41">
+<o:Entity Id="o42">
 <a:ObjectID>CE7B735E-4D6B-4A83-A4D7-17A49F3D4D93</a:ObjectID>
 <a:Name>CHARACTER</a:Name>
 <a:Code>CHARACTER</a:Code>
@@ -2138,7 +2472,7 @@ DAT 1497047384</a:History>
 <a:History>ORG {FB256F73-EBD8-4110-89C3-4B15E5ECCD84}
 DAT 1497047384</a:History>
 <c:Identifiers>
-<o:Identifier Id="o99">
+<o:Identifier Id="o101">
 <a:ObjectID>70BFE922-F4D1-4A3C-98D4-A9BB4EFE042B</a:ObjectID>
 <a:Name>Identifiant_1</a:Name>
 <a:Code>IDENTIFIANT_1</a:Code>
@@ -2147,16 +2481,16 @@ DAT 1497047384</a:History>
 <a:ModificationDate>1497047384</a:ModificationDate>
 <a:Modifier>Arthur</a:Modifier>
 <c:Identifier.Attributes>
-<o:EntityAttribute Ref="o100"/>
-<o:EntityAttribute Ref="o101"/>
+<o:EntityAttribute Ref="o102"/>
+<o:EntityAttribute Ref="o103"/>
 </c:Identifier.Attributes>
 </o:Identifier>
 </c:Identifiers>
 <c:PrimaryIdentifier>
-<o:Identifier Ref="o99"/>
+<o:Identifier Ref="o101"/>
 </c:PrimaryIdentifier>
 <c:Attributes>
-<o:EntityAttribute Id="o100">
+<o:EntityAttribute Id="o102">
 <a:ObjectID>8798E40C-B052-49CE-A167-A4871C46A012</a:ObjectID>
 <a:Name>PERSON_ID</a:Name>
 <a:Code>PERSON_ID</a:Code>
@@ -2169,7 +2503,7 @@ DAT 1497047384</a:History>
 <a:DataType>I</a:DataType>
 <a:LogicalAttribute.Mandatory>1</a:LogicalAttribute.Mandatory>
 </o:EntityAttribute>
-<o:EntityAttribute Id="o101">
+<o:EntityAttribute Id="o103">
 <a:ObjectID>C4F4DDB9-25BA-465B-81E6-0AFC5F62E814</a:ObjectID>
 <a:Name>MOVIE_ID</a:Name>
 <a:Code>MOVIE_ID</a:Code>
@@ -2182,7 +2516,7 @@ DAT 1497047384</a:History>
 <a:DataType>I</a:DataType>
 <a:LogicalAttribute.Mandatory>1</a:LogicalAttribute.Mandatory>
 </o:EntityAttribute>
-<o:EntityAttribute Id="o102">
+<o:EntityAttribute Id="o104">
 <a:ObjectID>80BB0019-B935-47F9-A8BE-1A56FAA33018</a:ObjectID>
 <a:Name>CHARACTER_NAME</a:Name>
 <a:Code>CHARACTER_NAME</a:Code>
@@ -2195,7 +2529,7 @@ DAT 1497047384</a:History>
 <a:DataType>VA250</a:DataType>
 <a:Length>250</a:Length>
 </o:EntityAttribute>
-<o:EntityAttribute Id="o103">
+<o:EntityAttribute Id="o105">
 <a:ObjectID>7C8F1BE4-D9B2-4CAB-953E-4CC18A8A4C15</a:ObjectID>
 <a:Name>CHARACTER_ORDER</a:Name>
 <a:Code>CHARACTER_ORDER</a:Code>
@@ -2209,7 +2543,7 @@ DAT 1497047384</a:History>
 </o:EntityAttribute>
 </c:Attributes>
 </o:Entity>
-<o:Entity Id="o42">
+<o:Entity Id="o43">
 <a:ObjectID>56CDC7DF-FCB4-4410-AA2F-0006E6899B8F</a:ObjectID>
 <a:Name>MOVIE_GENRE</a:Name>
 <a:Code>MOVIE_GENRE</a:Code>
@@ -2220,7 +2554,7 @@ DAT 1497047384</a:History>
 <a:History>ORG {2FAAC27E-D937-4297-AC32-A838D230C434}
 DAT 1497047384</a:History>
 <c:Identifiers>
-<o:Identifier Id="o104">
+<o:Identifier Id="o106">
 <a:ObjectID>617CA263-8BB6-438A-B2F5-FC1BB8426DEA</a:ObjectID>
 <a:Name>Identifiant_1</a:Name>
 <a:Code>IDENTIFIANT_1</a:Code>
@@ -2229,16 +2563,16 @@ DAT 1497047384</a:History>
 <a:ModificationDate>1497047384</a:ModificationDate>
 <a:Modifier>Arthur</a:Modifier>
 <c:Identifier.Attributes>
-<o:EntityAttribute Ref="o105"/>
-<o:EntityAttribute Ref="o106"/>
+<o:EntityAttribute Ref="o107"/>
+<o:EntityAttribute Ref="o108"/>
 </c:Identifier.Attributes>
 </o:Identifier>
 </c:Identifiers>
 <c:PrimaryIdentifier>
-<o:Identifier Ref="o104"/>
+<o:Identifier Ref="o106"/>
 </c:PrimaryIdentifier>
 <c:Attributes>
-<o:EntityAttribute Id="o105">
+<o:EntityAttribute Id="o107">
 <a:ObjectID>C6C116DB-E213-4435-A8FA-9D9EFDED30AF</a:ObjectID>
 <a:Name>GENRE_ID</a:Name>
 <a:Code>GENRE_ID</a:Code>
@@ -2251,7 +2585,7 @@ DAT 1497047384</a:History>
 <a:DataType>I</a:DataType>
 <a:LogicalAttribute.Mandatory>1</a:LogicalAttribute.Mandatory>
 </o:EntityAttribute>
-<o:EntityAttribute Id="o106">
+<o:EntityAttribute Id="o108">
 <a:ObjectID>FABFB31F-C522-4133-ABB1-CD503C20387D</a:ObjectID>
 <a:Name>MOVIE_ID</a:Name>
 <a:Code>MOVIE_ID</a:Code>
@@ -2268,7 +2602,7 @@ DAT 1497047384</a:History>
 </o:Entity>
 </c:Entities>
 <c:Relationships>
-<o:Relationship Id="o8">
+<o:Relationship Id="o9">
 <a:ObjectID>37D55B3C-1208-43B2-9750-E822FB754565</a:ObjectID>
 <a:Name>MOVIE_GENRE</a:Name>
 <a:Code>MOVIE_GENRE2</a:Code>
@@ -2282,31 +2616,31 @@ DAT 1497047384</a:History>
 <a:Entity1ToEntity2RoleCardinality>1,n</a:Entity1ToEntity2RoleCardinality>
 <a:Entity2ToEntity1RoleCardinality>1,1</a:Entity2ToEntity1RoleCardinality>
 <c:Object1>
-<o:Entity Ref="o42"/>
+<o:Entity Ref="o43"/>
 </c:Object1>
 <c:Object2>
-<o:Entity Ref="o33"/>
+<o:Entity Ref="o34"/>
 </c:Object2>
 <c:Joins>
-<o:RelationshipJoin Id="o107">
+<o:RelationshipJoin Id="o109">
 <a:ObjectID>E9A8F785-479C-490E-AF60-6437DE11CD41</a:ObjectID>
 <a:CreationDate>1497047384</a:CreationDate>
 <a:Creator>Arthur</a:Creator>
 <a:ModificationDate>1497047384</a:ModificationDate>
 <a:Modifier>Arthur</a:Modifier>
 <c:Object1>
-<o:EntityAttribute Ref="o44"/>
+<o:EntityAttribute Ref="o45"/>
 </c:Object1>
 <c:Object2>
-<o:EntityAttribute Ref="o106"/>
+<o:EntityAttribute Ref="o108"/>
 </c:Object2>
 </o:RelationshipJoin>
 </c:Joins>
 <c:ParentIdentifier>
-<o:Identifier Ref="o43"/>
+<o:Identifier Ref="o44"/>
 </c:ParentIdentifier>
 </o:Relationship>
-<o:Relationship Id="o11">
+<o:Relationship Id="o12">
 <a:ObjectID>64D1D807-6CC1-4E47-8AF6-49534DF3B479</a:ObjectID>
 <a:Name>MOVIE_GENRE</a:Name>
 <a:Code>MOVIE_GENRE</a:Code>
@@ -2320,31 +2654,31 @@ DAT 1497047384</a:History>
 <a:Entity1ToEntity2RoleCardinality>1,1</a:Entity1ToEntity2RoleCardinality>
 <a:Entity2ToEntity1RoleCardinality>0,n</a:Entity2ToEntity1RoleCardinality>
 <c:Object1>
-<o:Entity Ref="o34"/>
+<o:Entity Ref="o35"/>
 </c:Object1>
 <c:Object2>
-<o:Entity Ref="o42"/>
+<o:Entity Ref="o43"/>
 </c:Object2>
 <c:Joins>
-<o:RelationshipJoin Id="o108">
+<o:RelationshipJoin Id="o110">
 <a:ObjectID>3B9BD3F9-4751-4F7D-9014-19D68CB258F2</a:ObjectID>
 <a:CreationDate>1497047384</a:CreationDate>
 <a:Creator>Arthur</a:Creator>
 <a:ModificationDate>1497047384</a:ModificationDate>
 <a:Modifier>Arthur</a:Modifier>
 <c:Object1>
-<o:EntityAttribute Ref="o63"/>
+<o:EntityAttribute Ref="o64"/>
 </c:Object1>
 <c:Object2>
-<o:EntityAttribute Ref="o105"/>
+<o:EntityAttribute Ref="o107"/>
 </c:Object2>
 </o:RelationshipJoin>
 </c:Joins>
 <c:ParentIdentifier>
-<o:Identifier Ref="o62"/>
+<o:Identifier Ref="o63"/>
 </c:ParentIdentifier>
 </o:Relationship>
-<o:Relationship Id="o14">
+<o:Relationship Id="o15">
 <a:ObjectID>64A335FC-BC9D-4139-8A0F-89B45FAC26A0</a:ObjectID>
 <a:Name>MOVIE_COLLECTION</a:Name>
 <a:Code>MOVIE_COLLECTION</a:Code>
@@ -2357,31 +2691,31 @@ DAT 1497047384</a:History>
 <a:Entity1ToEntity2RoleCardinality>0,1</a:Entity1ToEntity2RoleCardinality>
 <a:Entity2ToEntity1RoleCardinality>0,n</a:Entity2ToEntity1RoleCardinality>
 <c:Object1>
-<o:Entity Ref="o35"/>
+<o:Entity Ref="o36"/>
 </c:Object1>
 <c:Object2>
-<o:Entity Ref="o33"/>
+<o:Entity Ref="o34"/>
 </c:Object2>
 <c:Joins>
-<o:RelationshipJoin Id="o109">
+<o:RelationshipJoin Id="o111">
 <a:ObjectID>6E103153-ECD3-40E4-8490-94D6E9552103</a:ObjectID>
 <a:CreationDate>1497047384</a:CreationDate>
 <a:Creator>Arthur</a:Creator>
 <a:ModificationDate>1497047384</a:ModificationDate>
 <a:Modifier>Arthur</a:Modifier>
 <c:Object1>
-<o:EntityAttribute Ref="o67"/>
+<o:EntityAttribute Ref="o68"/>
 </c:Object1>
 <c:Object2>
-<o:EntityAttribute Ref="o45"/>
+<o:EntityAttribute Ref="o46"/>
 </c:Object2>
 </o:RelationshipJoin>
 </c:Joins>
 <c:ParentIdentifier>
-<o:Identifier Ref="o66"/>
+<o:Identifier Ref="o67"/>
 </c:ParentIdentifier>
 </o:Relationship>
-<o:Relationship Id="o17">
+<o:Relationship Id="o18">
 <a:ObjectID>C333B477-9384-4591-BCAC-CA07A2E25AFA</a:ObjectID>
 <a:Name>MOVIE_TORRENT</a:Name>
 <a:Code>MOVIE_TORRENT</a:Code>
@@ -2394,31 +2728,31 @@ DAT 1497047384</a:History>
 <a:Entity1ToEntity2RoleCardinality>0,n</a:Entity1ToEntity2RoleCardinality>
 <a:Entity2ToEntity1RoleCardinality>0,1</a:Entity2ToEntity1RoleCardinality>
 <c:Object1>
-<o:Entity Ref="o36"/>
+<o:Entity Ref="o37"/>
 </c:Object1>
 <c:Object2>
-<o:Entity Ref="o33"/>
+<o:Entity Ref="o34"/>
 </c:Object2>
 <c:Joins>
-<o:RelationshipJoin Id="o110">
+<o:RelationshipJoin Id="o112">
 <a:ObjectID>3D8E0DB4-107E-48DC-80F9-44625020299B</a:ObjectID>
 <a:CreationDate>1497047384</a:CreationDate>
 <a:Creator>Arthur</a:Creator>
 <a:ModificationDate>1497047384</a:ModificationDate>
 <a:Modifier>Arthur</a:Modifier>
 <c:Object1>
-<o:EntityAttribute Ref="o44"/>
+<o:EntityAttribute Ref="o45"/>
 </c:Object1>
 <c:Object2>
-<o:EntityAttribute Ref="o74"/>
+<o:EntityAttribute Ref="o75"/>
 </c:Object2>
 </o:RelationshipJoin>
 </c:Joins>
 <c:ParentIdentifier>
-<o:Identifier Ref="o43"/>
+<o:Identifier Ref="o44"/>
 </c:ParentIdentifier>
 </o:Relationship>
-<o:Relationship Id="o20">
+<o:Relationship Id="o21">
 <a:ObjectID>947F7E46-7C57-430E-9564-3CE08AFBAB83</a:ObjectID>
 <a:Name>TORRENT_CATEGORY</a:Name>
 <a:Code>TORRENT_CATEGORY</a:Code>
@@ -2431,31 +2765,31 @@ DAT 1497047384</a:History>
 <a:Entity1ToEntity2RoleCardinality>1,1</a:Entity1ToEntity2RoleCardinality>
 <a:Entity2ToEntity1RoleCardinality>0,n</a:Entity2ToEntity1RoleCardinality>
 <c:Object1>
-<o:Entity Ref="o37"/>
+<o:Entity Ref="o38"/>
 </c:Object1>
 <c:Object2>
-<o:Entity Ref="o36"/>
+<o:Entity Ref="o37"/>
 </c:Object2>
 <c:Joins>
-<o:RelationshipJoin Id="o111">
+<o:RelationshipJoin Id="o113">
 <a:ObjectID>6A36A1FA-BE3C-46B7-B3A3-6B93AA25CD3D</a:ObjectID>
 <a:CreationDate>1497047384</a:CreationDate>
 <a:Creator>Arthur</a:Creator>
 <a:ModificationDate>1497047384</a:ModificationDate>
 <a:Modifier>Arthur</a:Modifier>
 <c:Object1>
-<o:EntityAttribute Ref="o86"/>
+<o:EntityAttribute Ref="o88"/>
 </c:Object1>
 <c:Object2>
-<o:EntityAttribute Ref="o75"/>
+<o:EntityAttribute Ref="o76"/>
 </c:Object2>
 </o:RelationshipJoin>
 </c:Joins>
 <c:ParentIdentifier>
-<o:Identifier Ref="o85"/>
+<o:Identifier Ref="o87"/>
 </c:ParentIdentifier>
 </o:Relationship>
-<o:Relationship Id="o23">
+<o:Relationship Id="o24">
 <a:ObjectID>24709135-AC15-4C8E-80AE-9A3C49F7450D</a:ObjectID>
 <a:Name>TORRENT_LANGUAGE</a:Name>
 <a:Code>TORRENT_LANGUAGE</a:Code>
@@ -2468,31 +2802,31 @@ DAT 1497047384</a:History>
 <a:Entity1ToEntity2RoleCardinality>1,1</a:Entity1ToEntity2RoleCardinality>
 <a:Entity2ToEntity1RoleCardinality>0,n</a:Entity2ToEntity1RoleCardinality>
 <c:Object1>
-<o:Entity Ref="o38"/>
+<o:Entity Ref="o39"/>
 </c:Object1>
 <c:Object2>
-<o:Entity Ref="o36"/>
+<o:Entity Ref="o37"/>
 </c:Object2>
 <c:Joins>
-<o:RelationshipJoin Id="o112">
+<o:RelationshipJoin Id="o114">
 <a:ObjectID>54CAFED7-8CFA-41D7-8074-3A6793F0F6C1</a:ObjectID>
 <a:CreationDate>1497047384</a:CreationDate>
 <a:Creator>Arthur</a:Creator>
 <a:ModificationDate>1497047384</a:ModificationDate>
 <a:Modifier>Arthur</a:Modifier>
 <c:Object1>
-<o:EntityAttribute Ref="o89"/>
+<o:EntityAttribute Ref="o91"/>
 </c:Object1>
 <c:Object2>
-<o:EntityAttribute Ref="o76"/>
+<o:EntityAttribute Ref="o77"/>
 </c:Object2>
 </o:RelationshipJoin>
 </c:Joins>
 <c:ParentIdentifier>
-<o:Identifier Ref="o88"/>
+<o:Identifier Ref="o90"/>
 </c:ParentIdentifier>
 </o:Relationship>
-<o:Relationship Id="o26">
+<o:Relationship Id="o27">
 <a:ObjectID>4D5EDC00-6387-4AA4-88DD-D6F0E9A5E6B2</a:ObjectID>
 <a:Name>TORRENT_QUALITY</a:Name>
 <a:Code>TORRENT_QUALITY</a:Code>
@@ -2505,31 +2839,31 @@ DAT 1497047384</a:History>
 <a:Entity1ToEntity2RoleCardinality>1,1</a:Entity1ToEntity2RoleCardinality>
 <a:Entity2ToEntity1RoleCardinality>0,n</a:Entity2ToEntity1RoleCardinality>
 <c:Object1>
-<o:Entity Ref="o39"/>
+<o:Entity Ref="o40"/>
 </c:Object1>
 <c:Object2>
-<o:Entity Ref="o36"/>
+<o:Entity Ref="o37"/>
 </c:Object2>
 <c:Joins>
-<o:RelationshipJoin Id="o113">
+<o:RelationshipJoin Id="o115">
 <a:ObjectID>29437692-FE9B-4C72-8511-3F50606E0F1C</a:ObjectID>
 <a:CreationDate>1497047384</a:CreationDate>
 <a:Creator>Arthur</a:Creator>
 <a:ModificationDate>1497047384</a:ModificationDate>
 <a:Modifier>Arthur</a:Modifier>
 <c:Object1>
-<o:EntityAttribute Ref="o92"/>
+<o:EntityAttribute Ref="o94"/>
 </c:Object1>
 <c:Object2>
-<o:EntityAttribute Ref="o77"/>
+<o:EntityAttribute Ref="o78"/>
 </c:Object2>
 </o:RelationshipJoin>
 </c:Joins>
 <c:ParentIdentifier>
-<o:Identifier Ref="o91"/>
+<o:Identifier Ref="o93"/>
 </c:ParentIdentifier>
 </o:Relationship>
-<o:Relationship Id="o30">
+<o:Relationship Id="o31">
 <a:ObjectID>4F063E2A-FCF7-4F97-AEFB-06394FD92D93</a:ObjectID>
 <a:Name>CHARACTER</a:Name>
 <a:Code>CHARACTER2</a:Code>
@@ -2543,31 +2877,31 @@ DAT 1497047384</a:History>
 <a:Entity1ToEntity2RoleCardinality>1,1</a:Entity1ToEntity2RoleCardinality>
 <a:Entity2ToEntity1RoleCardinality>0,n</a:Entity2ToEntity1RoleCardinality>
 <c:Object1>
-<o:Entity Ref="o40"/>
+<o:Entity Ref="o41"/>
 </c:Object1>
 <c:Object2>
-<o:Entity Ref="o41"/>
+<o:Entity Ref="o42"/>
 </c:Object2>
 <c:Joins>
-<o:RelationshipJoin Id="o114">
+<o:RelationshipJoin Id="o116">
 <a:ObjectID>ECE13F7C-E04A-4071-8506-D576E179DC8E</a:ObjectID>
 <a:CreationDate>1497047384</a:CreationDate>
 <a:Creator>Arthur</a:Creator>
 <a:ModificationDate>1497047384</a:ModificationDate>
 <a:Modifier>Arthur</a:Modifier>
 <c:Object1>
-<o:EntityAttribute Ref="o95"/>
+<o:EntityAttribute Ref="o97"/>
 </c:Object1>
 <c:Object2>
-<o:EntityAttribute Ref="o100"/>
+<o:EntityAttribute Ref="o102"/>
 </c:Object2>
 </o:RelationshipJoin>
 </c:Joins>
 <c:ParentIdentifier>
-<o:Identifier Ref="o94"/>
+<o:Identifier Ref="o96"/>
 </c:ParentIdentifier>
 </o:Relationship>
-<o:Relationship Id="o32">
+<o:Relationship Id="o33">
 <a:ObjectID>79292ECE-6181-4CC8-AA15-0158454952EB</a:ObjectID>
 <a:Name>CHARACTER</a:Name>
 <a:Code>CHARACTER</a:Code>
@@ -2581,33 +2915,33 @@ DAT 1497047384</a:History>
 <a:Entity1ToEntity2RoleCardinality>1,1</a:Entity1ToEntity2RoleCardinality>
 <a:Entity2ToEntity1RoleCardinality>0,n</a:Entity2ToEntity1RoleCardinality>
 <c:Object1>
-<o:Entity Ref="o33"/>
+<o:Entity Ref="o34"/>
 </c:Object1>
 <c:Object2>
-<o:Entity Ref="o41"/>
+<o:Entity Ref="o42"/>
 </c:Object2>
 <c:Joins>
-<o:RelationshipJoin Id="o115">
+<o:RelationshipJoin Id="o117">
 <a:ObjectID>D383A341-0589-47D5-8F18-DB0554EFEB6F</a:ObjectID>
 <a:CreationDate>1497047384</a:CreationDate>
 <a:Creator>Arthur</a:Creator>
 <a:ModificationDate>1497047384</a:ModificationDate>
 <a:Modifier>Arthur</a:Modifier>
 <c:Object1>
-<o:EntityAttribute Ref="o44"/>
+<o:EntityAttribute Ref="o45"/>
 </c:Object1>
 <c:Object2>
-<o:EntityAttribute Ref="o101"/>
+<o:EntityAttribute Ref="o103"/>
 </c:Object2>
 </o:RelationshipJoin>
 </c:Joins>
 <c:ParentIdentifier>
-<o:Identifier Ref="o43"/>
+<o:Identifier Ref="o44"/>
 </c:ParentIdentifier>
 </o:Relationship>
 </c:Relationships>
 <c:TargetModels>
-<o:TargetModel Id="o116">
+<o:TargetModel Id="o118">
 <a:ObjectID>335168CD-FE61-45EE-8D3E-3A554395E047</a:ObjectID>
 <a:Name>play-batch-mcd</a:Name>
 <a:Code>PLAY_BATCH_MCD</a:Code>
@@ -2618,6 +2952,21 @@ DAT 1497047384</a:History>
 <a:TargetModelURL>file:///C|/Users/Arthur/Documents/GitHub/play/play-batch/model/play-batch-mcd.mcd</a:TargetModelURL>
 <a:TargetModelID>E541E082-F2E5-4B95-938D-4FD8B50F3F9E</a:TargetModelID>
 <a:TargetModelClassID>1E597170-9350-11D1-AB3C-0020AF71E433</a:TargetModelClassID>
+<c:SessionShortcuts>
+<o:Shortcut Ref="o4"/>
+</c:SessionShortcuts>
+</o:TargetModel>
+<o:TargetModel Id="o119">
+<a:ObjectID>8592413E-0B1C-4EA4-B40F-8B58DC3EDC95</a:ObjectID>
+<a:Name>play-batch-mcd</a:Name>
+<a:Code>PLAY_BATCH_MCD</a:Code>
+<a:CreationDate>1497047474</a:CreationDate>
+<a:Creator>Arthur</a:Creator>
+<a:ModificationDate>1497047510</a:ModificationDate>
+<a:Modifier>Arthur</a:Modifier>
+<a:TargetModelURL>file:///C|/Users/Arthur/Documents/GitHub/play/play-batch/model/play-batch-mcd.mpd</a:TargetModelURL>
+<a:TargetModelID>C68D8820-1327-46E3-AA72-8F91B71AEB50</a:TargetModelID>
+<a:TargetModelClassID>CDE44E21-9669-11D1-9914-006097355D9B</a:TargetModelClassID>
 <c:SessionShortcuts>
 <o:Shortcut Ref="o3"/>
 </c:SessionShortcuts>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?PowerDesigner AppLocale="UTF16" ID="{C68D8820-1327-46E3-AA72-8F91B71AEB50}" Label="" LastModificationDate="1497048857" Name="play-batch-mcd" Objects="99" Symbols="19" Target="Microsoft SQL Server 2008" Type="{CDE44E21-9669-11D1-9914-006097355D9B}" signature="PDM_DATA_MODEL_XML" version="15.1.0.2850"?>
+<?PowerDesigner AppLocale="UTF16" ID="{C68D8820-1327-46E3-AA72-8F91B71AEB50}" Label="" LastModificationDate="1497137039" Name="play-batch-mcd" Objects="100" Symbols="19" Target="Microsoft SQL Server 2008" Type="{CDE44E21-9669-11D1-9914-006097355D9B}" signature="PDM_DATA_MODEL_XML" version="15.1.0.2850"?>
 <!-- Veuillez ne pas modifier ce fichier -->
 
 <Model xmlns:a="attribute" xmlns:c="collection" xmlns:o="object">
@@ -12,10 +12,10 @@
 <a:Code>PLAY_BATCH_MCD</a:Code>
 <a:CreationDate>1497047463</a:CreationDate>
 <a:Creator>Arthur</a:Creator>
-<a:ModificationDate>1497047534</a:ModificationDate>
+<a:ModificationDate>1497137039</a:ModificationDate>
 <a:Modifier>Arthur</a:Modifier>
 <a:History>ORG {C97BE401-6D12-4D0F-84D7-686D545087E1}
-DAT 1497047474
+DAT 1497137039
 ATT FOPT</a:History>
 <a:PackageOptionsText>[FolderOptions]
 
@@ -2500,6 +2500,7 @@ ConvTablePath=%_HOME%\Fichiers de ressources\Tables de conversion
 
 [ModelOptions\Generate\Pdm]
 RRMapping=No
+PreserveMode=Yes
 
 [ModelOptions\Generate\Cdm]
 CheckModel=Yes
@@ -2576,9 +2577,9 @@ PhysOpts=</a:ModelOptionsText>
 <a:ObjectID>F12A7BDC-F8F0-4900-8FD4-007CD749582C</a:ObjectID>
 <a:Name>play-batch-mcd</a:Name>
 <a:Code>PLAY_BATCH_MCD</a:Code>
-<a:CreationDate>1497047474</a:CreationDate>
+<a:CreationDate>1497137039</a:CreationDate>
 <a:Creator>Arthur</a:Creator>
-<a:ModificationDate>1497047474</a:ModificationDate>
+<a:ModificationDate>1497137039</a:ModificationDate>
 <a:Modifier>Arthur</a:Modifier>
 <a:TargetStereotype/>
 <a:TargetID>C97BE401-6D12-4D0F-84D7-686D545087E1</a:TargetID>
@@ -3325,7 +3326,7 @@ Shadow=0
 <a:PaperSource>15</a:PaperSource>
 <c:Symbols>
 <o:ReferenceSymbol Id="o6">
-<a:ModificationDate>1497047495</a:ModificationDate>
+<a:ModificationDate>1497137039</a:ModificationDate>
 <a:Rect>((-13800,37312), (-4062,37762))</a:Rect>
 <a:ListOfPoints>((-4062,37537),(-13800,37537))</a:ListOfPoints>
 <a:CornerStyle>1</a:CornerStyle>
@@ -3346,7 +3347,7 @@ DESTINATION 0 Arial,8,N</a:FontList>
 </c:Object>
 </o:ReferenceSymbol>
 <o:ReferenceSymbol Id="o10">
-<a:ModificationDate>1497047585</a:ModificationDate>
+<a:ModificationDate>1497137039</a:ModificationDate>
 <a:Rect>((-3912,37198), (13399,37648))</a:Rect>
 <a:ListOfPoints>((-3912,37423),(13399,37423))</a:ListOfPoints>
 <a:CornerStyle>1</a:CornerStyle>
@@ -3367,7 +3368,7 @@ DESTINATION 0 Arial,8,N</a:FontList>
 </c:Object>
 </o:ReferenceSymbol>
 <o:ReferenceSymbol Id="o13">
-<a:ModificationDate>1497047586</a:ModificationDate>
+<a:ModificationDate>1497137039</a:ModificationDate>
 <a:Rect>((-23325,25049), (7225,25499))</a:Rect>
 <a:ListOfPoints>((-23325,25274),(7225,25274))</a:ListOfPoints>
 <a:CornerStyle>1</a:CornerStyle>
@@ -3388,9 +3389,9 @@ DESTINATION 0 Arial,8,N</a:FontList>
 </c:Object>
 </o:ReferenceSymbol>
 <o:ReferenceSymbol Id="o16">
-<a:ModificationDate>1497047506</a:ModificationDate>
-<a:Rect>((-28062,14150), (-27612,23775))</a:Rect>
-<a:ListOfPoints>((-27837,14150),(-27837,23775))</a:ListOfPoints>
+<a:ModificationDate>1497137039</a:ModificationDate>
+<a:Rect>((-28062,14450), (-27612,23775))</a:Rect>
+<a:ListOfPoints>((-27837,14450),(-27837,23775))</a:ListOfPoints>
 <a:CornerStyle>1</a:CornerStyle>
 <a:ArrowStyle>1</a:ArrowStyle>
 <a:LineColor>11184640</a:LineColor>
@@ -3409,9 +3410,9 @@ DESTINATION 0 Arial,8,N</a:FontList>
 </c:Object>
 </o:ReferenceSymbol>
 <o:ReferenceSymbol Id="o19">
-<a:ModificationDate>1497047570</a:ModificationDate>
-<a:Rect>((-17050,13875), (3350,14325))</a:Rect>
-<a:ListOfPoints>((-17050,14100),(3350,14100))</a:ListOfPoints>
+<a:ModificationDate>1497137039</a:ModificationDate>
+<a:Rect>((-17050,14023), (3350,14473))</a:Rect>
+<a:ListOfPoints>((-17050,14248),(3350,14248))</a:ListOfPoints>
 <a:CornerStyle>1</a:CornerStyle>
 <a:ArrowStyle>1</a:ArrowStyle>
 <a:LineColor>11184640</a:LineColor>
@@ -3430,9 +3431,9 @@ DESTINATION 0 Arial,8,N</a:FontList>
 </c:Object>
 </o:ReferenceSymbol>
 <o:ReferenceSymbol Id="o22">
-<a:ModificationDate>1497047568</a:ModificationDate>
-<a:Rect>((-17125,7187), (2825,7637))</a:Rect>
-<a:ListOfPoints>((-17125,7412),(2825,7412))</a:ListOfPoints>
+<a:ModificationDate>1497137039</a:ModificationDate>
+<a:Rect>((-17125,7089), (2825,7539))</a:Rect>
+<a:ListOfPoints>((-17125,7314),(2825,7314))</a:ListOfPoints>
 <a:CornerStyle>1</a:CornerStyle>
 <a:ArrowStyle>1</a:ArrowStyle>
 <a:LineColor>11184640</a:LineColor>
@@ -3451,9 +3452,9 @@ DESTINATION 0 Arial,8,N</a:FontList>
 </c:Object>
 </o:ReferenceSymbol>
 <o:ReferenceSymbol Id="o25">
-<a:ModificationDate>1497047575</a:ModificationDate>
-<a:Rect>((-19675,125), (4775,7175))</a:Rect>
-<a:ListOfPoints>((-19675,7175),(-19675,125),(4775,125))</a:ListOfPoints>
+<a:ModificationDate>1497137039</a:ModificationDate>
+<a:Rect>((-19675,125), (4775,6963))</a:Rect>
+<a:ListOfPoints>((-19675,6963),(-19675,125),(4775,125))</a:ListOfPoints>
 <a:CornerStyle>1</a:CornerStyle>
 <a:ArrowStyle>1</a:ArrowStyle>
 <a:LineColor>11184640</a:LineColor>
@@ -3472,8 +3473,8 @@ DESTINATION 0 Arial,8,N</a:FontList>
 </c:Object>
 </o:ReferenceSymbol>
 <o:ReferenceSymbol Id="o28">
-<a:ModificationDate>1497047581</a:ModificationDate>
-<a:Rect>((-26355,46723), (-25905,54950))</a:Rect>
+<a:ModificationDate>1497137039</a:ModificationDate>
+<a:Rect>((-26630,46723), (-25630,54950))</a:Rect>
 <a:ListOfPoints>((-26130,46723),(-26130,54950))</a:ListOfPoints>
 <a:CornerStyle>1</a:CornerStyle>
 <a:ArrowStyle>1</a:ArrowStyle>
@@ -3493,8 +3494,8 @@ DESTINATION 0 Arial,8,N</a:FontList>
 </c:Object>
 </o:ReferenceSymbol>
 <o:ReferenceSymbol Id="o32">
-<a:ModificationDate>1497047580</a:ModificationDate>
-<a:Rect>((-27239,35250), (-26789,46723))</a:Rect>
+<a:ModificationDate>1497137039</a:ModificationDate>
+<a:Rect>((-27514,35250), (-26514,46723))</a:Rect>
 <a:ListOfPoints>((-27014,46723),(-27014,35250))</a:ListOfPoints>
 <a:CornerStyle>1</a:CornerStyle>
 <a:ArrowStyle>1</a:ArrowStyle>
@@ -3514,6 +3515,7 @@ DESTINATION 0 Arial,8,N</a:FontList>
 </c:Object>
 </o:ReferenceSymbol>
 <o:TableSymbol Id="o8">
+<a:ModificationDate>1497137039</a:ModificationDate>
 <a:IconMode>-1</a:IconMode>
 <a:Rect>((-33716,21310), (-13684,40414))</a:Rect>
 <a:LineColor>11184640</a:LineColor>
@@ -3537,7 +3539,7 @@ LABL 0 Arial,8,N</a:FontList>
 </c:Object>
 </o:TableSymbol>
 <o:TableSymbol Id="o11">
-<a:ModificationDate>1497047585</a:ModificationDate>
+<a:ModificationDate>1497137039</a:ModificationDate>
 <a:IconMode>-1</a:IconMode>
 <a:Rect>((6087,35140), (20711,39634))</a:Rect>
 <a:LineColor>11184640</a:LineColor>
@@ -3561,7 +3563,7 @@ LABL 0 Arial,8,N</a:FontList>
 </c:Object>
 </o:TableSymbol>
 <o:TableSymbol Id="o14">
-<a:ModificationDate>1497047586</a:ModificationDate>
+<a:ModificationDate>1497137039</a:ModificationDate>
 <a:IconMode>-1</a:IconMode>
 <a:Rect>((6317,22016), (26581,28458))</a:Rect>
 <a:LineColor>11184640</a:LineColor>
@@ -3585,9 +3587,9 @@ LABL 0 Arial,8,N</a:FontList>
 </c:Object>
 </o:TableSymbol>
 <o:TableSymbol Id="o17">
-<a:ModificationDate>1497047506</a:ModificationDate>
+<a:ModificationDate>1497137039</a:ModificationDate>
 <a:IconMode>-1</a:IconMode>
-<a:Rect>((-33778,3432), (-16372,16692))</a:Rect>
+<a:Rect>((-33778,2945), (-16372,17179))</a:Rect>
 <a:LineColor>11184640</a:LineColor>
 <a:FillColor>16777136</a:FillColor>
 <a:ShadowColor>12632256</a:ShadowColor>
@@ -3609,7 +3611,7 @@ LABL 0 Arial,8,N</a:FontList>
 </c:Object>
 </o:TableSymbol>
 <o:TableSymbol Id="o20">
-<a:ModificationDate>1497047570</a:ModificationDate>
+<a:ModificationDate>1497137039</a:ModificationDate>
 <a:IconMode>-1</a:IconMode>
 <a:Rect>((2376,12012), (16922,16012))</a:Rect>
 <a:LineColor>11184640</a:LineColor>
@@ -3633,7 +3635,7 @@ LABL 0 Arial,8,N</a:FontList>
 </c:Object>
 </o:TableSymbol>
 <o:TableSymbol Id="o23">
-<a:ModificationDate>1497047568</a:ModificationDate>
+<a:ModificationDate>1497137039</a:ModificationDate>
 <a:IconMode>-1</a:IconMode>
 <a:Rect>((2452,5238), (16998,9237))</a:Rect>
 <a:LineColor>11184640</a:LineColor>
@@ -3657,7 +3659,7 @@ LABL 0 Arial,8,N</a:FontList>
 </c:Object>
 </o:TableSymbol>
 <o:TableSymbol Id="o26">
-<a:ModificationDate>1497047575</a:ModificationDate>
+<a:ModificationDate>1497137039</a:ModificationDate>
 <a:IconMode>-1</a:IconMode>
 <a:Rect>((2614,-2211), (16234,1789))</a:Rect>
 <a:LineColor>11184640</a:LineColor>
@@ -3681,7 +3683,7 @@ LABL 0 Arial,8,N</a:FontList>
 </c:Object>
 </o:TableSymbol>
 <o:TableSymbol Id="o30">
-<a:ModificationDate>1497047581</a:ModificationDate>
+<a:ModificationDate>1497137039</a:ModificationDate>
 <a:IconMode>-1</a:IconMode>
 <a:Rect>((-33741,53790), (-16259,59258))</a:Rect>
 <a:LineColor>11184640</a:LineColor>
@@ -3705,7 +3707,7 @@ LABL 0 Arial,8,N</a:FontList>
 </c:Object>
 </o:TableSymbol>
 <o:TableSymbol Id="o29">
-<a:ModificationDate>1497047580</a:ModificationDate>
+<a:ModificationDate>1497137039</a:ModificationDate>
 <a:IconMode>-1</a:IconMode>
 <a:Rect>((-33752,44091), (-16578,49559))</a:Rect>
 <a:AutoAdjustToText>0</a:AutoAdjustToText>
@@ -3730,7 +3732,7 @@ LABL 0 Arial,8,N</a:FontList>
 </c:Object>
 </o:TableSymbol>
 <o:TableSymbol Id="o7">
-<a:ModificationDate>1497047495</a:ModificationDate>
+<a:ModificationDate>1497137039</a:ModificationDate>
 <a:IconMode>-1</a:IconMode>
 <a:Rect>((-8826,35500), (699,39499))</a:Rect>
 <a:LineColor>11184640</a:LineColor>
@@ -4262,7 +4264,7 @@ DAT 1497047384</a:History>
 <a:Code>TORRENT</a:Code>
 <a:CreationDate>1497047474</a:CreationDate>
 <a:Creator>Arthur</a:Creator>
-<a:ModificationDate>1497047474</a:ModificationDate>
+<a:ModificationDate>1497137039</a:ModificationDate>
 <a:Modifier>Arthur</a:Modifier>
 <a:History>ORG {0E0C5656-B120-4AE5-8688-1FE81A4A3D59}
 DAT 1497047474
@@ -4347,6 +4349,20 @@ DAT 1497047384</a:History>
 <a:Mandatory>1</a:Mandatory>
 </o:Column>
 <o:Column Id="o78">
+<a:ObjectID>34F4954D-2794-4280-B0A6-2E7F3DE8225A</a:ObjectID>
+<a:Name>TORRENT_T411_ID</a:Name>
+<a:Code>TORRENT_T411_ID</a:Code>
+<a:CreationDate>1497137038</a:CreationDate>
+<a:Creator>Arthur</a:Creator>
+<a:ModificationDate>1497137039</a:ModificationDate>
+<a:Modifier>Arthur</a:Modifier>
+<a:History>ORG {629D174D-D85A-42FD-84A4-625709DAA65C}
+DAT 1497137038
+ORG {12F1AD29-DA81-4BF7-A921-3EC0F5770D29}
+DAT 1497137027</a:History>
+<a:DataType>int</a:DataType>
+</o:Column>
+<o:Column Id="o79">
 <a:ObjectID>F14BF82D-C33D-49F3-A508-66BE5F7FC48C</a:ObjectID>
 <a:Name>TORRENT_NAME</a:Name>
 <a:Code>TORRENT_NAME</a:Code>
@@ -4361,7 +4377,7 @@ DAT 1497047384</a:History>
 <a:DataType>varchar(250)</a:DataType>
 <a:Length>250</a:Length>
 </o:Column>
-<o:Column Id="o79">
+<o:Column Id="o80">
 <a:ObjectID>C917F1BB-D829-48F7-808A-F8F6C742FEF7</a:ObjectID>
 <a:Name>TORRENT_SLUG</a:Name>
 <a:Code>TORRENT_SLUG</a:Code>
@@ -4376,7 +4392,7 @@ DAT 1497047384</a:History>
 <a:DataType>varchar(250)</a:DataType>
 <a:Length>250</a:Length>
 </o:Column>
-<o:Column Id="o80">
+<o:Column Id="o81">
 <a:ObjectID>4AB2375F-C268-45B4-A56A-6C56C69A3113</a:ObjectID>
 <a:Name>TORRENT_YEAR</a:Name>
 <a:Code>TORRENT_YEAR</a:Code>
@@ -4390,7 +4406,7 @@ ORG {60391D63-CC1A-40C3-85D4-B730328F3D6B}
 DAT 1497047384</a:History>
 <a:DataType>int</a:DataType>
 </o:Column>
-<o:Column Id="o81">
+<o:Column Id="o82">
 <a:ObjectID>96D66E35-6A6A-4FE2-8785-834CD443CF32</a:ObjectID>
 <a:Name>TORRENT_SIZE</a:Name>
 <a:Code>TORRENT_SIZE</a:Code>
@@ -4404,7 +4420,7 @@ ORG {24DAAC10-4601-432B-BAF0-1C641BC8E5FE}
 DAT 1497047384</a:History>
 <a:DataType>bigint</a:DataType>
 </o:Column>
-<o:Column Id="o82">
+<o:Column Id="o83">
 <a:ObjectID>FBFE0FE7-3F7D-48F5-B565-641A960AC6E0</a:ObjectID>
 <a:Name>TORRENT_SEEDERS</a:Name>
 <a:Code>TORRENT_SEEDERS</a:Code>
@@ -4418,7 +4434,7 @@ ORG {15DDA41C-6A59-42A9-BA0E-A4FB68EA8FA6}
 DAT 1497047384</a:History>
 <a:DataType>int</a:DataType>
 </o:Column>
-<o:Column Id="o83">
+<o:Column Id="o84">
 <a:ObjectID>5ED911AB-9FF3-4C63-B69D-C95C15C06C3E</a:ObjectID>
 <a:Name>TORRENT_LEECHERS</a:Name>
 <a:Code>TORRENT_LEECHERS</a:Code>
@@ -4432,7 +4448,7 @@ ORG {451C94AF-280D-45D3-B4CB-178042A22E83}
 DAT 1497047384</a:History>
 <a:DataType>int</a:DataType>
 </o:Column>
-<o:Column Id="o84">
+<o:Column Id="o85">
 <a:ObjectID>C308A81B-6720-4077-9300-4BD8C73B898D</a:ObjectID>
 <a:Name>TORRENT_COMPLETED</a:Name>
 <a:Code>TORRENT_COMPLETED</a:Code>
@@ -4448,7 +4464,7 @@ DAT 1497047384</a:History>
 </o:Column>
 </c:Columns>
 <c:Keys>
-<o:Key Id="o85">
+<o:Key Id="o86">
 <a:ObjectID>10E5DD2C-0FD4-41DB-BB32-864D936DCE71</a:ObjectID>
 <a:Name>TORRENT_ID</a:Name>
 <a:Code>TORRENT_ID</a:Code>
@@ -4466,7 +4482,7 @@ DAT 1497047384</a:History>
 </o:Key>
 </c:Keys>
 <c:PrimaryKey>
-<o:Key Ref="o85"/>
+<o:Key Ref="o86"/>
 </c:PrimaryKey>
 </o:Table>
 <o:Table Id="o38">
@@ -4483,7 +4499,7 @@ ORG {6573E83F-D2D4-41E6-92DC-54867CA76B40}
 DAT 1497047384</a:History>
 <a:TotalSavingCurrency/>
 <c:Columns>
-<o:Column Id="o86">
+<o:Column Id="o87">
 <a:ObjectID>A64E244F-5317-4D45-80DA-229FC6ED7864</a:ObjectID>
 <a:Name>CATEGORY_ID</a:Name>
 <a:Code>CATEGORY_ID</a:Code>
@@ -4500,7 +4516,7 @@ ATT DTTP</a:History>
 <a:Identity>1</a:Identity>
 <a:Mandatory>1</a:Mandatory>
 </o:Column>
-<o:Column Id="o87">
+<o:Column Id="o88">
 <a:ObjectID>9615F07B-BB76-44B2-B514-D40EE526CDF0</a:ObjectID>
 <a:Name>CATEGORY_NAME</a:Name>
 <a:Code>CATEGORY_NAME</a:Code>
@@ -4517,7 +4533,7 @@ DAT 1497047384</a:History>
 </o:Column>
 </c:Columns>
 <c:Keys>
-<o:Key Id="o88">
+<o:Key Id="o89">
 <a:ObjectID>2BFF16FB-3AC0-4BAB-AADD-B0F60AE038A5</a:ObjectID>
 <a:Name>CATEGORY_ID</a:Name>
 <a:Code>CATEGORY_ID</a:Code>
@@ -4530,12 +4546,12 @@ DAT 1497047474
 ORG {266A49DC-DB41-46C4-85BC-0F74522288F4}
 DAT 1497047384</a:History>
 <c:Key.Columns>
-<o:Column Ref="o86"/>
+<o:Column Ref="o87"/>
 </c:Key.Columns>
 </o:Key>
 </c:Keys>
 <c:PrimaryKey>
-<o:Key Ref="o88"/>
+<o:Key Ref="o89"/>
 </c:PrimaryKey>
 </o:Table>
 <o:Table Id="o39">
@@ -4552,7 +4568,7 @@ ORG {3F69628B-AA62-4E22-ADF0-E856CDEDC7D9}
 DAT 1497047384</a:History>
 <a:TotalSavingCurrency/>
 <c:Columns>
-<o:Column Id="o89">
+<o:Column Id="o90">
 <a:ObjectID>E19F0CDA-BE3A-4EED-9751-8586FF345F21</a:ObjectID>
 <a:Name>LANGUAGE_ID</a:Name>
 <a:Code>LANGUAGE_ID</a:Code>
@@ -4569,7 +4585,7 @@ ATT DTTP</a:History>
 <a:Identity>1</a:Identity>
 <a:Mandatory>1</a:Mandatory>
 </o:Column>
-<o:Column Id="o90">
+<o:Column Id="o91">
 <a:ObjectID>231E0347-448A-450B-AE21-21B0ED8E79F4</a:ObjectID>
 <a:Name>LANGUAGE_NAME</a:Name>
 <a:Code>LANGUAGE_NAME</a:Code>
@@ -4586,7 +4602,7 @@ DAT 1497047384</a:History>
 </o:Column>
 </c:Columns>
 <c:Keys>
-<o:Key Id="o91">
+<o:Key Id="o92">
 <a:ObjectID>CF9B0CEC-BC89-45F1-9637-037B11454635</a:ObjectID>
 <a:Name>LANGUAGE_ID</a:Name>
 <a:Code>LANGUAGE_ID</a:Code>
@@ -4599,12 +4615,12 @@ DAT 1497047474
 ORG {721268EB-8A1F-4426-892C-94B574569412}
 DAT 1497047384</a:History>
 <c:Key.Columns>
-<o:Column Ref="o89"/>
+<o:Column Ref="o90"/>
 </c:Key.Columns>
 </o:Key>
 </c:Keys>
 <c:PrimaryKey>
-<o:Key Ref="o91"/>
+<o:Key Ref="o92"/>
 </c:PrimaryKey>
 </o:Table>
 <o:Table Id="o40">
@@ -4621,7 +4637,7 @@ ORG {91180EE7-EB68-4056-B17D-82AAC0D7CB49}
 DAT 1497047384</a:History>
 <a:TotalSavingCurrency/>
 <c:Columns>
-<o:Column Id="o92">
+<o:Column Id="o93">
 <a:ObjectID>7AEA6BE2-695A-4A87-AA48-67C670EA10AD</a:ObjectID>
 <a:Name>QUALITY_ID</a:Name>
 <a:Code>QUALITY_ID</a:Code>
@@ -4638,7 +4654,7 @@ ATT DTTP</a:History>
 <a:Identity>1</a:Identity>
 <a:Mandatory>1</a:Mandatory>
 </o:Column>
-<o:Column Id="o93">
+<o:Column Id="o94">
 <a:ObjectID>77C2244B-ED00-425B-8338-FC99652718FA</a:ObjectID>
 <a:Name>QUALITY_NAME</a:Name>
 <a:Code>QUALITY_NAME</a:Code>
@@ -4655,7 +4671,7 @@ DAT 1497047384</a:History>
 </o:Column>
 </c:Columns>
 <c:Keys>
-<o:Key Id="o94">
+<o:Key Id="o95">
 <a:ObjectID>AE6870BD-792D-418C-9BCF-F50420504B3C</a:ObjectID>
 <a:Name>QUALITY_ID</a:Name>
 <a:Code>QUALITY_ID</a:Code>
@@ -4668,12 +4684,12 @@ DAT 1497047474
 ORG {9AF4A085-1495-4CAB-9F0F-CC2BB0870405}
 DAT 1497047384</a:History>
 <c:Key.Columns>
-<o:Column Ref="o92"/>
+<o:Column Ref="o93"/>
 </c:Key.Columns>
 </o:Key>
 </c:Keys>
 <c:PrimaryKey>
-<o:Key Ref="o94"/>
+<o:Key Ref="o95"/>
 </c:PrimaryKey>
 </o:Table>
 <o:Table Id="o41">
@@ -4690,7 +4706,7 @@ ORG {5FAD731A-FC1E-47CC-B639-F6216970172A}
 DAT 1497047384</a:History>
 <a:TotalSavingCurrency/>
 <c:Columns>
-<o:Column Id="o95">
+<o:Column Id="o96">
 <a:ObjectID>E6206C37-108A-4A7D-8705-592C35E1D170</a:ObjectID>
 <a:Name>PERSON_ID</a:Name>
 <a:Code>PERSON_ID</a:Code>
@@ -4707,7 +4723,7 @@ ATT DTTP</a:History>
 <a:Identity>1</a:Identity>
 <a:Mandatory>1</a:Mandatory>
 </o:Column>
-<o:Column Id="o96">
+<o:Column Id="o97">
 <a:ObjectID>97A23A0F-20CC-4FA1-A7B7-FB4518B7CAC1</a:ObjectID>
 <a:Name>PERSON_FIRSTNAME</a:Name>
 <a:Code>PERSON_FIRSTNAME</a:Code>
@@ -4722,7 +4738,7 @@ DAT 1497047384</a:History>
 <a:DataType>varchar(250)</a:DataType>
 <a:Length>250</a:Length>
 </o:Column>
-<o:Column Id="o97">
+<o:Column Id="o98">
 <a:ObjectID>9BE191BB-0D74-4EFC-BA45-F66B0BF6C541</a:ObjectID>
 <a:Name>PERSON_LASTNAME</a:Name>
 <a:Code>PERSON_LASTNAME</a:Code>
@@ -4737,7 +4753,7 @@ DAT 1497047384</a:History>
 <a:DataType>varchar(250)</a:DataType>
 <a:Length>250</a:Length>
 </o:Column>
-<o:Column Id="o98">
+<o:Column Id="o99">
 <a:ObjectID>793E5F1E-890F-4F1A-85D3-1FFC0DD61540</a:ObjectID>
 <a:Name>PERSON_PROFILE_PATH</a:Name>
 <a:Code>PERSON_PROFILE_PATH</a:Code>
@@ -4754,7 +4770,7 @@ DAT 1497047384</a:History>
 </o:Column>
 </c:Columns>
 <c:Keys>
-<o:Key Id="o99">
+<o:Key Id="o100">
 <a:ObjectID>389FE362-169B-49AC-83FA-B207E7E33B42</a:ObjectID>
 <a:Name>PERSON_ID</a:Name>
 <a:Code>PERSON_ID</a:Code>
@@ -4767,12 +4783,12 @@ DAT 1497047474
 ORG {F8097C7D-090E-4BF0-91E4-050203173668}
 DAT 1497047384</a:History>
 <c:Key.Columns>
-<o:Column Ref="o95"/>
+<o:Column Ref="o96"/>
 </c:Key.Columns>
 </o:Key>
 </c:Keys>
 <c:PrimaryKey>
-<o:Key Ref="o99"/>
+<o:Key Ref="o100"/>
 </c:PrimaryKey>
 </o:Table>
 <o:Table Id="o42">
@@ -4789,7 +4805,7 @@ ORG {FB256F73-EBD8-4110-89C3-4B15E5ECCD84}
 DAT 1497047384</a:History>
 <a:TotalSavingCurrency/>
 <c:Columns>
-<o:Column Id="o100">
+<o:Column Id="o101">
 <a:ObjectID>D6AC98D7-4C88-470F-837C-2DF6E1833E19</a:ObjectID>
 <a:Name>PERSON_ID</a:Name>
 <a:Code>PERSON_ID</a:Code>
@@ -4804,7 +4820,7 @@ DAT 1497047384</a:History>
 <a:DataType>int</a:DataType>
 <a:Mandatory>1</a:Mandatory>
 </o:Column>
-<o:Column Id="o101">
+<o:Column Id="o102">
 <a:ObjectID>5C954061-E95F-4480-9620-5897CBCA21A1</a:ObjectID>
 <a:Name>MOVIE_ID</a:Name>
 <a:Code>MOVIE_ID</a:Code>
@@ -4819,7 +4835,7 @@ DAT 1497047384</a:History>
 <a:DataType>int</a:DataType>
 <a:Mandatory>1</a:Mandatory>
 </o:Column>
-<o:Column Id="o102">
+<o:Column Id="o103">
 <a:ObjectID>15028384-2B79-4D5E-A560-81C69BA93102</a:ObjectID>
 <a:Name>CHARACTER_NAME</a:Name>
 <a:Code>CHARACTER_NAME</a:Code>
@@ -4834,7 +4850,7 @@ DAT 1497047384</a:History>
 <a:DataType>varchar(250)</a:DataType>
 <a:Length>250</a:Length>
 </o:Column>
-<o:Column Id="o103">
+<o:Column Id="o104">
 <a:ObjectID>AACBC69E-627B-4BAE-9936-90F861FA8982</a:ObjectID>
 <a:Name>CHARACTER_ORDER</a:Name>
 <a:Code>CHARACTER_ORDER</a:Code>
@@ -4850,7 +4866,7 @@ DAT 1497047384</a:History>
 </o:Column>
 </c:Columns>
 <c:Keys>
-<o:Key Id="o104">
+<o:Key Id="o105">
 <a:ObjectID>C8BCEB58-5C74-4C6F-B3C1-6D56E1F1D5B3</a:ObjectID>
 <a:Name>Identifiant_1</a:Name>
 <a:Code>IDENTIFIANT_1</a:Code>
@@ -4861,13 +4877,13 @@ DAT 1497047384</a:History>
 <a:History>ORG {70BFE922-F4D1-4A3C-98D4-A9BB4EFE042B}
 DAT 1497047474</a:History>
 <c:Key.Columns>
-<o:Column Ref="o100"/>
 <o:Column Ref="o101"/>
+<o:Column Ref="o102"/>
 </c:Key.Columns>
 </o:Key>
 </c:Keys>
 <c:PrimaryKey>
-<o:Key Ref="o104"/>
+<o:Key Ref="o105"/>
 </c:PrimaryKey>
 </o:Table>
 <o:Table Id="o43">
@@ -4884,7 +4900,7 @@ ORG {2FAAC27E-D937-4297-AC32-A838D230C434}
 DAT 1497047384</a:History>
 <a:TotalSavingCurrency/>
 <c:Columns>
-<o:Column Id="o105">
+<o:Column Id="o106">
 <a:ObjectID>ADA9CEA1-58E0-47D3-847B-93CE21347C55</a:ObjectID>
 <a:Name>GENRE_ID</a:Name>
 <a:Code>GENRE_ID</a:Code>
@@ -4899,7 +4915,7 @@ DAT 1497047384</a:History>
 <a:DataType>int</a:DataType>
 <a:Mandatory>1</a:Mandatory>
 </o:Column>
-<o:Column Id="o106">
+<o:Column Id="o107">
 <a:ObjectID>D1DC9120-114A-446D-8D46-AE46702A7F57</a:ObjectID>
 <a:Name>MOVIE_ID</a:Name>
 <a:Code>MOVIE_ID</a:Code>
@@ -4916,7 +4932,7 @@ DAT 1497047384</a:History>
 </o:Column>
 </c:Columns>
 <c:Keys>
-<o:Key Id="o107">
+<o:Key Id="o108">
 <a:ObjectID>538061DE-D821-4E85-A40F-A2CEA436952C</a:ObjectID>
 <a:Name>Identifiant_1</a:Name>
 <a:Code>IDENTIFIANT_1</a:Code>
@@ -4927,13 +4943,13 @@ DAT 1497047384</a:History>
 <a:History>ORG {617CA263-8BB6-438A-B2F5-FC1BB8426DEA}
 DAT 1497047474</a:History>
 <c:Key.Columns>
-<o:Column Ref="o105"/>
 <o:Column Ref="o106"/>
+<o:Column Ref="o107"/>
 </c:Key.Columns>
 </o:Key>
 </c:Keys>
 <c:PrimaryKey>
-<o:Key Ref="o107"/>
+<o:Key Ref="o108"/>
 </c:PrimaryKey>
 </o:Table>
 </c:Tables>
@@ -4964,7 +4980,7 @@ DAT 1497047384</a:History>
 <o:Key Ref="o62"/>
 </c:ParentKey>
 <c:Joins>
-<o:ReferenceJoin Id="o108">
+<o:ReferenceJoin Id="o109">
 <a:ObjectID>A5CD9661-ED9F-43AF-B645-B566E6D65692</a:ObjectID>
 <a:CreationDate>1497047474</a:CreationDate>
 <a:Creator>Arthur</a:Creator>
@@ -4976,7 +4992,7 @@ DAT 1497047474</a:History>
 <o:Column Ref="o44"/>
 </c:Object1>
 <c:Object2>
-<o:Column Ref="o106"/>
+<o:Column Ref="o107"/>
 </c:Object2>
 </o:ReferenceJoin>
 </c:Joins>
@@ -5007,7 +5023,7 @@ DAT 1497047384</a:History>
 <o:Key Ref="o66"/>
 </c:ParentKey>
 <c:Joins>
-<o:ReferenceJoin Id="o109">
+<o:ReferenceJoin Id="o110">
 <a:ObjectID>28E118AC-574B-4555-B999-88BFE718104F</a:ObjectID>
 <a:CreationDate>1497047474</a:CreationDate>
 <a:Creator>Arthur</a:Creator>
@@ -5019,7 +5035,7 @@ DAT 1497047474</a:History>
 <o:Column Ref="o63"/>
 </c:Object1>
 <c:Object2>
-<o:Column Ref="o105"/>
+<o:Column Ref="o106"/>
 </c:Object2>
 </o:ReferenceJoin>
 </c:Joins>
@@ -5050,7 +5066,7 @@ DAT 1497047384</a:History>
 <o:Key Ref="o72"/>
 </c:ParentKey>
 <c:Joins>
-<o:ReferenceJoin Id="o110">
+<o:ReferenceJoin Id="o111">
 <a:ObjectID>036DE9A6-E9F5-459D-B036-8AF28C93D3C5</a:ObjectID>
 <a:CreationDate>1497047474</a:CreationDate>
 <a:Creator>Arthur</a:Creator>
@@ -5093,7 +5109,7 @@ DAT 1497047384</a:History>
 <o:Key Ref="o62"/>
 </c:ParentKey>
 <c:Joins>
-<o:ReferenceJoin Id="o111">
+<o:ReferenceJoin Id="o112">
 <a:ObjectID>0E3E4B35-F203-4B17-864C-B38E8804FCF3</a:ObjectID>
 <a:CreationDate>1497047474</a:CreationDate>
 <a:Creator>Arthur</a:Creator>
@@ -5133,10 +5149,10 @@ DAT 1497047384</a:History>
 <o:Table Ref="o37"/>
 </c:ChildTable>
 <c:ParentKey>
-<o:Key Ref="o88"/>
+<o:Key Ref="o89"/>
 </c:ParentKey>
 <c:Joins>
-<o:ReferenceJoin Id="o112">
+<o:ReferenceJoin Id="o113">
 <a:ObjectID>F4830421-E023-4A39-8D79-217E2BD6C96B</a:ObjectID>
 <a:CreationDate>1497047474</a:CreationDate>
 <a:Creator>Arthur</a:Creator>
@@ -5145,7 +5161,7 @@ DAT 1497047384</a:History>
 <a:History>ORG {6A36A1FA-BE3C-46B7-B3A3-6B93AA25CD3D}
 DAT 1497047474</a:History>
 <c:Object1>
-<o:Column Ref="o86"/>
+<o:Column Ref="o87"/>
 </c:Object1>
 <c:Object2>
 <o:Column Ref="o75"/>
@@ -5176,10 +5192,10 @@ DAT 1497047384</a:History>
 <o:Table Ref="o37"/>
 </c:ChildTable>
 <c:ParentKey>
-<o:Key Ref="o91"/>
+<o:Key Ref="o92"/>
 </c:ParentKey>
 <c:Joins>
-<o:ReferenceJoin Id="o113">
+<o:ReferenceJoin Id="o114">
 <a:ObjectID>FE6579B6-4615-4D6C-BB10-B3CD4B757B85</a:ObjectID>
 <a:CreationDate>1497047474</a:CreationDate>
 <a:Creator>Arthur</a:Creator>
@@ -5188,7 +5204,7 @@ DAT 1497047384</a:History>
 <a:History>ORG {54CAFED7-8CFA-41D7-8074-3A6793F0F6C1}
 DAT 1497047474</a:History>
 <c:Object1>
-<o:Column Ref="o89"/>
+<o:Column Ref="o90"/>
 </c:Object1>
 <c:Object2>
 <o:Column Ref="o76"/>
@@ -5219,10 +5235,10 @@ DAT 1497047384</a:History>
 <o:Table Ref="o37"/>
 </c:ChildTable>
 <c:ParentKey>
-<o:Key Ref="o94"/>
+<o:Key Ref="o95"/>
 </c:ParentKey>
 <c:Joins>
-<o:ReferenceJoin Id="o114">
+<o:ReferenceJoin Id="o115">
 <a:ObjectID>7D0606B5-CD95-4A18-9F81-839FDD5EB03A</a:ObjectID>
 <a:CreationDate>1497047474</a:CreationDate>
 <a:Creator>Arthur</a:Creator>
@@ -5231,7 +5247,7 @@ DAT 1497047384</a:History>
 <a:History>ORG {29437692-FE9B-4C72-8511-3F50606E0F1C}
 DAT 1497047474</a:History>
 <c:Object1>
-<o:Column Ref="o92"/>
+<o:Column Ref="o93"/>
 </c:Object1>
 <c:Object2>
 <o:Column Ref="o77"/>
@@ -5262,10 +5278,10 @@ DAT 1497047384</a:History>
 <o:Table Ref="o42"/>
 </c:ChildTable>
 <c:ParentKey>
-<o:Key Ref="o99"/>
+<o:Key Ref="o100"/>
 </c:ParentKey>
 <c:Joins>
-<o:ReferenceJoin Id="o115">
+<o:ReferenceJoin Id="o116">
 <a:ObjectID>1DAF7353-7B08-47DE-884F-6A94EB471270</a:ObjectID>
 <a:CreationDate>1497047474</a:CreationDate>
 <a:Creator>Arthur</a:Creator>
@@ -5274,10 +5290,10 @@ DAT 1497047384</a:History>
 <a:History>ORG {ECE13F7C-E04A-4071-8506-D576E179DC8E}
 DAT 1497047474</a:History>
 <c:Object1>
-<o:Column Ref="o95"/>
+<o:Column Ref="o96"/>
 </c:Object1>
 <c:Object2>
-<o:Column Ref="o100"/>
+<o:Column Ref="o101"/>
 </c:Object2>
 </o:ReferenceJoin>
 </c:Joins>
@@ -5308,7 +5324,7 @@ DAT 1497047384</a:History>
 <o:Key Ref="o62"/>
 </c:ParentKey>
 <c:Joins>
-<o:ReferenceJoin Id="o116">
+<o:ReferenceJoin Id="o117">
 <a:ObjectID>48B44E2D-7BC3-4A60-A078-81C65BBABE5F</a:ObjectID>
 <a:CreationDate>1497047474</a:CreationDate>
 <a:Creator>Arthur</a:Creator>
@@ -5320,14 +5336,14 @@ DAT 1497047474</a:History>
 <o:Column Ref="o44"/>
 </c:Object1>
 <c:Object2>
-<o:Column Ref="o101"/>
+<o:Column Ref="o102"/>
 </c:Object2>
 </o:ReferenceJoin>
 </c:Joins>
 </o:Reference>
 </c:References>
 <c:DefaultGroups>
-<o:Group Id="o117">
+<o:Group Id="o118">
 <a:ObjectID>9F8D681A-B612-40E8-9BFF-E5CF2A2A4E2E</a:ObjectID>
 <a:Name>PUBLIC</a:Name>
 <a:Code>PUBLIC</a:Code>
@@ -5338,7 +5354,7 @@ DAT 1497047474</a:History>
 </o:Group>
 </c:DefaultGroups>
 <c:TargetModels>
-<o:TargetModel Id="o118">
+<o:TargetModel Id="o119">
 <a:ObjectID>855F43B6-7F1D-4166-8ABF-E58DF5074E00</a:ObjectID>
 <a:Name>Microsoft SQL Server 2008</a:Name>
 <a:Code>MSSQLSRV2008</a:Code>
@@ -5353,7 +5369,7 @@ DAT 1497047474</a:History>
 <o:Shortcut Ref="o4"/>
 </c:SessionShortcuts>
 </o:TargetModel>
-<o:TargetModel Id="o119">
+<o:TargetModel Id="o120">
 <a:ObjectID>950C610A-1260-4565-96E0-E6DF84B8CCC4</a:ObjectID>
 <a:Name>play-batch-mcd</a:Name>
 <a:Code>PLAY_BATCH_MCD</a:Code>

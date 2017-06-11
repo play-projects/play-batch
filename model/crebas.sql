@@ -1,6 +1,6 @@
 /*==============================================================*/
 /* Nom de SGBD :  Microsoft SQL Server 2008                     */
-/* Date de création :  10/06/2017 00:55:12                      */
+/* Date de création :  11/06/2017 01:24:14                      */
 /*==============================================================*/
 
 
@@ -197,6 +197,7 @@ create table TORRENT (
    CATEGORY_ID          int                  not null,
    LANGUAGE_ID          int                  not null,
    QUALITY_ID           int                  not null,
+   TORRENT_T411_ID      int                  null,
    TORRENT_NAME         varchar(250)         null,
    TORRENT_SLUG         varchar(250)         null,
    TORRENT_YEAR         int                  null,

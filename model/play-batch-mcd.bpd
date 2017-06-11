@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?PowerDesigner AppLocale="UTF16" ID="{C68D8820-1327-46E3-AA72-8F91B71AEB50}" Label="" LastModificationDate="1497047586" Name="play-batch-mcd" Objects="99" Symbols="19" Target="Microsoft SQL Server 2008" Type="{CDE44E21-9669-11D1-9914-006097355D9B}" signature="PDM_DATA_MODEL_XML" version="15.1.0.2850"?>
+<?PowerDesigner AppLocale="UTF16" ID="{C68D8820-1327-46E3-AA72-8F91B71AEB50}" Label="" LastModificationDate="1497048876" Name="play-batch-mcd" Objects="99" Symbols="19" Target="Microsoft SQL Server 2008" Type="{CDE44E21-9669-11D1-9914-006097355D9B}" signature="PDM_DATA_MODEL_XML" version="15.1.0.2850"?>
 <!-- Veuillez ne pas modifier ce fichier -->
 
 <Model xmlns:a="attribute" xmlns:c="collection" xmlns:o="object">
@@ -12,11 +12,12 @@
 <a:Code>PLAY_BATCH_MCD</a:Code>
 <a:CreationDate>1497047463</a:CreationDate>
 <a:Creator>Arthur</a:Creator>
-<a:ModificationDate>1497047534</a:ModificationDate>
+<a:ModificationDate>1497048876</a:ModificationDate>
 <a:Modifier>Arthur</a:Modifier>
 <a:History>ORG {C97BE401-6D12-4D0F-84D7-686D545087E1}
 DAT 1497047474
-ATT FOPT</a:History>
+ATT FOPT
+ATT MOPT</a:History>
 <a:PackageOptionsText>[FolderOptions]
 
 [FolderOptions\Physical Objects]
@@ -2500,6 +2501,7 @@ ConvTablePath=%_HOME%\Fichiers de ressources\Tables de conversion
 
 [ModelOptions\Generate\Pdm]
 RRMapping=No
+PreserveMode=Yes
 
 [ModelOptions\Generate\Cdm]
 CheckModel=Yes
@@ -3514,6 +3516,7 @@ DESTINATION 0 Arial,8,N</a:FontList>
 </c:Object>
 </o:ReferenceSymbol>
 <o:TableSymbol Id="o8">
+<a:ModificationDate>1497048876</a:ModificationDate>
 <a:IconMode>-1</a:IconMode>
 <a:Rect>((-33716,21310), (-13684,40414))</a:Rect>
 <a:LineColor>11184640</a:LineColor>
@@ -3537,7 +3540,7 @@ LABL 0 Arial,8,N</a:FontList>
 </c:Object>
 </o:TableSymbol>
 <o:TableSymbol Id="o11">
-<a:ModificationDate>1497047585</a:ModificationDate>
+<a:ModificationDate>1497048876</a:ModificationDate>
 <a:IconMode>-1</a:IconMode>
 <a:Rect>((6087,35140), (20711,39634))</a:Rect>
 <a:LineColor>11184640</a:LineColor>
@@ -3561,7 +3564,7 @@ LABL 0 Arial,8,N</a:FontList>
 </c:Object>
 </o:TableSymbol>
 <o:TableSymbol Id="o14">
-<a:ModificationDate>1497047586</a:ModificationDate>
+<a:ModificationDate>1497048876</a:ModificationDate>
 <a:IconMode>-1</a:IconMode>
 <a:Rect>((6317,22016), (26581,28458))</a:Rect>
 <a:LineColor>11184640</a:LineColor>
@@ -3585,7 +3588,7 @@ LABL 0 Arial,8,N</a:FontList>
 </c:Object>
 </o:TableSymbol>
 <o:TableSymbol Id="o17">
-<a:ModificationDate>1497047506</a:ModificationDate>
+<a:ModificationDate>1497048876</a:ModificationDate>
 <a:IconMode>-1</a:IconMode>
 <a:Rect>((-33778,3432), (-16372,16692))</a:Rect>
 <a:LineColor>11184640</a:LineColor>
@@ -3609,7 +3612,7 @@ LABL 0 Arial,8,N</a:FontList>
 </c:Object>
 </o:TableSymbol>
 <o:TableSymbol Id="o20">
-<a:ModificationDate>1497047570</a:ModificationDate>
+<a:ModificationDate>1497048876</a:ModificationDate>
 <a:IconMode>-1</a:IconMode>
 <a:Rect>((2376,12012), (16922,16012))</a:Rect>
 <a:LineColor>11184640</a:LineColor>
@@ -3633,7 +3636,7 @@ LABL 0 Arial,8,N</a:FontList>
 </c:Object>
 </o:TableSymbol>
 <o:TableSymbol Id="o23">
-<a:ModificationDate>1497047568</a:ModificationDate>
+<a:ModificationDate>1497048876</a:ModificationDate>
 <a:IconMode>-1</a:IconMode>
 <a:Rect>((2452,5238), (16998,9237))</a:Rect>
 <a:LineColor>11184640</a:LineColor>
@@ -3657,7 +3660,7 @@ LABL 0 Arial,8,N</a:FontList>
 </c:Object>
 </o:TableSymbol>
 <o:TableSymbol Id="o26">
-<a:ModificationDate>1497047575</a:ModificationDate>
+<a:ModificationDate>1497048876</a:ModificationDate>
 <a:IconMode>-1</a:IconMode>
 <a:Rect>((2614,-2211), (16234,1789))</a:Rect>
 <a:LineColor>11184640</a:LineColor>
@@ -3681,7 +3684,7 @@ LABL 0 Arial,8,N</a:FontList>
 </c:Object>
 </o:TableSymbol>
 <o:TableSymbol Id="o30">
-<a:ModificationDate>1497047581</a:ModificationDate>
+<a:ModificationDate>1497048876</a:ModificationDate>
 <a:IconMode>-1</a:IconMode>
 <a:Rect>((-33741,53790), (-16259,59258))</a:Rect>
 <a:LineColor>11184640</a:LineColor>
@@ -3730,7 +3733,7 @@ LABL 0 Arial,8,N</a:FontList>
 </c:Object>
 </o:TableSymbol>
 <o:TableSymbol Id="o7">
-<a:ModificationDate>1497047495</a:ModificationDate>
+<a:ModificationDate>1497048876</a:ModificationDate>
 <a:IconMode>-1</a:IconMode>
 <a:Rect>((-8826,35500), (699,39499))</a:Rect>
 <a:LineColor>11184640</a:LineColor>
@@ -3780,13 +3783,14 @@ DAT 1497047384</a:History>
 <a:Code>MOVIE_ID</a:Code>
 <a:CreationDate>1497047474</a:CreationDate>
 <a:Creator>Arthur</a:Creator>
-<a:ModificationDate>1497047474</a:ModificationDate>
+<a:ModificationDate>1497048820</a:ModificationDate>
 <a:Modifier>Arthur</a:Modifier>
 <a:History>ORG {DD70B316-FB75-46F5-BF07-D6267316CE69}
 DAT 1497047474
 ORG {FA44CC45-179D-439A-8064-9C9BA6B3DD2E}
-DAT 1497047384</a:History>
-<a:DataType>numeric</a:DataType>
+DAT 1497047384
+ATT DTTP</a:History>
+<a:DataType>integer</a:DataType>
 <a:Identity>1</a:Identity>
 <a:Mandatory>1</a:Mandatory>
 </o:Column>
@@ -4079,13 +4083,14 @@ DAT 1497047384</a:History>
 <a:Code>GENRE_ID</a:Code>
 <a:CreationDate>1497047474</a:CreationDate>
 <a:Creator>Arthur</a:Creator>
-<a:ModificationDate>1497047474</a:ModificationDate>
+<a:ModificationDate>1497048827</a:ModificationDate>
 <a:Modifier>Arthur</a:Modifier>
 <a:History>ORG {38B581A4-003D-4072-A346-9A0DE4265755}
 DAT 1497047474
 ORG {5F6FE079-8F77-4D0E-A31B-7A5A7BA00FFF}
-DAT 1497047384</a:History>
-<a:DataType>numeric</a:DataType>
+DAT 1497047384
+ATT DTTP</a:History>
+<a:DataType>integer</a:DataType>
 <a:Identity>1</a:Identity>
 <a:Mandatory>1</a:Mandatory>
 </o:Column>
@@ -4161,13 +4166,14 @@ DAT 1497047384</a:History>
 <a:Code>COLLECTION_ID</a:Code>
 <a:CreationDate>1497047474</a:CreationDate>
 <a:Creator>Arthur</a:Creator>
-<a:ModificationDate>1497047474</a:ModificationDate>
+<a:ModificationDate>1497048833</a:ModificationDate>
 <a:Modifier>Arthur</a:Modifier>
 <a:History>ORG {3C0EB1CE-B23D-4929-90C5-70544A74E4FB}
 DAT 1497047474
 ORG {35B26C0B-9741-460E-80EA-B9DCC452461C}
-DAT 1497047384</a:History>
-<a:DataType>numeric</a:DataType>
+DAT 1497047384
+ATT DTTP</a:History>
+<a:DataType>integer</a:DataType>
 <a:Identity>1</a:Identity>
 <a:Mandatory>1</a:Mandatory>
 </o:Column>
@@ -4273,13 +4279,14 @@ DAT 1497047384</a:History>
 <a:Code>TORRENT_ID</a:Code>
 <a:CreationDate>1497047474</a:CreationDate>
 <a:Creator>Arthur</a:Creator>
-<a:ModificationDate>1497047474</a:ModificationDate>
+<a:ModificationDate>1497048857</a:ModificationDate>
 <a:Modifier>Arthur</a:Modifier>
 <a:History>ORG {3E80076C-8264-456B-B04A-056231D852BD}
 DAT 1497047474
 ORG {05F5C6D1-2380-465A-86F0-343BD7F0B787}
-DAT 1497047384</a:History>
-<a:DataType>numeric</a:DataType>
+DAT 1497047384
+ATT DTTP</a:History>
+<a:DataType>integer</a:DataType>
 <a:Identity>1</a:Identity>
 <a:Mandatory>1</a:Mandatory>
 </o:Column>
@@ -4485,13 +4492,14 @@ DAT 1497047384</a:History>
 <a:Code>CATEGORY_ID</a:Code>
 <a:CreationDate>1497047474</a:CreationDate>
 <a:Creator>Arthur</a:Creator>
-<a:ModificationDate>1497047474</a:ModificationDate>
+<a:ModificationDate>1497048838</a:ModificationDate>
 <a:Modifier>Arthur</a:Modifier>
 <a:History>ORG {4F2AF219-AA33-4414-B767-D08520416F9C}
 DAT 1497047474
 ORG {277E999A-D7BB-4C55-8105-AFD1D4164F2A}
-DAT 1497047384</a:History>
-<a:DataType>numeric</a:DataType>
+DAT 1497047384
+ATT DTTP</a:History>
+<a:DataType>integer</a:DataType>
 <a:Identity>1</a:Identity>
 <a:Mandatory>1</a:Mandatory>
 </o:Column>
@@ -4553,13 +4561,14 @@ DAT 1497047384</a:History>
 <a:Code>LANGUAGE_ID</a:Code>
 <a:CreationDate>1497047474</a:CreationDate>
 <a:Creator>Arthur</a:Creator>
-<a:ModificationDate>1497047474</a:ModificationDate>
+<a:ModificationDate>1497048844</a:ModificationDate>
 <a:Modifier>Arthur</a:Modifier>
 <a:History>ORG {0B91E3B4-691E-48B6-9ECE-B126B35B3863}
 DAT 1497047474
 ORG {909ED8DC-A00D-4878-8899-E109CA44D055}
-DAT 1497047384</a:History>
-<a:DataType>numeric</a:DataType>
+DAT 1497047384
+ATT DTTP</a:History>
+<a:DataType>integer</a:DataType>
 <a:Identity>1</a:Identity>
 <a:Mandatory>1</a:Mandatory>
 </o:Column>
@@ -4621,13 +4630,14 @@ DAT 1497047384</a:History>
 <a:Code>QUALITY_ID</a:Code>
 <a:CreationDate>1497047474</a:CreationDate>
 <a:Creator>Arthur</a:Creator>
-<a:ModificationDate>1497047474</a:ModificationDate>
+<a:ModificationDate>1497048851</a:ModificationDate>
 <a:Modifier>Arthur</a:Modifier>
 <a:History>ORG {BA24B483-C7D5-4DC3-A1B5-9F3E8B0EA05C}
 DAT 1497047474
 ORG {14D490FF-B217-4FC9-B42A-F46016221EBA}
-DAT 1497047384</a:History>
-<a:DataType>numeric</a:DataType>
+DAT 1497047384
+ATT DTTP</a:History>
+<a:DataType>integer</a:DataType>
 <a:Identity>1</a:Identity>
 <a:Mandatory>1</a:Mandatory>
 </o:Column>
@@ -4689,13 +4699,14 @@ DAT 1497047384</a:History>
 <a:Code>PERSON_ID</a:Code>
 <a:CreationDate>1497047474</a:CreationDate>
 <a:Creator>Arthur</a:Creator>
-<a:ModificationDate>1497047474</a:ModificationDate>
+<a:ModificationDate>1497048794</a:ModificationDate>
 <a:Modifier>Arthur</a:Modifier>
 <a:History>ORG {BFA69B6D-C8F5-4EB7-91D2-4C2D4D8D6355}
 DAT 1497047474
 ORG {A576F9F2-6DC4-4D4F-AE0D-6F1B58631593}
-DAT 1497047384</a:History>
-<a:DataType>numeric</a:DataType>
+DAT 1497047384
+ATT DTTP</a:History>
+<a:DataType>integer</a:DataType>
 <a:Identity>1</a:Identity>
 <a:Mandatory>1</a:Mandatory>
 </o:Column>

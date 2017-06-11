@@ -18,7 +18,8 @@ namespace batch.Services.Torrents
 	    {
 	        var french = GetFrenchMovies();
 	        var vostfr = GetVostfrMovies();
-	        return french.Concat(vostfr).ToList();
+	        var torrents = french.Concat(vostfr).GroupBy(t => t.Id).Select(t => t.First()).ToList();
+            return torrents;
 	    }
 
         private IEnumerable<Torrent> GetFrenchMovies()
@@ -81,8 +82,9 @@ namespace batch.Services.Torrents
 
 	        var slug = Regex.Replace(name, @"\.", " ");
             slug = Regex.Replace(slug, @"[^a-zA-Z0-9' ]", string.Empty);
+            slug = slug.Trim();
             slug = Regex.Replace(slug, @"\s+", "-");
-	        return slug.Trim();
+	        return slug;
 	    }
 
 	    private int GetTorrentYear(string year)

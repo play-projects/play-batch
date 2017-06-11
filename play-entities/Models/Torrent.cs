@@ -1,4 +1,6 @@
-﻿namespace entities.Models
+﻿using System;
+
+namespace entities.Models
 {
     public partial class Torrent
     {
@@ -8,12 +10,13 @@
         public string Name { get; set; }
         public string Slug { get; set; }
         public int? Year { get; set; }
-        public long? Size { get; set; }
+        public long Size { get; set; }
         public int? Seeders { get; set; }
         public int? Leechers { get; set; }
         public int? Completed { get; set; }
         public int CategoryId { get; set; }
         public int LanguageId { get; set; }
         public int QualityId { get; set; }
+        public DateTime CreatedAt { get; set; }
     }
 }

@@ -1,6 +1,6 @@
 /*==============================================================*/
 /* Nom de SGBD :  Microsoft SQL Server 2008                     */
-/* Date de création :  11/06/2017 01:24:14                      */
+/* Date de création :  11/06/2017 11:39:50                      */
 /*==============================================================*/
 
 
@@ -79,7 +79,8 @@ go
 /*==============================================================*/
 create table CATEGORY (
    CATEGORY_ID          integer              identity,
-   CATEGORY_NAME        varchar(25)          null,
+   CATEGORY_NAME        varchar(50)          not null,
+   CATEGORY_CREATED_AT  datetime             not null,
    constraint PK_CATEGORY primary key nonclustered (CATEGORY_ID)
 )
 go
@@ -90,8 +91,9 @@ go
 create table CHARACTER (
    PERSON_ID            int                  not null,
    MOVIE_ID             int                  not null,
-   CHARACTER_NAME       varchar(250)         null,
-   CHARACTER_ORDER      int                  null,
+   CHARACTER_NAME       varchar(250)         not null,
+   CHARACTER_ORDER      int                  not null,
+   CHARACTER_CREATED_AT datetime             not null,
    constraint PK_CHARACTER primary key nonclustered (PERSON_ID, MOVIE_ID)
 )
 go
@@ -101,10 +103,11 @@ go
 /*==============================================================*/
 create table COLLECTION (
    COLLECTION_ID        integer              identity,
-   COLLECTION_TMDB_ID   int                  null,
-   COLLECTION_NAME      varchar(100)         null,
-   COLLECTION_POSTER_PATH varchar(100)         null,
-   COLLECTION_BACKDROP_PATH varchar(100)         null,
+   COLLECTION_TMDB_ID   int                  not null,
+   COLLECTION_NAME      varchar(1000)        not null,
+   COLLECTION_POSTER_PATH varchar(1000)        null,
+   COLLECTION_BACKDROP_PATH varchar(1000)        null,
+   COLLECTION_CREATED_AT datetime             not null,
    constraint PK_COLLECTION primary key nonclustered (COLLECTION_ID)
 )
 go
@@ -114,8 +117,9 @@ go
 /*==============================================================*/
 create table GENRE (
    GENRE_ID             integer              identity,
-   GENRE_TMDB_ID        int                  null,
-   GENRE_NAME           varchar(100)         null,
+   GENRE_TMDB_ID        int                  not null,
+   GENRE_NAME           varchar(250)         not null,
+   GENRE_CREATED_AT     datetime             not null,
    constraint PK_GENRE primary key nonclustered (GENRE_ID)
 )
 go
@@ -125,7 +129,8 @@ go
 /*==============================================================*/
 create table LANGUAGE (
    LANGUAGE_ID          integer              identity,
-   LANGUAGE_NAME        varchar(25)          null,
+   LANGUAGE_NAME        varchar(50)          not null,
+   LANGUAGE_CREATED_AT  datetime             not null,
    constraint PK_LANGUAGE primary key nonclustered (LANGUAGE_ID)
 )
 go
@@ -136,22 +141,23 @@ go
 create table MOVIE (
    MOVIE_ID             integer              identity,
    COLLECTION_ID        int                  null,
-   MOVIE_TRAKT_ID       int                  null,
-   MOVIE_IMDB_ID        varchar(10)          null,
-   MOVIE_TMDB_ID        int                  null,
-   MOVIE_TITLE          varchar(250)         null,
-   MOVIE_ORIGINAL_TITLE varchar(250)         null,
-   MOVIE_YEAR           int                  null,
-   MOVIE_ORIGINAL_LANGUAGE varchar(25)          null,
-   MOVIE_OVERVIEW       varchar(2500)        null,
-   MOVIE_TAGLINE        varchar(250)         null,
-   MOVIE_POPULARITY     decimal              null,
+   MOVIE_TRAKT_ID       int                  not null,
+   MOVIE_IMDB_ID        varchar(25)          not null,
+   MOVIE_TMDB_ID        int                  not null,
+   MOVIE_TITLE          varchar(500)         not null,
+   MOVIE_ORIGINAL_TITLE varchar(500)         null,
+   MOVIE_YEAR           int                  not null,
+   MOVIE_ORIGINAL_LANGUAGE varchar(50)          null,
+   MOVIE_OVERVIEW       varchar(2500)        not null,
+   MOVIE_TAGLINE        varchar(1000)        null,
+   MOVIE_POPULARITY     decimal              not null,
    MOVIE_RELEASE_DATE   datetime             null,
-   MOVIE_VOTE_AVERAGE   decimal              null,
-   MOVIE_VOTE_COUNT     int                  null,
+   MOVIE_VOTE_AVERAGE   decimal              not null,
+   MOVIE_VOTE_COUNT     int                  not null,
    MOVIE_RUNTIME        int                  null,
-   MOVIE_BACKDROP_PATH  varchar(100)         null,
-   MOVIE_POSTER_PATH    varchar(100)         null,
+   MOVIE_BACKDROP_PATH  varchar(1000)        null,
+   MOVIE_POSTER_PATH    varchar(1000)        null,
+   MOVIE_CREATED_AT     datetime             not null,
    constraint PK_MOVIE primary key nonclustered (MOVIE_ID)
 )
 go
@@ -171,9 +177,10 @@ go
 /*==============================================================*/
 create table PERSON (
    PERSON_ID            integer              identity,
-   PERSON_FIRSTNAME     varchar(250)         null,
-   PERSON_LASTNAME      varchar(250)         null,
-   PERSON_PROFILE_PATH  varchar(100)         null,
+   PERSON_FIRSTNAME     varchar(250)         not null,
+   PERSON_LASTNAME      varchar(250)         not null,
+   PERSON_PROFILE_PATH  varchar(1000)        null,
+   PERSON_CREATED_AT    datetime             not null,
    constraint PK_PERSON primary key nonclustered (PERSON_ID)
 )
 go
@@ -183,7 +190,8 @@ go
 /*==============================================================*/
 create table QUALITY (
    QUALITY_ID           integer              identity,
-   QUALITY_NAME         varchar(25)          null,
+   QUALITY_NAME         varchar(50)          not null,
+   QUALITY_CREATED_AT   datetime             not null,
    constraint PK_QUALITY primary key nonclustered (QUALITY_ID)
 )
 go
@@ -197,14 +205,15 @@ create table TORRENT (
    CATEGORY_ID          int                  not null,
    LANGUAGE_ID          int                  not null,
    QUALITY_ID           int                  not null,
-   TORRENT_T411_ID      int                  null,
-   TORRENT_NAME         varchar(250)         null,
+   TORRENT_T411_ID      int                  not null,
+   TORRENT_NAME         varchar(250)         not null,
    TORRENT_SLUG         varchar(250)         null,
    TORRENT_YEAR         int                  null,
-   TORRENT_SIZE         bigint               null,
+   TORRENT_SIZE         bigint               not null,
    TORRENT_SEEDERS      int                  null,
    TORRENT_LEECHERS     int                  null,
    TORRENT_COMPLETED    int                  null,
+   TORRENT_CREATED_AT   datetime             not null,
    constraint PK_TORRENT primary key nonclustered (TORRENT_ID)
 )
 go

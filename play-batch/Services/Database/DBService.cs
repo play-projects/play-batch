@@ -51,7 +51,8 @@ namespace batch.Services.Database
                     VoteCount = movie.VoteCount,
                     Runtime = movie.Runtime,
                     BackdropPath = movie.BackdropPath,
-                    PosterPath = movie.PosterPath
+                    PosterPath = movie.PosterPath,
+                    CreatedAt = DateTime.Now
                 };
                 context.Movie.Add(mov);
             }
@@ -65,7 +66,7 @@ namespace batch.Services.Database
                     context.MovieGenre.Add(new MovieGenre
                     {
                         MovieId = mov.Id,
-                        GenreId = genres.Where(ge => ge.TmdbId == gen.Id).Single().Id
+                        GenreId = genres.Where(ge => ge.TmdbId == gen.Id).Single().Id,
                     });
                 }
                     
@@ -87,7 +88,8 @@ namespace batch.Services.Database
                     TmdbId = collection.Id,
                     Name = collection.Name,
                     PosterPath = collection.PosterPath,
-                    BackdropPath = collection.BackdropPath
+                    BackdropPath = collection.BackdropPath,
+                    CreatedAt = DateTime.Now
                 });
             }
             context.SaveChanges();
@@ -101,7 +103,8 @@ namespace batch.Services.Database
                 context.Genre.Add(new Genre
                 {
                     TmdbId = genre.Id,
-                    Name = genre.Name
+                    Name = genre.Name,
+                    CreatedAt = DateTime.Now
                 });
             }
             context.SaveChanges();
@@ -131,7 +134,8 @@ namespace batch.Services.Database
                     Completed = torrent.Completed,
                     CategoryId = categories.SingleOrDefault(c => c.Name.Equals(torrent.Category.ToString(), StringComparison.CurrentCultureIgnoreCase))?.Id ?? 0,
                     LanguageId = languages.SingleOrDefault(l => l.Name.Equals(torrent.Language.ToString(), StringComparison.CurrentCultureIgnoreCase))?.Id ?? 0,
-                    QualityId = qualities.SingleOrDefault(q => q.Name.Equals(torrent.Quality.ToString(), StringComparison.CurrentCultureIgnoreCase))?.Id ?? 0
+                    QualityId = qualities.SingleOrDefault(q => q.Name.Equals(torrent.Quality.ToString(), StringComparison.CurrentCultureIgnoreCase))?.Id ?? 0,
+                    CreatedAt = DateTime.Now
                 });
             }
             context.SaveChanges();
@@ -139,24 +143,24 @@ namespace batch.Services.Database
 
         private void InsertCategories()
         {
-            context.Category.Add(new Category { Name = Models.Category.Series.ToString().ToLower() });
-            context.Category.Add(new Category { Name = Models.Category.Movie.ToString().ToLower() });
+            context.Category.Add(new Category { Name = Models.Category.Series.ToString().ToLower(), CreatedAt = DateTime.Now });
+            context.Category.Add(new Category { Name = Models.Category.Movie.ToString().ToLower(), CreatedAt = DateTime.Now });
             context.SaveChanges();
         }
 
         private void InsertLanguages()
         {
-            context.Language.Add(new Language { Name = Models.Language.VF.ToString().ToLower() });
-            context.Language.Add(new Language { Name = Models.Language.VOSTFR.ToString().ToLower() });
+            context.Language.Add(new Language { Name = Models.Language.VF.ToString().ToLower(), CreatedAt = DateTime.Now });
+            context.Language.Add(new Language { Name = Models.Language.VOSTFR.ToString().ToLower(), CreatedAt = DateTime.Now });
             context.SaveChanges();
         }
 
         private void InsertQualities()
         {
-            context.Quality.Add(new Quality { Name = Models.Quality.Low.ToString().ToLower() });
-            context.Quality.Add(new Quality { Name = Models.Quality.Medium.ToString().ToLower() });
-            context.Quality.Add(new Quality { Name = Models.Quality.High.ToString().ToLower() });
-            context.Quality.Add(new Quality { Name = Models.Quality.VeryHigh.ToString().ToLower() });
+            context.Quality.Add(new Quality { Name = Models.Quality.Low.ToString().ToLower(), CreatedAt = DateTime.Now });
+            context.Quality.Add(new Quality { Name = Models.Quality.Medium.ToString().ToLower(), CreatedAt = DateTime.Now });
+            context.Quality.Add(new Quality { Name = Models.Quality.High.ToString().ToLower(), CreatedAt = DateTime.Now });
+            context.Quality.Add(new Quality { Name = Models.Quality.VeryHigh.ToString().ToLower(), CreatedAt = DateTime.Now });
             context.SaveChanges();
         }
     }

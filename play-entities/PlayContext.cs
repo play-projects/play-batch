@@ -32,7 +32,11 @@ namespace entities.Models
 
                 entity.Property(e => e.Name)
                     .HasColumnName("CATEGORY_NAME")
-                    .HasColumnType("varchar(25)");
+                    .HasColumnType("varchar(50)");
+
+                entity.Property(e => e.CreatedAt)
+                    .HasColumnName("CATEGORY_CREATED_AT")
+                    .HasColumnType("datetime");
             });
 
             modelBuilder.Entity<Character>(entity =>
@@ -51,6 +55,10 @@ namespace entities.Models
                     .HasColumnType("varchar(250)");
 
                 entity.Property(e => e.Order).HasColumnName("CHARACTER_ORDER");
+
+                entity.Property(e => e.CreatedAt)
+                    .HasColumnName("CHARACTER_CREATED_AT")
+                    .HasColumnType("datetime");
             });
 
             modelBuilder.Entity<Collection>(entity =>
@@ -67,13 +75,17 @@ namespace entities.Models
 
                 entity.Property(e => e.Name)
                     .HasColumnName("COLLECTION_NAME")
-                    .HasColumnType("varchar(100)");
+                    .HasColumnType("varchar(1000)");
 
                 entity.Property(e => e.PosterPath)
                     .HasColumnName("COLLECTION_POSTER_PATH")
-                    .HasColumnType("varchar(100)");
+                    .HasColumnType("varchar(1000)");
 
                 entity.Property(e => e.TmdbId).HasColumnName("COLLECTION_TMDB_ID");
+
+                entity.Property(e => e.CreatedAt)
+                    .HasColumnName("COLLECTION_CREATED_AT")
+                    .HasColumnType("datetime");
             });
 
             modelBuilder.Entity<Genre>(entity =>
@@ -86,9 +98,13 @@ namespace entities.Models
 
                 entity.Property(e => e.Name)
                     .HasColumnName("GENRE_NAME")
-                    .HasColumnType("varchar(100)");
+                    .HasColumnType("varchar(250)");
 
                 entity.Property(e => e.TmdbId).HasColumnName("GENRE_TMDB_ID");
+
+                entity.Property(e => e.CreatedAt)
+                    .HasColumnName("GENRE_CREATED_AT")
+                    .HasColumnType("datetime");
             });
 
             modelBuilder.Entity<Language>(entity =>
@@ -101,7 +117,11 @@ namespace entities.Models
 
                 entity.Property(e => e.Name)
                     .HasColumnName("LANGUAGE_NAME")
-                    .HasColumnType("varchar(25)");
+                    .HasColumnType("varchar(50)");
+
+                entity.Property(e => e.CreatedAt)
+                    .HasColumnName("LANGUAGE_CREATED_AT")
+                    .HasColumnType("datetime");
             });
 
             modelBuilder.Entity<Movie>(entity =>
@@ -116,19 +136,19 @@ namespace entities.Models
 
                 entity.Property(e => e.BackdropPath)
                     .HasColumnName("MOVIE_BACKDROP_PATH")
-                    .HasColumnType("varchar(100)");
+                    .HasColumnType("varchar(1000)");
 
                 entity.Property(e => e.ImdbId)
                     .HasColumnName("MOVIE_IMDB_ID")
-                    .HasColumnType("varchar(10)");
+                    .HasColumnType("varchar(25)");
 
                 entity.Property(e => e.OriginalLanguage)
                     .HasColumnName("MOVIE_ORIGINAL_LANGUAGE")
-                    .HasColumnType("varchar(25)");
+                    .HasColumnType("varchar(50)");
 
                 entity.Property(e => e.OriginalTitle)
                     .HasColumnName("MOVIE_ORIGINAL_TITLE")
-                    .HasColumnType("varchar(250)");
+                    .HasColumnType("varchar(500)");
 
                 entity.Property(e => e.Overview)
                     .HasColumnName("MOVIE_OVERVIEW")
@@ -140,7 +160,7 @@ namespace entities.Models
 
                 entity.Property(e => e.PosterPath)
                     .HasColumnName("MOVIE_POSTER_PATH")
-                    .HasColumnType("varchar(100)");
+                    .HasColumnType("varchar(1000)");
 
                 entity.Property(e => e.ReleaseDate)
                     .HasColumnName("MOVIE_RELEASE_DATE")
@@ -150,11 +170,11 @@ namespace entities.Models
 
                 entity.Property(e => e.Tagline)
                     .HasColumnName("MOVIE_TAGLINE")
-                    .HasColumnType("varchar(250)");
+                    .HasColumnType("varchar(1000)");
 
                 entity.Property(e => e.Title)
                     .HasColumnName("MOVIE_TITLE")
-                    .HasColumnType("varchar(250)");
+                    .HasColumnType("varchar(500)");
 
                 entity.Property(e => e.TmdbId).HasColumnName("MOVIE_TMDB_ID");
 
@@ -167,6 +187,10 @@ namespace entities.Models
                 entity.Property(e => e.VoteCount).HasColumnName("MOVIE_VOTE_COUNT");
 
                 entity.Property(e => e.Year).HasColumnName("MOVIE_YEAR");
+
+                entity.Property(e => e.CreatedAt)
+                    .HasColumnName("MOVIE_CREATED_AT")
+                    .HasColumnType("datetime");
             });
 
             modelBuilder.Entity<MovieGenre>(entity =>
@@ -199,7 +223,11 @@ namespace entities.Models
 
                 entity.Property(e => e.ProfilePath)
                     .HasColumnName("PERSON_PROFILE_PATH")
-                    .HasColumnType("varchar(100)");
+                    .HasColumnType("varchar(1000)");
+
+                entity.Property(e => e.CreatedAt)
+                    .HasColumnName("PERSON_CREATED_AT")
+                    .HasColumnType("datetime");
             });
 
             modelBuilder.Entity<Quality>(entity =>
@@ -212,7 +240,11 @@ namespace entities.Models
 
                 entity.Property(e => e.Name)
                     .HasColumnName("QUALITY_NAME")
-                    .HasColumnType("varchar(25)");
+                    .HasColumnType("varchar(50)");
+
+                entity.Property(e => e.CreatedAt)
+                    .HasColumnName("QUALITY_CREATED_AT")
+                    .HasColumnType("datetime");
             });
 
             modelBuilder.Entity<Torrent>(entity =>
@@ -250,6 +282,10 @@ namespace entities.Models
                     .HasColumnType("varchar(250)");
 
                 entity.Property(e => e.Year).HasColumnName("TORRENT_YEAR");
+
+                entity.Property(e => e.CreatedAt)
+                    .HasColumnName("TORRENT_CREATED_AT")
+                    .HasColumnType("datetime");
             });
         }
     }

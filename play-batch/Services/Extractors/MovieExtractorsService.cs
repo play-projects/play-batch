@@ -10,6 +10,10 @@ namespace batch.Services.Tmdb
 {
     public class MovieExtractorsService
     {
+        private const string apiKey = "fa25d553584aac70e9db4d47d3636ae9";
+        private const string language = "fr-FR";
+        private const string baseUrl = "https://api.themoviedb.org/3";
+
         public static MovieExtractorsService Instance = new MovieExtractorsService();
         private MovieExtractorsService() { }
 
@@ -97,9 +101,7 @@ namespace batch.Services.Tmdb
 
         private Movie GetMovie(Movie movie)
         {
-            var apiKey = "fa25d553584aac70e9db4d47d3636ae9";
-            var language = "fr-FR";
-            var url = $"https://api.themoviedb.org/3/movie/{movie.TmdbId}?api_key={apiKey}&language={language}";
+            var url = $"{baseUrl}/movie/{movie.TmdbId}?api_key={apiKey}&language={language}";
             var content = WebService.Instance.GetContentTmdb(url);
             if (string.IsNullOrEmpty(content)) return Movie.NotFound;
 

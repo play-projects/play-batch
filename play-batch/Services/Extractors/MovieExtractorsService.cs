@@ -61,7 +61,7 @@ namespace batch.Services.Tmdb
             foreach (var token in json)
             {
                 int.TryParse(token["movie"]["year"].ToString(), out int year);
-                if (torrent.Year != year)
+                if (torrent.Year >= year - 1 && torrent.Year <= year + 1)
                     return Movie.NotFound;
 
                 var name = token["movie"]["title"].ToString();

@@ -2,7 +2,7 @@
 
 namespace entities.Models
 {
-    public partial class PlayContext : DbContext
+    public class PlayContext : DbContext
     {
         public virtual DbSet<Category> Category { get; set; }
         public virtual DbSet<Character> Character { get; set; }

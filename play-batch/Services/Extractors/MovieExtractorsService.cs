@@ -61,7 +61,7 @@ namespace batch.Services.Tmdb
             foreach (var token in json)
             {
                 int.TryParse(token["movie"]["year"].ToString(), out int year);
-                if (torrent.Year >= year - 1 && torrent.Year <= year + 1)
+                if (torrent.Year < year - 1 && torrent.Year > year + 1)
                     return Movie.NotFound;
 
                 var name = token["movie"]["title"].ToString();
@@ -106,6 +106,8 @@ namespace batch.Services.Tmdb
             if (string.IsNullOrEmpty(content)) return Movie.NotFound;
 
             var json = JObject.Parse(content);
+            var releaseDate = GetProperty<DateTime>(json["release_date"].ToString());
+
             movie.Title = json["title"].ToString();
             movie.Genres = json["genres"].Select(g => new Genre
             {
@@ -116,7 +118,7 @@ namespace batch.Services.Tmdb
             movie.Overview = json["overview"].ToString();
             movie.Tagline = json["tagline"].ToString();
             movie.Popularity = GetProperty<double>(json["popularity"].ToString());
-            movie.ReleaseDate = GetProperty<DateTime>(json["release_date"].ToString());
+            movie.ReleaseDate = releaseDate == DateTime.MinValue ? new DateTime(1900, 1, 1) : releaseDate;
             movie.VoteAverage = GetProperty<float>(json["vote_average"].ToString());
             movie.VoteCount = GetProperty<int>(json["vote_count"].ToString());
             movie.Runtime = GetProperty<int>(json["runtime"].ToString());

@@ -19,33 +19,30 @@ drop table QUALITY;
 drop table TORRENT;
 
 create table CATEGORY (
-CATEGORY_ID          NUMERIC(6)                     not null,
+CATEGORY_ID          INTEGER PRIMARY KEY            AUTOINCREMENT,
 CATEGORY_NAME        VARCHAR(50)                    not null,
-CATEGORY_CREATED_AT  DATE                           not null,
-primary key (CATEGORY_ID)
+CATEGORY_CREATED_AT  DATE                           not null
 );
 
 create table PERSON (
-PERSON_ID            NUMERIC(6)                     not null,
+PERSON_ID            INTEGER PRIMARY KEY            AUTOINCREMENT,
 PERSON_FIRSTNAME     VARCHAR(250)                   not null,
 PERSON_LASTNAME      VARCHAR(250)                   not null,
 PERSON_PROFILE_PATH  VARCHAR(1000),
-PERSON_CREATED_AT    DATE                           not null,
-primary key (PERSON_ID)
+PERSON_CREATED_AT    DATE                           not null
 );
 
 create table COLLECTION (
-COLLECTION_ID        NUMERIC(6)                     not null,
+COLLECTION_ID        INTEGER PRIMARY KEY            AUTOINCREMENT,
 COLLECTION_TMDB_ID   INTEGER                        not null,
 COLLECTION_NAME      VARCHAR(1000)                  not null,
 COLLECTION_POSTER_PATH VARCHAR(1000),
 COLLECTION_BACKDROP_PATH VARCHAR(1000),
-COLLECTION_CREATED_AT DATE                           not null,
-primary key (COLLECTION_ID)
+COLLECTION_CREATED_AT DATE                           not null
 );
 
 create table MOVIE (
-MOVIE_ID             NUMERIC(6)                     not null,
+MOVIE_ID             INTEGER PRIMARY KEY            AUTOINCREMENT,
 COLLECTION_ID        INTEGER,
 MOVIE_TRAKT_ID       INTEGER                        not null,
 MOVIE_IMDB_ID        VARCHAR(25)                    not null,
@@ -64,18 +61,16 @@ MOVIE_RUNTIME        INTEGER,
 MOVIE_BACKDROP_PATH  VARCHAR(1000),
 MOVIE_POSTER_PATH    VARCHAR(1000),
 MOVIE_CREATED_AT     DATE                           not null,
-primary key (MOVIE_ID),
 foreign key (COLLECTION_ID)
       references COLLECTION (COLLECTION_ID)
 );
 
 create table CHARACTER (
-PERSON_ID            INTEGER                        not null,
+PERSON_ID            INTEGER PRIMARY KEY            AUTOINCREMENT,
 MOVIE_ID             INTEGER                        not null,
 CHARACTER_NAME       VARCHAR(250)                   not null,
 CHARACTER_ORDER      INTEGER                        not null,
 CHARACTER_CREATED_AT DATE                           not null,
-primary key (PERSON_ID, MOVIE_ID),
 foreign key (PERSON_ID)
       references PERSON (PERSON_ID),
 foreign key (MOVIE_ID)
@@ -83,18 +78,16 @@ foreign key (MOVIE_ID)
 );
 
 create table GENRE (
-GENRE_ID             NUMERIC(6)                     not null,
+GENRE_ID             INTEGER PRIMARY KEY            AUTOINCREMENT,
 GENRE_TMDB_ID        INTEGER                        not null,
 GENRE_NAME           VARCHAR(250)                   not null,
-GENRE_CREATED_AT     DATE                           not null,
-primary key (GENRE_ID)
+GENRE_CREATED_AT     DATE                           not null
 );
 
 create table LANGUAGE (
-LANGUAGE_ID          NUMERIC(6)                     not null,
+LANGUAGE_ID          INTEGER PRIMARY KEY            AUTOINCREMENT,
 LANGUAGE_NAME        VARCHAR(50)                    not null,
-LANGUAGE_CREATED_AT  DATE                           not null,
-primary key (LANGUAGE_ID)
+LANGUAGE_CREATED_AT  DATE                           not null
 );
 
 create table MOVIE_GENRE (
@@ -108,14 +101,13 @@ foreign key (GENRE_ID)
 );
 
 create table QUALITY (
-QUALITY_ID           NUMERIC(6)                     not null,
+QUALITY_ID           INTEGER PRIMARY KEY            AUTOINCREMENT,
 QUALITY_NAME         VARCHAR(50)                    not null,
-QUALITY_CREATED_AT   DATE                           not null,
-primary key (QUALITY_ID)
+QUALITY_CREATED_AT   DATE                           not null
 );
 
 create table TORRENT (
-TORRENT_ID           NUMERIC(6)                     not null,
+TORRENT_ID           INTEGER PRIMARY KEY            AUTOINCREMENT,
 MOVIE_ID             INTEGER,
 CATEGORY_ID          INTEGER                        not null,
 LANGUAGE_ID          INTEGER                        not null,
@@ -129,7 +121,6 @@ TORRENT_SEEDERS      INTEGER,
 TORRENT_LEECHERS     INTEGER,
 TORRENT_COMPLETED    INTEGER,
 TORRENT_CREATED_AT   DATE                           not null,
-primary key (TORRENT_ID),
 foreign key (MOVIE_ID)
       references MOVIE (MOVIE_ID),
 foreign key (CATEGORY_ID)

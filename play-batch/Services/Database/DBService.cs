@@ -7,13 +7,10 @@ namespace batch.Services.Database
 {
     public class DBService
     {
-        public static DBService Instance = new DBService();
-
-        private readonly PlayContext context;
-
-        private DBService()
+        private readonly PlayContext _ctx;
+        public DBService(string db, string connection)
         {
-            context = new PlayContext();
+            _ctx = new PlayContext(db, connection);
         }
 
         public void Insert(List<Models.Movie> movies)
@@ -27,9 +24,9 @@ namespace batch.Services.Database
             var c = movies.Select(m => m.Collection).ToList();
             InsertCollections(c);
 
-            var torrents = context.Torrent.Select(to => to).ToList();
-            var genres = context.Genre.Select(ge => ge).ToList();
-            var collections = context.Collection.Select(co => co).ToList();
+            var torrents = _ctx.Torrent.Select(to => to).ToList();
+            var genres = _ctx.Genre.Select(ge => ge).ToList();
+            var collections = _ctx.Collection.Select(co => co).ToList();
 
             foreach (var movie in movies)
             {
@@ -54,36 +51,36 @@ namespace batch.Services.Database
                     PosterPath = movie.PosterPath,
                     CreatedAt = DateTime.Now
                 };
-                context.Movie.Add(mov);
+                _ctx.Movie.Add(mov);
             }
-            context.SaveChanges();
+            _ctx.SaveChanges();
 
             foreach (var movie in movies)
             {
-                var mov = context.Movie.Local.Where(m => m.ImdbId == movie.ImdbId).Single();
+                var mov = _ctx.Movie.Local.Single(m => m.ImdbId == movie.ImdbId);
                 foreach (var gen in movie.Genres)
                 {
-                    context.MovieGenre.Add(new MovieGenre
+                    _ctx.MovieGenre.Add(new MovieGenre
                     {
                         MovieId = mov.Id,
-                        GenreId = genres.Where(ge => ge.TmdbId == gen.Id).Single().Id,
+                        GenreId = genres.Single(ge => ge.TmdbId == gen.Id).Id,
                     });
                 }
                     
                 foreach (var tor in movie.Torrents)
                 {
-                    torrents.Where(to => to.T411Id == tor.Id).Single().MovieId = mov.Id;
+                    torrents.Single(to => to.T411Id == tor.Id).MovieId = mov.Id;
                 }
             }
-            context.SaveChanges();
+            _ctx.SaveChanges();
         }
 
-        private void InsertCollections(List<Models.Collection> c)
+        private void InsertCollections(IEnumerable<Models.Collection> c)
         {
             var collections = c.GroupBy(co => co?.Id).Where(co => co.Key != null).Select(co => co.First());
             foreach (var collection in collections)
             {
-                context.Collection.Add(new Collection
+                _ctx.Collection.Add(new Collection
                 {
                     TmdbId = collection.Id,
                     Name = collection.Name,
@@ -92,37 +89,37 @@ namespace batch.Services.Database
                     CreatedAt = DateTime.Now
                 });
             }
-            context.SaveChanges();
+            _ctx.SaveChanges();
         }
 
-        private void InsertGenres(List<Models.Genre> g)
+        private void InsertGenres(IEnumerable<Models.Genre> g)
         {
             var genres = g.GroupBy(ge => ge.Id).Where(ge => ge != null).Select(ge => ge.First());
             foreach (var genre in genres)
             {
-                context.Genre.Add(new Genre
+                _ctx.Genre.Add(new Genre
                 {
                     TmdbId = genre.Id,
                     Name = genre.Name,
                     CreatedAt = DateTime.Now
                 });
             }
-            context.SaveChanges();
+            _ctx.SaveChanges();
         }
 
-        private void InsertTorrents(List<Models.Torrent> torrents)
+        private void InsertTorrents(IEnumerable<Models.Torrent> torrents)
         {
             InsertCategories();
             InsertLanguages();
             InsertQualities();
 
-            var categories = context.Category.Select(c => new Category { Id = c.Id, Name = c.Name });
-            var languages = context.Language.Select(l => new Language { Id = l.Id, Name = l.Name });
-            var qualities = context.Quality.Select(q => new Quality { Id = q.Id, Name = q.Name });
+            var categories = _ctx.Category.Select(c => new Category { Id = c.Id, Name = c.Name });
+            var languages = _ctx.Language.Select(l => new Language { Id = l.Id, Name = l.Name });
+            var qualities = _ctx.Quality.Select(q => new Quality { Id = q.Id, Name = q.Name });
 
             foreach (var torrent in torrents)
             {
-                context.Add(new Torrent
+                _ctx.Add(new Torrent
                 {
                     T411Id = torrent.Id,
                     Name = torrent.Name,
@@ -138,30 +135,30 @@ namespace batch.Services.Database
                     CreatedAt = DateTime.Now
                 });
             }
-            context.SaveChanges();
+            _ctx.SaveChanges();
         }
 
         private void InsertCategories()
         {
-            context.Category.Add(new Category { Name = Models.Category.Series.ToString().ToLower(), CreatedAt = DateTime.Now });
-            context.Category.Add(new Category { Name = Models.Category.Movie.ToString().ToLower(), CreatedAt = DateTime.Now });
-            context.SaveChanges();
+            _ctx.Category.Add(new Category { Name = Models.Category.Series.ToString().ToLower(), CreatedAt = DateTime.Now });
+            _ctx.Category.Add(new Category { Name = Models.Category.Movie.ToString().ToLower(), CreatedAt = DateTime.Now });
+            _ctx.SaveChanges();
         }
 
         private void InsertLanguages()
         {
-            context.Language.Add(new Language { Name = Models.Language.VF.ToString().ToLower(), CreatedAt = DateTime.Now });
-            context.Language.Add(new Language { Name = Models.Language.VOSTFR.ToString().ToLower(), CreatedAt = DateTime.Now });
-            context.SaveChanges();
+            _ctx.Language.Add(new Language { Name = Models.Language.VF.ToString().ToLower(), CreatedAt = DateTime.Now });
+            _ctx.Language.Add(new Language { Name = Models.Language.VOSTFR.ToString().ToLower(), CreatedAt = DateTime.Now });
+            _ctx.SaveChanges();
         }
 
         private void InsertQualities()
         {
-            context.Quality.Add(new Quality { Name = Models.Quality.Low.ToString().ToLower(), CreatedAt = DateTime.Now });
-            context.Quality.Add(new Quality { Name = Models.Quality.Medium.ToString().ToLower(), CreatedAt = DateTime.Now });
-            context.Quality.Add(new Quality { Name = Models.Quality.High.ToString().ToLower(), CreatedAt = DateTime.Now });
-            context.Quality.Add(new Quality { Name = Models.Quality.VeryHigh.ToString().ToLower(), CreatedAt = DateTime.Now });
-            context.SaveChanges();
+            _ctx.Quality.Add(new Quality { Name = Models.Quality.Low.ToString().ToLower(), CreatedAt = DateTime.Now });
+            _ctx.Quality.Add(new Quality { Name = Models.Quality.Medium.ToString().ToLower(), CreatedAt = DateTime.Now });
+            _ctx.Quality.Add(new Quality { Name = Models.Quality.High.ToString().ToLower(), CreatedAt = DateTime.Now });
+            _ctx.Quality.Add(new Quality { Name = Models.Quality.VeryHigh.ToString().ToLower(), CreatedAt = DateTime.Now });
+            _ctx.SaveChanges();
         }
     }
 }

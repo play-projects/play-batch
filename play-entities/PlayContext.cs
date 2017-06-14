@@ -1,9 +1,19 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using System.Reflection.Metadata;
+using Microsoft.EntityFrameworkCore;
 
 namespace entities.Models
 {
     public class PlayContext : DbContext
     {
+        private string _db { get; set; }
+        private string _connection { get; set; }
+
+        public PlayContext(string db, string connection)
+        {
+            _db = db;
+            _connection = connection;
+        }
+
         public virtual DbSet<Category> Category { get; set; }
         public virtual DbSet<Character> Character { get; set; }
         public virtual DbSet<Collection> Collection { get; set; }
@@ -17,7 +27,14 @@ namespace entities.Models
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Server=ARTHUR-PC;Database=PLAY;Trusted_Connection=True;");
+            if (_db.Equals("sqlserver"))
+            {
+                optionsBuilder.UseSqlServer(_connection);
+            }
+            else if (_db.Equals("sqlite"))
+            {
+                optionsBuilder.UseSqlite(_connection);
+            }
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

@@ -17,18 +17,18 @@ namespace batch.Services.Torrents
 	    public List<Torrent> GetMovies()
 	    {
 	        var french = GetFrenchMovies();
-	        var vostfr = GetVostfrMovies();
-	        var torrents = french.Concat(vostfr).GroupBy(t => t.Id).Select(t => t.First()).ToList();
+	        //var vostfr = GetVostfrMovies();
+	        var torrents = french/*.Concat(vostfr).GroupBy(t => t.Id).Select(t => t.First())*/.ToList();
             return torrents;
 	    }
 
         private IEnumerable<Torrent> GetFrenchMovies()
         {
-            var low = GetMovieBySearch(new Search(Criteria.MOVIE, Criteria.VF, Criteria.LOW, Criteria.TWOD));
-            var medium = GetMovieBySearch(new Search(Criteria.MOVIE, Criteria.VF, Criteria.MEDIUM, Criteria.TWOD));
-            var high = GetMovieBySearch(new Search(Criteria.MOVIE, Criteria.VF, Criteria.HIGH, Criteria.TWOD));
+            //var low = GetMovieBySearch(new Search(Criteria.MOVIE, Criteria.VF, Criteria.LOW, Criteria.TWOD));
+            //var medium = GetMovieBySearch(new Search(Criteria.MOVIE, Criteria.VF, Criteria.MEDIUM, Criteria.TWOD));
+            //var high = GetMovieBySearch(new Search(Criteria.MOVIE, Criteria.VF, Criteria.HIGH, Criteria.TWOD));
             var veryhigh = GetMovieBySearch(new Search(Criteria.MOVIE, Criteria.VF, Criteria.VERYHIGH, Criteria.TWOD));
-            return low.Concat(medium).Concat(high).Concat(veryhigh).ToList();
+            return /*low.Concat(medium).Concat(high).Concat(*/veryhigh/*)*/.ToList();
         }
 
 	    private IEnumerable<Torrent> GetVostfrMovies()

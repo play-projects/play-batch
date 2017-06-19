@@ -1,15 +1,28 @@
 ﻿using System;
 using System.Diagnostics;
+using System.IO;
+using batch.Services.Database;
 using batch.Services.Torrents;
 using batch.Services.Tmdb;
-using batch.Services.Database;
+using entities.Models;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace batch
 {
     class Program
     {
-        static void Main(string[] args)
+        public static IConfigurationRoot Configuration { get; set; }
+
+        public static void Main(string[] args)
         {
+            var builder = new ConfigurationBuilder()
+                .SetBasePath(Directory.GetCurrentDirectory())
+                .AddJsonFile("appsettings.json");
+
+            Configuration = builder.Build();
+
             var sw = Stopwatch.StartNew();
             var torrents = MovieTorrentsService.Instance.GetMovies();
             sw.Stop();
@@ -26,7 +39,9 @@ namespace batch
             var swMovies = sw.ElapsedMilliseconds;
 
             sw.Restart();
-            DBService.Instance.Insert(movies);
+            var db = Configuration["db"];
+            var connection = Configuration["connection_strings:play_db"];
+            new DBService(db, connection).Insert(movies);
             sw.Stop();
 
             Console.WriteLine($"torents: {torrents.Count}");

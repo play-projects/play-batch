@@ -45,7 +45,7 @@ namespace batch.Services.Tmdb
 
         private Movie GetMovieIds(Torrent torrent)
         {
-            var url = $"https://api.trakt.tv/search/movie?query={torrent.Slug}";
+            var url = $"https://api.trakt.tv/search/movie?query={torrent.Slug.Replace("-", " ")}";
             var header = new Dictionary<string, string>
             {
                 { "trakt-api-version", "2" },

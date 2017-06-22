@@ -1,6 +1,6 @@
 /*==============================================================*/
 /* Nom de SGBD :  Microsoft SQL Server 2008                     */
-/* Date de création :  11/06/2017 14:33:13                      */
+/* Date de création :  22/06/2017 13:22:28                      */
 /*==============================================================*/
 
 
@@ -145,6 +145,7 @@ create table MOVIE (
    MOVIE_IMDB_ID        varchar(25)          not null,
    MOVIE_TMDB_ID        int                  not null,
    MOVIE_TITLE          varchar(500)         not null,
+   MOVIE_TITLE_SEARCH   varchar(500)         not null,
    MOVIE_ORIGINAL_TITLE varchar(500)         null,
    MOVIE_YEAR           int                  not null,
    MOVIE_ORIGINAL_LANGUAGE varchar(50)          null,

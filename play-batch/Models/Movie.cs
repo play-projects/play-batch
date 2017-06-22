@@ -12,6 +12,7 @@ namespace batch.Models
         public List<Torrent> Torrents { get; set; }
 
         public string Title { get; set; }
+        public string TitleSearch { get; set; }
         public string OriginalTitle { get; set; }
         public int Year { get; set; }
         public List<Genre> Genres { get; set; }

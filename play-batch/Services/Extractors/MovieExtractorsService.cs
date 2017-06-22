@@ -3,7 +3,9 @@ using batch.Services.Web;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace batch.Services.Tmdb
@@ -107,6 +109,7 @@ namespace batch.Services.Tmdb
 
             var json = JObject.Parse(content);
             movie.Title = json["title"].ToString();
+            movie.TitleSearch = GetSearchTitle(json["title"].ToString());
             movie.Genres = json["genres"].Select(g => new Genre
             {
                 Id = GetProperty<int>(g["id"].ToString()),
@@ -133,6 +136,13 @@ namespace batch.Services.Tmdb
                 };
             }
             return movie;
+        }
+
+        private string GetSearchTitle(string str)
+        {
+            var text = str.ToLower().Normalize(NormalizationForm.FormD);
+            var chars = text.Where(c => CharUnicodeInfo.GetUnicodeCategory(c) != UnicodeCategory.NonSpacingMark).ToArray();
+            return new string(chars).Normalize(NormalizationForm.FormC);
         }
 
         private T GetProperty<T>(string json)

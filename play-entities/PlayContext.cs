@@ -193,6 +193,10 @@ namespace entities.Models
                     .HasColumnName("MOVIE_TITLE")
                     .HasColumnType("varchar(500)");
 
+                entity.Property(e => e.TitleSearch)
+                    .HasColumnName("MOVIE_TITLE_SEARCH")
+                    .HasColumnType("varchar(500)");
+
                 entity.Property(e => e.TmdbId).HasColumnName("MOVIE_TMDB_ID");
 
                 entity.Property(e => e.TraktId).HasColumnName("MOVIE_TRAKT_ID");

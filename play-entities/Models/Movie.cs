@@ -10,6 +10,7 @@ namespace entities.Models
         public string ImdbId { get; set; }
         public int TmdbId { get; set; }
         public string Title { get; set; }
+        public string TitleSearch { get; set; }
         public string OriginalTitle { get; set; }
         public int Year { get; set; }
         public string OriginalLanguage { get; set; }

@@ -37,6 +37,7 @@ namespace batch.Services.Database
                     ImdbId = movie.ImdbId,
                     TmdbId = movie.TmdbId,
                     Title = movie.Title,
+                    TitleSearch = movie.TitleSearch,
                     OriginalTitle = movie.OriginalTitle,
                     Year = movie.Year,
                     OriginalLanguage = movie.OriginalLanguage,

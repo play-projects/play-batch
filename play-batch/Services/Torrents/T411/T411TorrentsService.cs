@@ -1,19 +1,16 @@
 ﻿using System;
 using System.Linq;
 using System.Text.RegularExpressions;
-using batch.Services.Parser;
 using batch.Services.Web;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using batch.Models;
 
-namespace batch.Services.Torrents
+namespace batch.Services.Torrents.T411
 {
-    public class BaseTorrentsService
+    public class T411TorrentsService : ABaseTorrentsService
     {
-        private readonly ParserFacade parser = ParserFacade.Instance;
-
-        protected List<Torrent> GetSearch(string url)
+        protected override List<Torrent> GetSearch(string url)
         {
             var nbOfPages = GetNumberOfPages(url);
             var movies = new List<Torrent>();

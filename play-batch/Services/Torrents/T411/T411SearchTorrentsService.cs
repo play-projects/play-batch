@@ -1,7 +1,8 @@
 ﻿using System.Text;
 using batch.Models;
 
-namespace batch.Services.Torrents
+namespace batch.Services.Torrents.T411
+
 {
     public enum Criteria
     {
@@ -12,7 +13,7 @@ namespace batch.Services.Torrents
         NONE
     }
 
-    public class SearchTorrentsService
+    public class T411SearchTorrentsService
     {
         private static readonly string baseUrl = "https://www.t411.al";
 

@@ -6,10 +6,11 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using batch.Services.Torrents.T411;
 
 namespace batch.Services.Torrents
 {
-    public class MovieTorrentsService : BaseTorrentsService
+    public class MovieTorrentsService : T411TorrentsService
 	{
 		public static MovieTorrentsService Instance = new MovieTorrentsService();
 		private MovieTorrentsService() { }
@@ -42,7 +43,7 @@ namespace batch.Services.Torrents
 
         private IEnumerable<Torrent> GetMovieBySearch(Search search)
 	    {
-	        var url = SearchTorrentsService.GetSearchUri(search);
+	        var url = T411SearchTorrentsService.GetSearchUri(search);
 	        var searchs = GetSearch(url);
             var movies = new List<Torrent>();
 	        Parallel.ForEach(searchs, s =>

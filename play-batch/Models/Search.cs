@@ -1,4 +1,4 @@
-﻿using batch.Services.Torrents;
+﻿using batch.Services.Torrents.T411;
 
 namespace batch.Models
 {

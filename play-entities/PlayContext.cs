@@ -1,12 +1,11 @@
-﻿using System.Reflection.Metadata;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 
 namespace entities.Models
 {
     public class PlayContext : DbContext
     {
-        private string _db { get; set; }
-        private string _connection { get; set; }
+        private readonly string _db;
+        private readonly string _connection;
 
         public PlayContext(string db, string connection)
         {

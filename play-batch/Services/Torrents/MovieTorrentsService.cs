@@ -6,76 +6,77 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
-using batch.Services.Torrents.T411;
+using batch.Services.Torrents.Nextorrent;
 
 namespace batch.Services.Torrents
 {
-    public class MovieTorrentsService : T411TorrentsService
-	{
-		public static MovieTorrentsService Instance = new MovieTorrentsService();
-		private MovieTorrentsService() { }
+    public class MovieTorrentsService
+    {
+        private readonly NextorrentService _nextorrent;
 
-	    public List<Torrent> GetMovies()
+	    public MovieTorrentsService(string next)
 	    {
-	        var french = GetFrenchMovies();
-	        var vostfr = GetVostfrMovies();
-	        var torrents = french.Concat(vostfr).GroupBy(t => t.Id).Select(t => t.First()).ToList();
-            return torrents;
+	        _nextorrent = new NextorrentService(next);
 	    }
 
-        private IEnumerable<Torrent> GetFrenchMovies()
-        {
-            var low = GetMovieBySearch(new Search(Criteria.MOVIE, Criteria.VF, Criteria.LOW, Criteria.TWOD));
-            var medium = GetMovieBySearch(new Search(Criteria.MOVIE, Criteria.VF, Criteria.MEDIUM, Criteria.TWOD));
-            var high = GetMovieBySearch(new Search(Criteria.MOVIE, Criteria.VF, Criteria.HIGH, Criteria.TWOD));
-            var veryhigh = GetMovieBySearch(new Search(Criteria.MOVIE, Criteria.VF, Criteria.VERYHIGH, Criteria.TWOD));
-            return low.Concat(medium).Concat(high).Concat(veryhigh).ToList();
-        }
-
-	    private IEnumerable<Torrent> GetVostfrMovies()
+	    public IEnumerable<Torrent> GetMovies()
 	    {
-	        var low = GetMovieBySearch(new Search(Criteria.MOVIE, Criteria.VOSTFR, Criteria.LOW, Criteria.TWOD));
-	        var medium = GetMovieBySearch(new Search(Criteria.MOVIE, Criteria.VOSTFR, Criteria.MEDIUM, Criteria.TWOD));
-	        var high = GetMovieBySearch(new Search(Criteria.MOVIE, Criteria.VOSTFR, Criteria.HIGH, Criteria.TWOD));
-	        var veryhigh = GetMovieBySearch(new Search(Criteria.MOVIE, Criteria.VOSTFR, Criteria.VERYHIGH, Criteria.TWOD));
-	        return low.Concat(medium).Concat(high).Concat(veryhigh).ToList();
+	        var movies = _nextorrent.GetMovieTorrents();
+	        return GetExtractTorrents(movies);
 	    }
 
-        private IEnumerable<Torrent> GetMovieBySearch(Search search)
+        private IEnumerable<Torrent> GetExtractTorrents(IEnumerable<Torrent> torrents)
 	    {
-	        var url = T411SearchTorrentsService.GetSearchUri(search);
-	        var searchs = GetSearch(url);
             var movies = new List<Torrent>();
-	        Parallel.ForEach(searchs, s =>
+	        Parallel.ForEach(torrents, t =>
 	        {
-	            var torrent = GetMovieByName(s, search);
-	            if (torrent == Torrent.NotFound) return;
+	            const string name = "(.+)";
+	            const string language = "(french|truefrench|vff|vostfr)";
+	            const string quality = "(dvdrip|hdrip|webrip|720p|1080p|4k)";
+	            const string year = @"(\d{4})";
+
+	            var pattern = string.Empty;
+                if (t.Source == Source.Nextorrent)
+	                pattern = $@"{name}.+{language}.+{quality}.+{year}";
+	            if (t.Source == Source.Yggtorrent)
+	                pattern = $@"{name}.+{year}.+{language}.+{quality}";
+
+                var regex = new Regex(pattern, RegexOptions.IgnoreCase);
+	            var match = regex.Match(t.Name);
+	            if (!match.Success) return;
+
+	            string s = string.Empty, l = string.Empty, q = string.Empty, y = string.Empty;
+	            if (t.Source == Source.Nextorrent)
+	            {
+	                s = match.Groups[1].Value;
+	                l = match.Groups[2].Value;
+	                q = match.Groups[3].Value;
+	                y = match.Groups[4].Value;
+	            }
+	            if (t.Source == Source.Yggtorrent)
+	            {
+	                s = match.Groups[1].Value;
+	                y = match.Groups[2].Value;
+	                l = match.Groups[3].Value;
+	                q = match.Groups[4].Value;
+                }
+
+	            t.Slug = GetSlug(s);
+	            t.Language = GetLanguage(l);
+	            t.Quality = GetQuality(q);
+	            t.Year = GetYear(y);
+                t.Category = Category.Movie;
+
 	            lock (movies)
 	            {
-	                movies.Add(torrent);
-	                Console.WriteLine($"torrent: {torrent.Slug} - {torrent.Year} - {torrent.Quality}");
+	                movies.Add(t);
+	                Console.WriteLine($"torrent: {t.Slug} - {t.Year} - {t.Quality}");
 	            }
 	        });
 	        return movies.GroupBy(m => m.Slug).Select(m => m.First());
 	    }
 
-	    private Torrent GetMovieByName(Torrent torrent, Search search)
-        {
-            var pattern = @"(.+)\D(\d{4})[^p]";
-            var regex = new Regex(pattern, RegexOptions.IgnoreCase);
-            var match = regex.Match(torrent.Name);
-
-            if (!match.Success)
-                return Torrent.NotFound;
-            torrent.Slug = GetTorrentSlug(match.Groups[1].Value);
-            torrent.Year = GetTorrentYear(match.Groups[2].Value);
-            torrent.Language = GetTorrentLanguage(search);
-            torrent.Category = Category.Movie;
-            torrent.Quality = GetTorrentQuality(search);
-            return torrent;
-        }
-
-	    private string GetTorrentSlug(string name)
+	    private string GetSlug(string name)
 	    {
             name = name.ToLower().Normalize(NormalizationForm.FormD);
             var chars = name.Where(c => CharUnicodeInfo.GetUnicodeCategory(c) != UnicodeCategory.NonSpacingMark).ToArray();
@@ -88,31 +89,35 @@ namespace batch.Services.Torrents
 	        return slug;
 	    }
 
-	    private int GetTorrentYear(string year)
+	    private int GetYear(string year)
 	    {
 	        return int.Parse(year);
         }
 
-        private Language GetTorrentLanguage(Search search)
+        private Language GetLanguage(string language)
         {
-            if (search.Language == Criteria.VF)
+            if (language.Equals("french", StringComparison.CurrentCultureIgnoreCase))
                 return Language.VF;
-            if (search.Language == Criteria.VOSTFR)
-                return Language.VOSTFR;
-            return Language.None;
+            if (language.Equals("truefrench", StringComparison.CurrentCultureIgnoreCase))
+                return Language.VF;
+            if (language.Equals("vff", StringComparison.CurrentCultureIgnoreCase))
+                return Language.VF;
+            return Language.VOSTFR;
         }
 
-		private Quality GetTorrentQuality(Search search)
+        private Quality GetQuality(string quality)
 		{
-            if (search.Quality == Criteria.LOW)
+            if (quality.Equals("dvdrip", StringComparison.CurrentCultureIgnoreCase))
                 return Quality.Low;
-		    if (search.Quality == Criteria.MEDIUM)
+		    if (quality.Equals("webrip", StringComparison.CurrentCultureIgnoreCase))
+                return Quality.Low;
+		    if (quality.Equals("hdrip", StringComparison.CurrentCultureIgnoreCase))
+		        return Quality.Medium;
+            if (quality.Equals("720p", StringComparison.CurrentCultureIgnoreCase))
                 return Quality.Medium;
-            if (search.Quality == Criteria.HIGH)
+		    if (quality.Equals("1080p", StringComparison.CurrentCultureIgnoreCase))
                 return Quality.High;
-		    if (search.Quality == Criteria.VERYHIGH)
-                return Quality.VeryHigh;
-            return Quality.None;
+            return Quality.VeryHigh;
 		}
 	}
 }

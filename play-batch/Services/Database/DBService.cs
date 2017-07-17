@@ -13,7 +13,7 @@ namespace batch.Services.Database
             _ctx = new PlayContext(db, connection);
         }
 
-        public void Insert(List<Models.Movie> movies)
+        public void Insert(IEnumerable<Models.Movie> movies)
         {
             var t = movies.SelectMany(m => m.Torrents).ToList();
             InsertTorrents(t);

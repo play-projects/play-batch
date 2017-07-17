@@ -2,26 +2,36 @@
 {
     public enum Language
     {
-        VF, VOSTFR, None
+        None, VF, VOSTFR
     }
 
     public enum Quality
     {
+        None,
         Low,        // Bdrip
         Medium,     // 720p
         High,       // 1080p
         VeryHigh,   // 4K
-        None
     }
 
     public enum Category
     {
-        Series, Movie, None
+        None, Series, Movie
+    }
+
+    public enum Source
+    {
+        None,
+        Nextorrent,
+        Torrent9,
+        Cpasbienb,
+        Yggtorrent
     }
 
     public class Torrent
     {
         public int Id { get; set; }
+        public Source Source { get; set; }
         public string Name { get; set; }
         public string Slug { get; set; }
         public int Year { get; set; }

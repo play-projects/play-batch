@@ -1,13 +1,12 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
+using System.Linq;
 using batch.Services.Database;
 using batch.Services.Torrents;
 using batch.Services.Tmdb;
-using entities.Models;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
 
 namespace batch
 {
@@ -24,7 +23,9 @@ namespace batch
             Configuration = builder.Build();
 
             var sw = Stopwatch.StartNew();
-            var torrents = MovieTorrentsService.Instance.GetMovies();
+            var next = Configuration["nextorrent_movies_url"];
+            var movieService = new MovieTorrentsService(next);
+            var torrents = movieService.GetMovies();
             sw.Stop();
             var swTorrents = sw.ElapsedMilliseconds;
 
@@ -44,9 +45,9 @@ namespace batch
             new DBService(db, connection).Insert(movies);
             sw.Stop();
 
-            Console.WriteLine($"torents: {torrents.Count}");
-            Console.WriteLine($"ids: {moviesIds.Count}");
-            Console.WriteLine($"movies: {movies.Count}");
+            Console.WriteLine($"torrents: {torrents.Count()}");
+            Console.WriteLine($"ids: {moviesIds.Count()}");
+            Console.WriteLine($"movies: {movies.Count()}");
             Console.WriteLine($"time elapsed for torrents: {swTorrents}ms");
             Console.WriteLine($"time elapsed for movies id: {swMoviesIds}ms");
             Console.WriteLine($"time elapsed for movies: {swMovies}ms");

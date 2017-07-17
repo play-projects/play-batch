@@ -6,7 +6,7 @@ namespace batch.Services.Torrents
 {
     public abstract class ABaseTorrentsService
     {
-        protected readonly ParserFacade parser = ParserFacade.Instance;
-        protected abstract List<Torrent> GetSearch(string url);
+        protected readonly ParserFacade Parser = ParserFacade.Instance;
+        public abstract List<Torrent> GetMovieTorrents();
     }
 }

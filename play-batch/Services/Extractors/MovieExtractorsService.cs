@@ -19,7 +19,7 @@ namespace batch.Services.Tmdb
         public static MovieExtractorsService Instance = new MovieExtractorsService();
         private MovieExtractorsService() { }
 
-        public List<Movie> GetMoviesIds(List<Torrent> torrents)
+        public IEnumerable<Movie> GetMoviesIds(IEnumerable<Torrent> torrents)
         {
             var movies = new List<Movie>();
             Parallel.ForEach(torrents, new ParallelOptions { MaxDegreeOfParallelism = 50 }, torrent =>
@@ -83,7 +83,7 @@ namespace batch.Services.Tmdb
             return Movie.NotFound;
         }
 
-        public List<Movie> GetMovies(List<Movie> movies)
+        public IEnumerable<Movie> GetMovies(IEnumerable<Movie> movies)
         {
             var result = new List<Movie>();
             Parallel.ForEach(movies, new ParallelOptions { MaxDegreeOfParallelism = 50 }, movie =>

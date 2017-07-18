@@ -16,6 +16,25 @@ namespace batch.Services.Torrents
         private readonly NextorrentService _nextorrent;
         private readonly Torrent9Service _torrent9;
 
+        private readonly Dictionary<string, Language> _languages = new Dictionary<string, Language>
+        {
+            { "french", Language.VF },
+            { "truefrench", Language.VF },
+            { "vff", Language.VF },
+            { "vostfr", Language.VOSTFR }
+        };
+        private readonly Dictionary<string, Quality> _qualities = new Dictionary<string, Quality>
+        {
+            { "dvdrip", Quality.Low },
+            { "webrip", Quality.Low },
+            { "web-dl", Quality.Low },
+            { "hdrip", Quality.Medium },
+            { "hdlight", Quality.Medium },
+            { "720p", Quality.Medium },
+            { "1080p", Quality.High },
+            { "4k", Quality.VeryHigh }
+        };
+
 	    public MovieTorrentsService(string next, string torrent9)
 	    {
 	        _nextorrent = new NextorrentService(next);
@@ -36,41 +55,15 @@ namespace batch.Services.Torrents
             var movies = new List<Torrent>();
 	        Parallel.ForEach(torrents, t =>
 	        {
-	            const string name = "(.+)";
-	            const string language = "(french|truefrench|vff|vostfr)";
-	            const string quality = "(dvdrip|hdrip|webrip|720p|1080p|4k)";
-	            const string year = @"(\d{4})";
-
-	            var pattern = string.Empty;
-                if (t.Source == Source.Nextorrent || t.Source == Source.Torrent9)
-	                pattern = $@"{name}.+{language}.+{quality}.+{year}";
-	            if (t.Source == Source.Yggtorrent)
-	                pattern = $@"{name}.+{year}.+{language}.+{quality}";
-
-                var regex = new Regex(pattern, RegexOptions.IgnoreCase);
-	            var match = regex.Match(t.Name);
-	            if (!match.Success) return;
-
-	            string s = string.Empty, l = string.Empty, q = string.Empty, y = string.Empty;
-	            if (t.Source == Source.Nextorrent || t.Source == Source.Torrent9)
-	            {
-	                s = match.Groups[1].Value;
-	                l = match.Groups[2].Value;
-	                q = match.Groups[3].Value;
-	                y = match.Groups[4].Value;
-	            }
-	            if (t.Source == Source.Yggtorrent)
-	            {
-	                s = match.Groups[1].Value;
-	                y = match.Groups[2].Value;
-	                l = match.Groups[3].Value;
-	                q = match.Groups[4].Value;
-                }
-
-	            t.Slug = GetSlug(s);
-	            t.Language = GetLanguage(l);
-	            t.Quality = GetQuality(q);
-	            t.Year = GetYear(y);
+	            var match = IsMatch(t.Name);
+	            if (string.IsNullOrEmpty(match.name) && string.IsNullOrEmpty(match.lang)
+	                && string.IsNullOrEmpty(match.quality) && string.IsNullOrEmpty(match.year))
+	                return;
+                    
+	            t.Slug = GetSlug(match.name);
+	            t.Language = GetLanguage(match.lang);
+	            t.Quality = GetQuality(match.quality);
+	            t.Year = GetYear(match.year);
                 t.Category = Category.Movie;
 	            t.Guid = Guid.NewGuid().ToString();
 
@@ -80,10 +73,46 @@ namespace batch.Services.Torrents
 	                Console.WriteLine($"torrent: {t.Slug} - {t.Year} - {t.Quality}");
 	            }
 	        });
-	        return movies.GroupBy(m => m.Slug).Select(m => m.First());
+	        return movies;
 	    }
 
-	    private string GetSlug(string name)
+        private (string name, string lang, string quality, string year) IsMatch(string torrentName)
+        {
+            var name = "(?<name>.+)";
+            var language = $"(?<lang>{string.Join("|", _languages.Keys.ToArray())})";
+            var quality = $"(?<quality>{string.Join("|", _qualities.Keys.ToArray())})";
+            var year = @"(?<year>\d{4})";  
+
+            var patterns = new[]
+            {
+                $@"{name}.+{language}.+{quality}.+{year}",
+                $@"{name}.+{language}.+{year}.+{quality}",
+
+                $@"{name}.+{quality}.+{language}.+{year}",
+                $@"{name}.+{quality}.+{year}.+{language}",
+
+                $@"{name}.+{year}.+{language}.+{quality}",
+                $@"{name}.+{year}.+{quality}.+{language}"
+            };
+
+            foreach (var pattern in patterns)
+            {
+                var regex = new Regex(pattern, RegexOptions.IgnoreCase);
+                var match = regex.Match(torrentName);
+                if (match.Success)
+                {
+                    return (
+                        match.Groups["name"].Value,
+                        match.Groups["lang"].Value,
+                        match.Groups["quality"].Value,
+                        match.Groups["year"].Value
+                    );
+                }
+            }
+            return (string.Empty, string.Empty, string.Empty, string.Empty);
+        }
+
+        private string GetSlug(string name)
 	    {
             name = name.ToLower().Normalize(NormalizationForm.FormD);
             var chars = name.Where(c => CharUnicodeInfo.GetUnicodeCategory(c) != UnicodeCategory.NonSpacingMark).ToArray();
@@ -103,28 +132,16 @@ namespace batch.Services.Torrents
 
         private Language GetLanguage(string language)
         {
-            if (language.Equals("french", StringComparison.CurrentCultureIgnoreCase))
-                return Language.VF;
-            if (language.Equals("truefrench", StringComparison.CurrentCultureIgnoreCase))
-                return Language.VF;
-            if (language.Equals("vff", StringComparison.CurrentCultureIgnoreCase))
-                return Language.VF;
-            return Language.VOSTFR;
+            if (_languages.ContainsKey(language))
+                return _languages[language];
+            return Language.None;
         }
 
         private Quality GetQuality(string quality)
-		{
-            if (quality.Equals("dvdrip", StringComparison.CurrentCultureIgnoreCase))
-                return Quality.Low;
-		    if (quality.Equals("webrip", StringComparison.CurrentCultureIgnoreCase))
-                return Quality.Low;
-		    if (quality.Equals("hdrip", StringComparison.CurrentCultureIgnoreCase))
-		        return Quality.Medium;
-            if (quality.Equals("720p", StringComparison.CurrentCultureIgnoreCase))
-                return Quality.Medium;
-		    if (quality.Equals("1080p", StringComparison.CurrentCultureIgnoreCase))
-                return Quality.High;
-            return Quality.VeryHigh;
-		}
+        {
+            if (_qualities.ContainsKey(quality))
+                return _qualities[quality];
+            return Quality.None;
+        }
 	}
 }

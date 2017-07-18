@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?PowerDesigner AppLocale="UTF16" ID="{C97BE401-6D12-4D0F-84D7-686D545087E1}" Label="" LastModificationDate="1498130509" Name="play-batch-mcd" Objects="109" Symbols="19" Type="{5F45F978-C4F3-4E35-A3FC-AF3318663A0F}" signature="LDM_DATA_MODEL_XML" version="15.1.0.2850"?>
+<?PowerDesigner AppLocale="UTF16" ID="{728F6350-60D9-48A3-8B18-8E55A6E13C48}" Label="" LastModificationDate="1500334399" Name="play-batch-mld" Objects="136" Symbols="25" Type="{5F45F978-C4F3-4E35-A3FC-AF3318663A0F}" signature="LDM_DATA_MODEL_XML" version="15.1.0.2850"?>
 <!-- Veuillez ne pas modifier ce fichier -->
 
 <Model xmlns:a="attribute" xmlns:c="collection" xmlns:o="object">
@@ -7,15 +7,20 @@
 <o:RootObject Id="o1">
 <c:Children>
 <o:Model Id="o2">
-<a:ObjectID>C97BE401-6D12-4D0F-84D7-686D545087E1</a:ObjectID>
-<a:Name>play-batch-mcd</a:Name>
-<a:Code>PLAY_BATCH_MCD</a:Code>
-<a:CreationDate>1497047380</a:CreationDate>
+<a:ObjectID>728F6350-60D9-48A3-8B18-8E55A6E13C48</a:ObjectID>
+<a:Name>play-batch-mld</a:Name>
+<a:Code>PLAY_BATCH_MLD</a:Code>
+<a:CreationDate>1500333766</a:CreationDate>
 <a:Creator>Arthur</a:Creator>
-<a:ModificationDate>1498130481</a:ModificationDate>
-<a:Modifier>adelamare</a:Modifier>
+<a:ModificationDate>1500334375</a:ModificationDate>
+<a:Modifier>Arthur</a:Modifier>
 <a:History>ORG {E541E082-F2E5-4B95-938D-4FD8B50F3F9E}
-DAT 1498130481
+DAT 1500334360
+DLD {772989E5-CBBD-42A4-9A30-EC6837A3A3FA},{BC271723-81F7-4D32-88BE-352D9BC145E1}
+DLD {772989E5-CBBD-42A4-9A30-EC6837A3A3FA},{C57E9BA7-4E51-4363-8BCC-818FB7C8F836}
+DLD {05F5C6D1-2380-465A-86F0-343BD7F0B787},{F98F3831-29BF-4C4F-B77F-EDCA4E8B1E09}
+DLD {05F5C6D1-2380-465A-86F0-343BD7F0B787},{BC271723-81F7-4D32-88BE-352D9BC145E1}
+ATT MOPT
 ATT FOPT</a:History>
 <a:PackageOptionsText>[FolderOptions]
 
@@ -295,11 +300,6 @@ FixRequested=No
 CheckRequested=Yes
 
 [FolderOptions\CheckModel\Objet étendu\UniqueCode]
-CheckSeverity=No
-FixRequested=No
-CheckRequested=Yes
-
-[FolderOptions\CheckModel\Objet étendu\MSSQLSRV2008_ExtendedObject_Queue_Nombre_de_lecteurs_valide_]
 CheckSeverity=No
 FixRequested=No
 CheckRequested=Yes
@@ -678,27 +678,27 @@ BuildTrgr=No
 PreserveMode=Yes</a:ModelOptionsText>
 <c:GeneratedModels>
 <o:Shortcut Id="o3">
-<a:ObjectID>B1581ED4-DA1B-4902-BD93-0E7AA118ADC7</a:ObjectID>
-<a:Name>play-batch-mcd</a:Name>
-<a:Code>PLAY_BATCH_MCD</a:Code>
-<a:CreationDate>1497047474</a:CreationDate>
+<a:ObjectID>B8AC709F-5DDF-43B7-8F16-CA4BEA3D1A88</a:ObjectID>
+<a:Name>play-batch-mpd</a:Name>
+<a:Code>PLAY_BATCH_MPD</a:Code>
+<a:CreationDate>1500334375</a:CreationDate>
 <a:Creator>Arthur</a:Creator>
-<a:ModificationDate>1497047474</a:ModificationDate>
+<a:ModificationDate>1500334375</a:ModificationDate>
 <a:Modifier>Arthur</a:Modifier>
 <a:TargetStereotype/>
-<a:TargetID>C68D8820-1327-46E3-AA72-8F91B71AEB50</a:TargetID>
+<a:TargetID>F47D7B30-3798-4345-9E60-58F6AA7421B9</a:TargetID>
 <a:TargetClassID>CDE44E21-9669-11D1-9914-006097355D9B</a:TargetClassID>
 </o:Shortcut>
 </c:GeneratedModels>
 <c:GenerationOrigins>
 <o:Shortcut Id="o4">
-<a:ObjectID>2774B3EE-B86D-42F5-98D3-7CCADEA124AE</a:ObjectID>
+<a:ObjectID>03B104DA-B132-48B1-BC53-15EA0F767995</a:ObjectID>
 <a:Name>play-batch-mcd</a:Name>
 <a:Code>PLAY_BATCH_MCD</a:Code>
-<a:CreationDate>1498130481</a:CreationDate>
-<a:Creator>adelamare</a:Creator>
-<a:ModificationDate>1498130481</a:ModificationDate>
-<a:Modifier>adelamare</a:Modifier>
+<a:CreationDate>1500334360</a:CreationDate>
+<a:Creator>Arthur</a:Creator>
+<a:ModificationDate>1500334360</a:ModificationDate>
+<a:Modifier>Arthur</a:Modifier>
 <a:TargetStereotype/>
 <a:TargetID>E541E082-F2E5-4B95-938D-4FD8B50F3F9E</a:TargetID>
 <a:TargetClassID>1E597170-9350-11D1-AB3C-0020AF71E433</a:TargetClassID>
@@ -706,15 +706,15 @@ PreserveMode=Yes</a:ModelOptionsText>
 </c:GenerationOrigins>
 <c:LogicalDiagrams>
 <o:LogicalDiagram Id="o5">
-<a:ObjectID>C4674F88-A1F8-4469-953C-BA406CD1AF76</a:ObjectID>
+<a:ObjectID>6559F5B0-AEFA-4A9F-9C38-61E7210707D2</a:ObjectID>
 <a:Name>Diagramme_1</a:Name>
 <a:Code>DIAGRAMME_1</a:Code>
-<a:CreationDate>1497047384</a:CreationDate>
+<a:CreationDate>1500333782</a:CreationDate>
 <a:Creator>Arthur</a:Creator>
-<a:ModificationDate>1497047384</a:ModificationDate>
+<a:ModificationDate>1500334175</a:ModificationDate>
 <a:Modifier>Arthur</a:Modifier>
 <a:History>ORG {82BDE54D-A944-4434-9D2A-8516DC44348C}
-DAT 1497047384</a:History>
+DAT 1500333782</a:History>
 <a:DisplayPreferences>[DisplayPreferences]
 
 [DisplayPreferences\LDM]
@@ -1194,9 +1194,9 @@ Shadow=0
 <a:PaperSource>15</a:PaperSource>
 <c:Symbols>
 <o:RelationshipSymbol Id="o6">
-<a:ModificationDate>1498130509</a:ModificationDate>
-<a:Rect>((-13800,37238), (8213,38984))</a:Rect>
-<a:ListOfPoints>((-13800,37738),(8213,37738))</a:ListOfPoints>
+<a:ModificationDate>1500334360</a:ModificationDate>
+<a:Rect>((-14175,39124), (4585,40870))</a:Rect>
+<a:ListOfPoints>((-14175,39624),(4585,39624))</a:ListOfPoints>
 <a:CornerStyle>1</a:CornerStyle>
 <a:ArrowStyle>4632</a:ArrowStyle>
 <a:LineColor>11184640</a:LineColor>
@@ -1214,9 +1214,10 @@ NAMA 0 Arial,8,N</a:FontList>
 </c:Object>
 </o:RelationshipSymbol>
 <o:RelationshipSymbol Id="o10">
-<a:ModificationDate>1498130503</a:ModificationDate>
-<a:Rect>((8363,36781), (25981,38527))</a:Rect>
-<a:ListOfPoints>((8363,37281),(25981,37281))</a:ListOfPoints>
+<a:ModificationDate>1500334360</a:ModificationDate>
+<a:CenterTextOffset>(0, 400)</a:CenterTextOffset>
+<a:Rect>((4735,39237), (19119,41383))</a:Rect>
+<a:ListOfPoints>((4735,39737),(19119,39737))</a:ListOfPoints>
 <a:CornerStyle>1</a:CornerStyle>
 <a:ArrowStyle>5906</a:ArrowStyle>
 <a:LineColor>11184640</a:LineColor>
@@ -1234,29 +1235,9 @@ NAMA 0 Arial,8,N</a:FontList>
 </c:Object>
 </o:RelationshipSymbol>
 <o:RelationshipSymbol Id="o13">
-<a:ModificationDate>1498130481</a:ModificationDate>
-<a:Rect>((-23550,24346), (16849,26392))</a:Rect>
-<a:ListOfPoints>((16849,25146),(-23550,25146))</a:ListOfPoints>
-<a:CornerStyle>1</a:CornerStyle>
-<a:ArrowStyle>4372</a:ArrowStyle>
-<a:LineColor>11184640</a:LineColor>
-<a:ShadowColor>12632256</a:ShadowColor>
-<a:FontList>DISPNAME 0 Arial,8,N
-NAMA 0 Arial,8,N</a:FontList>
-<c:SourceSymbol>
-<o:EntitySymbol Ref="o14"/>
-</c:SourceSymbol>
-<c:DestinationSymbol>
-<o:EntitySymbol Ref="o7"/>
-</c:DestinationSymbol>
-<c:Object>
-<o:Relationship Ref="o15"/>
-</c:Object>
-</o:RelationshipSymbol>
-<o:RelationshipSymbol Id="o16">
-<a:ModificationDate>1498130481</a:ModificationDate>
-<a:Rect>((-31957,12298), (-24533,23097))</a:Rect>
-<a:ListOfPoints>((-28245,23097),(-28245,12298))</a:ListOfPoints>
+<a:ModificationDate>1500334360</a:ModificationDate>
+<a:Rect>((-31920,11877), (-24571,23064))</a:Rect>
+<a:ListOfPoints>((-28245,23064),(-28245,11877))</a:ListOfPoints>
 <a:CornerStyle>1</a:CornerStyle>
 <a:ArrowStyle>4371</a:ArrowStyle>
 <a:LineColor>11184640</a:LineColor>
@@ -1267,16 +1248,17 @@ NAMA 0 Arial,8,N</a:FontList>
 <o:EntitySymbol Ref="o7"/>
 </c:SourceSymbol>
 <c:DestinationSymbol>
-<o:EntitySymbol Ref="o17"/>
+<o:EntitySymbol Ref="o14"/>
 </c:DestinationSymbol>
 <c:Object>
-<o:Relationship Ref="o18"/>
+<o:Relationship Ref="o15"/>
 </c:Object>
 </o:RelationshipSymbol>
-<o:RelationshipSymbol Id="o19">
-<a:ModificationDate>1498130481</a:ModificationDate>
-<a:Rect>((-17797,12154), (2488,14200))</a:Rect>
-<a:ListOfPoints>((-17797,12954),(2488,12954))</a:ListOfPoints>
+<o:RelationshipSymbol Id="o16">
+<a:ModificationDate>1500334360</a:ModificationDate>
+<a:CenterTextOffset>(0, 400)</a:CenterTextOffset>
+<a:Rect>((-17497,12540), (1738,14986))</a:Rect>
+<a:ListOfPoints>((-17497,13340),(1738,13340))</a:ListOfPoints>
 <a:CornerStyle>1</a:CornerStyle>
 <a:ArrowStyle>4882</a:ArrowStyle>
 <a:LineColor>11184640</a:LineColor>
@@ -1284,7 +1266,27 @@ NAMA 0 Arial,8,N</a:FontList>
 <a:FontList>DISPNAME 0 Arial,8,N
 NAMA 0 Arial,8,N</a:FontList>
 <c:SourceSymbol>
+<o:EntitySymbol Ref="o14"/>
+</c:SourceSymbol>
+<c:DestinationSymbol>
 <o:EntitySymbol Ref="o17"/>
+</c:DestinationSymbol>
+<c:Object>
+<o:Relationship Ref="o18"/>
+</c:Object>
+</o:RelationshipSymbol>
+<o:RelationshipSymbol Id="o19">
+<a:ModificationDate>1500334360</a:ModificationDate>
+<a:Rect>((-17872,3281), (1131,5327))</a:Rect>
+<a:ListOfPoints>((-17872,4081),(1131,4081))</a:ListOfPoints>
+<a:CornerStyle>1</a:CornerStyle>
+<a:ArrowStyle>4882</a:ArrowStyle>
+<a:LineColor>11184640</a:LineColor>
+<a:ShadowColor>12632256</a:ShadowColor>
+<a:FontList>DISPNAME 0 Arial,8,N
+NAMA 0 Arial,8,N</a:FontList>
+<c:SourceSymbol>
+<o:EntitySymbol Ref="o14"/>
 </c:SourceSymbol>
 <c:DestinationSymbol>
 <o:EntitySymbol Ref="o20"/>
@@ -1294,9 +1296,10 @@ NAMA 0 Arial,8,N</a:FontList>
 </c:Object>
 </o:RelationshipSymbol>
 <o:RelationshipSymbol Id="o22">
-<a:ModificationDate>1498130481</a:ModificationDate>
-<a:Rect>((-17873,4045), (1880,6091))</a:Rect>
-<a:ListOfPoints>((-17873,4845),(1880,4845))</a:ListOfPoints>
+<a:ModificationDate>1500334360</a:ModificationDate>
+<a:CenterTextOffset>(3000, -1200)</a:CenterTextOffset>
+<a:Rect>((-21526,-4585), (3184,3364))</a:Rect>
+<a:ListOfPoints>((-20439,3364),(-20439,-3457),(3184,-3457))</a:ListOfPoints>
 <a:CornerStyle>1</a:CornerStyle>
 <a:ArrowStyle>4882</a:ArrowStyle>
 <a:LineColor>11184640</a:LineColor>
@@ -1304,7 +1307,7 @@ NAMA 0 Arial,8,N</a:FontList>
 <a:FontList>DISPNAME 0 Arial,8,N
 NAMA 0 Arial,8,N</a:FontList>
 <c:SourceSymbol>
-<o:EntitySymbol Ref="o17"/>
+<o:EntitySymbol Ref="o14"/>
 </c:SourceSymbol>
 <c:DestinationSymbol>
 <o:EntitySymbol Ref="o23"/>
@@ -1314,57 +1317,57 @@ NAMA 0 Arial,8,N</a:FontList>
 </c:Object>
 </o:RelationshipSymbol>
 <o:RelationshipSymbol Id="o25">
-<a:ModificationDate>1498130481</a:ModificationDate>
-<a:Rect>((-24565,-4794), (4109,4387))</a:Rect>
-<a:ListOfPoints>((-20440,4387),(-20440,-4207),(4109,-4207))</a:ListOfPoints>
+<a:ModificationDate>1500334360</a:ModificationDate>
+<a:Rect>((-29292,50655), (-23968,61923))</a:Rect>
+<a:ListOfPoints>((-26630,50655),(-26630,61923))</a:ListOfPoints>
 <a:CornerStyle>1</a:CornerStyle>
-<a:ArrowStyle>4882</a:ArrowStyle>
+<a:ArrowStyle>5906</a:ArrowStyle>
+<a:LineColor>16744576</a:LineColor>
+<a:ShadowColor>12632256</a:ShadowColor>
+<a:FontList>DISPNAME 0 Arial,8,N
+NAMA 0 Arial,8,N</a:FontList>
+<c:SourceSymbol>
+<o:EntitySymbol Ref="o26"/>
+</c:SourceSymbol>
+<c:DestinationSymbol>
+<o:EntitySymbol Ref="o27"/>
+</c:DestinationSymbol>
+<c:Object>
+<o:Relationship Ref="o28"/>
+</c:Object>
+</o:RelationshipSymbol>
+<o:RelationshipSymbol Id="o29">
+<a:ModificationDate>1500334360</a:ModificationDate>
+<a:Rect>((-29759,35690), (-24435,50655))</a:Rect>
+<a:ListOfPoints>((-27097,50655),(-27097,35690))</a:ListOfPoints>
+<a:CornerStyle>1</a:CornerStyle>
+<a:ArrowStyle>5906</a:ArrowStyle>
+<a:LineColor>16744576</a:LineColor>
+<a:ShadowColor>12632256</a:ShadowColor>
+<a:FontList>DISPNAME 0 Arial,8,N
+NAMA 0 Arial,8,N</a:FontList>
+<c:SourceSymbol>
+<o:EntitySymbol Ref="o26"/>
+</c:SourceSymbol>
+<c:DestinationSymbol>
+<o:EntitySymbol Ref="o7"/>
+</c:DestinationSymbol>
+<c:Object>
+<o:Relationship Ref="o30"/>
+</c:Object>
+</o:RelationshipSymbol>
+<o:RelationshipSymbol Id="o31">
+<a:ModificationDate>1500334360</a:ModificationDate>
+<a:Rect>((-17474,29038), (8701,31084))</a:Rect>
+<a:ListOfPoints>((8701,29838),(-17474,29838))</a:ListOfPoints>
+<a:CornerStyle>1</a:CornerStyle>
+<a:ArrowStyle>4372</a:ArrowStyle>
 <a:LineColor>11184640</a:LineColor>
 <a:ShadowColor>12632256</a:ShadowColor>
 <a:FontList>DISPNAME 0 Arial,8,N
 NAMA 0 Arial,8,N</a:FontList>
 <c:SourceSymbol>
-<o:EntitySymbol Ref="o17"/>
-</c:SourceSymbol>
-<c:DestinationSymbol>
-<o:EntitySymbol Ref="o26"/>
-</c:DestinationSymbol>
-<c:Object>
-<o:Relationship Ref="o27"/>
-</c:Object>
-</o:RelationshipSymbol>
-<o:RelationshipSymbol Id="o28">
-<a:ModificationDate>1498130481</a:ModificationDate>
-<a:Rect>((-31043,50502), (-25643,62723))</a:Rect>
-<a:ListOfPoints>((-28343,50502),(-28343,62723))</a:ListOfPoints>
-<a:CornerStyle>1</a:CornerStyle>
-<a:ArrowStyle>5906</a:ArrowStyle>
-<a:LineColor>16744576</a:LineColor>
-<a:ShadowColor>12632256</a:ShadowColor>
-<a:FontList>DISPNAME 0 Arial,8,N
-NAMA 0 Arial,8,N</a:FontList>
-<c:SourceSymbol>
-<o:EntitySymbol Ref="o29"/>
-</c:SourceSymbol>
-<c:DestinationSymbol>
-<o:EntitySymbol Ref="o30"/>
-</c:DestinationSymbol>
-<c:Object>
-<o:Relationship Ref="o31"/>
-</c:Object>
-</o:RelationshipSymbol>
-<o:RelationshipSymbol Id="o32">
-<a:ModificationDate>1498130481</a:ModificationDate>
-<a:Rect>((-30914,35670), (-25514,50502))</a:Rect>
-<a:ListOfPoints>((-28214,50502),(-28214,35670))</a:ListOfPoints>
-<a:CornerStyle>1</a:CornerStyle>
-<a:ArrowStyle>5906</a:ArrowStyle>
-<a:LineColor>16744576</a:LineColor>
-<a:ShadowColor>12632256</a:ShadowColor>
-<a:FontList>DISPNAME 0 Arial,8,N
-NAMA 0 Arial,8,N</a:FontList>
-<c:SourceSymbol>
-<o:EntitySymbol Ref="o29"/>
+<o:EntitySymbol Ref="o32"/>
 </c:SourceSymbol>
 <c:DestinationSymbol>
 <o:EntitySymbol Ref="o7"/>
@@ -1373,8 +1376,29 @@ NAMA 0 Arial,8,N</a:FontList>
 <o:Relationship Ref="o33"/>
 </c:Object>
 </o:RelationshipSymbol>
+<o:RelationshipSymbol Id="o34">
+<a:ModificationDate>1500334360</a:ModificationDate>
+<a:CenterTextOffset>(0, 400)</a:CenterTextOffset>
+<a:Rect>((-48175,12075), (-34200,14521))</a:Rect>
+<a:ListOfPoints>((-48175,12875),(-34200,12875))</a:ListOfPoints>
+<a:CornerStyle>1</a:CornerStyle>
+<a:ArrowStyle>4627</a:ArrowStyle>
+<a:LineColor>11184640</a:LineColor>
+<a:ShadowColor>12632256</a:ShadowColor>
+<a:FontList>DISPNAME 0 Arial,8,N
+NAMA 0 Arial,8,N</a:FontList>
+<c:SourceSymbol>
+<o:EntitySymbol Ref="o35"/>
+</c:SourceSymbol>
+<c:DestinationSymbol>
+<o:EntitySymbol Ref="o14"/>
+</c:DestinationSymbol>
+<c:Object>
+<o:Relationship Ref="o36"/>
+</c:Object>
+</o:RelationshipSymbol>
 <o:EntitySymbol Id="o7">
-<a:ModificationDate>1498130481</a:ModificationDate>
+<a:ModificationDate>1500334375</a:ModificationDate>
 <a:IconMode>-1</a:IconMode>
 <a:Rect>((-37810,19700), (-9590,42024))</a:Rect>
 <a:LineColor>11184640</a:LineColor>
@@ -1391,76 +1415,13 @@ Identifiers 0 Arial,8,N</a:FontList>
 <a:GradientFillMode>65</a:GradientFillMode>
 <a:GradientEndColor>16777215</a:GradientEndColor>
 <c:Object>
-<o:Entity Ref="o34"/>
-</c:Object>
-</o:EntitySymbol>
-<o:EntitySymbol Id="o11">
-<a:ModificationDate>1498130481</a:ModificationDate>
-<a:IconMode>-1</a:IconMode>
-<a:Rect>((23659,33342), (46239,40082))</a:Rect>
-<a:LineColor>11184640</a:LineColor>
-<a:FillColor>16777136</a:FillColor>
-<a:ShadowColor>12632256</a:ShadowColor>
-<a:FontList>STRN 0 Arial,8,N
-DISPNAME 0 Arial,8,N
-Attributes 0 Arial,8,N
-LABL 0 Arial,8,N
-EntityPrimaryAttribute 0 Arial,8,U
-EntityForeignAttribute 0 Arial,8,N
-Identifiers 0 Arial,8,N</a:FontList>
-<a:BrushStyle>6</a:BrushStyle>
-<a:GradientFillMode>65</a:GradientFillMode>
-<a:GradientEndColor>16777215</a:GradientEndColor>
-<c:Object>
-<o:Entity Ref="o35"/>
-</c:Object>
-</o:EntitySymbol>
-<o:EntitySymbol Id="o14">
-<a:ModificationDate>1498130481</a:ModificationDate>
-<a:IconMode>-1</a:IconMode>
-<a:Rect>((3319,20893), (30379,29581))</a:Rect>
-<a:LineColor>11184640</a:LineColor>
-<a:FillColor>16777136</a:FillColor>
-<a:ShadowColor>12632256</a:ShadowColor>
-<a:FontList>STRN 0 Arial,8,N
-DISPNAME 0 Arial,8,N
-Attributes 0 Arial,8,N
-LABL 0 Arial,8,N
-EntityPrimaryAttribute 0 Arial,8,U
-EntityForeignAttribute 0 Arial,8,N
-Identifiers 0 Arial,8,N</a:FontList>
-<a:BrushStyle>6</a:BrushStyle>
-<a:GradientFillMode>65</a:GradientFillMode>
-<a:GradientEndColor>16777215</a:GradientEndColor>
-<c:Object>
-<o:Entity Ref="o36"/>
-</c:Object>
-</o:EntitySymbol>
-<o:EntitySymbol Id="o17">
-<a:ModificationDate>1498130481</a:ModificationDate>
-<a:IconMode>-1</a:IconMode>
-<a:Rect>((-37822,-578), (-13928,15902))</a:Rect>
-<a:LineColor>11184640</a:LineColor>
-<a:FillColor>16777136</a:FillColor>
-<a:ShadowColor>12632256</a:ShadowColor>
-<a:FontList>STRN 0 Arial,8,N
-DISPNAME 0 Arial,8,N
-Attributes 0 Arial,8,N
-LABL 0 Arial,8,N
-EntityPrimaryAttribute 0 Arial,8,U
-EntityForeignAttribute 0 Arial,8,N
-Identifiers 0 Arial,8,N</a:FontList>
-<a:BrushStyle>6</a:BrushStyle>
-<a:GradientFillMode>65</a:GradientFillMode>
-<a:GradientEndColor>16777215</a:GradientEndColor>
-<c:Object>
 <o:Entity Ref="o37"/>
 </c:Object>
 </o:EntitySymbol>
-<o:EntitySymbol Id="o20">
-<a:ModificationDate>1498130481</a:ModificationDate>
+<o:EntitySymbol Id="o11">
+<a:ModificationDate>1500334375</a:ModificationDate>
 <a:IconMode>-1</a:IconMode>
-<a:Rect>((-2220,10729), (21518,16495))</a:Rect>
+<a:Rect>((17109,35317), (39689,42057))</a:Rect>
 <a:LineColor>11184640</a:LineColor>
 <a:FillColor>16777136</a:FillColor>
 <a:ShadowColor>12632256</a:ShadowColor>
@@ -1478,10 +1439,10 @@ Identifiers 0 Arial,8,N</a:FontList>
 <o:Entity Ref="o38"/>
 </c:Object>
 </o:EntitySymbol>
-<o:EntitySymbol Id="o23">
-<a:ModificationDate>1498130481</a:ModificationDate>
+<o:EntitySymbol Id="o32">
+<a:ModificationDate>1500334375</a:ModificationDate>
 <a:IconMode>-1</a:IconMode>
-<a:Rect>((-2144,1954), (21594,7721))</a:Rect>
+<a:Rect>((2719,25743), (29779,34431))</a:Rect>
 <a:LineColor>11184640</a:LineColor>
 <a:FillColor>16777136</a:FillColor>
 <a:ShadowColor>12632256</a:ShadowColor>
@@ -1499,10 +1460,10 @@ Identifiers 0 Arial,8,N</a:FontList>
 <o:Entity Ref="o39"/>
 </c:Object>
 </o:EntitySymbol>
-<o:EntitySymbol Id="o26">
-<a:ModificationDate>1498130481</a:ModificationDate>
+<o:EntitySymbol Id="o14">
+<a:ModificationDate>1500334375</a:ModificationDate>
 <a:IconMode>-1</a:IconMode>
-<a:Rect>((-1982,-7495), (20830,-1729))</a:Rect>
+<a:Rect>((-37822,-2327), (-13928,16101))</a:Rect>
 <a:LineColor>11184640</a:LineColor>
 <a:FillColor>16777136</a:FillColor>
 <a:ShadowColor>12632256</a:ShadowColor>
@@ -1520,10 +1481,10 @@ Identifiers 0 Arial,8,N</a:FontList>
 <o:Entity Ref="o40"/>
 </c:Object>
 </o:EntitySymbol>
-<o:EntitySymbol Id="o30">
-<a:ModificationDate>1498130481</a:ModificationDate>
+<o:EntitySymbol Id="o17">
+<a:ModificationDate>1500334375</a:ModificationDate>
 <a:IconMode>-1</a:IconMode>
-<a:Rect>((-39140,60667), (-14860,68381))</a:Rect>
+<a:Rect>((-2970,9579), (20768,15345))</a:Rect>
 <a:LineColor>11184640</a:LineColor>
 <a:FillColor>16777136</a:FillColor>
 <a:ShadowColor>12632256</a:ShadowColor>
@@ -1541,10 +1502,73 @@ Identifiers 0 Arial,8,N</a:FontList>
 <o:Entity Ref="o41"/>
 </c:Object>
 </o:EntitySymbol>
-<o:EntitySymbol Id="o29">
-<a:ModificationDate>1498130481</a:ModificationDate>
+<o:EntitySymbol Id="o20">
+<a:ModificationDate>1500334375</a:ModificationDate>
 <a:IconMode>-1</a:IconMode>
-<a:Rect>((-39280,46650), (-15850,54594))</a:Rect>
+<a:Rect>((-2894,1379), (20844,7146))</a:Rect>
+<a:LineColor>11184640</a:LineColor>
+<a:FillColor>16777136</a:FillColor>
+<a:ShadowColor>12632256</a:ShadowColor>
+<a:FontList>STRN 0 Arial,8,N
+DISPNAME 0 Arial,8,N
+Attributes 0 Arial,8,N
+LABL 0 Arial,8,N
+EntityPrimaryAttribute 0 Arial,8,U
+EntityForeignAttribute 0 Arial,8,N
+Identifiers 0 Arial,8,N</a:FontList>
+<a:BrushStyle>6</a:BrushStyle>
+<a:GradientFillMode>65</a:GradientFillMode>
+<a:GradientEndColor>16777215</a:GradientEndColor>
+<c:Object>
+<o:Entity Ref="o42"/>
+</c:Object>
+</o:EntitySymbol>
+<o:EntitySymbol Id="o23">
+<a:ModificationDate>1500334375</a:ModificationDate>
+<a:IconMode>-1</a:IconMode>
+<a:Rect>((-2907,-6745), (19905,-979))</a:Rect>
+<a:LineColor>11184640</a:LineColor>
+<a:FillColor>16777136</a:FillColor>
+<a:ShadowColor>12632256</a:ShadowColor>
+<a:FontList>STRN 0 Arial,8,N
+DISPNAME 0 Arial,8,N
+Attributes 0 Arial,8,N
+LABL 0 Arial,8,N
+EntityPrimaryAttribute 0 Arial,8,U
+EntityForeignAttribute 0 Arial,8,N
+Identifiers 0 Arial,8,N</a:FontList>
+<a:BrushStyle>6</a:BrushStyle>
+<a:GradientFillMode>65</a:GradientFillMode>
+<a:GradientEndColor>16777215</a:GradientEndColor>
+<c:Object>
+<o:Entity Ref="o43"/>
+</c:Object>
+</o:EntitySymbol>
+<o:EntitySymbol Id="o27">
+<a:ModificationDate>1500334375</a:ModificationDate>
+<a:IconMode>-1</a:IconMode>
+<a:Rect>((-37940,59867), (-13660,67581))</a:Rect>
+<a:LineColor>11184640</a:LineColor>
+<a:FillColor>16777136</a:FillColor>
+<a:ShadowColor>12632256</a:ShadowColor>
+<a:FontList>STRN 0 Arial,8,N
+DISPNAME 0 Arial,8,N
+Attributes 0 Arial,8,N
+LABL 0 Arial,8,N
+EntityPrimaryAttribute 0 Arial,8,U
+EntityForeignAttribute 0 Arial,8,N
+Identifiers 0 Arial,8,N</a:FontList>
+<a:BrushStyle>6</a:BrushStyle>
+<a:GradientFillMode>65</a:GradientFillMode>
+<a:GradientEndColor>16777215</a:GradientEndColor>
+<c:Object>
+<o:Entity Ref="o44"/>
+</c:Object>
+</o:EntitySymbol>
+<o:EntitySymbol Id="o26">
+<a:ModificationDate>1500334360</a:ModificationDate>
+<a:IconMode>-1</a:IconMode>
+<a:Rect>((-38001,46923), (-12177,54637))</a:Rect>
 <a:AutoAdjustToText>0</a:AutoAdjustToText>
 <a:LineColor>16744576</a:LineColor>
 <a:FillColor>16765136</a:FillColor>
@@ -1559,15 +1583,35 @@ Identifiers 0 Arial,8,N</a:FontList>
 <a:BrushStyle>6</a:BrushStyle>
 <a:GradientFillMode>65</a:GradientFillMode>
 <a:GradientEndColor>16777215</a:GradientEndColor>
-<a:ManuallyResized>1</a:ManuallyResized>
 <c:Object>
-<o:Entity Ref="o42"/>
+<o:Entity Ref="o45"/>
+</c:Object>
+</o:EntitySymbol>
+<o:EntitySymbol Id="o35">
+<a:ModificationDate>1500334375</a:ModificationDate>
+<a:IconMode>-1</a:IconMode>
+<a:Rect>((-70504,9865), (-47846,15633))</a:Rect>
+<a:LineColor>11184640</a:LineColor>
+<a:FillColor>16777136</a:FillColor>
+<a:ShadowColor>12632256</a:ShadowColor>
+<a:FontList>STRN 0 Arial,8,N
+DISPNAME 0 Arial,8,N
+Attributes 0 Arial,8,N
+LABL 0 Arial,8,N
+EntityPrimaryAttribute 0 Arial,8,U
+EntityForeignAttribute 0 Arial,8,N
+Identifiers 0 Arial,8,N</a:FontList>
+<a:BrushStyle>6</a:BrushStyle>
+<a:GradientFillMode>65</a:GradientFillMode>
+<a:GradientEndColor>16777215</a:GradientEndColor>
+<c:Object>
+<o:Entity Ref="o46"/>
 </c:Object>
 </o:EntitySymbol>
 <o:EntitySymbol Id="o8">
-<a:ModificationDate>1498130481</a:ModificationDate>
+<a:ModificationDate>1500334375</a:ModificationDate>
 <a:IconMode>-1</a:IconMode>
-<a:Rect>((1827,34878), (14596,39671))</a:Rect>
+<a:Rect>((-1801,37265), (10968,42058))</a:Rect>
 <a:LineColor>11184640</a:LineColor>
 <a:FillColor>16759472</a:FillColor>
 <a:ShadowColor>12632256</a:ShadowColor>
@@ -1582,7 +1626,7 @@ Identifiers 0 Arial,8,N</a:FontList>
 <a:GradientFillMode>65</a:GradientFillMode>
 <a:GradientEndColor>16777215</a:GradientEndColor>
 <c:Object>
-<o:Entity Ref="o43"/>
+<o:Entity Ref="o47"/>
 </c:Object>
 </o:EntitySymbol>
 </c:Symbols>
@@ -1592,1041 +1636,970 @@ Identifiers 0 Arial,8,N</a:FontList>
 <o:LogicalDiagram Ref="o5"/>
 </c:DefaultDiagram>
 <c:Entities>
-<o:Entity Id="o34">
-<a:ObjectID>50C093D1-040D-4DD6-8CC5-1065383B9A1E</a:ObjectID>
+<o:Entity Id="o37">
+<a:ObjectID>4A43640F-25CE-4A8B-BA2D-A434DA497AF9</a:ObjectID>
 <a:Name>MOVIE</a:Name>
 <a:Code>MOVIE</a:Code>
-<a:CreationDate>1497047384</a:CreationDate>
+<a:CreationDate>1500333782</a:CreationDate>
 <a:Creator>Arthur</a:Creator>
-<a:ModificationDate>1498130481</a:ModificationDate>
-<a:Modifier>adelamare</a:Modifier>
+<a:ModificationDate>1500333782</a:ModificationDate>
+<a:Modifier>Arthur</a:Modifier>
 <a:History>ORG {58C78E38-C291-4814-AD54-53F64E801877}
-DAT 1497047384</a:History>
+DAT 1500333782</a:History>
 <c:Identifiers>
-<o:Identifier Id="o44">
-<a:ObjectID>3E4EDC9C-3EFD-446A-90FB-CD503DA35BD1</a:ObjectID>
+<o:Identifier Id="o48">
+<a:ObjectID>BF90F3F9-A060-413F-AD9E-7795D9A54DD0</a:ObjectID>
 <a:Name>MOVIE_ID</a:Name>
 <a:Code>MOVIE_ID</a:Code>
-<a:CreationDate>1497047384</a:CreationDate>
+<a:CreationDate>1500333782</a:CreationDate>
 <a:Creator>Arthur</a:Creator>
-<a:ModificationDate>1497047384</a:ModificationDate>
+<a:ModificationDate>1500333782</a:ModificationDate>
 <a:Modifier>Arthur</a:Modifier>
 <a:History>ORG {C545A58D-A058-4FBD-84C0-6BB183B6A9A8}
-DAT 1497047384</a:History>
+DAT 1500333782</a:History>
 <c:Identifier.Attributes>
-<o:EntityAttribute Ref="o45"/>
+<o:EntityAttribute Ref="o49"/>
 </c:Identifier.Attributes>
 </o:Identifier>
 </c:Identifiers>
 <c:PrimaryIdentifier>
-<o:Identifier Ref="o44"/>
+<o:Identifier Ref="o48"/>
 </c:PrimaryIdentifier>
 <c:Attributes>
-<o:EntityAttribute Id="o45">
-<a:ObjectID>DD70B316-FB75-46F5-BF07-D6267316CE69</a:ObjectID>
+<o:EntityAttribute Id="o49">
+<a:ObjectID>F35E9D94-01BB-4F27-8FE6-8B15F4FB50A5</a:ObjectID>
 <a:Name>MOVIE_ID</a:Name>
 <a:Code>MOVIE_ID</a:Code>
-<a:CreationDate>1497047384</a:CreationDate>
+<a:CreationDate>1500333782</a:CreationDate>
 <a:Creator>Arthur</a:Creator>
-<a:ModificationDate>1497047384</a:ModificationDate>
+<a:ModificationDate>1500333782</a:ModificationDate>
 <a:Modifier>Arthur</a:Modifier>
 <a:History>ORG {FA44CC45-179D-439A-8064-9C9BA6B3DD2E}
-DAT 1497047384</a:History>
+DAT 1500333782</a:History>
 <a:DataType>NO</a:DataType>
 <a:LogicalAttribute.Mandatory>1</a:LogicalAttribute.Mandatory>
 </o:EntityAttribute>
-<o:EntityAttribute Id="o46">
-<a:ObjectID>1CD4D446-7313-4E56-9527-C2FD2FCCE874</a:ObjectID>
+<o:EntityAttribute Id="o50">
+<a:ObjectID>0DE4C2AB-26EA-4AD7-B077-6F010F73765F</a:ObjectID>
 <a:Name>COLLECTION_ID</a:Name>
 <a:Code>COLLECTION_ID</a:Code>
-<a:CreationDate>1497047384</a:CreationDate>
+<a:CreationDate>1500333782</a:CreationDate>
 <a:Creator>Arthur</a:Creator>
-<a:ModificationDate>1497184348</a:ModificationDate>
+<a:ModificationDate>1500333782</a:ModificationDate>
 <a:Modifier>Arthur</a:Modifier>
 <a:History>ORG {35B26C0B-9741-460E-80EA-B9DCC452461C},{297C820B-3E7D-4291-A866-FC7566A58F52}
-DAT 1497047384</a:History>
+DAT 1500333782</a:History>
 <a:DataType>I</a:DataType>
 </o:EntityAttribute>
-<o:EntityAttribute Id="o47">
-<a:ObjectID>055069F1-5150-49C3-9D6F-4D0D26EB4826</a:ObjectID>
+<o:EntityAttribute Id="o51">
+<a:ObjectID>C3134141-9E8B-4541-90CF-9303F52D8BDA</a:ObjectID>
 <a:Name>MOVIE_TRAKT_ID</a:Name>
 <a:Code>MOVIE_TRAKT_ID</a:Code>
-<a:CreationDate>1497047384</a:CreationDate>
+<a:CreationDate>1500333782</a:CreationDate>
 <a:Creator>Arthur</a:Creator>
-<a:ModificationDate>1497173234</a:ModificationDate>
+<a:ModificationDate>1500333782</a:ModificationDate>
 <a:Modifier>Arthur</a:Modifier>
 <a:History>ORG {40B37C48-9EA6-45AC-B7EE-ADCEAA7803B8}
-DAT 1497047384</a:History>
+DAT 1500333782</a:History>
 <a:DataType>I</a:DataType>
 <a:LogicalAttribute.Mandatory>1</a:LogicalAttribute.Mandatory>
 </o:EntityAttribute>
-<o:EntityAttribute Id="o48">
-<a:ObjectID>BE2F0813-A417-497B-B8E2-EAEAE5F335F5</a:ObjectID>
+<o:EntityAttribute Id="o52">
+<a:ObjectID>37E3B543-776B-4450-800F-7197E756B73D</a:ObjectID>
 <a:Name>MOVIE_IMDB_ID</a:Name>
 <a:Code>MOVIE_IMDB_ID</a:Code>
-<a:CreationDate>1497047384</a:CreationDate>
+<a:CreationDate>1500333782</a:CreationDate>
 <a:Creator>Arthur</a:Creator>
-<a:ModificationDate>1497173234</a:ModificationDate>
+<a:ModificationDate>1500333782</a:ModificationDate>
 <a:Modifier>Arthur</a:Modifier>
 <a:History>ORG {3A7D69D1-B580-4E70-9655-A067D283D262}
-DAT 1497047384</a:History>
+DAT 1500333782</a:History>
 <a:DataType>VA25</a:DataType>
 <a:Length>25</a:Length>
 <a:LogicalAttribute.Mandatory>1</a:LogicalAttribute.Mandatory>
 </o:EntityAttribute>
-<o:EntityAttribute Id="o49">
-<a:ObjectID>FA6A71F1-8756-4E85-BE8F-E1CCBF7E69F0</a:ObjectID>
+<o:EntityAttribute Id="o53">
+<a:ObjectID>2A50A4CA-7A84-4D62-B429-D1CD38C7415F</a:ObjectID>
 <a:Name>MOVIE_TMDB_ID</a:Name>
 <a:Code>MOVIE_TMDB_ID</a:Code>
-<a:CreationDate>1497047384</a:CreationDate>
+<a:CreationDate>1500333782</a:CreationDate>
 <a:Creator>Arthur</a:Creator>
-<a:ModificationDate>1497173234</a:ModificationDate>
+<a:ModificationDate>1500333782</a:ModificationDate>
 <a:Modifier>Arthur</a:Modifier>
 <a:History>ORG {A20EF8CE-9F9C-4206-8DAA-AE09E87F64FF}
-DAT 1497047384</a:History>
-<a:DataType>I</a:DataType>
-<a:LogicalAttribute.Mandatory>1</a:LogicalAttribute.Mandatory>
-</o:EntityAttribute>
-<o:EntityAttribute Id="o50">
-<a:ObjectID>2262EB7C-5313-4413-991D-4851EA8980E1</a:ObjectID>
-<a:Name>MOVIE_TITLE</a:Name>
-<a:Code>MOVIE_TITLE</a:Code>
-<a:CreationDate>1497047384</a:CreationDate>
-<a:Creator>Arthur</a:Creator>
-<a:ModificationDate>1497173234</a:ModificationDate>
-<a:Modifier>Arthur</a:Modifier>
-<a:History>ORG {99399034-38D3-4112-A7BE-28134CC01D2B}
-DAT 1497047384</a:History>
-<a:DataType>VA500</a:DataType>
-<a:Length>500</a:Length>
-<a:LogicalAttribute.Mandatory>1</a:LogicalAttribute.Mandatory>
-</o:EntityAttribute>
-<o:EntityAttribute Id="o51">
-<a:ObjectID>52E7C191-1F83-4D9C-B8A2-11896AEACB4E</a:ObjectID>
-<a:Name>MOVIE_TITLE_SEARCH</a:Name>
-<a:Code>MOVIE_TITLE_SEARCH</a:Code>
-<a:CreationDate>1498130479</a:CreationDate>
-<a:Creator>adelamare</a:Creator>
-<a:ModificationDate>1498130481</a:ModificationDate>
-<a:Modifier>adelamare</a:Modifier>
-<a:History>ORG {334724BB-3933-49B9-A90D-CA16B189B3A5}
-DAT 1498130479</a:History>
-<a:DataType>VA500</a:DataType>
-<a:Length>500</a:Length>
-</o:EntityAttribute>
-<o:EntityAttribute Id="o52">
-<a:ObjectID>C8EEC2A0-7F3D-4BF2-A57A-94A33A490558</a:ObjectID>
-<a:Name>MOVIE_ORIGINAL_TITLE</a:Name>
-<a:Code>MOVIE_ORIGINAL_TITLE</a:Code>
-<a:CreationDate>1497047384</a:CreationDate>
-<a:Creator>Arthur</a:Creator>
-<a:ModificationDate>1497173234</a:ModificationDate>
-<a:Modifier>Arthur</a:Modifier>
-<a:History>ORG {BE594A47-0183-470E-9403-83411E01494A}
-DAT 1497047384</a:History>
-<a:DataType>VA500</a:DataType>
-<a:Length>500</a:Length>
-</o:EntityAttribute>
-<o:EntityAttribute Id="o53">
-<a:ObjectID>470D228C-6D3B-4797-BDAF-1990EA527629</a:ObjectID>
-<a:Name>MOVIE_YEAR</a:Name>
-<a:Code>MOVIE_YEAR</a:Code>
-<a:CreationDate>1497047384</a:CreationDate>
-<a:Creator>Arthur</a:Creator>
-<a:ModificationDate>1497173234</a:ModificationDate>
-<a:Modifier>Arthur</a:Modifier>
-<a:History>ORG {247B7179-5B90-405F-8FE5-19C433B0258F}
-DAT 1497047384</a:History>
+DAT 1500333782</a:History>
 <a:DataType>I</a:DataType>
 <a:LogicalAttribute.Mandatory>1</a:LogicalAttribute.Mandatory>
 </o:EntityAttribute>
 <o:EntityAttribute Id="o54">
-<a:ObjectID>DCF51C58-0FC8-4FBA-9815-523815F43274</a:ObjectID>
+<a:ObjectID>A6133236-2B1D-40B2-8101-F8E001FCA982</a:ObjectID>
+<a:Name>MOVIE_TITLE</a:Name>
+<a:Code>MOVIE_TITLE</a:Code>
+<a:CreationDate>1500333782</a:CreationDate>
+<a:Creator>Arthur</a:Creator>
+<a:ModificationDate>1500333782</a:ModificationDate>
+<a:Modifier>Arthur</a:Modifier>
+<a:History>ORG {99399034-38D3-4112-A7BE-28134CC01D2B}
+DAT 1500333782</a:History>
+<a:DataType>VA500</a:DataType>
+<a:Length>500</a:Length>
+<a:LogicalAttribute.Mandatory>1</a:LogicalAttribute.Mandatory>
+</o:EntityAttribute>
+<o:EntityAttribute Id="o55">
+<a:ObjectID>48D6142A-0B69-4CE6-B394-50C720B9E1DB</a:ObjectID>
+<a:Name>MOVIE_TITLE_SEARCH</a:Name>
+<a:Code>MOVIE_TITLE_SEARCH</a:Code>
+<a:CreationDate>1500333782</a:CreationDate>
+<a:Creator>Arthur</a:Creator>
+<a:ModificationDate>1500333782</a:ModificationDate>
+<a:Modifier>Arthur</a:Modifier>
+<a:History>ORG {334724BB-3933-49B9-A90D-CA16B189B3A5}
+DAT 1500333782</a:History>
+<a:DataType>VA500</a:DataType>
+<a:Length>500</a:Length>
+</o:EntityAttribute>
+<o:EntityAttribute Id="o56">
+<a:ObjectID>FFC1CAF4-44CF-4F9A-91E6-FC9DAA2CE416</a:ObjectID>
+<a:Name>MOVIE_ORIGINAL_TITLE</a:Name>
+<a:Code>MOVIE_ORIGINAL_TITLE</a:Code>
+<a:CreationDate>1500333782</a:CreationDate>
+<a:Creator>Arthur</a:Creator>
+<a:ModificationDate>1500333782</a:ModificationDate>
+<a:Modifier>Arthur</a:Modifier>
+<a:History>ORG {BE594A47-0183-470E-9403-83411E01494A}
+DAT 1500333782</a:History>
+<a:DataType>VA500</a:DataType>
+<a:Length>500</a:Length>
+</o:EntityAttribute>
+<o:EntityAttribute Id="o57">
+<a:ObjectID>F78288A1-D015-4E3D-8B80-9EA715CD4B56</a:ObjectID>
+<a:Name>MOVIE_YEAR</a:Name>
+<a:Code>MOVIE_YEAR</a:Code>
+<a:CreationDate>1500333782</a:CreationDate>
+<a:Creator>Arthur</a:Creator>
+<a:ModificationDate>1500333782</a:ModificationDate>
+<a:Modifier>Arthur</a:Modifier>
+<a:History>ORG {247B7179-5B90-405F-8FE5-19C433B0258F}
+DAT 1500333782</a:History>
+<a:DataType>I</a:DataType>
+<a:LogicalAttribute.Mandatory>1</a:LogicalAttribute.Mandatory>
+</o:EntityAttribute>
+<o:EntityAttribute Id="o58">
+<a:ObjectID>2F8C43B3-E379-4CB3-93BC-9C4AFF58E243</a:ObjectID>
 <a:Name>MOVIE_ORIGINAL_LANGUAGE</a:Name>
 <a:Code>MOVIE_ORIGINAL_LANGUAGE</a:Code>
-<a:CreationDate>1497047384</a:CreationDate>
+<a:CreationDate>1500333782</a:CreationDate>
 <a:Creator>Arthur</a:Creator>
-<a:ModificationDate>1497173234</a:ModificationDate>
+<a:ModificationDate>1500333782</a:ModificationDate>
 <a:Modifier>Arthur</a:Modifier>
 <a:History>ORG {76D3C170-F6EB-4438-8FF2-3A90FA6EDDF1}
-DAT 1497047384</a:History>
+DAT 1500333782</a:History>
 <a:DataType>VA50</a:DataType>
 <a:Length>50</a:Length>
 </o:EntityAttribute>
-<o:EntityAttribute Id="o55">
-<a:ObjectID>45A96069-44E5-49F2-B47D-5C8E55D8DBD8</a:ObjectID>
+<o:EntityAttribute Id="o59">
+<a:ObjectID>2E31B781-4924-4E63-9086-3E97CACA3B05</a:ObjectID>
 <a:Name>MOVIE_OVERVIEW</a:Name>
 <a:Code>MOVIE_OVERVIEW</a:Code>
-<a:CreationDate>1497047384</a:CreationDate>
+<a:CreationDate>1500333782</a:CreationDate>
 <a:Creator>Arthur</a:Creator>
-<a:ModificationDate>1497173234</a:ModificationDate>
+<a:ModificationDate>1500333782</a:ModificationDate>
 <a:Modifier>Arthur</a:Modifier>
 <a:History>ORG {CD393521-CE4F-4107-A86A-7E2206F44190}
-DAT 1497047384</a:History>
+DAT 1500333782</a:History>
 <a:DataType>LVA2500</a:DataType>
 <a:Length>2500</a:Length>
 <a:LogicalAttribute.Mandatory>1</a:LogicalAttribute.Mandatory>
 </o:EntityAttribute>
-<o:EntityAttribute Id="o56">
-<a:ObjectID>CE606495-17ED-4CFC-A19D-31B1F2D4E730</a:ObjectID>
+<o:EntityAttribute Id="o60">
+<a:ObjectID>4A80FEB0-640E-4DFC-890A-6EBAD79E1CBA</a:ObjectID>
 <a:Name>MOVIE_TAGLINE</a:Name>
 <a:Code>MOVIE_TAGLINE</a:Code>
-<a:CreationDate>1497047384</a:CreationDate>
+<a:CreationDate>1500333782</a:CreationDate>
 <a:Creator>Arthur</a:Creator>
-<a:ModificationDate>1497173234</a:ModificationDate>
+<a:ModificationDate>1500333782</a:ModificationDate>
 <a:Modifier>Arthur</a:Modifier>
 <a:History>ORG {810A2CE4-BECF-4C6C-9DA0-7E8980DEEC82}
-DAT 1497047384</a:History>
+DAT 1500333782</a:History>
 <a:DataType>VA1000</a:DataType>
 <a:Length>1000</a:Length>
-</o:EntityAttribute>
-<o:EntityAttribute Id="o57">
-<a:ObjectID>322BC8C3-DC4D-431D-8D18-8C3CF5462EB1</a:ObjectID>
-<a:Name>MOVIE_POPULARITY</a:Name>
-<a:Code>MOVIE_POPULARITY</a:Code>
-<a:CreationDate>1497047384</a:CreationDate>
-<a:Creator>Arthur</a:Creator>
-<a:ModificationDate>1497173234</a:ModificationDate>
-<a:Modifier>Arthur</a:Modifier>
-<a:History>ORG {0559E4DC-CAA2-4E28-BB86-FE39D9937E94}
-DAT 1497047384</a:History>
-<a:DataType>DC</a:DataType>
-<a:LogicalAttribute.Mandatory>1</a:LogicalAttribute.Mandatory>
-</o:EntityAttribute>
-<o:EntityAttribute Id="o58">
-<a:ObjectID>2CE661AE-B625-42C0-9A04-38B6388F561E</a:ObjectID>
-<a:Name>MOVIE_RELEASE_DATE</a:Name>
-<a:Code>MOVIE_RELEASE_DATE</a:Code>
-<a:CreationDate>1497047384</a:CreationDate>
-<a:Creator>Arthur</a:Creator>
-<a:ModificationDate>1497047384</a:ModificationDate>
-<a:Modifier>Arthur</a:Modifier>
-<a:History>ORG {4AA8C6A3-1B79-4E47-B2E0-06989517FD6B}
-DAT 1497047384</a:History>
-<a:DataType>D</a:DataType>
-</o:EntityAttribute>
-<o:EntityAttribute Id="o59">
-<a:ObjectID>D8C0275C-7AA0-4FD7-B062-1FEEAEE2FCC4</a:ObjectID>
-<a:Name>MOVIE_VOTE_AVERAGE</a:Name>
-<a:Code>MOVIE_VOTE_AVERAGE</a:Code>
-<a:CreationDate>1497047384</a:CreationDate>
-<a:Creator>Arthur</a:Creator>
-<a:ModificationDate>1497173234</a:ModificationDate>
-<a:Modifier>Arthur</a:Modifier>
-<a:History>ORG {1D1C5657-2A6D-439B-A479-8A3A3C94CAEB}
-DAT 1497047384</a:History>
-<a:DataType>DC</a:DataType>
-<a:LogicalAttribute.Mandatory>1</a:LogicalAttribute.Mandatory>
-</o:EntityAttribute>
-<o:EntityAttribute Id="o60">
-<a:ObjectID>DA444EEC-13CF-44D7-B974-FC5BF3C73018</a:ObjectID>
-<a:Name>MOVIE_VOTE_COUNT</a:Name>
-<a:Code>MOVIE_VOTE_COUNT</a:Code>
-<a:CreationDate>1497047384</a:CreationDate>
-<a:Creator>Arthur</a:Creator>
-<a:ModificationDate>1497173234</a:ModificationDate>
-<a:Modifier>Arthur</a:Modifier>
-<a:History>ORG {5EE07726-25B7-40D5-9817-4E8364D2A975}
-DAT 1497047384</a:History>
-<a:DataType>I</a:DataType>
-<a:LogicalAttribute.Mandatory>1</a:LogicalAttribute.Mandatory>
 </o:EntityAttribute>
 <o:EntityAttribute Id="o61">
-<a:ObjectID>F1D2CB88-5E4C-4878-A563-40F0E0A166D7</a:ObjectID>
-<a:Name>MOVIE_RUNTIME</a:Name>
-<a:Code>MOVIE_RUNTIME</a:Code>
-<a:CreationDate>1497047384</a:CreationDate>
+<a:ObjectID>4435A9BC-9413-435E-B264-208D95A8261E</a:ObjectID>
+<a:Name>MOVIE_POPULARITY</a:Name>
+<a:Code>MOVIE_POPULARITY</a:Code>
+<a:CreationDate>1500333782</a:CreationDate>
 <a:Creator>Arthur</a:Creator>
-<a:ModificationDate>1497047384</a:ModificationDate>
+<a:ModificationDate>1500333782</a:ModificationDate>
 <a:Modifier>Arthur</a:Modifier>
-<a:History>ORG {A26570E3-E63A-4065-8B11-BDEA1B5E639C}
-DAT 1497047384</a:History>
-<a:DataType>I</a:DataType>
+<a:History>ORG {0559E4DC-CAA2-4E28-BB86-FE39D9937E94}
+DAT 1500333782</a:History>
+<a:DataType>DC</a:DataType>
+<a:LogicalAttribute.Mandatory>1</a:LogicalAttribute.Mandatory>
 </o:EntityAttribute>
 <o:EntityAttribute Id="o62">
-<a:ObjectID>F292AF8D-B734-41DE-8221-F31F19C391EA</a:ObjectID>
-<a:Name>MOVIE_BACKDROP_PATH</a:Name>
-<a:Code>MOVIE_BACKDROP_PATH</a:Code>
-<a:CreationDate>1497047384</a:CreationDate>
+<a:ObjectID>EA859CFA-BC3E-463C-9043-16F777840CA1</a:ObjectID>
+<a:Name>MOVIE_RELEASE_DATE</a:Name>
+<a:Code>MOVIE_RELEASE_DATE</a:Code>
+<a:CreationDate>1500333782</a:CreationDate>
 <a:Creator>Arthur</a:Creator>
-<a:ModificationDate>1497173234</a:ModificationDate>
+<a:ModificationDate>1500333782</a:ModificationDate>
 <a:Modifier>Arthur</a:Modifier>
-<a:History>ORG {8B83F89C-3985-4A71-8DA7-905C5661F9E9}
-DAT 1497047384</a:History>
-<a:DataType>VA1000</a:DataType>
-<a:Length>1000</a:Length>
+<a:History>ORG {4AA8C6A3-1B79-4E47-B2E0-06989517FD6B}
+DAT 1500333782</a:History>
+<a:DataType>D</a:DataType>
 </o:EntityAttribute>
 <o:EntityAttribute Id="o63">
-<a:ObjectID>FB241374-B623-4D14-B2E3-C6F6668F477A</a:ObjectID>
-<a:Name>MOVIE_POSTER_PATH</a:Name>
-<a:Code>MOVIE_POSTER_PATH</a:Code>
-<a:CreationDate>1497047384</a:CreationDate>
+<a:ObjectID>C4DB5C96-8C09-47CF-8F20-2F173875DA74</a:ObjectID>
+<a:Name>MOVIE_VOTE_AVERAGE</a:Name>
+<a:Code>MOVIE_VOTE_AVERAGE</a:Code>
+<a:CreationDate>1500333782</a:CreationDate>
 <a:Creator>Arthur</a:Creator>
-<a:ModificationDate>1497173234</a:ModificationDate>
+<a:ModificationDate>1500333782</a:ModificationDate>
 <a:Modifier>Arthur</a:Modifier>
-<a:History>ORG {09EF47B5-FB03-4025-BE22-3ACB7A7EB435}
-DAT 1497047384</a:History>
-<a:DataType>VA1000</a:DataType>
-<a:Length>1000</a:Length>
+<a:History>ORG {1D1C5657-2A6D-439B-A479-8A3A3C94CAEB}
+DAT 1500333782</a:History>
+<a:DataType>DC</a:DataType>
+<a:LogicalAttribute.Mandatory>1</a:LogicalAttribute.Mandatory>
 </o:EntityAttribute>
 <o:EntityAttribute Id="o64">
-<a:ObjectID>DC3A4E8D-0EEB-47F6-8290-2B5A12386DFF</a:ObjectID>
-<a:Name>MOVIE_CREATED_AT</a:Name>
-<a:Code>MOVIE_CREATED_AT</a:Code>
-<a:CreationDate>1497173232</a:CreationDate>
+<a:ObjectID>AD32C796-B1DB-4D5B-926C-73E262454DFE</a:ObjectID>
+<a:Name>MOVIE_VOTE_COUNT</a:Name>
+<a:Code>MOVIE_VOTE_COUNT</a:Code>
+<a:CreationDate>1500333782</a:CreationDate>
 <a:Creator>Arthur</a:Creator>
-<a:ModificationDate>1497173234</a:ModificationDate>
+<a:ModificationDate>1500333782</a:ModificationDate>
 <a:Modifier>Arthur</a:Modifier>
-<a:History>ORG {AC44A12F-1B1A-40C4-93C8-A0DD1289B5EF}
-DAT 1497173232</a:History>
-<a:DataType>D</a:DataType>
+<a:History>ORG {5EE07726-25B7-40D5-9817-4E8364D2A975}
+DAT 1500333782</a:History>
+<a:DataType>I</a:DataType>
 <a:LogicalAttribute.Mandatory>1</a:LogicalAttribute.Mandatory>
 </o:EntityAttribute>
-</c:Attributes>
-</o:Entity>
-<o:Entity Id="o35">
-<a:ObjectID>C700A3DB-BC80-4680-ADA4-7FB4C7C99497</a:ObjectID>
-<a:Name>GENRE</a:Name>
-<a:Code>GENRE</a:Code>
-<a:CreationDate>1497047384</a:CreationDate>
+<o:EntityAttribute Id="o65">
+<a:ObjectID>D450D573-2DA1-40AD-ACFF-B5C68171309D</a:ObjectID>
+<a:Name>MOVIE_RUNTIME</a:Name>
+<a:Code>MOVIE_RUNTIME</a:Code>
+<a:CreationDate>1500333782</a:CreationDate>
 <a:Creator>Arthur</a:Creator>
-<a:ModificationDate>1497173234</a:ModificationDate>
+<a:ModificationDate>1500333782</a:ModificationDate>
 <a:Modifier>Arthur</a:Modifier>
-<a:History>ORG {F6A0A701-5AD8-47A0-8D51-FCB7A2738142}
-DAT 1497047384</a:History>
-<c:Identifiers>
-<o:Identifier Id="o65">
-<a:ObjectID>8171894D-F0C2-437C-93D9-BA927955795B</a:ObjectID>
-<a:Name>GENRE_ID</a:Name>
-<a:Code>GENRE_ID</a:Code>
-<a:CreationDate>1497047384</a:CreationDate>
-<a:Creator>Arthur</a:Creator>
-<a:ModificationDate>1497047384</a:ModificationDate>
-<a:Modifier>Arthur</a:Modifier>
-<a:History>ORG {318CC188-0DCF-446B-89C6-8BEC754461EC}
-DAT 1497047384</a:History>
-<c:Identifier.Attributes>
-<o:EntityAttribute Ref="o66"/>
-</c:Identifier.Attributes>
-</o:Identifier>
-</c:Identifiers>
-<c:PrimaryIdentifier>
-<o:Identifier Ref="o65"/>
-</c:PrimaryIdentifier>
-<c:Attributes>
+<a:History>ORG {A26570E3-E63A-4065-8B11-BDEA1B5E639C}
+DAT 1500333782</a:History>
+<a:DataType>I</a:DataType>
+</o:EntityAttribute>
 <o:EntityAttribute Id="o66">
-<a:ObjectID>38B581A4-003D-4072-A346-9A0DE4265755</a:ObjectID>
-<a:Name>GENRE_ID</a:Name>
-<a:Code>GENRE_ID</a:Code>
-<a:CreationDate>1497047384</a:CreationDate>
+<a:ObjectID>F1E7D31A-A31B-4179-8365-E17786439343</a:ObjectID>
+<a:Name>MOVIE_BACKDROP_PATH</a:Name>
+<a:Code>MOVIE_BACKDROP_PATH</a:Code>
+<a:CreationDate>1500333782</a:CreationDate>
 <a:Creator>Arthur</a:Creator>
-<a:ModificationDate>1497047384</a:ModificationDate>
+<a:ModificationDate>1500333782</a:ModificationDate>
 <a:Modifier>Arthur</a:Modifier>
-<a:History>ORG {5F6FE079-8F77-4D0E-A31B-7A5A7BA00FFF}
-DAT 1497047384</a:History>
-<a:DataType>NO</a:DataType>
-<a:LogicalAttribute.Mandatory>1</a:LogicalAttribute.Mandatory>
+<a:History>ORG {8B83F89C-3985-4A71-8DA7-905C5661F9E9}
+DAT 1500333782</a:History>
+<a:DataType>VA1000</a:DataType>
+<a:Length>1000</a:Length>
 </o:EntityAttribute>
 <o:EntityAttribute Id="o67">
-<a:ObjectID>BE832DF1-3576-49B9-B426-78BC94513FDD</a:ObjectID>
-<a:Name>GENRE_TMDB_ID</a:Name>
-<a:Code>GENRE_TMDB_ID</a:Code>
-<a:CreationDate>1497047384</a:CreationDate>
+<a:ObjectID>7EEC0B81-A288-4016-923A-FAD94AAD9028</a:ObjectID>
+<a:Name>MOVIE_POSTER_PATH</a:Name>
+<a:Code>MOVIE_POSTER_PATH</a:Code>
+<a:CreationDate>1500333782</a:CreationDate>
 <a:Creator>Arthur</a:Creator>
-<a:ModificationDate>1497173234</a:ModificationDate>
+<a:ModificationDate>1500333782</a:ModificationDate>
 <a:Modifier>Arthur</a:Modifier>
-<a:History>ORG {80A5F2E8-5E7B-421F-8369-8ED0DC8E2023}
-DAT 1497047384</a:History>
-<a:DataType>I</a:DataType>
-<a:LogicalAttribute.Mandatory>1</a:LogicalAttribute.Mandatory>
+<a:History>ORG {09EF47B5-FB03-4025-BE22-3ACB7A7EB435}
+DAT 1500333782</a:History>
+<a:DataType>VA1000</a:DataType>
+<a:Length>1000</a:Length>
 </o:EntityAttribute>
 <o:EntityAttribute Id="o68">
-<a:ObjectID>74948D38-F083-40AC-825B-EE74E7F70B65</a:ObjectID>
-<a:Name>GENRE_NAME</a:Name>
-<a:Code>GENRE_NAME</a:Code>
-<a:CreationDate>1497047384</a:CreationDate>
+<a:ObjectID>6CEADC92-CFCC-4A05-BBA9-8BB2BCF2A39A</a:ObjectID>
+<a:Name>MOVIE_CREATED_AT</a:Name>
+<a:Code>MOVIE_CREATED_AT</a:Code>
+<a:CreationDate>1500333782</a:CreationDate>
 <a:Creator>Arthur</a:Creator>
-<a:ModificationDate>1497173234</a:ModificationDate>
+<a:ModificationDate>1500333782</a:ModificationDate>
 <a:Modifier>Arthur</a:Modifier>
-<a:History>ORG {81ECCA42-A532-471F-B626-E22052871C0C}
-DAT 1497047384</a:History>
-<a:DataType>VA250</a:DataType>
-<a:Length>250</a:Length>
-<a:LogicalAttribute.Mandatory>1</a:LogicalAttribute.Mandatory>
-</o:EntityAttribute>
-<o:EntityAttribute Id="o69">
-<a:ObjectID>8927794B-11F1-40C1-AF57-5D0DF4DA2968</a:ObjectID>
-<a:Name>GENRE_CREATED_AT</a:Name>
-<a:Code>GENRE_CREATED_AT</a:Code>
-<a:CreationDate>1497173232</a:CreationDate>
-<a:Creator>Arthur</a:Creator>
-<a:ModificationDate>1497173234</a:ModificationDate>
-<a:Modifier>Arthur</a:Modifier>
-<a:History>ORG {DB389201-87DA-4C0E-91F4-D50DF7F87698}
-DAT 1497173232</a:History>
-<a:DataType>D</a:DataType>
-<a:LogicalAttribute.Mandatory>1</a:LogicalAttribute.Mandatory>
-</o:EntityAttribute>
-</c:Attributes>
-</o:Entity>
-<o:Entity Id="o36">
-<a:ObjectID>5FC8DBB3-D926-4569-900E-DC10E20EE765</a:ObjectID>
-<a:Name>COLLECTION</a:Name>
-<a:Code>COLLECTION</a:Code>
-<a:CreationDate>1497047384</a:CreationDate>
-<a:Creator>Arthur</a:Creator>
-<a:ModificationDate>1497173234</a:ModificationDate>
-<a:Modifier>Arthur</a:Modifier>
-<a:History>ORG {A4ABF797-0D4F-4821-9C3A-DCA6EF531C02}
-DAT 1497047384</a:History>
-<c:Identifiers>
-<o:Identifier Id="o70">
-<a:ObjectID>62B46A7A-2ECA-4BBE-A29B-1D8DB7DD4498</a:ObjectID>
-<a:Name>COLLECTION_ID</a:Name>
-<a:Code>COLLECTION_ID</a:Code>
-<a:CreationDate>1497047384</a:CreationDate>
-<a:Creator>Arthur</a:Creator>
-<a:ModificationDate>1497047384</a:ModificationDate>
-<a:Modifier>Arthur</a:Modifier>
-<a:History>ORG {24F9197A-F671-4186-8F0D-5486E1EABAB0}
-DAT 1497047384</a:History>
-<c:Identifier.Attributes>
-<o:EntityAttribute Ref="o71"/>
-</c:Identifier.Attributes>
-</o:Identifier>
-</c:Identifiers>
-<c:PrimaryIdentifier>
-<o:Identifier Ref="o70"/>
-</c:PrimaryIdentifier>
-<c:Attributes>
-<o:EntityAttribute Id="o71">
-<a:ObjectID>3C0EB1CE-B23D-4929-90C5-70544A74E4FB</a:ObjectID>
-<a:Name>COLLECTION_ID</a:Name>
-<a:Code>COLLECTION_ID</a:Code>
-<a:CreationDate>1497047384</a:CreationDate>
-<a:Creator>Arthur</a:Creator>
-<a:ModificationDate>1497047384</a:ModificationDate>
-<a:Modifier>Arthur</a:Modifier>
-<a:History>ORG {35B26C0B-9741-460E-80EA-B9DCC452461C}
-DAT 1497047384</a:History>
-<a:DataType>NO</a:DataType>
-<a:LogicalAttribute.Mandatory>1</a:LogicalAttribute.Mandatory>
-</o:EntityAttribute>
-<o:EntityAttribute Id="o72">
-<a:ObjectID>518FF165-835D-4D26-BC79-7E7333378E6E</a:ObjectID>
-<a:Name>COLLECTION_TMDB_ID</a:Name>
-<a:Code>COLLECTION_TMDB_ID</a:Code>
-<a:CreationDate>1497047384</a:CreationDate>
-<a:Creator>Arthur</a:Creator>
-<a:ModificationDate>1497173234</a:ModificationDate>
-<a:Modifier>Arthur</a:Modifier>
-<a:History>ORG {C034FC25-767B-49F6-8371-2AC614D94E5C}
-DAT 1497047384</a:History>
-<a:DataType>I</a:DataType>
-<a:LogicalAttribute.Mandatory>1</a:LogicalAttribute.Mandatory>
-</o:EntityAttribute>
-<o:EntityAttribute Id="o73">
-<a:ObjectID>AD4143DD-574D-4D6B-A722-B01470D90370</a:ObjectID>
-<a:Name>COLLECTION_NAME</a:Name>
-<a:Code>COLLECTION_NAME</a:Code>
-<a:CreationDate>1497047384</a:CreationDate>
-<a:Creator>Arthur</a:Creator>
-<a:ModificationDate>1497173973</a:ModificationDate>
-<a:Modifier>Arthur</a:Modifier>
-<a:History>ORG {1303CEC4-4E0B-4B61-9919-3EB8A0D7205C}
-DAT 1497047384</a:History>
-<a:DataType>VA1000</a:DataType>
-<a:Length>1000</a:Length>
-<a:LogicalAttribute.Mandatory>1</a:LogicalAttribute.Mandatory>
-</o:EntityAttribute>
-<o:EntityAttribute Id="o74">
-<a:ObjectID>98E82895-BFD1-4D98-B73E-33C5D347D638</a:ObjectID>
-<a:Name>COLLECTION_POSTER_PATH</a:Name>
-<a:Code>COLLECTION_POSTER_PATH</a:Code>
-<a:CreationDate>1497047384</a:CreationDate>
-<a:Creator>Arthur</a:Creator>
-<a:ModificationDate>1497173973</a:ModificationDate>
-<a:Modifier>Arthur</a:Modifier>
-<a:History>ORG {A62A504E-3BAF-43DC-AEDE-6F7B35AD0E60}
-DAT 1497047384</a:History>
-<a:DataType>VA1000</a:DataType>
-<a:Length>1000</a:Length>
-</o:EntityAttribute>
-<o:EntityAttribute Id="o75">
-<a:ObjectID>E80FC7AD-F52A-4437-A87C-DC87FFD9FCE1</a:ObjectID>
-<a:Name>COLLECTION_BACKDROP_PATH</a:Name>
-<a:Code>COLLECTION_BACKDROP_PATH</a:Code>
-<a:CreationDate>1497047384</a:CreationDate>
-<a:Creator>Arthur</a:Creator>
-<a:ModificationDate>1497173973</a:ModificationDate>
-<a:Modifier>Arthur</a:Modifier>
-<a:History>ORG {2C0D686E-84B0-4E8F-9D86-0EE6BEAC4C9A}
-DAT 1497047384</a:History>
-<a:DataType>VA1000</a:DataType>
-<a:Length>1000</a:Length>
-</o:EntityAttribute>
-<o:EntityAttribute Id="o76">
-<a:ObjectID>42D1E31F-922B-4E38-8331-F7F890F433DF</a:ObjectID>
-<a:Name>COLLECTION_CREATED_AT</a:Name>
-<a:Code>COLLECTION_CREATED_AT</a:Code>
-<a:CreationDate>1497173232</a:CreationDate>
-<a:Creator>Arthur</a:Creator>
-<a:ModificationDate>1497173234</a:ModificationDate>
-<a:Modifier>Arthur</a:Modifier>
-<a:History>ORG {2989A552-B37B-4BB6-A4A8-8674B3B88479}
-DAT 1497173232</a:History>
-<a:DataType>D</a:DataType>
-<a:LogicalAttribute.Mandatory>1</a:LogicalAttribute.Mandatory>
-</o:EntityAttribute>
-</c:Attributes>
-</o:Entity>
-<o:Entity Id="o37">
-<a:ObjectID>0E0C5656-B120-4AE5-8688-1FE81A4A3D59</a:ObjectID>
-<a:Name>TORRENT</a:Name>
-<a:Code>TORRENT</a:Code>
-<a:CreationDate>1497047384</a:CreationDate>
-<a:Creator>Arthur</a:Creator>
-<a:ModificationDate>1497173234</a:ModificationDate>
-<a:Modifier>Arthur</a:Modifier>
-<a:History>ORG {DD689606-4F45-406C-A6F1-F1D147ABDFCC}
-DAT 1497047384</a:History>
-<c:Identifiers>
-<o:Identifier Id="o77">
-<a:ObjectID>8F4CA30D-F181-4A69-9C8F-84BE2024AB2C</a:ObjectID>
-<a:Name>TORRENT_ID</a:Name>
-<a:Code>TORRENT_ID</a:Code>
-<a:CreationDate>1497047384</a:CreationDate>
-<a:Creator>Arthur</a:Creator>
-<a:ModificationDate>1497047384</a:ModificationDate>
-<a:Modifier>Arthur</a:Modifier>
-<a:History>ORG {B454CB65-636B-4E00-98C6-DFEE0475F705}
-DAT 1497047384</a:History>
-<c:Identifier.Attributes>
-<o:EntityAttribute Ref="o78"/>
-</c:Identifier.Attributes>
-</o:Identifier>
-</c:Identifiers>
-<c:PrimaryIdentifier>
-<o:Identifier Ref="o77"/>
-</c:PrimaryIdentifier>
-<c:Attributes>
-<o:EntityAttribute Id="o78">
-<a:ObjectID>3E80076C-8264-456B-B04A-056231D852BD</a:ObjectID>
-<a:Name>TORRENT_ID</a:Name>
-<a:Code>TORRENT_ID</a:Code>
-<a:CreationDate>1497047384</a:CreationDate>
-<a:Creator>Arthur</a:Creator>
-<a:ModificationDate>1497047384</a:ModificationDate>
-<a:Modifier>Arthur</a:Modifier>
-<a:History>ORG {05F5C6D1-2380-465A-86F0-343BD7F0B787}
-DAT 1497047384</a:History>
-<a:DataType>NO</a:DataType>
-<a:LogicalAttribute.Mandatory>1</a:LogicalAttribute.Mandatory>
-</o:EntityAttribute>
-<o:EntityAttribute Id="o79">
-<a:ObjectID>FFD8A0C9-464C-46CD-BFA2-18F2D70772DC</a:ObjectID>
-<a:Name>MOVIE_ID</a:Name>
-<a:Code>MOVIE_ID</a:Code>
-<a:CreationDate>1497047384</a:CreationDate>
-<a:Creator>Arthur</a:Creator>
-<a:ModificationDate>1497047384</a:ModificationDate>
-<a:Modifier>Arthur</a:Modifier>
-<a:History>ORG {FA44CC45-179D-439A-8064-9C9BA6B3DD2E},{55EE6745-FA49-4DD3-9148-7DEA21B0FC61}
-DAT 1497047384</a:History>
-<a:DataType>I</a:DataType>
-</o:EntityAttribute>
-<o:EntityAttribute Id="o80">
-<a:ObjectID>C514B4E7-F63F-47B1-B623-9722DE947EF3</a:ObjectID>
-<a:Name>CATEGORY_ID</a:Name>
-<a:Code>CATEGORY_ID</a:Code>
-<a:CreationDate>1497047384</a:CreationDate>
-<a:Creator>Arthur</a:Creator>
-<a:ModificationDate>1497047384</a:ModificationDate>
-<a:Modifier>Arthur</a:Modifier>
-<a:History>ORG {277E999A-D7BB-4C55-8105-AFD1D4164F2A},{A21D4664-CFB3-4EB7-8F58-FF67C98D6C8A}
-DAT 1497047384</a:History>
-<a:DataType>I</a:DataType>
-<a:LogicalAttribute.Mandatory>1</a:LogicalAttribute.Mandatory>
-</o:EntityAttribute>
-<o:EntityAttribute Id="o81">
-<a:ObjectID>A7D0D5AA-4890-4FFE-A795-6DBE6B4F3ED1</a:ObjectID>
-<a:Name>LANGUAGE_ID</a:Name>
-<a:Code>LANGUAGE_ID</a:Code>
-<a:CreationDate>1497047384</a:CreationDate>
-<a:Creator>Arthur</a:Creator>
-<a:ModificationDate>1497047384</a:ModificationDate>
-<a:Modifier>Arthur</a:Modifier>
-<a:History>ORG {909ED8DC-A00D-4878-8899-E109CA44D055},{F3B45D09-7A18-4E57-9E93-032DC4718379}
-DAT 1497047384</a:History>
-<a:DataType>I</a:DataType>
-<a:LogicalAttribute.Mandatory>1</a:LogicalAttribute.Mandatory>
-</o:EntityAttribute>
-<o:EntityAttribute Id="o82">
-<a:ObjectID>18C8C318-6A53-498E-BF3A-06FB274DEE9F</a:ObjectID>
-<a:Name>QUALITY_ID</a:Name>
-<a:Code>QUALITY_ID</a:Code>
-<a:CreationDate>1497047384</a:CreationDate>
-<a:Creator>Arthur</a:Creator>
-<a:ModificationDate>1497047384</a:ModificationDate>
-<a:Modifier>Arthur</a:Modifier>
-<a:History>ORG {14D490FF-B217-4FC9-B42A-F46016221EBA},{AE25F954-A63C-422F-AF45-94FCFBF23B15}
-DAT 1497047384</a:History>
-<a:DataType>I</a:DataType>
-<a:LogicalAttribute.Mandatory>1</a:LogicalAttribute.Mandatory>
-</o:EntityAttribute>
-<o:EntityAttribute Id="o83">
-<a:ObjectID>629D174D-D85A-42FD-84A4-625709DAA65C</a:ObjectID>
-<a:Name>TORRENT_T411_ID</a:Name>
-<a:Code>TORRENT_T411_ID</a:Code>
-<a:CreationDate>1497137027</a:CreationDate>
-<a:Creator>Arthur</a:Creator>
-<a:ModificationDate>1497173234</a:ModificationDate>
-<a:Modifier>Arthur</a:Modifier>
-<a:History>ORG {12F1AD29-DA81-4BF7-A921-3EC0F5770D29}
-DAT 1497137027</a:History>
-<a:DataType>I</a:DataType>
-<a:LogicalAttribute.Mandatory>1</a:LogicalAttribute.Mandatory>
-</o:EntityAttribute>
-<o:EntityAttribute Id="o84">
-<a:ObjectID>F33E28F3-DE09-4AF8-8DBC-2F00F3B15088</a:ObjectID>
-<a:Name>TORRENT_NAME</a:Name>
-<a:Code>TORRENT_NAME</a:Code>
-<a:CreationDate>1497047384</a:CreationDate>
-<a:Creator>Arthur</a:Creator>
-<a:ModificationDate>1497173234</a:ModificationDate>
-<a:Modifier>Arthur</a:Modifier>
-<a:History>ORG {97A1770C-0ADB-4435-9347-F2CB8F97DA98}
-DAT 1497047384</a:History>
-<a:DataType>VA250</a:DataType>
-<a:Length>250</a:Length>
-<a:LogicalAttribute.Mandatory>1</a:LogicalAttribute.Mandatory>
-</o:EntityAttribute>
-<o:EntityAttribute Id="o85">
-<a:ObjectID>17001400-482F-40F8-83B4-342C0BFE072E</a:ObjectID>
-<a:Name>TORRENT_SLUG</a:Name>
-<a:Code>TORRENT_SLUG</a:Code>
-<a:CreationDate>1497047384</a:CreationDate>
-<a:Creator>Arthur</a:Creator>
-<a:ModificationDate>1497047384</a:ModificationDate>
-<a:Modifier>Arthur</a:Modifier>
-<a:History>ORG {E757147E-81AB-41A4-89DB-F31E0B81B99A}
-DAT 1497047384</a:History>
-<a:DataType>VA250</a:DataType>
-<a:Length>250</a:Length>
-</o:EntityAttribute>
-<o:EntityAttribute Id="o86">
-<a:ObjectID>DD877F9E-4B8B-4AF6-9E3B-399355D72383</a:ObjectID>
-<a:Name>TORRENT_YEAR</a:Name>
-<a:Code>TORRENT_YEAR</a:Code>
-<a:CreationDate>1497047384</a:CreationDate>
-<a:Creator>Arthur</a:Creator>
-<a:ModificationDate>1497047384</a:ModificationDate>
-<a:Modifier>Arthur</a:Modifier>
-<a:History>ORG {60391D63-CC1A-40C3-85D4-B730328F3D6B}
-DAT 1497047384</a:History>
-<a:DataType>I</a:DataType>
-</o:EntityAttribute>
-<o:EntityAttribute Id="o87">
-<a:ObjectID>C7D75029-C4B9-4EFD-B44D-6A11CBB5A886</a:ObjectID>
-<a:Name>TORRENT_SIZE</a:Name>
-<a:Code>TORRENT_SIZE</a:Code>
-<a:CreationDate>1497047384</a:CreationDate>
-<a:Creator>Arthur</a:Creator>
-<a:ModificationDate>1497173234</a:ModificationDate>
-<a:Modifier>Arthur</a:Modifier>
-<a:History>ORG {24DAAC10-4601-432B-BAF0-1C641BC8E5FE}
-DAT 1497047384</a:History>
-<a:DataType>LI</a:DataType>
-<a:LogicalAttribute.Mandatory>1</a:LogicalAttribute.Mandatory>
-</o:EntityAttribute>
-<o:EntityAttribute Id="o88">
-<a:ObjectID>DADAEB68-980C-4614-A4F0-BE2B053E14AB</a:ObjectID>
-<a:Name>TORRENT_SEEDERS</a:Name>
-<a:Code>TORRENT_SEEDERS</a:Code>
-<a:CreationDate>1497047384</a:CreationDate>
-<a:Creator>Arthur</a:Creator>
-<a:ModificationDate>1497047384</a:ModificationDate>
-<a:Modifier>Arthur</a:Modifier>
-<a:History>ORG {15DDA41C-6A59-42A9-BA0E-A4FB68EA8FA6}
-DAT 1497047384</a:History>
-<a:DataType>I</a:DataType>
-</o:EntityAttribute>
-<o:EntityAttribute Id="o89">
-<a:ObjectID>F4B89B08-27A7-4DD2-8922-FE1A467E0001</a:ObjectID>
-<a:Name>TORRENT_LEECHERS</a:Name>
-<a:Code>TORRENT_LEECHERS</a:Code>
-<a:CreationDate>1497047384</a:CreationDate>
-<a:Creator>Arthur</a:Creator>
-<a:ModificationDate>1497047384</a:ModificationDate>
-<a:Modifier>Arthur</a:Modifier>
-<a:History>ORG {451C94AF-280D-45D3-B4CB-178042A22E83}
-DAT 1497047384</a:History>
-<a:DataType>I</a:DataType>
-</o:EntityAttribute>
-<o:EntityAttribute Id="o90">
-<a:ObjectID>CE50FA09-4FFC-4F75-8A96-72E615E46BDF</a:ObjectID>
-<a:Name>TORRENT_COMPLETED</a:Name>
-<a:Code>TORRENT_COMPLETED</a:Code>
-<a:CreationDate>1497047384</a:CreationDate>
-<a:Creator>Arthur</a:Creator>
-<a:ModificationDate>1497047384</a:ModificationDate>
-<a:Modifier>Arthur</a:Modifier>
-<a:History>ORG {8B7D7F0B-DA23-477C-A96D-B384B0D676C1}
-DAT 1497047384</a:History>
-<a:DataType>I</a:DataType>
-</o:EntityAttribute>
-<o:EntityAttribute Id="o91">
-<a:ObjectID>245B7287-C8E4-4688-8380-B34BBC16C957</a:ObjectID>
-<a:Name>TORRENT_CREATED_AT</a:Name>
-<a:Code>TORRENT_CREATED_AT</a:Code>
-<a:CreationDate>1497173232</a:CreationDate>
-<a:Creator>Arthur</a:Creator>
-<a:ModificationDate>1497173234</a:ModificationDate>
-<a:Modifier>Arthur</a:Modifier>
-<a:History>ORG {EEDF724F-B41D-410C-825F-A00D02D3441B}
-DAT 1497173232</a:History>
+<a:History>ORG {AC44A12F-1B1A-40C4-93C8-A0DD1289B5EF}
+DAT 1500333782</a:History>
 <a:DataType>D</a:DataType>
 <a:LogicalAttribute.Mandatory>1</a:LogicalAttribute.Mandatory>
 </o:EntityAttribute>
 </c:Attributes>
 </o:Entity>
 <o:Entity Id="o38">
-<a:ObjectID>F6A2B357-C940-45D4-B952-A6E3DEA2E38A</a:ObjectID>
-<a:Name>CATEGORY</a:Name>
-<a:Code>CATEGORY</a:Code>
-<a:CreationDate>1497047384</a:CreationDate>
+<a:ObjectID>85295979-BDDF-466D-97C3-E4264526C6F4</a:ObjectID>
+<a:Name>GENRE</a:Name>
+<a:Code>GENRE</a:Code>
+<a:CreationDate>1500333782</a:CreationDate>
 <a:Creator>Arthur</a:Creator>
-<a:ModificationDate>1497173234</a:ModificationDate>
+<a:ModificationDate>1500333782</a:ModificationDate>
 <a:Modifier>Arthur</a:Modifier>
-<a:History>ORG {6573E83F-D2D4-41E6-92DC-54867CA76B40}
-DAT 1497047384</a:History>
+<a:History>ORG {F6A0A701-5AD8-47A0-8D51-FCB7A2738142}
+DAT 1500333782</a:History>
 <c:Identifiers>
-<o:Identifier Id="o92">
-<a:ObjectID>BE691C70-D43E-4938-8214-7FBB86A5CD5A</a:ObjectID>
-<a:Name>CATEGORY_ID</a:Name>
-<a:Code>CATEGORY_ID</a:Code>
-<a:CreationDate>1497047384</a:CreationDate>
+<o:Identifier Id="o69">
+<a:ObjectID>0427CE90-B32B-449A-AD6D-B34307F3B8A1</a:ObjectID>
+<a:Name>GENRE_ID</a:Name>
+<a:Code>GENRE_ID</a:Code>
+<a:CreationDate>1500333782</a:CreationDate>
 <a:Creator>Arthur</a:Creator>
-<a:ModificationDate>1497047384</a:ModificationDate>
+<a:ModificationDate>1500333782</a:ModificationDate>
 <a:Modifier>Arthur</a:Modifier>
-<a:History>ORG {266A49DC-DB41-46C4-85BC-0F74522288F4}
-DAT 1497047384</a:History>
+<a:History>ORG {318CC188-0DCF-446B-89C6-8BEC754461EC}
+DAT 1500333782</a:History>
 <c:Identifier.Attributes>
-<o:EntityAttribute Ref="o93"/>
+<o:EntityAttribute Ref="o70"/>
 </c:Identifier.Attributes>
 </o:Identifier>
 </c:Identifiers>
 <c:PrimaryIdentifier>
-<o:Identifier Ref="o92"/>
+<o:Identifier Ref="o69"/>
 </c:PrimaryIdentifier>
 <c:Attributes>
-<o:EntityAttribute Id="o93">
-<a:ObjectID>4F2AF219-AA33-4414-B767-D08520416F9C</a:ObjectID>
-<a:Name>CATEGORY_ID</a:Name>
-<a:Code>CATEGORY_ID</a:Code>
-<a:CreationDate>1497047384</a:CreationDate>
+<o:EntityAttribute Id="o70">
+<a:ObjectID>3FA65B85-D1E2-4443-BDE3-5FBF24239DDA</a:ObjectID>
+<a:Name>GENRE_ID</a:Name>
+<a:Code>GENRE_ID</a:Code>
+<a:CreationDate>1500333782</a:CreationDate>
 <a:Creator>Arthur</a:Creator>
-<a:ModificationDate>1497047384</a:ModificationDate>
+<a:ModificationDate>1500333782</a:ModificationDate>
 <a:Modifier>Arthur</a:Modifier>
-<a:History>ORG {277E999A-D7BB-4C55-8105-AFD1D4164F2A}
-DAT 1497047384</a:History>
+<a:History>ORG {5F6FE079-8F77-4D0E-A31B-7A5A7BA00FFF}
+DAT 1500333782</a:History>
 <a:DataType>NO</a:DataType>
 <a:LogicalAttribute.Mandatory>1</a:LogicalAttribute.Mandatory>
 </o:EntityAttribute>
-<o:EntityAttribute Id="o94">
-<a:ObjectID>18E64CDB-D98D-4354-A369-B965C650AFB9</a:ObjectID>
-<a:Name>CATEGORY_NAME</a:Name>
-<a:Code>CATEGORY_NAME</a:Code>
-<a:CreationDate>1497047384</a:CreationDate>
+<o:EntityAttribute Id="o71">
+<a:ObjectID>6EDA4106-5E1E-419F-9C7D-50A209FA63CE</a:ObjectID>
+<a:Name>GENRE_TMDB_ID</a:Name>
+<a:Code>GENRE_TMDB_ID</a:Code>
+<a:CreationDate>1500333782</a:CreationDate>
 <a:Creator>Arthur</a:Creator>
-<a:ModificationDate>1497173234</a:ModificationDate>
+<a:ModificationDate>1500333782</a:ModificationDate>
 <a:Modifier>Arthur</a:Modifier>
-<a:History>ORG {26495C22-8CEF-426D-895D-F48F9F02A3B3}
-DAT 1497047384</a:History>
-<a:DataType>VA50</a:DataType>
-<a:Length>50</a:Length>
+<a:History>ORG {80A5F2E8-5E7B-421F-8369-8ED0DC8E2023}
+DAT 1500333782</a:History>
+<a:DataType>I</a:DataType>
 <a:LogicalAttribute.Mandatory>1</a:LogicalAttribute.Mandatory>
 </o:EntityAttribute>
-<o:EntityAttribute Id="o95">
-<a:ObjectID>45613D44-0377-41DB-97CE-4B9C478E8D31</a:ObjectID>
-<a:Name>CATEGORY_CREATED_AT</a:Name>
-<a:Code>CATEGORY_CREATED_AT</a:Code>
-<a:CreationDate>1497173232</a:CreationDate>
+<o:EntityAttribute Id="o72">
+<a:ObjectID>C75655E7-8FC1-4D87-BD0F-9349D5D9ACE8</a:ObjectID>
+<a:Name>GENRE_NAME</a:Name>
+<a:Code>GENRE_NAME</a:Code>
+<a:CreationDate>1500333782</a:CreationDate>
 <a:Creator>Arthur</a:Creator>
-<a:ModificationDate>1497173234</a:ModificationDate>
+<a:ModificationDate>1500333782</a:ModificationDate>
 <a:Modifier>Arthur</a:Modifier>
-<a:History>ORG {DCBF92BE-0E60-4667-BEF7-D9DEF196451B}
-DAT 1497173232</a:History>
+<a:History>ORG {81ECCA42-A532-471F-B626-E22052871C0C}
+DAT 1500333782</a:History>
+<a:DataType>VA250</a:DataType>
+<a:Length>250</a:Length>
+<a:LogicalAttribute.Mandatory>1</a:LogicalAttribute.Mandatory>
+</o:EntityAttribute>
+<o:EntityAttribute Id="o73">
+<a:ObjectID>3613B514-C797-4747-9C27-F2F23BC52E06</a:ObjectID>
+<a:Name>GENRE_CREATED_AT</a:Name>
+<a:Code>GENRE_CREATED_AT</a:Code>
+<a:CreationDate>1500333782</a:CreationDate>
+<a:Creator>Arthur</a:Creator>
+<a:ModificationDate>1500333782</a:ModificationDate>
+<a:Modifier>Arthur</a:Modifier>
+<a:History>ORG {DB389201-87DA-4C0E-91F4-D50DF7F87698}
+DAT 1500333782</a:History>
 <a:DataType>D</a:DataType>
 <a:LogicalAttribute.Mandatory>1</a:LogicalAttribute.Mandatory>
 </o:EntityAttribute>
 </c:Attributes>
 </o:Entity>
 <o:Entity Id="o39">
-<a:ObjectID>A2810974-B4E7-4BA9-9935-1D3C0C308CFF</a:ObjectID>
-<a:Name>LANGUAGE</a:Name>
-<a:Code>LANGUAGE</a:Code>
-<a:CreationDate>1497047384</a:CreationDate>
+<a:ObjectID>C0D6C457-8CC6-479A-B4A6-4B194D2DFADA</a:ObjectID>
+<a:Name>COLLECTION</a:Name>
+<a:Code>COLLECTION</a:Code>
+<a:CreationDate>1500333782</a:CreationDate>
 <a:Creator>Arthur</a:Creator>
-<a:ModificationDate>1497173234</a:ModificationDate>
+<a:ModificationDate>1500333782</a:ModificationDate>
 <a:Modifier>Arthur</a:Modifier>
-<a:History>ORG {3F69628B-AA62-4E22-ADF0-E856CDEDC7D9}
-DAT 1497047384</a:History>
+<a:History>ORG {A4ABF797-0D4F-4821-9C3A-DCA6EF531C02}
+DAT 1500333782</a:History>
 <c:Identifiers>
-<o:Identifier Id="o96">
-<a:ObjectID>FE9CBDAF-FEB5-4B27-8557-7E883C67C3CE</a:ObjectID>
-<a:Name>LANGUAGE_ID</a:Name>
-<a:Code>LANGUAGE_ID</a:Code>
-<a:CreationDate>1497047384</a:CreationDate>
+<o:Identifier Id="o74">
+<a:ObjectID>6C5F7013-32A9-485F-8F00-0B66FB7CA778</a:ObjectID>
+<a:Name>COLLECTION_ID</a:Name>
+<a:Code>COLLECTION_ID</a:Code>
+<a:CreationDate>1500333782</a:CreationDate>
 <a:Creator>Arthur</a:Creator>
-<a:ModificationDate>1497047384</a:ModificationDate>
+<a:ModificationDate>1500333782</a:ModificationDate>
 <a:Modifier>Arthur</a:Modifier>
-<a:History>ORG {721268EB-8A1F-4426-892C-94B574569412}
-DAT 1497047384</a:History>
+<a:History>ORG {24F9197A-F671-4186-8F0D-5486E1EABAB0}
+DAT 1500333782</a:History>
 <c:Identifier.Attributes>
-<o:EntityAttribute Ref="o97"/>
+<o:EntityAttribute Ref="o75"/>
 </c:Identifier.Attributes>
 </o:Identifier>
 </c:Identifiers>
 <c:PrimaryIdentifier>
-<o:Identifier Ref="o96"/>
+<o:Identifier Ref="o74"/>
 </c:PrimaryIdentifier>
 <c:Attributes>
-<o:EntityAttribute Id="o97">
-<a:ObjectID>0B91E3B4-691E-48B6-9ECE-B126B35B3863</a:ObjectID>
-<a:Name>LANGUAGE_ID</a:Name>
-<a:Code>LANGUAGE_ID</a:Code>
-<a:CreationDate>1497047384</a:CreationDate>
+<o:EntityAttribute Id="o75">
+<a:ObjectID>F344CAA2-21C4-47C8-BD3A-E64323CFA595</a:ObjectID>
+<a:Name>COLLECTION_ID</a:Name>
+<a:Code>COLLECTION_ID</a:Code>
+<a:CreationDate>1500333782</a:CreationDate>
 <a:Creator>Arthur</a:Creator>
-<a:ModificationDate>1497047384</a:ModificationDate>
+<a:ModificationDate>1500333782</a:ModificationDate>
 <a:Modifier>Arthur</a:Modifier>
-<a:History>ORG {909ED8DC-A00D-4878-8899-E109CA44D055}
-DAT 1497047384</a:History>
+<a:History>ORG {35B26C0B-9741-460E-80EA-B9DCC452461C}
+DAT 1500333782</a:History>
 <a:DataType>NO</a:DataType>
 <a:LogicalAttribute.Mandatory>1</a:LogicalAttribute.Mandatory>
 </o:EntityAttribute>
-<o:EntityAttribute Id="o98">
-<a:ObjectID>F7547591-A3F5-4C54-B660-99736C5AA5F2</a:ObjectID>
-<a:Name>LANGUAGE_NAME</a:Name>
-<a:Code>LANGUAGE_NAME</a:Code>
-<a:CreationDate>1497047384</a:CreationDate>
+<o:EntityAttribute Id="o76">
+<a:ObjectID>7D3F62FC-98E6-4C71-B950-CF01DD30B17F</a:ObjectID>
+<a:Name>COLLECTION_TMDB_ID</a:Name>
+<a:Code>COLLECTION_TMDB_ID</a:Code>
+<a:CreationDate>1500333782</a:CreationDate>
 <a:Creator>Arthur</a:Creator>
-<a:ModificationDate>1497173234</a:ModificationDate>
+<a:ModificationDate>1500333782</a:ModificationDate>
 <a:Modifier>Arthur</a:Modifier>
-<a:History>ORG {08BB03D5-14A3-4984-8EB0-255C104B555B}
-DAT 1497047384</a:History>
-<a:DataType>VA50</a:DataType>
-<a:Length>50</a:Length>
+<a:History>ORG {C034FC25-767B-49F6-8371-2AC614D94E5C}
+DAT 1500333782</a:History>
+<a:DataType>I</a:DataType>
 <a:LogicalAttribute.Mandatory>1</a:LogicalAttribute.Mandatory>
 </o:EntityAttribute>
-<o:EntityAttribute Id="o99">
-<a:ObjectID>A88DF9D9-F393-47BF-B568-062D8C8E0F6F</a:ObjectID>
-<a:Name>LANGUAGE_CREATED_AT</a:Name>
-<a:Code>LANGUAGE_CREATED_AT</a:Code>
-<a:CreationDate>1497173232</a:CreationDate>
+<o:EntityAttribute Id="o77">
+<a:ObjectID>50CB686D-BD7B-463E-9557-860886553A44</a:ObjectID>
+<a:Name>COLLECTION_NAME</a:Name>
+<a:Code>COLLECTION_NAME</a:Code>
+<a:CreationDate>1500333782</a:CreationDate>
 <a:Creator>Arthur</a:Creator>
-<a:ModificationDate>1497173234</a:ModificationDate>
+<a:ModificationDate>1500333782</a:ModificationDate>
 <a:Modifier>Arthur</a:Modifier>
-<a:History>ORG {329E8EB4-BC2D-4197-8FB7-9CA718EF1D49}
-DAT 1497173232</a:History>
+<a:History>ORG {1303CEC4-4E0B-4B61-9919-3EB8A0D7205C}
+DAT 1500333782</a:History>
+<a:DataType>VA1000</a:DataType>
+<a:Length>1000</a:Length>
+<a:LogicalAttribute.Mandatory>1</a:LogicalAttribute.Mandatory>
+</o:EntityAttribute>
+<o:EntityAttribute Id="o78">
+<a:ObjectID>85F6B936-7827-48E0-A1B1-31158296BE8B</a:ObjectID>
+<a:Name>COLLECTION_POSTER_PATH</a:Name>
+<a:Code>COLLECTION_POSTER_PATH</a:Code>
+<a:CreationDate>1500333782</a:CreationDate>
+<a:Creator>Arthur</a:Creator>
+<a:ModificationDate>1500333782</a:ModificationDate>
+<a:Modifier>Arthur</a:Modifier>
+<a:History>ORG {A62A504E-3BAF-43DC-AEDE-6F7B35AD0E60}
+DAT 1500333782</a:History>
+<a:DataType>VA1000</a:DataType>
+<a:Length>1000</a:Length>
+</o:EntityAttribute>
+<o:EntityAttribute Id="o79">
+<a:ObjectID>1FE9F90D-8BDB-47E3-801E-12CB1DA37640</a:ObjectID>
+<a:Name>COLLECTION_BACKDROP_PATH</a:Name>
+<a:Code>COLLECTION_BACKDROP_PATH</a:Code>
+<a:CreationDate>1500333782</a:CreationDate>
+<a:Creator>Arthur</a:Creator>
+<a:ModificationDate>1500333782</a:ModificationDate>
+<a:Modifier>Arthur</a:Modifier>
+<a:History>ORG {2C0D686E-84B0-4E8F-9D86-0EE6BEAC4C9A}
+DAT 1500333782</a:History>
+<a:DataType>VA1000</a:DataType>
+<a:Length>1000</a:Length>
+</o:EntityAttribute>
+<o:EntityAttribute Id="o80">
+<a:ObjectID>43C46F54-0193-4C61-BE99-813E4D1D27EC</a:ObjectID>
+<a:Name>COLLECTION_CREATED_AT</a:Name>
+<a:Code>COLLECTION_CREATED_AT</a:Code>
+<a:CreationDate>1500333782</a:CreationDate>
+<a:Creator>Arthur</a:Creator>
+<a:ModificationDate>1500333782</a:ModificationDate>
+<a:Modifier>Arthur</a:Modifier>
+<a:History>ORG {2989A552-B37B-4BB6-A4A8-8674B3B88479}
+DAT 1500333782</a:History>
 <a:DataType>D</a:DataType>
 <a:LogicalAttribute.Mandatory>1</a:LogicalAttribute.Mandatory>
 </o:EntityAttribute>
 </c:Attributes>
 </o:Entity>
 <o:Entity Id="o40">
-<a:ObjectID>9250AA93-A765-4CC2-98D5-A0BD726ED2E2</a:ObjectID>
-<a:Name>QUALITY</a:Name>
-<a:Code>QUALITY</a:Code>
-<a:CreationDate>1497047384</a:CreationDate>
+<a:ObjectID>CCBFCA28-F9AF-4A63-9418-83B8DE0317EE</a:ObjectID>
+<a:Name>TORRENT</a:Name>
+<a:Code>TORRENT</a:Code>
+<a:CreationDate>1500333782</a:CreationDate>
 <a:Creator>Arthur</a:Creator>
-<a:ModificationDate>1497173234</a:ModificationDate>
+<a:ModificationDate>1500334345</a:ModificationDate>
 <a:Modifier>Arthur</a:Modifier>
-<a:History>ORG {91180EE7-EB68-4056-B17D-82AAC0D7CB49}
-DAT 1497047384</a:History>
+<a:History>ORG {DD689606-4F45-406C-A6F1-F1D147ABDFCC}
+DAT 1500333782
+MOV PENTCOL</a:History>
 <c:Identifiers>
-<o:Identifier Id="o100">
-<a:ObjectID>8941D88C-8E32-41CC-86E2-F9BC434F1A7D</a:ObjectID>
-<a:Name>QUALITY_ID</a:Name>
-<a:Code>QUALITY_ID</a:Code>
-<a:CreationDate>1497047384</a:CreationDate>
+<o:Identifier Id="o81">
+<a:ObjectID>FEA1A498-1B31-48B8-AACF-FF379AB68663</a:ObjectID>
+<a:Name>TORRENT_ID</a:Name>
+<a:Code>TORRENT_ID</a:Code>
+<a:CreationDate>1500333782</a:CreationDate>
 <a:Creator>Arthur</a:Creator>
-<a:ModificationDate>1497047384</a:ModificationDate>
+<a:ModificationDate>1500333782</a:ModificationDate>
 <a:Modifier>Arthur</a:Modifier>
-<a:History>ORG {9AF4A085-1495-4CAB-9F0F-CC2BB0870405}
-DAT 1497047384</a:History>
+<a:History>ORG {B454CB65-636B-4E00-98C6-DFEE0475F705}
+DAT 1500333782</a:History>
 <c:Identifier.Attributes>
-<o:EntityAttribute Ref="o101"/>
+<o:EntityAttribute Ref="o82"/>
 </c:Identifier.Attributes>
 </o:Identifier>
 </c:Identifiers>
 <c:PrimaryIdentifier>
-<o:Identifier Ref="o100"/>
+<o:Identifier Ref="o81"/>
 </c:PrimaryIdentifier>
 <c:Attributes>
-<o:EntityAttribute Id="o101">
-<a:ObjectID>BA24B483-C7D5-4DC3-A1B5-9F3E8B0EA05C</a:ObjectID>
-<a:Name>QUALITY_ID</a:Name>
-<a:Code>QUALITY_ID</a:Code>
-<a:CreationDate>1497047384</a:CreationDate>
+<o:EntityAttribute Id="o82">
+<a:ObjectID>D054D8B5-3CF9-4FDC-8946-09BA086446A1</a:ObjectID>
+<a:Name>TORRENT_ID</a:Name>
+<a:Code>TORRENT_ID</a:Code>
+<a:CreationDate>1500333782</a:CreationDate>
 <a:Creator>Arthur</a:Creator>
-<a:ModificationDate>1497047384</a:ModificationDate>
+<a:ModificationDate>1500333782</a:ModificationDate>
 <a:Modifier>Arthur</a:Modifier>
-<a:History>ORG {14D490FF-B217-4FC9-B42A-F46016221EBA}
-DAT 1497047384</a:History>
+<a:History>ORG {05F5C6D1-2380-465A-86F0-343BD7F0B787}
+DAT 1500333782</a:History>
 <a:DataType>NO</a:DataType>
 <a:LogicalAttribute.Mandatory>1</a:LogicalAttribute.Mandatory>
 </o:EntityAttribute>
-<o:EntityAttribute Id="o102">
-<a:ObjectID>26395FA5-DBF2-4A82-9735-FB04BFEDD1FA</a:ObjectID>
-<a:Name>QUALITY_NAME</a:Name>
-<a:Code>QUALITY_NAME</a:Code>
-<a:CreationDate>1497047384</a:CreationDate>
+<o:EntityAttribute Id="o83">
+<a:ObjectID>EFE3B81A-75ED-48B6-841B-D4A5D94AD51D</a:ObjectID>
+<a:Name>SOURCE_ID</a:Name>
+<a:Code>SOURCE_ID</a:Code>
+<a:CreationDate>1500334173</a:CreationDate>
 <a:Creator>Arthur</a:Creator>
-<a:ModificationDate>1497173234</a:ModificationDate>
+<a:ModificationDate>1500334345</a:ModificationDate>
 <a:Modifier>Arthur</a:Modifier>
-<a:History>ORG {C9927FCA-F2FF-471C-9C35-91DC6FA32027}
-DAT 1497047384</a:History>
-<a:DataType>VA50</a:DataType>
-<a:Length>50</a:Length>
+<a:History>ORG {772989E5-CBBD-42A4-9A30-EC6837A3A3FA},{FB2E4544-FB34-4EEE-8BCA-872C26927D15}
+DAT 1500334173</a:History>
+<a:DataType>I</a:DataType>
 <a:LogicalAttribute.Mandatory>1</a:LogicalAttribute.Mandatory>
 </o:EntityAttribute>
-<o:EntityAttribute Id="o103">
-<a:ObjectID>34D49BE7-1864-4F51-9589-4800C72958C7</a:ObjectID>
-<a:Name>QUALITY_CREATED_AT</a:Name>
-<a:Code>QUALITY_CREATED_AT</a:Code>
-<a:CreationDate>1497173232</a:CreationDate>
+<o:EntityAttribute Id="o84">
+<a:ObjectID>8F8BAFB6-B2DE-499B-8249-A96B1C0B506A</a:ObjectID>
+<a:Name>MOVIE_ID</a:Name>
+<a:Code>MOVIE_ID</a:Code>
+<a:CreationDate>1500333782</a:CreationDate>
 <a:Creator>Arthur</a:Creator>
-<a:ModificationDate>1497173234</a:ModificationDate>
+<a:ModificationDate>1500333782</a:ModificationDate>
 <a:Modifier>Arthur</a:Modifier>
-<a:History>ORG {21525450-786C-4F53-8078-B84332877874}
-DAT 1497173232</a:History>
+<a:History>ORG {FA44CC45-179D-439A-8064-9C9BA6B3DD2E},{55EE6745-FA49-4DD3-9148-7DEA21B0FC61}
+DAT 1500333782</a:History>
+<a:DataType>I</a:DataType>
+</o:EntityAttribute>
+<o:EntityAttribute Id="o85">
+<a:ObjectID>ABB39FD4-4F50-409C-B122-09799692445F</a:ObjectID>
+<a:Name>CATEGORY_ID</a:Name>
+<a:Code>CATEGORY_ID</a:Code>
+<a:CreationDate>1500333782</a:CreationDate>
+<a:Creator>Arthur</a:Creator>
+<a:ModificationDate>1500333782</a:ModificationDate>
+<a:Modifier>Arthur</a:Modifier>
+<a:History>ORG {277E999A-D7BB-4C55-8105-AFD1D4164F2A},{A21D4664-CFB3-4EB7-8F58-FF67C98D6C8A}
+DAT 1500333782</a:History>
+<a:DataType>I</a:DataType>
+<a:LogicalAttribute.Mandatory>1</a:LogicalAttribute.Mandatory>
+</o:EntityAttribute>
+<o:EntityAttribute Id="o86">
+<a:ObjectID>86FA9D80-1A5F-45D5-B067-EACA4990EE83</a:ObjectID>
+<a:Name>LANGUAGE_ID</a:Name>
+<a:Code>LANGUAGE_ID</a:Code>
+<a:CreationDate>1500333782</a:CreationDate>
+<a:Creator>Arthur</a:Creator>
+<a:ModificationDate>1500333782</a:ModificationDate>
+<a:Modifier>Arthur</a:Modifier>
+<a:History>ORG {909ED8DC-A00D-4878-8899-E109CA44D055},{F3B45D09-7A18-4E57-9E93-032DC4718379}
+DAT 1500333782</a:History>
+<a:DataType>I</a:DataType>
+<a:LogicalAttribute.Mandatory>1</a:LogicalAttribute.Mandatory>
+</o:EntityAttribute>
+<o:EntityAttribute Id="o87">
+<a:ObjectID>D8EF6CB2-ADD9-4E03-9C29-CF127B77D3CA</a:ObjectID>
+<a:Name>QUALITY_ID</a:Name>
+<a:Code>QUALITY_ID</a:Code>
+<a:CreationDate>1500333782</a:CreationDate>
+<a:Creator>Arthur</a:Creator>
+<a:ModificationDate>1500333782</a:ModificationDate>
+<a:Modifier>Arthur</a:Modifier>
+<a:History>ORG {14D490FF-B217-4FC9-B42A-F46016221EBA},{AE25F954-A63C-422F-AF45-94FCFBF23B15}
+DAT 1500333782</a:History>
+<a:DataType>I</a:DataType>
+<a:LogicalAttribute.Mandatory>1</a:LogicalAttribute.Mandatory>
+</o:EntityAttribute>
+<o:EntityAttribute Id="o88">
+<a:ObjectID>C5AD3A88-C71D-4831-9320-4127797C5660</a:ObjectID>
+<a:Name>TORRENT_GUID</a:Name>
+<a:Code>TORRENT_GUID</a:Code>
+<a:CreationDate>1500334173</a:CreationDate>
+<a:Creator>Arthur</a:Creator>
+<a:ModificationDate>1500334175</a:ModificationDate>
+<a:Modifier>Arthur</a:Modifier>
+<a:History>ORG {217E0036-9085-4903-9FB9-D85853332F83}
+DAT 1500334173</a:History>
+<a:DataType>VA250</a:DataType>
+<a:Length>250</a:Length>
+<a:LogicalAttribute.Mandatory>1</a:LogicalAttribute.Mandatory>
+</o:EntityAttribute>
+<o:EntityAttribute Id="o89">
+<a:ObjectID>687004AA-1A4A-498A-BDB1-5BB185E5CB96</a:ObjectID>
+<a:Name>TORRENT_NAME</a:Name>
+<a:Code>TORRENT_NAME</a:Code>
+<a:CreationDate>1500333782</a:CreationDate>
+<a:Creator>Arthur</a:Creator>
+<a:ModificationDate>1500333782</a:ModificationDate>
+<a:Modifier>Arthur</a:Modifier>
+<a:History>ORG {97A1770C-0ADB-4435-9347-F2CB8F97DA98}
+DAT 1500333782</a:History>
+<a:DataType>VA250</a:DataType>
+<a:Length>250</a:Length>
+<a:LogicalAttribute.Mandatory>1</a:LogicalAttribute.Mandatory>
+</o:EntityAttribute>
+<o:EntityAttribute Id="o90">
+<a:ObjectID>8E3FCEA9-DC20-4E6C-870F-B44E532A2C86</a:ObjectID>
+<a:Name>TORRENT_SLUG</a:Name>
+<a:Code>TORRENT_SLUG</a:Code>
+<a:CreationDate>1500333782</a:CreationDate>
+<a:Creator>Arthur</a:Creator>
+<a:ModificationDate>1500333782</a:ModificationDate>
+<a:Modifier>Arthur</a:Modifier>
+<a:History>ORG {E757147E-81AB-41A4-89DB-F31E0B81B99A}
+DAT 1500333782</a:History>
+<a:DataType>VA250</a:DataType>
+<a:Length>250</a:Length>
+</o:EntityAttribute>
+<o:EntityAttribute Id="o91">
+<a:ObjectID>F25EBD6F-6F7C-45C4-8EAB-2E5961825AC5</a:ObjectID>
+<a:Name>TORRENT_YEAR</a:Name>
+<a:Code>TORRENT_YEAR</a:Code>
+<a:CreationDate>1500333782</a:CreationDate>
+<a:Creator>Arthur</a:Creator>
+<a:ModificationDate>1500333782</a:ModificationDate>
+<a:Modifier>Arthur</a:Modifier>
+<a:History>ORG {60391D63-CC1A-40C3-85D4-B730328F3D6B}
+DAT 1500333782</a:History>
+<a:DataType>I</a:DataType>
+</o:EntityAttribute>
+<o:EntityAttribute Id="o92">
+<a:ObjectID>EF17482F-B291-4568-A778-1E3F8300722F</a:ObjectID>
+<a:Name>TORRENT_SIZE</a:Name>
+<a:Code>TORRENT_SIZE</a:Code>
+<a:CreationDate>1500333782</a:CreationDate>
+<a:Creator>Arthur</a:Creator>
+<a:ModificationDate>1500333782</a:ModificationDate>
+<a:Modifier>Arthur</a:Modifier>
+<a:History>ORG {24DAAC10-4601-432B-BAF0-1C641BC8E5FE}
+DAT 1500333782</a:History>
+<a:DataType>LI</a:DataType>
+<a:LogicalAttribute.Mandatory>1</a:LogicalAttribute.Mandatory>
+</o:EntityAttribute>
+<o:EntityAttribute Id="o93">
+<a:ObjectID>3E17D4A7-5D31-43AB-982D-19533A98ED79</a:ObjectID>
+<a:Name>TORRENT_SEEDERS</a:Name>
+<a:Code>TORRENT_SEEDERS</a:Code>
+<a:CreationDate>1500333782</a:CreationDate>
+<a:Creator>Arthur</a:Creator>
+<a:ModificationDate>1500333782</a:ModificationDate>
+<a:Modifier>Arthur</a:Modifier>
+<a:History>ORG {15DDA41C-6A59-42A9-BA0E-A4FB68EA8FA6}
+DAT 1500333782</a:History>
+<a:DataType>I</a:DataType>
+</o:EntityAttribute>
+<o:EntityAttribute Id="o94">
+<a:ObjectID>0BC7A7E8-BC48-42C9-ACC4-1BF17AC057DB</a:ObjectID>
+<a:Name>TORRENT_LEECHERS</a:Name>
+<a:Code>TORRENT_LEECHERS</a:Code>
+<a:CreationDate>1500333782</a:CreationDate>
+<a:Creator>Arthur</a:Creator>
+<a:ModificationDate>1500333782</a:ModificationDate>
+<a:Modifier>Arthur</a:Modifier>
+<a:History>ORG {451C94AF-280D-45D3-B4CB-178042A22E83}
+DAT 1500333782</a:History>
+<a:DataType>I</a:DataType>
+</o:EntityAttribute>
+<o:EntityAttribute Id="o95">
+<a:ObjectID>88E5FCB9-18FB-422A-96F7-64021611B8AF</a:ObjectID>
+<a:Name>TORRENT_COMPLETED</a:Name>
+<a:Code>TORRENT_COMPLETED</a:Code>
+<a:CreationDate>1500333782</a:CreationDate>
+<a:Creator>Arthur</a:Creator>
+<a:ModificationDate>1500333782</a:ModificationDate>
+<a:Modifier>Arthur</a:Modifier>
+<a:History>ORG {8B7D7F0B-DA23-477C-A96D-B384B0D676C1}
+DAT 1500333782</a:History>
+<a:DataType>I</a:DataType>
+</o:EntityAttribute>
+<o:EntityAttribute Id="o96">
+<a:ObjectID>C400936D-876F-45CE-ABE9-E3E977FBBA78</a:ObjectID>
+<a:Name>TORRENT_CREATED_AT</a:Name>
+<a:Code>TORRENT_CREATED_AT</a:Code>
+<a:CreationDate>1500333782</a:CreationDate>
+<a:Creator>Arthur</a:Creator>
+<a:ModificationDate>1500333782</a:ModificationDate>
+<a:Modifier>Arthur</a:Modifier>
+<a:History>ORG {EEDF724F-B41D-410C-825F-A00D02D3441B}
+DAT 1500333782</a:History>
 <a:DataType>D</a:DataType>
 <a:LogicalAttribute.Mandatory>1</a:LogicalAttribute.Mandatory>
+</o:EntityAttribute>
+<o:EntityAttribute Id="o97">
+<a:ObjectID>D0DD59BC-5BF6-44D0-9169-4B94D28B5D62</a:ObjectID>
+<a:Name>SOURCE_TORRENT_ID</a:Name>
+<a:Code>SOURCE_TORRENT_ID</a:Code>
+<a:CreationDate>1500334343</a:CreationDate>
+<a:Creator>Arthur</a:Creator>
+<a:ModificationDate>1500334345</a:ModificationDate>
+<a:Modifier>Arthur</a:Modifier>
+<a:History>ORG {ED1DD671-21F9-4339-BB5C-9038B3E00A97}
+DAT 1500334343</a:History>
+<a:DataType>I</a:DataType>
 </o:EntityAttribute>
 </c:Attributes>
 </o:Entity>
 <o:Entity Id="o41">
-<a:ObjectID>06E23611-79E1-4C13-A2B9-4470D95DEE83</a:ObjectID>
-<a:Name>PERSON</a:Name>
-<a:Code>PERSON</a:Code>
-<a:CreationDate>1497047384</a:CreationDate>
+<a:ObjectID>0B5651A9-A260-4CA0-A9C3-91C6E8213D46</a:ObjectID>
+<a:Name>CATEGORY</a:Name>
+<a:Code>CATEGORY</a:Code>
+<a:CreationDate>1500333782</a:CreationDate>
 <a:Creator>Arthur</a:Creator>
-<a:ModificationDate>1497173234</a:ModificationDate>
+<a:ModificationDate>1500333782</a:ModificationDate>
 <a:Modifier>Arthur</a:Modifier>
-<a:History>ORG {5FAD731A-FC1E-47CC-B639-F6216970172A}
-DAT 1497047384</a:History>
+<a:History>ORG {6573E83F-D2D4-41E6-92DC-54867CA76B40}
+DAT 1500333782</a:History>
 <c:Identifiers>
-<o:Identifier Id="o104">
-<a:ObjectID>FF27EA53-6AA3-445E-9F9B-1524CA695C06</a:ObjectID>
-<a:Name>PERSON_ID</a:Name>
-<a:Code>PERSON_ID</a:Code>
-<a:CreationDate>1497047384</a:CreationDate>
+<o:Identifier Id="o98">
+<a:ObjectID>45D68428-8DA3-48AD-9853-35980767D7CD</a:ObjectID>
+<a:Name>CATEGORY_ID</a:Name>
+<a:Code>CATEGORY_ID</a:Code>
+<a:CreationDate>1500333782</a:CreationDate>
 <a:Creator>Arthur</a:Creator>
-<a:ModificationDate>1497047384</a:ModificationDate>
+<a:ModificationDate>1500333782</a:ModificationDate>
 <a:Modifier>Arthur</a:Modifier>
-<a:History>ORG {F8097C7D-090E-4BF0-91E4-050203173668}
-DAT 1497047384</a:History>
+<a:History>ORG {266A49DC-DB41-46C4-85BC-0F74522288F4}
+DAT 1500333782</a:History>
 <c:Identifier.Attributes>
-<o:EntityAttribute Ref="o105"/>
+<o:EntityAttribute Ref="o99"/>
 </c:Identifier.Attributes>
 </o:Identifier>
 </c:Identifiers>
 <c:PrimaryIdentifier>
-<o:Identifier Ref="o104"/>
+<o:Identifier Ref="o98"/>
 </c:PrimaryIdentifier>
 <c:Attributes>
-<o:EntityAttribute Id="o105">
-<a:ObjectID>BFA69B6D-C8F5-4EB7-91D2-4C2D4D8D6355</a:ObjectID>
-<a:Name>PERSON_ID</a:Name>
-<a:Code>PERSON_ID</a:Code>
-<a:CreationDate>1497047384</a:CreationDate>
+<o:EntityAttribute Id="o99">
+<a:ObjectID>9ACDEED5-B7BC-4AB5-99FD-B562D8CEE5DC</a:ObjectID>
+<a:Name>CATEGORY_ID</a:Name>
+<a:Code>CATEGORY_ID</a:Code>
+<a:CreationDate>1500333782</a:CreationDate>
 <a:Creator>Arthur</a:Creator>
-<a:ModificationDate>1497047384</a:ModificationDate>
+<a:ModificationDate>1500333782</a:ModificationDate>
 <a:Modifier>Arthur</a:Modifier>
-<a:History>ORG {A576F9F2-6DC4-4D4F-AE0D-6F1B58631593}
-DAT 1497047384</a:History>
+<a:History>ORG {277E999A-D7BB-4C55-8105-AFD1D4164F2A}
+DAT 1500333782</a:History>
 <a:DataType>NO</a:DataType>
 <a:LogicalAttribute.Mandatory>1</a:LogicalAttribute.Mandatory>
 </o:EntityAttribute>
-<o:EntityAttribute Id="o106">
-<a:ObjectID>44D7359B-67C5-4C37-A34A-F3D04A091535</a:ObjectID>
-<a:Name>PERSON_FIRSTNAME</a:Name>
-<a:Code>PERSON_FIRSTNAME</a:Code>
-<a:CreationDate>1497047384</a:CreationDate>
+<o:EntityAttribute Id="o100">
+<a:ObjectID>3A8925DB-6EAA-40E0-8FE7-8730942F24A4</a:ObjectID>
+<a:Name>CATEGORY_NAME</a:Name>
+<a:Code>CATEGORY_NAME</a:Code>
+<a:CreationDate>1500333782</a:CreationDate>
 <a:Creator>Arthur</a:Creator>
-<a:ModificationDate>1497173234</a:ModificationDate>
+<a:ModificationDate>1500333782</a:ModificationDate>
 <a:Modifier>Arthur</a:Modifier>
-<a:History>ORG {D93D55B5-D3B1-438B-B530-F1A12505ECB8}
-DAT 1497047384</a:History>
-<a:DataType>VA250</a:DataType>
-<a:Length>250</a:Length>
+<a:History>ORG {26495C22-8CEF-426D-895D-F48F9F02A3B3}
+DAT 1500333782</a:History>
+<a:DataType>VA50</a:DataType>
+<a:Length>50</a:Length>
 <a:LogicalAttribute.Mandatory>1</a:LogicalAttribute.Mandatory>
 </o:EntityAttribute>
-<o:EntityAttribute Id="o107">
-<a:ObjectID>0B844C36-74A0-4298-8DB5-602360978378</a:ObjectID>
-<a:Name>PERSON_LASTNAME</a:Name>
-<a:Code>PERSON_LASTNAME</a:Code>
-<a:CreationDate>1497047384</a:CreationDate>
+<o:EntityAttribute Id="o101">
+<a:ObjectID>5FF4C19F-0B89-4B9D-AA7C-1AF4CE2E9E07</a:ObjectID>
+<a:Name>CATEGORY_CREATED_AT</a:Name>
+<a:Code>CATEGORY_CREATED_AT</a:Code>
+<a:CreationDate>1500333782</a:CreationDate>
 <a:Creator>Arthur</a:Creator>
-<a:ModificationDate>1497173234</a:ModificationDate>
+<a:ModificationDate>1500333782</a:ModificationDate>
 <a:Modifier>Arthur</a:Modifier>
-<a:History>ORG {2B9B3E1C-6CD9-4B01-ACE8-6D8FB4976151}
-DAT 1497047384</a:History>
-<a:DataType>VA250</a:DataType>
-<a:Length>250</a:Length>
-<a:LogicalAttribute.Mandatory>1</a:LogicalAttribute.Mandatory>
-</o:EntityAttribute>
-<o:EntityAttribute Id="o108">
-<a:ObjectID>A9645BCC-0D10-4DD2-8900-C4138244C210</a:ObjectID>
-<a:Name>PERSON_PROFILE_PATH</a:Name>
-<a:Code>PERSON_PROFILE_PATH</a:Code>
-<a:CreationDate>1497047384</a:CreationDate>
-<a:Creator>Arthur</a:Creator>
-<a:ModificationDate>1497173973</a:ModificationDate>
-<a:Modifier>Arthur</a:Modifier>
-<a:History>ORG {79E30146-BD0C-4B37-AEFE-E5A309791F60}
-DAT 1497047384</a:History>
-<a:DataType>VA1000</a:DataType>
-<a:Length>1000</a:Length>
-</o:EntityAttribute>
-<o:EntityAttribute Id="o109">
-<a:ObjectID>CB17041C-5876-4C10-8F7F-A1F78428A956</a:ObjectID>
-<a:Name>PERSON_CREATED_AT</a:Name>
-<a:Code>PERSON_CREATED_AT</a:Code>
-<a:CreationDate>1497173232</a:CreationDate>
-<a:Creator>Arthur</a:Creator>
-<a:ModificationDate>1497173234</a:ModificationDate>
-<a:Modifier>Arthur</a:Modifier>
-<a:History>ORG {F1B06512-C0F1-4E4A-B1D5-4668024CF474}
-DAT 1497173232</a:History>
+<a:History>ORG {DCBF92BE-0E60-4667-BEF7-D9DEF196451B}
+DAT 1500333782</a:History>
 <a:DataType>D</a:DataType>
 <a:LogicalAttribute.Mandatory>1</a:LogicalAttribute.Mandatory>
 </o:EntityAttribute>
 </c:Attributes>
 </o:Entity>
 <o:Entity Id="o42">
-<a:ObjectID>CE7B735E-4D6B-4A83-A4D7-17A49F3D4D93</a:ObjectID>
-<a:Name>CHARACTER</a:Name>
-<a:Code>CHARACTER</a:Code>
-<a:CreationDate>1497047384</a:CreationDate>
+<a:ObjectID>F713F87D-A298-4916-B19A-D02F8AA609EA</a:ObjectID>
+<a:Name>LANGUAGE</a:Name>
+<a:Code>LANGUAGE</a:Code>
+<a:CreationDate>1500333782</a:CreationDate>
 <a:Creator>Arthur</a:Creator>
-<a:ModificationDate>1497173234</a:ModificationDate>
+<a:ModificationDate>1500333782</a:ModificationDate>
 <a:Modifier>Arthur</a:Modifier>
-<a:History>ORG {FB256F73-EBD8-4110-89C3-4B15E5ECCD84}
-DAT 1497047384</a:History>
+<a:History>ORG {3F69628B-AA62-4E22-ADF0-E856CDEDC7D9}
+DAT 1500333782</a:History>
+<c:Identifiers>
+<o:Identifier Id="o102">
+<a:ObjectID>38624A74-05CC-4C34-939E-AB0502B91F48</a:ObjectID>
+<a:Name>LANGUAGE_ID</a:Name>
+<a:Code>LANGUAGE_ID</a:Code>
+<a:CreationDate>1500333782</a:CreationDate>
+<a:Creator>Arthur</a:Creator>
+<a:ModificationDate>1500333782</a:ModificationDate>
+<a:Modifier>Arthur</a:Modifier>
+<a:History>ORG {721268EB-8A1F-4426-892C-94B574569412}
+DAT 1500333782</a:History>
+<c:Identifier.Attributes>
+<o:EntityAttribute Ref="o103"/>
+</c:Identifier.Attributes>
+</o:Identifier>
+</c:Identifiers>
+<c:PrimaryIdentifier>
+<o:Identifier Ref="o102"/>
+</c:PrimaryIdentifier>
+<c:Attributes>
+<o:EntityAttribute Id="o103">
+<a:ObjectID>ABC15EEE-EEEB-49F7-8B62-1F537CAAD1E3</a:ObjectID>
+<a:Name>LANGUAGE_ID</a:Name>
+<a:Code>LANGUAGE_ID</a:Code>
+<a:CreationDate>1500333782</a:CreationDate>
+<a:Creator>Arthur</a:Creator>
+<a:ModificationDate>1500333782</a:ModificationDate>
+<a:Modifier>Arthur</a:Modifier>
+<a:History>ORG {909ED8DC-A00D-4878-8899-E109CA44D055}
+DAT 1500333782</a:History>
+<a:DataType>NO</a:DataType>
+<a:LogicalAttribute.Mandatory>1</a:LogicalAttribute.Mandatory>
+</o:EntityAttribute>
+<o:EntityAttribute Id="o104">
+<a:ObjectID>75A8B595-BBEB-4E1D-9846-F9F3A46EF753</a:ObjectID>
+<a:Name>LANGUAGE_NAME</a:Name>
+<a:Code>LANGUAGE_NAME</a:Code>
+<a:CreationDate>1500333782</a:CreationDate>
+<a:Creator>Arthur</a:Creator>
+<a:ModificationDate>1500333782</a:ModificationDate>
+<a:Modifier>Arthur</a:Modifier>
+<a:History>ORG {08BB03D5-14A3-4984-8EB0-255C104B555B}
+DAT 1500333782</a:History>
+<a:DataType>VA50</a:DataType>
+<a:Length>50</a:Length>
+<a:LogicalAttribute.Mandatory>1</a:LogicalAttribute.Mandatory>
+</o:EntityAttribute>
+<o:EntityAttribute Id="o105">
+<a:ObjectID>562C2806-0042-4470-A7DE-DFA1EAA51ACC</a:ObjectID>
+<a:Name>LANGUAGE_CREATED_AT</a:Name>
+<a:Code>LANGUAGE_CREATED_AT</a:Code>
+<a:CreationDate>1500333782</a:CreationDate>
+<a:Creator>Arthur</a:Creator>
+<a:ModificationDate>1500333782</a:ModificationDate>
+<a:Modifier>Arthur</a:Modifier>
+<a:History>ORG {329E8EB4-BC2D-4197-8FB7-9CA718EF1D49}
+DAT 1500333782</a:History>
+<a:DataType>D</a:DataType>
+<a:LogicalAttribute.Mandatory>1</a:LogicalAttribute.Mandatory>
+</o:EntityAttribute>
+</c:Attributes>
+</o:Entity>
+<o:Entity Id="o43">
+<a:ObjectID>819DEA31-DEB7-4D13-AD80-C86B0F18C573</a:ObjectID>
+<a:Name>QUALITY</a:Name>
+<a:Code>QUALITY</a:Code>
+<a:CreationDate>1500333782</a:CreationDate>
+<a:Creator>Arthur</a:Creator>
+<a:ModificationDate>1500333782</a:ModificationDate>
+<a:Modifier>Arthur</a:Modifier>
+<a:History>ORG {91180EE7-EB68-4056-B17D-82AAC0D7CB49}
+DAT 1500333782</a:History>
+<c:Identifiers>
+<o:Identifier Id="o106">
+<a:ObjectID>5F763CFD-3F1F-4693-A28F-3B6455D59EFD</a:ObjectID>
+<a:Name>QUALITY_ID</a:Name>
+<a:Code>QUALITY_ID</a:Code>
+<a:CreationDate>1500333782</a:CreationDate>
+<a:Creator>Arthur</a:Creator>
+<a:ModificationDate>1500333782</a:ModificationDate>
+<a:Modifier>Arthur</a:Modifier>
+<a:History>ORG {9AF4A085-1495-4CAB-9F0F-CC2BB0870405}
+DAT 1500333782</a:History>
+<c:Identifier.Attributes>
+<o:EntityAttribute Ref="o107"/>
+</c:Identifier.Attributes>
+</o:Identifier>
+</c:Identifiers>
+<c:PrimaryIdentifier>
+<o:Identifier Ref="o106"/>
+</c:PrimaryIdentifier>
+<c:Attributes>
+<o:EntityAttribute Id="o107">
+<a:ObjectID>3A9CD74C-48AA-4948-B246-6A1E4CFEA4AF</a:ObjectID>
+<a:Name>QUALITY_ID</a:Name>
+<a:Code>QUALITY_ID</a:Code>
+<a:CreationDate>1500333782</a:CreationDate>
+<a:Creator>Arthur</a:Creator>
+<a:ModificationDate>1500333782</a:ModificationDate>
+<a:Modifier>Arthur</a:Modifier>
+<a:History>ORG {14D490FF-B217-4FC9-B42A-F46016221EBA}
+DAT 1500333782</a:History>
+<a:DataType>NO</a:DataType>
+<a:LogicalAttribute.Mandatory>1</a:LogicalAttribute.Mandatory>
+</o:EntityAttribute>
+<o:EntityAttribute Id="o108">
+<a:ObjectID>1CE602A3-D92C-4A64-A81A-5F4684E74F5A</a:ObjectID>
+<a:Name>QUALITY_NAME</a:Name>
+<a:Code>QUALITY_NAME</a:Code>
+<a:CreationDate>1500333782</a:CreationDate>
+<a:Creator>Arthur</a:Creator>
+<a:ModificationDate>1500333782</a:ModificationDate>
+<a:Modifier>Arthur</a:Modifier>
+<a:History>ORG {C9927FCA-F2FF-471C-9C35-91DC6FA32027}
+DAT 1500333782</a:History>
+<a:DataType>VA50</a:DataType>
+<a:Length>50</a:Length>
+<a:LogicalAttribute.Mandatory>1</a:LogicalAttribute.Mandatory>
+</o:EntityAttribute>
+<o:EntityAttribute Id="o109">
+<a:ObjectID>E2E755FE-6B8F-4C22-86B1-4163069B6B30</a:ObjectID>
+<a:Name>QUALITY_CREATED_AT</a:Name>
+<a:Code>QUALITY_CREATED_AT</a:Code>
+<a:CreationDate>1500333782</a:CreationDate>
+<a:Creator>Arthur</a:Creator>
+<a:ModificationDate>1500333782</a:ModificationDate>
+<a:Modifier>Arthur</a:Modifier>
+<a:History>ORG {21525450-786C-4F53-8078-B84332877874}
+DAT 1500333782</a:History>
+<a:DataType>D</a:DataType>
+<a:LogicalAttribute.Mandatory>1</a:LogicalAttribute.Mandatory>
+</o:EntityAttribute>
+</c:Attributes>
+</o:Entity>
+<o:Entity Id="o44">
+<a:ObjectID>A943C9EF-4F1D-4B76-9BB4-3752DB196006</a:ObjectID>
+<a:Name>PERSON</a:Name>
+<a:Code>PERSON</a:Code>
+<a:CreationDate>1500333782</a:CreationDate>
+<a:Creator>Arthur</a:Creator>
+<a:ModificationDate>1500333782</a:ModificationDate>
+<a:Modifier>Arthur</a:Modifier>
+<a:History>ORG {5FAD731A-FC1E-47CC-B639-F6216970172A}
+DAT 1500333782</a:History>
 <c:Identifiers>
 <o:Identifier Id="o110">
-<a:ObjectID>70BFE922-F4D1-4A3C-98D4-A9BB4EFE042B</a:ObjectID>
-<a:Name>Identifiant_1</a:Name>
-<a:Code>IDENTIFIANT_1</a:Code>
-<a:CreationDate>1497047384</a:CreationDate>
+<a:ObjectID>9D7B078B-860E-4A71-A7B2-E34EC7FC80C7</a:ObjectID>
+<a:Name>PERSON_ID</a:Name>
+<a:Code>PERSON_ID</a:Code>
+<a:CreationDate>1500333782</a:CreationDate>
 <a:Creator>Arthur</a:Creator>
-<a:ModificationDate>1497047384</a:ModificationDate>
+<a:ModificationDate>1500333782</a:ModificationDate>
 <a:Modifier>Arthur</a:Modifier>
+<a:History>ORG {F8097C7D-090E-4BF0-91E4-050203173668}
+DAT 1500333782</a:History>
 <c:Identifier.Attributes>
 <o:EntityAttribute Ref="o111"/>
-<o:EntityAttribute Ref="o112"/>
 </c:Identifier.Attributes>
 </o:Identifier>
 </c:Identifiers>
@@ -2635,95 +2608,97 @@ DAT 1497047384</a:History>
 </c:PrimaryIdentifier>
 <c:Attributes>
 <o:EntityAttribute Id="o111">
-<a:ObjectID>8798E40C-B052-49CE-A167-A4871C46A012</a:ObjectID>
+<a:ObjectID>DD80E0B0-B78A-46BE-9C1A-9AE062A7F94E</a:ObjectID>
 <a:Name>PERSON_ID</a:Name>
 <a:Code>PERSON_ID</a:Code>
-<a:CreationDate>1497047384</a:CreationDate>
+<a:CreationDate>1500333782</a:CreationDate>
 <a:Creator>Arthur</a:Creator>
-<a:ModificationDate>1497047384</a:ModificationDate>
+<a:ModificationDate>1500333782</a:ModificationDate>
 <a:Modifier>Arthur</a:Modifier>
-<a:History>ORG {A576F9F2-6DC4-4D4F-AE0D-6F1B58631593},{BEE49D5C-4203-46D1-AD74-5AFDB423D802}
-DAT 1497047384</a:History>
-<a:DataType>I</a:DataType>
+<a:History>ORG {A576F9F2-6DC4-4D4F-AE0D-6F1B58631593}
+DAT 1500333782</a:History>
+<a:DataType>NO</a:DataType>
 <a:LogicalAttribute.Mandatory>1</a:LogicalAttribute.Mandatory>
 </o:EntityAttribute>
 <o:EntityAttribute Id="o112">
-<a:ObjectID>C4F4DDB9-25BA-465B-81E6-0AFC5F62E814</a:ObjectID>
-<a:Name>MOVIE_ID</a:Name>
-<a:Code>MOVIE_ID</a:Code>
-<a:CreationDate>1497047384</a:CreationDate>
+<a:ObjectID>27E875B7-4C16-49AC-95D7-D63ECCB4E4B9</a:ObjectID>
+<a:Name>PERSON_FIRSTNAME</a:Name>
+<a:Code>PERSON_FIRSTNAME</a:Code>
+<a:CreationDate>1500333782</a:CreationDate>
 <a:Creator>Arthur</a:Creator>
-<a:ModificationDate>1497047384</a:ModificationDate>
+<a:ModificationDate>1500333782</a:ModificationDate>
 <a:Modifier>Arthur</a:Modifier>
-<a:History>ORG {FA44CC45-179D-439A-8064-9C9BA6B3DD2E},{3982D414-E71F-414A-A5D8-1E14534F672C}
-DAT 1497047384</a:History>
-<a:DataType>I</a:DataType>
+<a:History>ORG {D93D55B5-D3B1-438B-B530-F1A12505ECB8}
+DAT 1500333782</a:History>
+<a:DataType>VA250</a:DataType>
+<a:Length>250</a:Length>
 <a:LogicalAttribute.Mandatory>1</a:LogicalAttribute.Mandatory>
 </o:EntityAttribute>
 <o:EntityAttribute Id="o113">
-<a:ObjectID>80BB0019-B935-47F9-A8BE-1A56FAA33018</a:ObjectID>
-<a:Name>CHARACTER_NAME</a:Name>
-<a:Code>CHARACTER_NAME</a:Code>
-<a:CreationDate>1497047384</a:CreationDate>
+<a:ObjectID>425DDED3-8A53-436F-94EB-E8B530CF36F6</a:ObjectID>
+<a:Name>PERSON_LASTNAME</a:Name>
+<a:Code>PERSON_LASTNAME</a:Code>
+<a:CreationDate>1500333782</a:CreationDate>
 <a:Creator>Arthur</a:Creator>
-<a:ModificationDate>1497173234</a:ModificationDate>
+<a:ModificationDate>1500333782</a:ModificationDate>
 <a:Modifier>Arthur</a:Modifier>
-<a:History>ORG {3FA77120-B3F4-425B-AC01-3D52D19F2376}
-DAT 1497047384</a:History>
+<a:History>ORG {2B9B3E1C-6CD9-4B01-ACE8-6D8FB4976151}
+DAT 1500333782</a:History>
 <a:DataType>VA250</a:DataType>
 <a:Length>250</a:Length>
 <a:LogicalAttribute.Mandatory>1</a:LogicalAttribute.Mandatory>
 </o:EntityAttribute>
 <o:EntityAttribute Id="o114">
-<a:ObjectID>7C8F1BE4-D9B2-4CAB-953E-4CC18A8A4C15</a:ObjectID>
-<a:Name>CHARACTER_ORDER</a:Name>
-<a:Code>CHARACTER_ORDER</a:Code>
-<a:CreationDate>1497047384</a:CreationDate>
+<a:ObjectID>70F97B51-3EA3-4BAC-B505-164F6F4B8E03</a:ObjectID>
+<a:Name>PERSON_PROFILE_PATH</a:Name>
+<a:Code>PERSON_PROFILE_PATH</a:Code>
+<a:CreationDate>1500333782</a:CreationDate>
 <a:Creator>Arthur</a:Creator>
-<a:ModificationDate>1497173234</a:ModificationDate>
+<a:ModificationDate>1500333782</a:ModificationDate>
 <a:Modifier>Arthur</a:Modifier>
-<a:History>ORG {44649AC6-AB2C-4F5E-8E17-BFD00CA7A9D3}
-DAT 1497047384</a:History>
-<a:DataType>I</a:DataType>
-<a:LogicalAttribute.Mandatory>1</a:LogicalAttribute.Mandatory>
+<a:History>ORG {79E30146-BD0C-4B37-AEFE-E5A309791F60}
+DAT 1500333782</a:History>
+<a:DataType>VA1000</a:DataType>
+<a:Length>1000</a:Length>
 </o:EntityAttribute>
 <o:EntityAttribute Id="o115">
-<a:ObjectID>BFED64C3-E84B-4C7A-957C-5034CF208FAE</a:ObjectID>
-<a:Name>CHARACTER_CREATED_AT</a:Name>
-<a:Code>CHARACTER_CREATED_AT</a:Code>
-<a:CreationDate>1497173232</a:CreationDate>
+<a:ObjectID>CF02264A-277D-4A9F-8299-713547F1118C</a:ObjectID>
+<a:Name>PERSON_CREATED_AT</a:Name>
+<a:Code>PERSON_CREATED_AT</a:Code>
+<a:CreationDate>1500333782</a:CreationDate>
 <a:Creator>Arthur</a:Creator>
-<a:ModificationDate>1497173234</a:ModificationDate>
+<a:ModificationDate>1500333782</a:ModificationDate>
 <a:Modifier>Arthur</a:Modifier>
-<a:History>ORG {4BDA7B93-DEC8-400A-8D7F-6A31C1D66587}
-DAT 1497173232</a:History>
+<a:History>ORG {F1B06512-C0F1-4E4A-B1D5-4668024CF474}
+DAT 1500333782</a:History>
 <a:DataType>D</a:DataType>
 <a:LogicalAttribute.Mandatory>1</a:LogicalAttribute.Mandatory>
 </o:EntityAttribute>
 </c:Attributes>
 </o:Entity>
-<o:Entity Id="o43">
-<a:ObjectID>56CDC7DF-FCB4-4410-AA2F-0006E6899B8F</a:ObjectID>
-<a:Name>MOVIE_GENRE</a:Name>
-<a:Code>MOVIE_GENRE</a:Code>
-<a:CreationDate>0</a:CreationDate>
-<a:Creator/>
-<a:ModificationDate>0</a:ModificationDate>
-<a:Modifier/>
-<a:History>ORG {2FAAC27E-D937-4297-AC32-A838D230C434}
-DAT 1497047384</a:History>
+<o:Entity Id="o46">
+<a:ObjectID>4CAC3843-F310-48D2-AB29-F0A3E03FA7D1</a:ObjectID>
+<a:Name>SOURCE</a:Name>
+<a:Code>SOURCE</a:Code>
+<a:CreationDate>1500333782</a:CreationDate>
+<a:Creator>Arthur</a:Creator>
+<a:ModificationDate>1500334175</a:ModificationDate>
+<a:Modifier>Arthur</a:Modifier>
+<a:History>ORG {A3DC7085-A770-4BAF-88E6-56BF43E24BF8}
+DAT 1500333782</a:History>
 <c:Identifiers>
 <o:Identifier Id="o116">
-<a:ObjectID>617CA263-8BB6-438A-B2F5-FC1BB8426DEA</a:ObjectID>
-<a:Name>Identifiant_1</a:Name>
-<a:Code>IDENTIFIANT_1</a:Code>
-<a:CreationDate>1497047384</a:CreationDate>
+<a:ObjectID>0411DBEF-6121-46CB-84FE-898FF47B6754</a:ObjectID>
+<a:Name>SOURCE_ID</a:Name>
+<a:Code>SOURCE_ID</a:Code>
+<a:CreationDate>1500333782</a:CreationDate>
 <a:Creator>Arthur</a:Creator>
-<a:ModificationDate>1497047384</a:ModificationDate>
+<a:ModificationDate>1500333782</a:ModificationDate>
 <a:Modifier>Arthur</a:Modifier>
+<a:History>ORG {FEA3ACEB-0F7F-4FE1-8CA6-5A7CBEB0674D}
+DAT 1500333782</a:History>
 <c:Identifier.Attributes>
 <o:EntityAttribute Ref="o117"/>
-<o:EntityAttribute Ref="o118"/>
 </c:Identifier.Attributes>
 </o:Identifier>
 </c:Identifiers>
@@ -2732,28 +2707,194 @@ DAT 1497047384</a:History>
 </c:PrimaryIdentifier>
 <c:Attributes>
 <o:EntityAttribute Id="o117">
-<a:ObjectID>C6C116DB-E213-4435-A8FA-9D9EFDED30AF</a:ObjectID>
-<a:Name>GENRE_ID</a:Name>
-<a:Code>GENRE_ID</a:Code>
-<a:CreationDate>1497047384</a:CreationDate>
+<a:ObjectID>47B26A5A-EB94-4791-9501-CE36E1C165A2</a:ObjectID>
+<a:Name>SOURCE_ID</a:Name>
+<a:Code>SOURCE_ID</a:Code>
+<a:CreationDate>1500333782</a:CreationDate>
 <a:Creator>Arthur</a:Creator>
-<a:ModificationDate>1497047384</a:ModificationDate>
+<a:ModificationDate>1500333782</a:ModificationDate>
 <a:Modifier>Arthur</a:Modifier>
-<a:History>ORG {5F6FE079-8F77-4D0E-A31B-7A5A7BA00FFF},{2FAAC27E-D937-4297-AC32-A838D230C434}
-DAT 1497047384</a:History>
-<a:DataType>I</a:DataType>
+<a:History>ORG {772989E5-CBBD-42A4-9A30-EC6837A3A3FA}
+DAT 1500333782</a:History>
+<a:DataType>NO</a:DataType>
 <a:LogicalAttribute.Mandatory>1</a:LogicalAttribute.Mandatory>
 </o:EntityAttribute>
 <o:EntityAttribute Id="o118">
-<a:ObjectID>FABFB31F-C522-4133-ABB1-CD503C20387D</a:ObjectID>
+<a:ObjectID>DFF4A469-A6A5-4266-87DE-BA9CB1A1D412</a:ObjectID>
+<a:Name>SOURCE_NAME</a:Name>
+<a:Code>SOURCE_NAME</a:Code>
+<a:CreationDate>1500333782</a:CreationDate>
+<a:Creator>Arthur</a:Creator>
+<a:ModificationDate>1500333782</a:ModificationDate>
+<a:Modifier>Arthur</a:Modifier>
+<a:History>ORG {1F844203-A7FA-4BBB-9DEF-441422508B99}
+DAT 1500333782</a:History>
+<a:DataType>VA50</a:DataType>
+<a:Length>50</a:Length>
+</o:EntityAttribute>
+<o:EntityAttribute Id="o119">
+<a:ObjectID>5CA405D2-DFE4-4C18-9A77-B46A0A2258E5</a:ObjectID>
+<a:Name>SOURCE_CREATED_AT</a:Name>
+<a:Code>SOURCE_CREATED_AT</a:Code>
+<a:CreationDate>1500333782</a:CreationDate>
+<a:Creator>Arthur</a:Creator>
+<a:ModificationDate>1500333782</a:ModificationDate>
+<a:Modifier>Arthur</a:Modifier>
+<a:History>ORG {8ECAC81B-96B2-4DDF-B38E-FC3BF72A4540}
+DAT 1500333782</a:History>
+<a:DataType>D</a:DataType>
+</o:EntityAttribute>
+</c:Attributes>
+</o:Entity>
+<o:Entity Id="o45">
+<a:ObjectID>0DD835BC-7B3B-436F-8F43-199D95D4FCFE</a:ObjectID>
+<a:Name>CHARACTER</a:Name>
+<a:Code>CHARACTER</a:Code>
+<a:CreationDate>1500333782</a:CreationDate>
+<a:Creator>Arthur</a:Creator>
+<a:ModificationDate>1500333782</a:ModificationDate>
+<a:Modifier>Arthur</a:Modifier>
+<a:History>ORG {FB256F73-EBD8-4110-89C3-4B15E5ECCD84}
+DAT 1500333782</a:History>
+<c:Identifiers>
+<o:Identifier Id="o120">
+<a:ObjectID>D12BA301-9082-42AB-8789-D5AEFAA3B796</a:ObjectID>
+<a:Name>Identifiant_1</a:Name>
+<a:Code>IDENTIFIANT_1</a:Code>
+<a:CreationDate>1500333782</a:CreationDate>
+<a:Creator>Arthur</a:Creator>
+<a:ModificationDate>1500333782</a:ModificationDate>
+<a:Modifier>Arthur</a:Modifier>
+<c:Identifier.Attributes>
+<o:EntityAttribute Ref="o121"/>
+<o:EntityAttribute Ref="o122"/>
+</c:Identifier.Attributes>
+</o:Identifier>
+</c:Identifiers>
+<c:PrimaryIdentifier>
+<o:Identifier Ref="o120"/>
+</c:PrimaryIdentifier>
+<c:Attributes>
+<o:EntityAttribute Id="o121">
+<a:ObjectID>AF9AD915-944C-4B91-995B-DCD6ABA9F11E</a:ObjectID>
+<a:Name>PERSON_ID</a:Name>
+<a:Code>PERSON_ID</a:Code>
+<a:CreationDate>1500333782</a:CreationDate>
+<a:Creator>Arthur</a:Creator>
+<a:ModificationDate>1500333782</a:ModificationDate>
+<a:Modifier>Arthur</a:Modifier>
+<a:History>ORG {A576F9F2-6DC4-4D4F-AE0D-6F1B58631593},{BEE49D5C-4203-46D1-AD74-5AFDB423D802}
+DAT 1500333782</a:History>
+<a:DataType>I</a:DataType>
+<a:LogicalAttribute.Mandatory>1</a:LogicalAttribute.Mandatory>
+</o:EntityAttribute>
+<o:EntityAttribute Id="o122">
+<a:ObjectID>D267BC24-90FD-4E1C-A42D-9688DA7BD765</a:ObjectID>
 <a:Name>MOVIE_ID</a:Name>
 <a:Code>MOVIE_ID</a:Code>
-<a:CreationDate>1497047384</a:CreationDate>
+<a:CreationDate>1500333782</a:CreationDate>
 <a:Creator>Arthur</a:Creator>
-<a:ModificationDate>1497047384</a:ModificationDate>
+<a:ModificationDate>1500333782</a:ModificationDate>
+<a:Modifier>Arthur</a:Modifier>
+<a:History>ORG {FA44CC45-179D-439A-8064-9C9BA6B3DD2E},{3982D414-E71F-414A-A5D8-1E14534F672C}
+DAT 1500333782</a:History>
+<a:DataType>I</a:DataType>
+<a:LogicalAttribute.Mandatory>1</a:LogicalAttribute.Mandatory>
+</o:EntityAttribute>
+<o:EntityAttribute Id="o123">
+<a:ObjectID>26DEB19C-A82C-481D-AA4E-BBDC2B4044D4</a:ObjectID>
+<a:Name>CHARACTER_NAME</a:Name>
+<a:Code>CHARACTER_NAME</a:Code>
+<a:CreationDate>1500333782</a:CreationDate>
+<a:Creator>Arthur</a:Creator>
+<a:ModificationDate>1500333782</a:ModificationDate>
+<a:Modifier>Arthur</a:Modifier>
+<a:History>ORG {3FA77120-B3F4-425B-AC01-3D52D19F2376}
+DAT 1500333782</a:History>
+<a:DataType>VA250</a:DataType>
+<a:Length>250</a:Length>
+<a:LogicalAttribute.Mandatory>1</a:LogicalAttribute.Mandatory>
+</o:EntityAttribute>
+<o:EntityAttribute Id="o124">
+<a:ObjectID>B1E91D44-455E-4F1A-AEE1-EDBEDF9ABE44</a:ObjectID>
+<a:Name>CHARACTER_ORDER</a:Name>
+<a:Code>CHARACTER_ORDER</a:Code>
+<a:CreationDate>1500333782</a:CreationDate>
+<a:Creator>Arthur</a:Creator>
+<a:ModificationDate>1500333782</a:ModificationDate>
+<a:Modifier>Arthur</a:Modifier>
+<a:History>ORG {44649AC6-AB2C-4F5E-8E17-BFD00CA7A9D3}
+DAT 1500333782</a:History>
+<a:DataType>I</a:DataType>
+<a:LogicalAttribute.Mandatory>1</a:LogicalAttribute.Mandatory>
+</o:EntityAttribute>
+<o:EntityAttribute Id="o125">
+<a:ObjectID>F1C7F0A8-DC98-4450-A7D3-D741003917EE</a:ObjectID>
+<a:Name>CHARACTER_CREATED_AT</a:Name>
+<a:Code>CHARACTER_CREATED_AT</a:Code>
+<a:CreationDate>1500333782</a:CreationDate>
+<a:Creator>Arthur</a:Creator>
+<a:ModificationDate>1500333782</a:ModificationDate>
+<a:Modifier>Arthur</a:Modifier>
+<a:History>ORG {4BDA7B93-DEC8-400A-8D7F-6A31C1D66587}
+DAT 1500333782</a:History>
+<a:DataType>D</a:DataType>
+<a:LogicalAttribute.Mandatory>1</a:LogicalAttribute.Mandatory>
+</o:EntityAttribute>
+</c:Attributes>
+</o:Entity>
+<o:Entity Id="o47">
+<a:ObjectID>04D09511-9F28-45E6-A07D-027BA3265653</a:ObjectID>
+<a:Name>MOVIE_GENRE</a:Name>
+<a:Code>MOVIE_GENRE</a:Code>
+<a:CreationDate>0</a:CreationDate>
+<a:Creator/>
+<a:ModificationDate>0</a:ModificationDate>
+<a:Modifier/>
+<a:History>ORG {2FAAC27E-D937-4297-AC32-A838D230C434}
+DAT 1500333782</a:History>
+<c:Identifiers>
+<o:Identifier Id="o126">
+<a:ObjectID>CB02F77A-D2D5-4162-A474-012A6EC27AE8</a:ObjectID>
+<a:Name>Identifiant_1</a:Name>
+<a:Code>IDENTIFIANT_1</a:Code>
+<a:CreationDate>1500333782</a:CreationDate>
+<a:Creator>Arthur</a:Creator>
+<a:ModificationDate>1500333782</a:ModificationDate>
+<a:Modifier>Arthur</a:Modifier>
+<c:Identifier.Attributes>
+<o:EntityAttribute Ref="o127"/>
+<o:EntityAttribute Ref="o128"/>
+</c:Identifier.Attributes>
+</o:Identifier>
+</c:Identifiers>
+<c:PrimaryIdentifier>
+<o:Identifier Ref="o126"/>
+</c:PrimaryIdentifier>
+<c:Attributes>
+<o:EntityAttribute Id="o127">
+<a:ObjectID>B571D1BD-B67F-484F-808B-0747EDC2C80F</a:ObjectID>
+<a:Name>GENRE_ID</a:Name>
+<a:Code>GENRE_ID</a:Code>
+<a:CreationDate>1500333782</a:CreationDate>
+<a:Creator>Arthur</a:Creator>
+<a:ModificationDate>1500333782</a:ModificationDate>
+<a:Modifier>Arthur</a:Modifier>
+<a:History>ORG {5F6FE079-8F77-4D0E-A31B-7A5A7BA00FFF},{2FAAC27E-D937-4297-AC32-A838D230C434}
+DAT 1500333782</a:History>
+<a:DataType>I</a:DataType>
+<a:LogicalAttribute.Mandatory>1</a:LogicalAttribute.Mandatory>
+</o:EntityAttribute>
+<o:EntityAttribute Id="o128">
+<a:ObjectID>171D931E-FE7E-4D80-881F-A73586A359FD</a:ObjectID>
+<a:Name>MOVIE_ID</a:Name>
+<a:Code>MOVIE_ID</a:Code>
+<a:CreationDate>1500333782</a:CreationDate>
+<a:Creator>Arthur</a:Creator>
+<a:ModificationDate>1500333782</a:ModificationDate>
 <a:Modifier>Arthur</a:Modifier>
 <a:History>ORG {FA44CC45-179D-439A-8064-9C9BA6B3DD2E},{2FAAC27E-D937-4297-AC32-A838D230C434}
-DAT 1497047384</a:History>
+DAT 1500333782</a:History>
 <a:DataType>I</a:DataType>
 <a:LogicalAttribute.Mandatory>1</a:LogicalAttribute.Mandatory>
 </o:EntityAttribute>
@@ -2762,7 +2903,7 @@ DAT 1497047384</a:History>
 </c:Entities>
 <c:Relationships>
 <o:Relationship Id="o9">
-<a:ObjectID>37D55B3C-1208-43B2-9750-E822FB754565</a:ObjectID>
+<a:ObjectID>86075F96-7DE2-4109-BC98-51A2DA5E4CF7</a:ObjectID>
 <a:Name>MOVIE_GENRE</a:Name>
 <a:Code>MOVIE_GENRE2</a:Code>
 <a:CreationDate>0</a:CreationDate>
@@ -2770,37 +2911,37 @@ DAT 1497047384</a:History>
 <a:ModificationDate>0</a:ModificationDate>
 <a:Modifier/>
 <a:History>ORG {2FAAC27E-D937-4297-AC32-A838D230C434}
-DAT 1497047384</a:History>
+DAT 1500333782</a:History>
 <a:DependentRole>B</a:DependentRole>
 <a:Entity1ToEntity2RoleCardinality>1,n</a:Entity1ToEntity2RoleCardinality>
 <a:Entity2ToEntity1RoleCardinality>1,1</a:Entity2ToEntity1RoleCardinality>
 <c:Object1>
-<o:Entity Ref="o43"/>
+<o:Entity Ref="o47"/>
 </c:Object1>
 <c:Object2>
-<o:Entity Ref="o34"/>
+<o:Entity Ref="o37"/>
 </c:Object2>
 <c:Joins>
-<o:RelationshipJoin Id="o119">
-<a:ObjectID>E9A8F785-479C-490E-AF60-6437DE11CD41</a:ObjectID>
-<a:CreationDate>1497047384</a:CreationDate>
+<o:RelationshipJoin Id="o129">
+<a:ObjectID>32E27F13-CDDC-4711-8AEB-CC19625D77C5</a:ObjectID>
+<a:CreationDate>1500333782</a:CreationDate>
 <a:Creator>Arthur</a:Creator>
-<a:ModificationDate>1497047384</a:ModificationDate>
+<a:ModificationDate>1500333782</a:ModificationDate>
 <a:Modifier>Arthur</a:Modifier>
 <c:Object1>
-<o:EntityAttribute Ref="o45"/>
+<o:EntityAttribute Ref="o49"/>
 </c:Object1>
 <c:Object2>
-<o:EntityAttribute Ref="o118"/>
+<o:EntityAttribute Ref="o128"/>
 </c:Object2>
 </o:RelationshipJoin>
 </c:Joins>
 <c:ParentIdentifier>
-<o:Identifier Ref="o44"/>
+<o:Identifier Ref="o48"/>
 </c:ParentIdentifier>
 </o:Relationship>
 <o:Relationship Id="o12">
-<a:ObjectID>64D1D807-6CC1-4E47-8AF6-49534DF3B479</a:ObjectID>
+<a:ObjectID>C72ACAE6-DFDC-49CD-867E-207CC0DB59A8</a:ObjectID>
 <a:Name>MOVIE_GENRE</a:Name>
 <a:Code>MOVIE_GENRE</a:Code>
 <a:CreationDate>0</a:CreationDate>
@@ -2808,197 +2949,47 @@ DAT 1497047384</a:History>
 <a:ModificationDate>0</a:ModificationDate>
 <a:Modifier/>
 <a:History>ORG {2FAAC27E-D937-4297-AC32-A838D230C434}
-DAT 1497047384</a:History>
+DAT 1500333782</a:History>
 <a:DependentRole>A</a:DependentRole>
-<a:Entity1ToEntity2RoleCardinality>1,1</a:Entity1ToEntity2RoleCardinality>
-<a:Entity2ToEntity1RoleCardinality>0,n</a:Entity2ToEntity1RoleCardinality>
-<c:Object1>
-<o:Entity Ref="o35"/>
-</c:Object1>
-<c:Object2>
-<o:Entity Ref="o43"/>
-</c:Object2>
-<c:Joins>
-<o:RelationshipJoin Id="o120">
-<a:ObjectID>3B9BD3F9-4751-4F7D-9014-19D68CB258F2</a:ObjectID>
-<a:CreationDate>1497047384</a:CreationDate>
-<a:Creator>Arthur</a:Creator>
-<a:ModificationDate>1497047384</a:ModificationDate>
-<a:Modifier>Arthur</a:Modifier>
-<c:Object1>
-<o:EntityAttribute Ref="o66"/>
-</c:Object1>
-<c:Object2>
-<o:EntityAttribute Ref="o117"/>
-</c:Object2>
-</o:RelationshipJoin>
-</c:Joins>
-<c:ParentIdentifier>
-<o:Identifier Ref="o65"/>
-</c:ParentIdentifier>
-</o:Relationship>
-<o:Relationship Id="o15">
-<a:ObjectID>64A335FC-BC9D-4139-8A0F-89B45FAC26A0</a:ObjectID>
-<a:Name>MOVIE_COLLECTION</a:Name>
-<a:Code>MOVIE_COLLECTION</a:Code>
-<a:CreationDate>1497047384</a:CreationDate>
-<a:Creator>Arthur</a:Creator>
-<a:ModificationDate>1497184348</a:ModificationDate>
-<a:Modifier>Arthur</a:Modifier>
-<a:History>ORG {9A7AD146-952C-403E-B3AF-C0B16E00BF5B}
-DAT 1497047384
-ATT ENTB
-ATT ENTA</a:History>
-<a:Entity1ToEntity2RoleCardinality>1,n</a:Entity1ToEntity2RoleCardinality>
-<a:Entity2ToEntity1RoleCardinality>0,1</a:Entity2ToEntity1RoleCardinality>
-<c:Object1>
-<o:Entity Ref="o34"/>
-</c:Object1>
-<c:Object2>
-<o:Entity Ref="o36"/>
-</c:Object2>
-<c:Joins>
-<o:RelationshipJoin Id="o121">
-<a:ObjectID>6E103153-ECD3-40E4-8490-94D6E9552103</a:ObjectID>
-<a:CreationDate>1497047384</a:CreationDate>
-<a:Creator>Arthur</a:Creator>
-<a:ModificationDate>1497047384</a:ModificationDate>
-<a:Modifier>Arthur</a:Modifier>
-<c:Object1>
-<o:EntityAttribute Ref="o71"/>
-</c:Object1>
-<c:Object2>
-<o:EntityAttribute Ref="o46"/>
-</c:Object2>
-</o:RelationshipJoin>
-</c:Joins>
-<c:ParentIdentifier>
-<o:Identifier Ref="o70"/>
-</c:ParentIdentifier>
-</o:Relationship>
-<o:Relationship Id="o18">
-<a:ObjectID>C333B477-9384-4591-BCAC-CA07A2E25AFA</a:ObjectID>
-<a:Name>MOVIE_TORRENT</a:Name>
-<a:Code>MOVIE_TORRENT</a:Code>
-<a:CreationDate>1497047384</a:CreationDate>
-<a:Creator>Arthur</a:Creator>
-<a:ModificationDate>1497047384</a:ModificationDate>
-<a:Modifier>Arthur</a:Modifier>
-<a:History>ORG {55EE6745-FA49-4DD3-9148-7DEA21B0FC61}
-DAT 1497047384</a:History>
-<a:Entity1ToEntity2RoleCardinality>0,n</a:Entity1ToEntity2RoleCardinality>
-<a:Entity2ToEntity1RoleCardinality>0,1</a:Entity2ToEntity1RoleCardinality>
-<c:Object1>
-<o:Entity Ref="o37"/>
-</c:Object1>
-<c:Object2>
-<o:Entity Ref="o34"/>
-</c:Object2>
-<c:Joins>
-<o:RelationshipJoin Id="o122">
-<a:ObjectID>3D8E0DB4-107E-48DC-80F9-44625020299B</a:ObjectID>
-<a:CreationDate>1497047384</a:CreationDate>
-<a:Creator>Arthur</a:Creator>
-<a:ModificationDate>1497047384</a:ModificationDate>
-<a:Modifier>Arthur</a:Modifier>
-<c:Object1>
-<o:EntityAttribute Ref="o45"/>
-</c:Object1>
-<c:Object2>
-<o:EntityAttribute Ref="o79"/>
-</c:Object2>
-</o:RelationshipJoin>
-</c:Joins>
-<c:ParentIdentifier>
-<o:Identifier Ref="o44"/>
-</c:ParentIdentifier>
-</o:Relationship>
-<o:Relationship Id="o21">
-<a:ObjectID>947F7E46-7C57-430E-9564-3CE08AFBAB83</a:ObjectID>
-<a:Name>TORRENT_CATEGORY</a:Name>
-<a:Code>TORRENT_CATEGORY</a:Code>
-<a:CreationDate>1497047384</a:CreationDate>
-<a:Creator>Arthur</a:Creator>
-<a:ModificationDate>1497047384</a:ModificationDate>
-<a:Modifier>Arthur</a:Modifier>
-<a:History>ORG {A21D4664-CFB3-4EB7-8F58-FF67C98D6C8A}
-DAT 1497047384</a:History>
 <a:Entity1ToEntity2RoleCardinality>1,1</a:Entity1ToEntity2RoleCardinality>
 <a:Entity2ToEntity1RoleCardinality>0,n</a:Entity2ToEntity1RoleCardinality>
 <c:Object1>
 <o:Entity Ref="o38"/>
 </c:Object1>
 <c:Object2>
-<o:Entity Ref="o37"/>
+<o:Entity Ref="o47"/>
 </c:Object2>
 <c:Joins>
-<o:RelationshipJoin Id="o123">
-<a:ObjectID>6A36A1FA-BE3C-46B7-B3A3-6B93AA25CD3D</a:ObjectID>
-<a:CreationDate>1497047384</a:CreationDate>
+<o:RelationshipJoin Id="o130">
+<a:ObjectID>BD2F1083-E9A1-4FED-A796-1A3BC19003F0</a:ObjectID>
+<a:CreationDate>1500333782</a:CreationDate>
 <a:Creator>Arthur</a:Creator>
-<a:ModificationDate>1497047384</a:ModificationDate>
+<a:ModificationDate>1500333782</a:ModificationDate>
 <a:Modifier>Arthur</a:Modifier>
 <c:Object1>
-<o:EntityAttribute Ref="o93"/>
+<o:EntityAttribute Ref="o70"/>
 </c:Object1>
 <c:Object2>
-<o:EntityAttribute Ref="o80"/>
+<o:EntityAttribute Ref="o127"/>
 </c:Object2>
 </o:RelationshipJoin>
 </c:Joins>
 <c:ParentIdentifier>
-<o:Identifier Ref="o92"/>
+<o:Identifier Ref="o69"/>
 </c:ParentIdentifier>
 </o:Relationship>
-<o:Relationship Id="o24">
-<a:ObjectID>24709135-AC15-4C8E-80AE-9A3C49F7450D</a:ObjectID>
-<a:Name>TORRENT_LANGUAGE</a:Name>
-<a:Code>TORRENT_LANGUAGE</a:Code>
-<a:CreationDate>1497047384</a:CreationDate>
+<o:Relationship Id="o15">
+<a:ObjectID>CF2CBE44-57B1-4C62-AF6C-53629856683E</a:ObjectID>
+<a:Name>MOVIE_TORRENT</a:Name>
+<a:Code>MOVIE_TORRENT</a:Code>
+<a:CreationDate>1500333782</a:CreationDate>
 <a:Creator>Arthur</a:Creator>
-<a:ModificationDate>1497047384</a:ModificationDate>
+<a:ModificationDate>1500333782</a:ModificationDate>
 <a:Modifier>Arthur</a:Modifier>
-<a:History>ORG {F3B45D09-7A18-4E57-9E93-032DC4718379}
-DAT 1497047384</a:History>
-<a:Entity1ToEntity2RoleCardinality>1,1</a:Entity1ToEntity2RoleCardinality>
-<a:Entity2ToEntity1RoleCardinality>0,n</a:Entity2ToEntity1RoleCardinality>
-<c:Object1>
-<o:Entity Ref="o39"/>
-</c:Object1>
-<c:Object2>
-<o:Entity Ref="o37"/>
-</c:Object2>
-<c:Joins>
-<o:RelationshipJoin Id="o124">
-<a:ObjectID>54CAFED7-8CFA-41D7-8074-3A6793F0F6C1</a:ObjectID>
-<a:CreationDate>1497047384</a:CreationDate>
-<a:Creator>Arthur</a:Creator>
-<a:ModificationDate>1497047384</a:ModificationDate>
-<a:Modifier>Arthur</a:Modifier>
-<c:Object1>
-<o:EntityAttribute Ref="o97"/>
-</c:Object1>
-<c:Object2>
-<o:EntityAttribute Ref="o81"/>
-</c:Object2>
-</o:RelationshipJoin>
-</c:Joins>
-<c:ParentIdentifier>
-<o:Identifier Ref="o96"/>
-</c:ParentIdentifier>
-</o:Relationship>
-<o:Relationship Id="o27">
-<a:ObjectID>4D5EDC00-6387-4AA4-88DD-D6F0E9A5E6B2</a:ObjectID>
-<a:Name>TORRENT_QUALITY</a:Name>
-<a:Code>TORRENT_QUALITY</a:Code>
-<a:CreationDate>1497047384</a:CreationDate>
-<a:Creator>Arthur</a:Creator>
-<a:ModificationDate>1497047384</a:ModificationDate>
-<a:Modifier>Arthur</a:Modifier>
-<a:History>ORG {AE25F954-A63C-422F-AF45-94FCFBF23B15}
-DAT 1497047384</a:History>
-<a:Entity1ToEntity2RoleCardinality>1,1</a:Entity1ToEntity2RoleCardinality>
-<a:Entity2ToEntity1RoleCardinality>0,n</a:Entity2ToEntity1RoleCardinality>
+<a:History>ORG {55EE6745-FA49-4DD3-9148-7DEA21B0FC61}
+DAT 1500333782</a:History>
+<a:Entity1ToEntity2RoleCardinality>0,n</a:Entity1ToEntity2RoleCardinality>
+<a:Entity2ToEntity1RoleCardinality>0,1</a:Entity2ToEntity1RoleCardinality>
 <c:Object1>
 <o:Entity Ref="o40"/>
 </c:Object1>
@@ -3006,26 +2997,174 @@ DAT 1497047384</a:History>
 <o:Entity Ref="o37"/>
 </c:Object2>
 <c:Joins>
-<o:RelationshipJoin Id="o125">
-<a:ObjectID>29437692-FE9B-4C72-8511-3F50606E0F1C</a:ObjectID>
-<a:CreationDate>1497047384</a:CreationDate>
+<o:RelationshipJoin Id="o131">
+<a:ObjectID>90AA322E-C743-45D6-A108-707413156B46</a:ObjectID>
+<a:CreationDate>1500333782</a:CreationDate>
 <a:Creator>Arthur</a:Creator>
-<a:ModificationDate>1497047384</a:ModificationDate>
+<a:ModificationDate>1500333782</a:ModificationDate>
 <a:Modifier>Arthur</a:Modifier>
 <c:Object1>
-<o:EntityAttribute Ref="o101"/>
+<o:EntityAttribute Ref="o49"/>
 </c:Object1>
 <c:Object2>
-<o:EntityAttribute Ref="o82"/>
+<o:EntityAttribute Ref="o84"/>
 </c:Object2>
 </o:RelationshipJoin>
 </c:Joins>
 <c:ParentIdentifier>
-<o:Identifier Ref="o100"/>
+<o:Identifier Ref="o48"/>
 </c:ParentIdentifier>
 </o:Relationship>
-<o:Relationship Id="o31">
-<a:ObjectID>4F063E2A-FCF7-4F97-AEFB-06394FD92D93</a:ObjectID>
+<o:Relationship Id="o18">
+<a:ObjectID>4C846A5D-89CC-427A-B176-48EBBBC88036</a:ObjectID>
+<a:Name>TORRENT_CATEGORY</a:Name>
+<a:Code>TORRENT_CATEGORY</a:Code>
+<a:CreationDate>1500333782</a:CreationDate>
+<a:Creator>Arthur</a:Creator>
+<a:ModificationDate>1500333782</a:ModificationDate>
+<a:Modifier>Arthur</a:Modifier>
+<a:History>ORG {A21D4664-CFB3-4EB7-8F58-FF67C98D6C8A}
+DAT 1500333782</a:History>
+<a:Entity1ToEntity2RoleCardinality>1,1</a:Entity1ToEntity2RoleCardinality>
+<a:Entity2ToEntity1RoleCardinality>0,n</a:Entity2ToEntity1RoleCardinality>
+<c:Object1>
+<o:Entity Ref="o41"/>
+</c:Object1>
+<c:Object2>
+<o:Entity Ref="o40"/>
+</c:Object2>
+<c:Joins>
+<o:RelationshipJoin Id="o132">
+<a:ObjectID>11C7A4B2-6ED4-4724-8868-8661775D2C61</a:ObjectID>
+<a:CreationDate>1500333782</a:CreationDate>
+<a:Creator>Arthur</a:Creator>
+<a:ModificationDate>1500333782</a:ModificationDate>
+<a:Modifier>Arthur</a:Modifier>
+<c:Object1>
+<o:EntityAttribute Ref="o99"/>
+</c:Object1>
+<c:Object2>
+<o:EntityAttribute Ref="o85"/>
+</c:Object2>
+</o:RelationshipJoin>
+</c:Joins>
+<c:ParentIdentifier>
+<o:Identifier Ref="o98"/>
+</c:ParentIdentifier>
+</o:Relationship>
+<o:Relationship Id="o21">
+<a:ObjectID>3EEB7E9F-B758-431A-98F8-89924675CA7B</a:ObjectID>
+<a:Name>TORRENT_LANGUAGE</a:Name>
+<a:Code>TORRENT_LANGUAGE</a:Code>
+<a:CreationDate>1500333782</a:CreationDate>
+<a:Creator>Arthur</a:Creator>
+<a:ModificationDate>1500333782</a:ModificationDate>
+<a:Modifier>Arthur</a:Modifier>
+<a:History>ORG {F3B45D09-7A18-4E57-9E93-032DC4718379}
+DAT 1500333782</a:History>
+<a:Entity1ToEntity2RoleCardinality>1,1</a:Entity1ToEntity2RoleCardinality>
+<a:Entity2ToEntity1RoleCardinality>0,n</a:Entity2ToEntity1RoleCardinality>
+<c:Object1>
+<o:Entity Ref="o42"/>
+</c:Object1>
+<c:Object2>
+<o:Entity Ref="o40"/>
+</c:Object2>
+<c:Joins>
+<o:RelationshipJoin Id="o133">
+<a:ObjectID>E50A0E93-0719-43EA-9938-72BB1123B30C</a:ObjectID>
+<a:CreationDate>1500333782</a:CreationDate>
+<a:Creator>Arthur</a:Creator>
+<a:ModificationDate>1500333782</a:ModificationDate>
+<a:Modifier>Arthur</a:Modifier>
+<c:Object1>
+<o:EntityAttribute Ref="o103"/>
+</c:Object1>
+<c:Object2>
+<o:EntityAttribute Ref="o86"/>
+</c:Object2>
+</o:RelationshipJoin>
+</c:Joins>
+<c:ParentIdentifier>
+<o:Identifier Ref="o102"/>
+</c:ParentIdentifier>
+</o:Relationship>
+<o:Relationship Id="o24">
+<a:ObjectID>6EB36D74-40D8-429F-A93A-D95B251F12FD</a:ObjectID>
+<a:Name>TORRENT_QUALITY</a:Name>
+<a:Code>TORRENT_QUALITY</a:Code>
+<a:CreationDate>1500333782</a:CreationDate>
+<a:Creator>Arthur</a:Creator>
+<a:ModificationDate>1500333782</a:ModificationDate>
+<a:Modifier>Arthur</a:Modifier>
+<a:History>ORG {AE25F954-A63C-422F-AF45-94FCFBF23B15}
+DAT 1500333782</a:History>
+<a:Entity1ToEntity2RoleCardinality>1,1</a:Entity1ToEntity2RoleCardinality>
+<a:Entity2ToEntity1RoleCardinality>0,n</a:Entity2ToEntity1RoleCardinality>
+<c:Object1>
+<o:Entity Ref="o43"/>
+</c:Object1>
+<c:Object2>
+<o:Entity Ref="o40"/>
+</c:Object2>
+<c:Joins>
+<o:RelationshipJoin Id="o134">
+<a:ObjectID>0D1B8676-23BC-4362-AF65-BA601398058C</a:ObjectID>
+<a:CreationDate>1500333782</a:CreationDate>
+<a:Creator>Arthur</a:Creator>
+<a:ModificationDate>1500333782</a:ModificationDate>
+<a:Modifier>Arthur</a:Modifier>
+<c:Object1>
+<o:EntityAttribute Ref="o107"/>
+</c:Object1>
+<c:Object2>
+<o:EntityAttribute Ref="o87"/>
+</c:Object2>
+</o:RelationshipJoin>
+</c:Joins>
+<c:ParentIdentifier>
+<o:Identifier Ref="o106"/>
+</c:ParentIdentifier>
+</o:Relationship>
+<o:Relationship Id="o33">
+<a:ObjectID>235BE83A-D977-4B9F-8D56-8FB11896FA40</a:ObjectID>
+<a:Name>MOVIE_COLLECTION</a:Name>
+<a:Code>MOVIE_COLLECTION</a:Code>
+<a:CreationDate>1500333782</a:CreationDate>
+<a:Creator>Arthur</a:Creator>
+<a:ModificationDate>1500333782</a:ModificationDate>
+<a:Modifier>Arthur</a:Modifier>
+<a:History>ORG {297C820B-3E7D-4291-A866-FC7566A58F52}
+DAT 1500333782</a:History>
+<a:Entity1ToEntity2RoleCardinality>1,n</a:Entity1ToEntity2RoleCardinality>
+<a:Entity2ToEntity1RoleCardinality>0,1</a:Entity2ToEntity1RoleCardinality>
+<c:Object1>
+<o:Entity Ref="o37"/>
+</c:Object1>
+<c:Object2>
+<o:Entity Ref="o39"/>
+</c:Object2>
+<c:Joins>
+<o:RelationshipJoin Id="o135">
+<a:ObjectID>95E209C2-CE18-4A87-B57E-9CA259DE9BFC</a:ObjectID>
+<a:CreationDate>1500333782</a:CreationDate>
+<a:Creator>Arthur</a:Creator>
+<a:ModificationDate>1500333782</a:ModificationDate>
+<a:Modifier>Arthur</a:Modifier>
+<c:Object1>
+<o:EntityAttribute Ref="o75"/>
+</c:Object1>
+<c:Object2>
+<o:EntityAttribute Ref="o50"/>
+</c:Object2>
+</o:RelationshipJoin>
+</c:Joins>
+<c:ParentIdentifier>
+<o:Identifier Ref="o74"/>
+</c:ParentIdentifier>
+</o:Relationship>
+<o:Relationship Id="o28">
+<a:ObjectID>35006461-A139-492F-B140-F378257D8C85</a:ObjectID>
 <a:Name>CHARACTER</a:Name>
 <a:Code>CHARACTER2</a:Code>
 <a:CreationDate>0</a:CreationDate>
@@ -3033,37 +3172,37 @@ DAT 1497047384</a:History>
 <a:ModificationDate>0</a:ModificationDate>
 <a:Modifier/>
 <a:History>ORG {BEE49D5C-4203-46D1-AD74-5AFDB423D802}
-DAT 1497047384</a:History>
+DAT 1500333782</a:History>
 <a:DependentRole>A</a:DependentRole>
 <a:Entity1ToEntity2RoleCardinality>1,1</a:Entity1ToEntity2RoleCardinality>
 <a:Entity2ToEntity1RoleCardinality>0,n</a:Entity2ToEntity1RoleCardinality>
 <c:Object1>
-<o:Entity Ref="o41"/>
+<o:Entity Ref="o44"/>
 </c:Object1>
 <c:Object2>
-<o:Entity Ref="o42"/>
+<o:Entity Ref="o45"/>
 </c:Object2>
 <c:Joins>
-<o:RelationshipJoin Id="o126">
-<a:ObjectID>ECE13F7C-E04A-4071-8506-D576E179DC8E</a:ObjectID>
-<a:CreationDate>1497047384</a:CreationDate>
+<o:RelationshipJoin Id="o136">
+<a:ObjectID>61425F15-8C60-425B-B632-15D6C645D058</a:ObjectID>
+<a:CreationDate>1500333782</a:CreationDate>
 <a:Creator>Arthur</a:Creator>
-<a:ModificationDate>1497047384</a:ModificationDate>
+<a:ModificationDate>1500333782</a:ModificationDate>
 <a:Modifier>Arthur</a:Modifier>
 <c:Object1>
-<o:EntityAttribute Ref="o105"/>
+<o:EntityAttribute Ref="o111"/>
 </c:Object1>
 <c:Object2>
-<o:EntityAttribute Ref="o111"/>
+<o:EntityAttribute Ref="o121"/>
 </c:Object2>
 </o:RelationshipJoin>
 </c:Joins>
 <c:ParentIdentifier>
-<o:Identifier Ref="o104"/>
+<o:Identifier Ref="o110"/>
 </c:ParentIdentifier>
 </o:Relationship>
-<o:Relationship Id="o33">
-<a:ObjectID>79292ECE-6181-4CC8-AA15-0158454952EB</a:ObjectID>
+<o:Relationship Id="o30">
+<a:ObjectID>8AA33857-1040-432E-97C6-8091CF59EBA7</a:ObjectID>
 <a:Name>CHARACTER</a:Name>
 <a:Code>CHARACTER</a:Code>
 <a:CreationDate>0</a:CreationDate>
@@ -3071,62 +3210,99 @@ DAT 1497047384</a:History>
 <a:ModificationDate>0</a:ModificationDate>
 <a:Modifier/>
 <a:History>ORG {3982D414-E71F-414A-A5D8-1E14534F672C}
-DAT 1497047384</a:History>
+DAT 1500333782</a:History>
 <a:DependentRole>A</a:DependentRole>
 <a:Entity1ToEntity2RoleCardinality>1,1</a:Entity1ToEntity2RoleCardinality>
 <a:Entity2ToEntity1RoleCardinality>0,n</a:Entity2ToEntity1RoleCardinality>
 <c:Object1>
-<o:Entity Ref="o34"/>
+<o:Entity Ref="o37"/>
 </c:Object1>
 <c:Object2>
-<o:Entity Ref="o42"/>
+<o:Entity Ref="o45"/>
 </c:Object2>
 <c:Joins>
-<o:RelationshipJoin Id="o127">
-<a:ObjectID>D383A341-0589-47D5-8F18-DB0554EFEB6F</a:ObjectID>
-<a:CreationDate>1497047384</a:CreationDate>
+<o:RelationshipJoin Id="o137">
+<a:ObjectID>D5C2C486-8402-4BB5-98B5-130A948C3878</a:ObjectID>
+<a:CreationDate>1500333782</a:CreationDate>
 <a:Creator>Arthur</a:Creator>
-<a:ModificationDate>1497047384</a:ModificationDate>
+<a:ModificationDate>1500333782</a:ModificationDate>
 <a:Modifier>Arthur</a:Modifier>
 <c:Object1>
-<o:EntityAttribute Ref="o45"/>
+<o:EntityAttribute Ref="o49"/>
 </c:Object1>
 <c:Object2>
-<o:EntityAttribute Ref="o112"/>
+<o:EntityAttribute Ref="o122"/>
 </c:Object2>
 </o:RelationshipJoin>
 </c:Joins>
 <c:ParentIdentifier>
-<o:Identifier Ref="o44"/>
+<o:Identifier Ref="o48"/>
+</c:ParentIdentifier>
+</o:Relationship>
+<o:Relationship Id="o36">
+<a:ObjectID>E00F25EE-D808-488D-96C0-0BD7190FD39D</a:ObjectID>
+<a:Name>TORRENT_SOURCE</a:Name>
+<a:Code>TORRENT_SOURCE</a:Code>
+<a:CreationDate>1500334173</a:CreationDate>
+<a:Creator>Arthur</a:Creator>
+<a:ModificationDate>1500334360</a:ModificationDate>
+<a:Modifier>Arthur</a:Modifier>
+<a:History>ORG {BC271723-81F7-4D32-88BE-352D9BC145E1}
+DAT 1500334173</a:History>
+<a:Entity1ToEntity2RoleCardinality>0,n</a:Entity1ToEntity2RoleCardinality>
+<a:Entity2ToEntity1RoleCardinality>1,1</a:Entity2ToEntity1RoleCardinality>
+<c:Object1>
+<o:Entity Ref="o40"/>
+</c:Object1>
+<c:Object2>
+<o:Entity Ref="o46"/>
+</c:Object2>
+<c:Joins>
+<o:RelationshipJoin Id="o138">
+<a:ObjectID>0FFF09BD-4B71-4FD4-880D-78BC61B42307</a:ObjectID>
+<a:CreationDate>1500334173</a:CreationDate>
+<a:Creator>Arthur</a:Creator>
+<a:ModificationDate>1500334175</a:ModificationDate>
+<a:Modifier>Arthur</a:Modifier>
+<c:Object1>
+<o:EntityAttribute Ref="o117"/>
+</c:Object1>
+<c:Object2>
+<o:EntityAttribute Ref="o83"/>
+</c:Object2>
+</o:RelationshipJoin>
+</c:Joins>
+<c:ParentIdentifier>
+<o:Identifier Ref="o116"/>
 </c:ParentIdentifier>
 </o:Relationship>
 </c:Relationships>
 <c:TargetModels>
-<o:TargetModel Id="o128">
-<a:ObjectID>335168CD-FE61-45EE-8D3E-3A554395E047</a:ObjectID>
+<o:TargetModel Id="o139">
+<a:ObjectID>4A22FF94-8762-471C-AFA5-AB12C2E22178</a:ObjectID>
 <a:Name>play-batch-mcd</a:Name>
 <a:Code>PLAY_BATCH_MCD</a:Code>
-<a:CreationDate>1497047384</a:CreationDate>
+<a:CreationDate>1500333782</a:CreationDate>
 <a:Creator>Arthur</a:Creator>
-<a:ModificationDate>1497047384</a:ModificationDate>
+<a:ModificationDate>1500333782</a:ModificationDate>
 <a:Modifier>Arthur</a:Modifier>
-<a:TargetModelURL>file:///C|/DEV/MOVIE/play-batch/model/play-batch-mcd.mcd</a:TargetModelURL>
+<a:TargetModelURL>file:///C|/Users/Arthur/Documents/GitHub/play/play-batch/model/play-batch-mcd.mcd</a:TargetModelURL>
 <a:TargetModelID>E541E082-F2E5-4B95-938D-4FD8B50F3F9E</a:TargetModelID>
 <a:TargetModelClassID>1E597170-9350-11D1-AB3C-0020AF71E433</a:TargetModelClassID>
 <c:SessionShortcuts>
 <o:Shortcut Ref="o4"/>
 </c:SessionShortcuts>
 </o:TargetModel>
-<o:TargetModel Id="o129">
-<a:ObjectID>8592413E-0B1C-4EA4-B40F-8B58DC3EDC95</a:ObjectID>
-<a:Name>play-batch-mcd</a:Name>
-<a:Code>PLAY_BATCH_MCD</a:Code>
-<a:CreationDate>1497047474</a:CreationDate>
+<o:TargetModel Id="o140">
+<a:ObjectID>F29A5632-4B36-4E78-90A5-C1DE25DF6F31</a:ObjectID>
+<a:Name>play-batch-mpd</a:Name>
+<a:Code>PLAY_BATCH_MPD</a:Code>
+<a:CreationDate>1500334375</a:CreationDate>
 <a:Creator>Arthur</a:Creator>
-<a:ModificationDate>1497047510</a:ModificationDate>
+<a:ModificationDate>1500334399</a:ModificationDate>
 <a:Modifier>Arthur</a:Modifier>
-<a:TargetModelURL>file:///C|/DEV/MOVIE/play-batch/model/play-batch-mcd.mpd</a:TargetModelURL>
-<a:TargetModelID>C68D8820-1327-46E3-AA72-8F91B71AEB50</a:TargetModelID>
+<a:TargetModelURL>file:///C|/Users/Arthur/Documents/GitHub/play/play-batch/model/play-batch-mpd.mpd</a:TargetModelURL>
+<a:TargetModelID>F47D7B30-3798-4345-9E60-58F6AA7421B9</a:TargetModelID>
 <a:TargetModelClassID>CDE44E21-9669-11D1-9914-006097355D9B</a:TargetModelClassID>
 <c:SessionShortcuts>
 <o:Shortcut Ref="o3"/>

@@ -7,22 +7,28 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using batch.Services.Torrents.Nextorrent;
+using play.Services.Torrents.Torrent9;
 
 namespace batch.Services.Torrents
 {
     public class MovieTorrentsService
     {
         private readonly NextorrentService _nextorrent;
+        private readonly Torrent9Service _torrent9;
 
-	    public MovieTorrentsService(string next)
+	    public MovieTorrentsService(string next, string torrent9)
 	    {
 	        _nextorrent = new NextorrentService(next);
+            _torrent9 = new Torrent9Service(torrent9);
 	    }
 
 	    public IEnumerable<Torrent> GetMovies()
 	    {
-	        var movies = _nextorrent.GetMovieTorrents();
-	        return GetExtractTorrents(movies);
+	        var next = _nextorrent.GetMovieTorrents();
+	        var torrent9 = _torrent9.GetMovieTorrents();
+
+	        var result = next.Concat(torrent9).ToList();
+	        return GetExtractTorrents(result);
 	    }
 
         private IEnumerable<Torrent> GetExtractTorrents(IEnumerable<Torrent> torrents)
@@ -36,7 +42,7 @@ namespace batch.Services.Torrents
 	            const string year = @"(\d{4})";
 
 	            var pattern = string.Empty;
-                if (t.Source == Source.Nextorrent)
+                if (t.Source == Source.Nextorrent || t.Source == Source.Torrent9)
 	                pattern = $@"{name}.+{language}.+{quality}.+{year}";
 	            if (t.Source == Source.Yggtorrent)
 	                pattern = $@"{name}.+{year}.+{language}.+{quality}";
@@ -46,7 +52,7 @@ namespace batch.Services.Torrents
 	            if (!match.Success) return;
 
 	            string s = string.Empty, l = string.Empty, q = string.Empty, y = string.Empty;
-	            if (t.Source == Source.Nextorrent)
+	            if (t.Source == Source.Nextorrent || t.Source == Source.Torrent9)
 	            {
 	                s = match.Groups[1].Value;
 	                l = match.Groups[2].Value;
@@ -66,6 +72,7 @@ namespace batch.Services.Torrents
 	            t.Quality = GetQuality(q);
 	            t.Year = GetYear(y);
                 t.Category = Category.Movie;
+	            t.Guid = Guid.NewGuid().ToString();
 
 	            lock (movies)
 	            {

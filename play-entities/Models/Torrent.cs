@@ -5,8 +5,9 @@ namespace entities.Models
     public partial class Torrent
     {
         public int Id { get; set; }
-        public int T411Id { get; set; }
+        public int SourceId { get; set; }
         public int? MovieId { get; set; }
+        public string Guid { get; set; }
         public string Name { get; set; }
         public string Slug { get; set; }
         public int? Year { get; set; }
@@ -17,6 +18,7 @@ namespace entities.Models
         public int CategoryId { get; set; }
         public int LanguageId { get; set; }
         public int QualityId { get; set; }
+        public int? TorrentId { get; set; } 
         public DateTime CreatedAt { get; set; }
     }
 }

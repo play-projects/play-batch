@@ -31,6 +31,7 @@
     public class Torrent
     {
         public int Id { get; set; }
+        public string Guid { get; set; }
         public Source Source { get; set; }
         public string Name { get; set; }
         public string Slug { get; set; }
@@ -48,6 +49,8 @@
         public static Torrent NotFound = new Torrent
         {
             Id = 0,
+            Guid = string.Empty,
+            Source = Source.None,
             Name = string.Empty,
             Slug = string.Empty,
             Year = 0,

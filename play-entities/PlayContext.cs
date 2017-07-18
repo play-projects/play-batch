@@ -23,6 +23,7 @@ namespace entities.Models
         public virtual DbSet<Person> Person { get; set; }
         public virtual DbSet<Quality> Quality { get; set; }
         public virtual DbSet<Torrent> Torrent { get; set; }
+        public virtual DbSet<Source> Source { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -267,6 +268,21 @@ namespace entities.Models
                     .HasColumnType("datetime");
             });
 
+            modelBuilder.Entity<Source>(entity =>
+            {
+                entity.ToTable("SOURCE");
+
+                entity.Property(e => e.Id)
+                    .HasColumnName("SOURCE_ID")
+                    .ValueGeneratedOnAdd();
+
+                entity.Property(e => e.Name)
+                    .HasColumnName("SOURCE_NAME")
+                    .HasColumnType("varchar(250)");
+
+                entity.Property(e => e.CreatedAt).HasColumnName("SOURCE_CREATED_AT");
+            });
+
             modelBuilder.Entity<Torrent>(entity =>
             {
                 entity.ToTable("TORRENT");
@@ -275,11 +291,11 @@ namespace entities.Models
                     .HasColumnName("TORRENT_ID")
                     .ValueGeneratedOnAdd();
 
+                entity.Property(e => e.SourceId).HasColumnName("SOURCE_ID");
+
                 entity.Property(e => e.CategoryId).HasColumnName("CATEGORY_ID");
 
                 entity.Property(e => e.LanguageId).HasColumnName("LANGUAGE_ID");
-
-                entity.Property(e => e.T411Id).HasColumnName("TORRENT_T411_ID");
 
                 entity.Property(e => e.MovieId).HasColumnName("MOVIE_ID");
 
@@ -288,6 +304,10 @@ namespace entities.Models
                 entity.Property(e => e.Completed).HasColumnName("TORRENT_COMPLETED");
 
                 entity.Property(e => e.Leechers).HasColumnName("TORRENT_LEECHERS");
+
+                entity.Property(e => e.Guid)
+                    .HasColumnName("TORRENT_GUID")
+                    .HasColumnType("varchar(250)");
 
                 entity.Property(e => e.Name)
                     .HasColumnName("TORRENT_NAME")
@@ -302,6 +322,8 @@ namespace entities.Models
                     .HasColumnType("varchar(250)");
 
                 entity.Property(e => e.Year).HasColumnName("TORRENT_YEAR");
+
+                entity.Property(e => e.TorrentId).HasColumnName("SOURCE_TORRENT_ID");
 
                 entity.Property(e => e.CreatedAt)
                     .HasColumnName("TORRENT_CREATED_AT")

@@ -17,6 +17,7 @@ namespace batch.Services.Database
         {
             var t = movies.SelectMany(m => m.Torrents).ToList();
             InsertTorrents(t);
+            InsertSources(t);
 
             var g = movies.SelectMany(m => m.Genres).ToList();
             InsertGenres(g);
@@ -27,6 +28,7 @@ namespace batch.Services.Database
             var torrents = _ctx.Torrent.Select(to => to).ToList();
             var genres = _ctx.Genre.Select(ge => ge).ToList();
             var collections = _ctx.Collection.Select(co => co).ToList();
+            var sources = _ctx.Source.Select(so => so).ToList();
 
             foreach (var movie in movies)
             {
@@ -70,7 +72,9 @@ namespace batch.Services.Database
                     
                 foreach (var tor in movie.Torrents)
                 {
-                    torrents.Single(to => to.T411Id == tor.Id).MovieId = mov.Id;
+                    var torr = torrents.Single(to => to.Guid == tor.Guid);
+                    torr.MovieId = mov.Id;
+                    torr.SourceId = sources.Single(so => so.Name == ((Models.Source)torr.SourceId).ToString()).Id;
                 }
             }
             _ctx.SaveChanges();
@@ -108,6 +112,20 @@ namespace batch.Services.Database
             _ctx.SaveChanges();
         }
 
+        private void InsertSources(IEnumerable<Models.Torrent> t)
+        {
+            var sources = t.GroupBy(s => s.Source).Where(s => s != null).Select(s => s.Key);
+            foreach (var source in sources)
+            {
+                _ctx.Source.Add(new Source
+                {
+                    Name = source.ToString(),
+                    CreatedAt = DateTime.Now
+                });
+            }
+            _ctx.SaveChanges();
+        }
+
         private void InsertTorrents(IEnumerable<Models.Torrent> torrents)
         {
             InsertCategories();
@@ -122,7 +140,7 @@ namespace batch.Services.Database
             {
                 _ctx.Add(new Torrent
                 {
-                    T411Id = torrent.Id,
+                    Guid = torrent.Guid,
                     Name = torrent.Name,
                     Slug = torrent.Slug,
                     Year = torrent.Year,
@@ -130,6 +148,7 @@ namespace batch.Services.Database
                     Seeders = torrent.Seeders,
                     Leechers = torrent.Leechers,
                     Completed = torrent.Completed,
+                    SourceId = (int)torrent.Source,
                     CategoryId = categories.SingleOrDefault(c => c.Name.Equals(torrent.Category.ToString(), StringComparison.CurrentCultureIgnoreCase))?.Id ?? 0,
                     LanguageId = languages.SingleOrDefault(l => l.Name.Equals(torrent.Language.ToString(), StringComparison.CurrentCultureIgnoreCase))?.Id ?? 0,
                     QualityId = qualities.SingleOrDefault(q => q.Name.Equals(torrent.Quality.ToString(), StringComparison.CurrentCultureIgnoreCase))?.Id ?? 0,

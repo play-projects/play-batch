@@ -74,46 +74,6 @@ namespace batch.Services.Torrents.Nextorrent
             return int.Parse(nb);
         }
 
-        private string GetName(string str)
-        {
-            var a = Parser.GetTag(str, "a");
-            if (!a.Success) return string.Empty;
-            return a.GetText();
-        }
-
-        private double GetSize(string str)
-        {
-            var unite = Regex.Match(str, @"[a-zA-Z]+");
-            if (!unite.Success) return 0;
-
-            var nb = Regex.Match(str, @"\d+(\.\d+)?");
-            if (!nb.Success) return 0;
-
-            double.TryParse(nb.Value.Replace(".", ","), out double size);
-            switch (unite.Value)
-            {
-                case "GB":
-                    size *= 1024 * 1024 * 1024;
-                    break;
-                case "MB":
-                    size *= 1024 * 1024;
-                    break;
-                case "KB":
-                    size *= 1024;
-                    break;
-            }
-            return Math.Round(size);
-        }
-
-        private int GetNumber(string str)
-        {
-            var match = Regex.Match(str, @"\d+");
-            if (!match.Success) return 0;
-
-            int.TryParse(match.Value, out int nb);
-            return nb;
-        }
-
         private int GetNumberOfPages(string url, int page)
         {
             while (true)
@@ -155,10 +115,10 @@ namespace batch.Services.Torrents.Nextorrent
             return result;
         }
 
-        private string GetPageNumber(string searchUrl, int nb)
+        private string GetPageNumber(string url, int nb)
         {
-            var url = $"{searchUrl}/{nb}";
-            var content = WebService.Instance.GetContent(url);
+            var searchUrl = $"{url}/{nb}";
+            var content = WebService.Instance.GetContent(searchUrl);
             return content;
         }
     }

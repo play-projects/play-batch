@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
@@ -24,7 +23,9 @@ namespace batch
 
             var sw = Stopwatch.StartNew();
             var next = Configuration["nextorrent_movies_url"];
-            var movieService = new MovieTorrentsService(next);
+            var torrent9 = Configuration["torrent9_movies_url"];
+
+            var movieService = new MovieTorrentsService(next, torrent9);
             var torrents = movieService.GetMovies();
             sw.Stop();
             var swTorrents = sw.ElapsedMilliseconds;

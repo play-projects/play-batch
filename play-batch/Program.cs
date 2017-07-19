@@ -24,8 +24,9 @@ namespace batch
             var sw = Stopwatch.StartNew();
             var next = Configuration["nextorrent_movies_url"];
             var torrent9 = Configuration["torrent9_movies_url"];
+            var omg = Configuration["omgtorrent_movies_url"];
 
-            var movieService = new MovieTorrentsService(next, torrent9);
+            var movieService = new MovieTorrentsService(next, torrent9, omg);
             var torrents = movieService.GetMovies();
             sw.Stop();
             var swTorrents = sw.ElapsedMilliseconds;

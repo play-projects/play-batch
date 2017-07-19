@@ -37,21 +37,17 @@ namespace play.Services.Torrents.Torrent9
                     var tds = Parser.GetTags(tr.Value, "td");
                     if (tds.Count < 4) return;
 
-                    var name = GetName(tds[0].Text);
-                    if (!string.IsNullOrEmpty(name))
+                    lock (torrents)
                     {
-                        lock (torrents)
+                        torrents.Add(new Torrent
                         {
-                            torrents.Add(new Torrent
-                            {
-                                Id = 0,
-                                Source = Source.Torrent9,
-                                Name = name,
-                                Size = GetSize(tds[1].Text),
-                                Seeders = GetNumber(tds[2].Text),
-                                Leechers = GetNumber(tds[3].Text)
-                            });
-                        }
+                            Name = GetName(tds[0].Text),
+                            Link = GetLink(tds[0].Text),
+                            Source = Source.Torrent9,
+                            Size = GetSize(tds[1].Text),
+                            Seeders = GetNumber(tds[2].Text),
+                            Leechers = GetNumber(tds[3].Text)
+                        });
                     }
                 }
             });
@@ -71,7 +67,7 @@ namespace play.Services.Torrents.Torrent9
             return title.Trim();
         }
 
-        private int GetNumberOfPages(string url)
+        protected override int GetNumberOfPages(string url)
         {
             var content = GetPageNumber(url, 0);
             var ul = Parser.GetTagsByClass(content, "ul", "pagination");
@@ -88,7 +84,7 @@ namespace play.Services.Torrents.Torrent9
             return nb - 1;
         }
 
-        private string GetPageNumber(string url, int nb)
+        protected override string GetPageNumber(string url, int nb)
         {
             var searchUrl = $"{url},page-{nb}";
             var content = WebService.Instance.GetContent(searchUrl);

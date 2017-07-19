@@ -18,7 +18,7 @@ namespace entities.Models
         public int CategoryId { get; set; }
         public int LanguageId { get; set; }
         public int QualityId { get; set; }
-        public int? TorrentId { get; set; } 
+        public string Link { get; set; } 
         public DateTime CreatedAt { get; set; }
     }
 }

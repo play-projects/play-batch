@@ -25,17 +25,18 @@
         Nextorrent,
         Torrent9,
         Cpasbienb,
-        Yggtorrent
+        Yggtorrent,
+        Omgtorrent
     }
 
     public class Torrent
     {
-        public int Id { get; set; }
         public string Guid { get; set; }
         public Source Source { get; set; }
         public string Name { get; set; }
         public string Slug { get; set; }
         public int Year { get; set; }
+        public string Link { get; set; }
 
         public double Size { get; set; }
         public int Seeders { get; set; }
@@ -48,7 +49,6 @@
 
         public static Torrent NotFound = new Torrent
         {
-            Id = 0,
             Guid = string.Empty,
             Source = Source.None,
             Name = string.Empty,

@@ -323,7 +323,9 @@ namespace entities.Models
 
                 entity.Property(e => e.Year).HasColumnName("TORRENT_YEAR");
 
-                entity.Property(e => e.TorrentId).HasColumnName("SOURCE_TORRENT_ID");
+                entity.Property(e => e.Link)
+                .HasColumnName("TORRENT_LINK")
+                .HasColumnType("varchar(1000)");
 
                 entity.Property(e => e.CreatedAt)
                     .HasColumnName("TORRENT_CREATED_AT")

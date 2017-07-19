@@ -142,6 +142,7 @@ namespace batch.Services.Database
                 {
                     Guid = torrent.Guid,
                     Name = torrent.Name,
+                    Link = torrent.Link,
                     Slug = torrent.Slug,
                     Year = torrent.Year,
                     Size = (long)torrent.Size,

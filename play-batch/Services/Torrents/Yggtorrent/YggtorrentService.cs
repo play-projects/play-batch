@@ -18,5 +18,15 @@ namespace play.Services.Torrents.Yggtorrent
         {
             throw new NotImplementedException();
         }
+
+        protected override int GetNumberOfPages(string url)
+        {
+            throw new NotImplementedException();
+        }
+
+        protected override string GetPageNumber(string url, int nb)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

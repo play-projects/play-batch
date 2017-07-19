@@ -19,7 +19,7 @@ namespace batch.Services.Torrents.Nextorrent
 
         public override List<Torrent> GetMovieTorrents()
         {
-            var nbOfPages = GetNumberOfPages(_url, 1);
+            var nbOfPages = GetNumberOfPages(_url);
             var pages = GetPageNumbers(1, nbOfPages);
             var torrents = new List<Torrent>();
             Parallel.ForEach(pages, new ParallelOptions { MaxDegreeOfParallelism = 25 }, nb =>
@@ -36,46 +36,26 @@ namespace batch.Services.Torrents.Nextorrent
                     var tds = Parser.GetTags(tr.Value, "td");
                     if (tds.Count < 4) return;
 
-                    var id = GetId(tds[0].Text);
-                    var name = GetName(tds[0].Text);
-                    if (id != 0 && !string.IsNullOrEmpty(name))
+                    lock (torrents)
                     {
-                        lock (torrents)
+                        torrents.Add(new Torrent
                         {
-                            torrents.Add(new Torrent
-                            {
-                                Id = id,
-                                Source = Source.Nextorrent,
-                                Name = name,
-                                Size = GetSize(tds[1].Text),
-                                Seeders = GetNumber(tds[2].Text),
-                                Leechers = GetNumber(tds[3].Text)
-                            });
-                        }
+                            Name = GetName(tds[0].Text),
+                            Link = GetLink(tds[0].Text),
+                            Source = Source.Nextorrent,
+                            Size = GetSize(tds[1].Text),
+                            Seeders = GetNumber(tds[2].Text),
+                            Leechers = GetNumber(tds[3].Text)
+                        });
                     }
                 }
             });
             return torrents;
         }
 
-        private int GetId(string str)
+        protected override int GetNumberOfPages(string url)
         {
-            var a = Parser.GetTag(str, "a");
-            if (!a.Success) return 0;
-
-            var href = a.Attributes.SingleOrDefault(attr => attr.Key == "href")?.Values.FirstOrDefault();
-            if (href == null) return 0;
-
-            var pattern = @"/torrent/\d+";
-            var match = Regex.Match(href, pattern);
-            if (!match.Success) return 0;
-
-            var nb = Regex.Match(match.Value, @"\d+").Value;
-            return int.Parse(nb);
-        }
-
-        private int GetNumberOfPages(string url, int page)
-        {
+            var page = 1;
             while (true)
             {
                 var pageUrl = $"{url}/{page}";
@@ -102,7 +82,7 @@ namespace batch.Services.Torrents.Nextorrent
             }
         }
 
-        private IEnumerable<int> GetPageNumbers(int start, int max)
+        protected IEnumerable<int> GetPageNumbers(int start, int max)
         {
             var result = new List<int>();
             for (var i = start; i <= max; i += 50)
@@ -115,7 +95,7 @@ namespace batch.Services.Torrents.Nextorrent
             return result;
         }
 
-        private string GetPageNumber(string url, int nb)
+        protected override string GetPageNumber(string url, int nb)
         {
             var searchUrl = $"{url}/{nb}";
             var content = WebService.Instance.GetContent(searchUrl);

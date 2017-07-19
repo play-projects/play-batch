@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text.RegularExpressions;
 using batch.Models;
 using batch.Services.Parser;
@@ -9,7 +10,20 @@ namespace batch.Services.Torrents
     public abstract class ABaseTorrentsService
     {
         protected readonly ParserFacade Parser = ParserFacade.Instance;
+
         public abstract List<Torrent> GetMovieTorrents();
+
+        protected abstract int GetNumberOfPages(string url);
+        protected abstract string GetPageNumber(string url, int nb);
+
+        protected virtual string GetLink(string str)
+        {
+            var a = Parser.GetTag(str, "a");
+            if (!a.Success) return string.Empty;
+
+            var href = a.Attributes.SingleOrDefault(attr => attr.Key == "href")?.Values.FirstOrDefault();
+            return href ?? string.Empty;
+        }
 
         protected virtual string GetName(string str)
         {
@@ -47,6 +61,10 @@ namespace batch.Services.Torrents
 
         protected virtual int GetNumber(string str)
         {
+            str = str.Replace(".", string.Empty)
+                .Replace(" ", string.Empty)
+                .Replace(",", string.Empty);
+
             var match = Regex.Match(str, @"\d+");
             if (!match.Success) return 0;
 

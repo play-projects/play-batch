@@ -1,12 +1,11 @@
 ﻿using batch.Models;
 using System;
 using System.Collections.Generic;
-using System.Globalization;
 using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using batch.Services.Torrents.Nextorrent;
+using batch.Services.Torrents.Omgtorrent;
 using play.Services.Torrents.Torrent9;
 
 namespace batch.Services.Torrents
@@ -15,6 +14,7 @@ namespace batch.Services.Torrents
     {
         private readonly NextorrentService _nextorrent;
         private readonly Torrent9Service _torrent9;
+        private readonly OmgtorrentService _omgtorrent;
 
         private readonly Dictionary<string, Language> _languages = new Dictionary<string, Language>
         {
@@ -36,18 +36,20 @@ namespace batch.Services.Torrents
             { "4k", Quality.VeryHigh }
         };
 
-	    public MovieTorrentsService(string next, string torrent9)
+	    public MovieTorrentsService(string next, string torrent9, string omg)
 	    {
 	        _nextorrent = new NextorrentService(next);
             _torrent9 = new Torrent9Service(torrent9);
+            _omgtorrent = new OmgtorrentService(omg);
 	    }
 
 	    public IEnumerable<Torrent> GetMovies()
 	    {
 	        var next = _nextorrent.GetMovieTorrents();
 	        var torrent9 = _torrent9.GetMovieTorrents();
+	        var omg = _omgtorrent.GetMovieTorrents();
 
-	        var result = next.Concat(torrent9).ToList();
+	        var result = next.Concat(torrent9).Concat(omg).ToList();
 	        return GetExtractTorrents(result);
 	    }
 
@@ -119,7 +121,8 @@ namespace batch.Services.Torrents
             slug = Regex.Replace(slug, @"[^\w\s\d'-]+", string.Empty);
             slug = slug.Trim();
             slug = Regex.Replace(slug, @"\s+", "-");
-	        return slug.ToLower();
+	        slug = Regex.Replace(slug, "-{2,}", "-");
+            return slug.ToLower();
 	    }
 
 	    private int GetYear(string year)
@@ -129,6 +132,7 @@ namespace batch.Services.Torrents
 
         private Language GetLanguage(string language)
         {
+            language = language.ToLower();
             if (_languages.ContainsKey(language))
                 return _languages[language];
             return Language.None;
@@ -136,6 +140,7 @@ namespace batch.Services.Torrents
 
         private Quality GetQuality(string quality)
         {
+            quality = quality.ToLower();
             if (_qualities.ContainsKey(quality))
                 return _qualities[quality];
             return Quality.None;

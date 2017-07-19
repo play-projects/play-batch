@@ -28,6 +28,7 @@ namespace batch.Services.Torrents
             { "dvdrip", Quality.Low },
             { "webrip", Quality.Low },
             { "web-dl", Quality.Low },
+            { "bdrip", Quality.Low },
             { "hdrip", Quality.Medium },
             { "hdlight", Quality.Medium },
             { "720p", Quality.Medium },

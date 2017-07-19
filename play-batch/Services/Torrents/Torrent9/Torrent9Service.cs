@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using batch.Models;
 using batch.Services.Torrents;
@@ -55,6 +56,19 @@ namespace play.Services.Torrents.Torrent9
                 }
             });
             return torrents;
+        }
+
+        protected override string GetName(string str)
+        {
+            var a = Parser.GetTag(str, "a");
+            if (!a.Success) return string.Empty;
+
+            var title = a.Attributes.SingleOrDefault(attr => attr.Key == "title")?.Values.FirstOrDefault();
+            if (title == null) return string.Empty;
+
+            title = title.Replace("Télécharger", string.Empty);
+            title = title.Replace("en Torrent", string.Empty);
+            return title.Trim();
         }
 
         private int GetNumberOfPages(string url)

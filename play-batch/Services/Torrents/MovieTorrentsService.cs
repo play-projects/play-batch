@@ -85,14 +85,14 @@ namespace batch.Services.Torrents
 
             var patterns = new[]
             {
-                $@"{name}.+{language}.+{quality}.+{year}",
-                $@"{name}.+{language}.+{year}.+{quality}",
+                $@"{name}\s+{language}.+{quality}.+{year}",
+                $@"{name}\s+{language}.+{year}.+{quality}",
 
-                $@"{name}.+{quality}.+{language}.+{year}",
-                $@"{name}.+{quality}.+{year}.+{language}",
+                $@"{name}\s+{quality}.+{language}.+{year}",
+                $@"{name}\s+{quality}.+{year}.+{language}",
 
-                $@"{name}.+{year}.+{language}.+{quality}",
-                $@"{name}.+{year}.+{quality}.+{language}"
+                $@"{name}\s+{year}.+{language}.+{quality}",
+                $@"{name}\s+{year}.+{quality}.+{language}"
             };
 
             foreach (var pattern in patterns)
@@ -114,15 +114,11 @@ namespace batch.Services.Torrents
 
         private string GetSlug(string name)
 	    {
-            name = name.ToLower().Normalize(NormalizationForm.FormD);
-            var chars = name.Where(c => CharUnicodeInfo.GetUnicodeCategory(c) != UnicodeCategory.NonSpacingMark).ToArray();
-            name = new string(chars).Normalize(NormalizationForm.FormC);
-
 	        var slug = Regex.Replace(name, @"\.", " ");
-            slug = Regex.Replace(slug, @"[^a-zA-Z0-9' ]", string.Empty);
+            slug = Regex.Replace(slug, @"[^\w\s\d'-]+", string.Empty);
             slug = slug.Trim();
             slug = Regex.Replace(slug, @"\s+", "-");
-	        return slug;
+	        return slug.ToLower();
 	    }
 
 	    private int GetYear(string year)

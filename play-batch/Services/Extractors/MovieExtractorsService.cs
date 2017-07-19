@@ -64,7 +64,7 @@ namespace batch.Services.Tmdb
             {
                 int.TryParse(token["movie"]["year"].ToString(), out int year);
                 if (torrent.Year != year)
-                    return Movie.NotFound;
+                    continue;
 
                 var name = token["movie"]["title"].ToString();
                 var trakt = int.Parse(token["movie"]["ids"]["tmdb"].ToString());

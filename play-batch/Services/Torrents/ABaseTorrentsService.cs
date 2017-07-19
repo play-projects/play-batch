@@ -11,14 +11,14 @@ namespace batch.Services.Torrents
         protected readonly ParserFacade Parser = ParserFacade.Instance;
         public abstract List<Torrent> GetMovieTorrents();
 
-        protected string GetName(string str)
+        protected virtual string GetName(string str)
         {
             var a = Parser.GetTag(str, "a");
             if (!a.Success) return string.Empty;
             return a.GetText();
         }
 
-        protected double GetSize(string str)
+        protected virtual double GetSize(string str)
         {
             var unite = Regex.Match(str, @"[a-zA-Z]+");
             if (!unite.Success) return 0;
@@ -45,7 +45,7 @@ namespace batch.Services.Torrents
             return Math.Round(size);
         }
 
-        protected int GetNumber(string str)
+        protected virtual int GetNumber(string str)
         {
             var match = Regex.Match(str, @"\d+");
             if (!match.Success) return 0;

@@ -25,8 +25,9 @@ namespace batch
             var next = Configuration["nextorrent_movies_url"];
             var torrent9 = Configuration["torrent9_movies_url"];
             var omg = Configuration["omgtorrent_movies_url"];
+            var lien = Configuration["lientorrent_movies_url"];
 
-            var movieService = new MovieTorrentsService(next, torrent9, omg);
+            var movieService = new MovieTorrentsService(next, torrent9, omg, lien);
             var torrents = movieService.GetMovies();
             sw.Stop();
             var swTorrents = sw.ElapsedMilliseconds;

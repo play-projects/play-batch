@@ -24,9 +24,9 @@
         None,
         Nextorrent,
         Torrent9,
-        Cpasbienb,
         Yggtorrent,
-        Omgtorrent
+        Omgtorrent,
+        Lientorrent
     }
 
     public class Torrent

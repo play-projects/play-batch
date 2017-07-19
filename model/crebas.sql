@@ -234,7 +234,7 @@ create table TORRENT (
    TORRENT_LEECHERS     int                  null,
    TORRENT_COMPLETED    int                  null,
    TORRENT_CREATED_AT   datetime             not null,
-   SOURCE_TORRENT_ID    int                  null,
+   TORRENT_LINK			varchar(1000)        not null,
    constraint PK_TORRENT primary key nonclustered (TORRENT_ID)
 )
 go

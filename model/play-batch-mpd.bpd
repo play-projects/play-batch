@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?PowerDesigner AppLocale="UTF16" ID="{F47D7B30-3798-4345-9E60-58F6AA7421B9}" Label="" LastModificationDate="1500481807" Name="play-batch-mpd" Objects="119" Symbols="21" Target="Microsoft SQL Server 2008" Type="{CDE44E21-9669-11D1-9914-006097355D9B}" signature="PDM_DATA_MODEL_XML" version="15.1.0.2850"?>
+<?PowerDesigner AppLocale="UTF16" ID="{F47D7B30-3798-4345-9E60-58F6AA7421B9}" Label="" LastModificationDate="1500480253" Name="play-batch-mpd" Objects="119" Symbols="21" Target="Microsoft SQL Server 2008" Type="{CDE44E21-9669-11D1-9914-006097355D9B}" signature="PDM_DATA_MODEL_XML" version="15.1.0.2850"?>
 <!-- Veuillez ne pas modifier ce fichier -->
 
 <Model xmlns:a="attribute" xmlns:c="collection" xmlns:o="object">
@@ -3367,8 +3367,8 @@ DESTINATION 0 Arial,8,N</a:FontList>
 </c:Object>
 </o:ReferenceSymbol>
 <o:ReferenceSymbol Id="o13">
-<a:Rect>((-28504,11877), (-28048,23064))</a:Rect>
-<a:ListOfPoints>((-28307,11877),(-28245,23064))</a:ListOfPoints>
+<a:Rect>((-28470,11877), (-28020,23064))</a:Rect>
+<a:ListOfPoints>((-28245,11877),(-28245,23064))</a:ListOfPoints>
 <a:CornerStyle>1</a:CornerStyle>
 <a:ArrowStyle>1</a:ArrowStyle>
 <a:LineColor>11184640</a:LineColor>
@@ -3387,8 +3387,8 @@ DESTINATION 0 Arial,8,N</a:FontList>
 </c:Object>
 </o:ReferenceSymbol>
 <o:ReferenceSymbol Id="o16">
-<a:Rect>((-17277,13115), (1738,13565))</a:Rect>
-<a:ListOfPoints>((-17277,13340),(1738,13340))</a:ListOfPoints>
+<a:Rect>((-17497,13115), (1738,13565))</a:Rect>
+<a:ListOfPoints>((-17497,13340),(1738,13340))</a:ListOfPoints>
 <a:CornerStyle>1</a:CornerStyle>
 <a:ArrowStyle>1</a:ArrowStyle>
 <a:LineColor>11184640</a:LineColor>
@@ -3407,8 +3407,8 @@ DESTINATION 0 Arial,8,N</a:FontList>
 </c:Object>
 </o:ReferenceSymbol>
 <o:ReferenceSymbol Id="o19">
-<a:Rect>((-17661,3856), (1131,4306))</a:Rect>
-<a:ListOfPoints>((-17661,4081),(1131,4081))</a:ListOfPoints>
+<a:Rect>((-17872,3856), (1131,4306))</a:Rect>
+<a:ListOfPoints>((-17872,4081),(1131,4081))</a:ListOfPoints>
 <a:CornerStyle>1</a:CornerStyle>
 <a:ArrowStyle>1</a:ArrowStyle>
 <a:LineColor>11184640</a:LineColor>
@@ -3428,7 +3428,7 @@ DESTINATION 0 Arial,8,N</a:FontList>
 </o:ReferenceSymbol>
 <o:ReferenceSymbol Id="o22">
 <a:Rect>((-20439,-3457), (3184,3364))</a:Rect>
-<a:ListOfPoints>((-20296,3364),(-20439,-3457),(3184,-3457))</a:ListOfPoints>
+<a:ListOfPoints>((-20439,3364),(-20439,-3457),(3184,-3457))</a:ListOfPoints>
 <a:CornerStyle>1</a:CornerStyle>
 <a:ArrowStyle>1</a:ArrowStyle>
 <a:LineColor>11184640</a:LineColor>
@@ -3508,8 +3508,8 @@ DESTINATION 0 Arial,8,N</a:FontList>
 </o:ReferenceSymbol>
 <o:ReferenceSymbol Id="o34">
 <a:ModificationDate>1500334383</a:ModificationDate>
-<a:Rect>((-50775,12787), (-34419,13237))</a:Rect>
-<a:ListOfPoints>((-34419,13012),(-50775,13012))</a:ListOfPoints>
+<a:Rect>((-50775,12787), (-34200,13237))</a:Rect>
+<a:ListOfPoints>((-34200,13012),(-50775,13012))</a:ListOfPoints>
 <a:CornerStyle>1</a:CornerStyle>
 <a:ArrowStyle>1</a:ArrowStyle>
 <a:LineColor>11184640</a:LineColor>
@@ -3599,7 +3599,7 @@ LABL 0 Arial,8,N</a:FontList>
 </o:TableSymbol>
 <o:TableSymbol Id="o14">
 <a:IconMode>-1</a:IconMode>
-<a:Rect>((-34886,-1691), (-16864,15465))</a:Rect>
+<a:Rect>((-34655,-1691), (-17095,15465))</a:Rect>
 <a:LineColor>11184640</a:LineColor>
 <a:FillColor>16777136</a:FillColor>
 <a:ShadowColor>12632256</a:ShadowColor>
@@ -4597,11 +4597,11 @@ DAT 1500333782</a:History>
 </o:Column>
 <o:Column Id="o96">
 <a:ObjectID>33AEB641-0C90-436B-879B-9D94C70E23DD</a:ObjectID>
-<a:Name>TORRENT_LINK</a:Name>
-<a:Code>TORRENT_LINK</a:Code>
+<a:Name>SOURCE_TORRENT_ID</a:Name>
+<a:Code>SOURCE_TORRENT_ID</a:Code>
 <a:CreationDate>1500334375</a:CreationDate>
 <a:Creator>Arthur</a:Creator>
-<a:ModificationDate>1500481807</a:ModificationDate>
+<a:ModificationDate>1500480253</a:ModificationDate>
 <a:Modifier>Arthur</a:Modifier>
 <a:History>ORG {D0DD59BC-5BF6-44D0-9169-4B94D28B5D62}
 DAT 1500334375
@@ -4609,12 +4609,9 @@ ORG {ED1DD671-21F9-4339-BB5C-9038B3E00A97}
 DAT 1500334343
 ATT DTTP
 ATT MAND
-ATT PRIM
-ATT NAME
-ATT CODE
-ATT MLEN</a:History>
-<a:DataType>varchar(1000)</a:DataType>
-<a:Length>1000</a:Length>
+ATT PRIM</a:History>
+<a:DataType>varchar(500)</a:DataType>
+<a:Length>500</a:Length>
 <a:Mandatory>1</a:Mandatory>
 </o:Column>
 </c:Columns>

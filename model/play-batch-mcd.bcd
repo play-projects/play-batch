@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?PowerDesigner AppLocale="UTF16" ID="{E541E082-F2E5-4B95-938D-4FD8B50F3F9E}" Label="" LastModificationDate="1500481765" Name="play-batch-mcd" Objects="157" Symbols="19" Type="{1E597170-9350-11D1-AB3C-0020AF71E433}" signature="CDM_DATA_MODEL_XML" version="15.1.0.2850"?>
+<?PowerDesigner AppLocale="UTF16" ID="{E541E082-F2E5-4B95-938D-4FD8B50F3F9E}" Label="" LastModificationDate="1500480093" Name="play-batch-mcd" Objects="157" Symbols="19" Type="{1E597170-9350-11D1-AB3C-0020AF71E433}" signature="CDM_DATA_MODEL_XML" version="15.1.0.2850"?>
 <!-- Veuillez ne pas modifier ce fichier -->
 
 <Model xmlns:a="attribute" xmlns:c="collection" xmlns:o="object">
@@ -12,7 +12,7 @@
 <a:Code>PLAY_BATCH_MCD</a:Code>
 <a:CreationDate>1497046084</a:CreationDate>
 <a:Creator>Arthur</a:Creator>
-<a:ModificationDate>1500481765</a:ModificationDate>
+<a:ModificationDate>1500334330</a:ModificationDate>
 <a:Modifier>Arthur</a:Modifier>
 <a:PackageOptionsText>[FolderOptions]
 
@@ -1210,8 +1210,8 @@ NAMA 0 Arial,8,N</a:FontList>
 <o:RelationshipSymbol Id="o10">
 <a:CreationDate>1497046937</a:CreationDate>
 <a:ModificationDate>1497173164</a:ModificationDate>
-<a:Rect>((-31982,14871), (-24558,23064))</a:Rect>
-<a:ListOfPoints>((-28245,23064),(-28291,14871))</a:ListOfPoints>
+<a:Rect>((-31957,14871), (-24533,23064))</a:Rect>
+<a:ListOfPoints>((-28245,23064),(-28245,14871))</a:ListOfPoints>
 <a:CornerStyle>1</a:CornerStyle>
 <a:ArrowStyle>4371</a:ArrowStyle>
 <a:LineColor>11184640</a:LineColor>
@@ -1231,8 +1231,8 @@ NAMA 0 Arial,8,N</a:FontList>
 <o:RelationshipSymbol Id="o13">
 <a:CreationDate>1497046962</a:CreationDate>
 <a:ModificationDate>1498130416</a:ModificationDate>
-<a:Rect>((-17639,13264), (1288,15310))</a:Rect>
-<a:ListOfPoints>((-17639,14064),(1288,14064))</a:ListOfPoints>
+<a:Rect>((-17797,13264), (1288,15310))</a:Rect>
+<a:ListOfPoints>((-17797,14064),(1288,14064))</a:ListOfPoints>
 <a:CornerStyle>1</a:CornerStyle>
 <a:ArrowStyle>4882</a:ArrowStyle>
 <a:LineColor>11184640</a:LineColor>
@@ -1252,8 +1252,8 @@ NAMA 0 Arial,8,N</a:FontList>
 <o:RelationshipSymbol Id="o16">
 <a:CreationDate>1497046963</a:CreationDate>
 <a:ModificationDate>1498130411</a:ModificationDate>
-<a:Rect>((-17716,5671), (681,7717))</a:Rect>
-<a:ListOfPoints>((-17716,6471),(681,6471))</a:ListOfPoints>
+<a:Rect>((-17872,5671), (681,7717))</a:Rect>
+<a:ListOfPoints>((-17872,6471),(681,6471))</a:ListOfPoints>
 <a:CornerStyle>1</a:CornerStyle>
 <a:ArrowStyle>4882</a:ArrowStyle>
 <a:LineColor>11184640</a:LineColor>
@@ -1274,7 +1274,7 @@ NAMA 0 Arial,8,N</a:FontList>
 <a:CreationDate>1497046964</a:CreationDate>
 <a:ModificationDate>1497173164</a:ModificationDate>
 <a:Rect>((-24564,-4794), (2509,5983))</a:Rect>
-<a:ListOfPoints>((-20333,5983),(-20439,-4207),(2509,-4207))</a:ListOfPoints>
+<a:ListOfPoints>((-20439,5983),(-20439,-4207),(2509,-4207))</a:ListOfPoints>
 <a:CornerStyle>1</a:CornerStyle>
 <a:ArrowStyle>4882</a:ArrowStyle>
 <a:LineColor>11184640</a:LineColor>
@@ -1357,8 +1357,8 @@ NAMA 0 Arial,8,N</a:FontList>
 <o:RelationshipSymbol Id="o31">
 <a:CreationDate>1500334292</a:CreationDate>
 <a:ModificationDate>1500334292</a:ModificationDate>
-<a:Rect>((-52800,12903), (-33292,14949))</a:Rect>
-<a:ListOfPoints>((-52800,13703),(-33292,13703))</a:ListOfPoints>
+<a:Rect>((-52800,12903), (-33150,14949))</a:Rect>
+<a:ListOfPoints>((-52800,13703),(-33150,13703))</a:ListOfPoints>
 <a:CornerStyle>1</a:CornerStyle>
 <a:ArrowStyle>4627</a:ArrowStyle>
 <a:LineColor>11184640</a:LineColor>
@@ -1442,7 +1442,7 @@ Identifiers 0 Arial,8,N</a:FontList>
 <a:CreationDate>1497046628</a:CreationDate>
 <a:ModificationDate>1497173164</a:ModificationDate>
 <a:IconMode>-1</a:IconMode>
-<a:Rect>((-37937,2883), (-13813,16441))</a:Rect>
+<a:Rect>((-37706,2883), (-14044,16441))</a:Rect>
 <a:LineColor>11184640</a:LineColor>
 <a:FillColor>16777136</a:FillColor>
 <a:ShadowColor>12632256</a:ShadowColor>
@@ -1990,7 +1990,7 @@ Identifiers 0 Arial,8,N</a:FontList>
 <a:Code>TORRENT</a:Code>
 <a:CreationDate>1497046628</a:CreationDate>
 <a:Creator>Arthur</a:Creator>
-<a:ModificationDate>1500481765</a:ModificationDate>
+<a:ModificationDate>1500334353</a:ModificationDate>
 <a:Modifier>Arthur</a:Modifier>
 <c:Identifiers>
 <o:Identifier Id="o105">
@@ -3200,14 +3200,14 @@ Identifiers 0 Arial,8,N</a:FontList>
 </o:DataItem>
 <o:DataItem Id="o127">
 <a:ObjectID>188A0E9B-DB47-4BAA-9F6A-3930D80D4A28</a:ObjectID>
-<a:Name>TORRENT_LINK</a:Name>
-<a:Code>TORRENT_LINK</a:Code>
+<a:Name>SOURCE_TORRENT_ID</a:Name>
+<a:Code>SOURCE_TORRENT_ID</a:Code>
 <a:CreationDate>1500332924</a:CreationDate>
 <a:Creator>Arthur</a:Creator>
-<a:ModificationDate>1500481765</a:ModificationDate>
+<a:ModificationDate>1500480026</a:ModificationDate>
 <a:Modifier>Arthur</a:Modifier>
-<a:DataType>VA1000</a:DataType>
-<a:Length>1000</a:Length>
+<a:DataType>VA500</a:DataType>
+<a:Length>500</a:Length>
 </o:DataItem>
 <o:DataItem Id="o172">
 <a:ObjectID>320C3090-40A5-4294-831B-39A243A0115F</a:ObjectID>

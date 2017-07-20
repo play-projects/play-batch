@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using batch.Models;
@@ -35,6 +36,8 @@ namespace play.Services.Torrents.Torrent9
 
                     lock (torrents)
                     {
+                        var name = GetName(tds[0].Text);
+                        Console.WriteLine($"{Source.Torrent9} - {name}");
                         torrents.Add(new Torrent
                         {
                             Name = GetName(tds[0].Text),

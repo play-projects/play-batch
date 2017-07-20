@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using batch.Models;
@@ -37,9 +38,11 @@ namespace batch.Services.Torrents.Cpasbien
 
                     lock (torrents)
                     {
+                        var name = GetName(ligne.Text);
+                        Console.WriteLine($"{Source.Cpasbien} - {name}");
                         torrents.Add(new Torrent
                         {
-                            Name = GetName(ligne.Text),
+                            Name = name,
                             Link = GetLink(ligne.Text),
                             Source = Source.Cpasbien,
                             Size = GetSize(poid[0].Text),

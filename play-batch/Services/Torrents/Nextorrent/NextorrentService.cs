@@ -36,6 +36,8 @@ namespace batch.Services.Torrents.Nextorrent
 
                     lock (torrents)
                     {
+                        var name = GetName(tds[0].Text);
+                        Console.WriteLine($"{Source.Nextorrent} - {name}");
                         torrents.Add(new Torrent
                         {
                             Name = GetName(tds[0].Text),

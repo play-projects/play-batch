@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using batch.Models;
@@ -31,6 +32,8 @@ namespace batch.Services.Torrents.Yggtorrent
 
                     lock (torrents)
                     {
+                        var name = GetName(tds[0].Text);
+                        Console.WriteLine($"{Source.Yggtorrent} - {name}");
                         torrents.Add(new Torrent
                         {
                             Name = GetName(tds[0].Text),

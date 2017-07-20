@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
@@ -32,9 +33,11 @@ namespace batch.Services.Torrents._1337x
 
                     lock (torrents)
                     {
+                        var name = GetName(tds[0].Text);
+                        Console.WriteLine($"{Source.Leetx} - {name}");
                         torrents.Add(new Torrent
                         {
-                            Name = GetName(tds[0].Text),
+                            Name = GetName(name),
                             Link = GetLink(tds[0].Text),
                             Source = Source.Leetx,
                             Size = GetSize(tds[4].Text),

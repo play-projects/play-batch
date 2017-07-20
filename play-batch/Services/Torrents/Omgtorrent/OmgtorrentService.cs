@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using batch.Models;
 using batch.Services.Web;
@@ -38,6 +39,8 @@ namespace batch.Services.Torrents.Omgtorrent
 
                     lock (torrents)
                     {
+                        var name = GetName(tds[1].Text);
+                        Console.WriteLine($"{Source.Omgtorrent} - {name}");
                         torrents.Add(new Torrent
                         {
                             Name = GetName(tds[1].Text),

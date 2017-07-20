@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Text.RegularExpressions;
@@ -43,9 +44,11 @@ namespace batch.Services.Torrents.Lientorrent
 
                     lock (torrents)
                     {
+                        var name = GetName(txt);
+                        Console.WriteLine($"{Source.Lientorrent} - {name}");
                         torrents.Add(new Torrent
                         {
-                            Name = GetName(txt),
+                            Name = name,
                             Link = GetLink(title[0].Text),
                             Source = Source.Lientorrent,
                             Size = 0,

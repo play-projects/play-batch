@@ -16,6 +16,8 @@ drop table PERSON;
 
 drop table QUALITY;
 
+drop table SOURCE;
+
 drop table TORRENT;
 
 create table CATEGORY (
@@ -107,8 +109,15 @@ QUALITY_NAME         VARCHAR(50)                    not null,
 QUALITY_CREATED_AT   DATE                           not null
 );
 
+create table SOURCE (
+SOURCE_ID			 INTEGER PRIMARY KEY			AUTOINCREMENT,
+SOURCE_NAME			 VARCHAR(50)					not null,
+SOURCE_CREATED_AT	 DATE							not null
+);
+
 create table TORRENT (
 TORRENT_ID           INTEGER PRIMARY KEY            AUTOINCREMENT,
+SOURCE_ID			 INTEGER,						not null,
 MOVIE_ID             INTEGER,
 CATEGORY_ID          INTEGER                        not null,
 LANGUAGE_ID          INTEGER                        not null,
@@ -121,7 +130,10 @@ TORRENT_SIZE         BIGINT                         not null,
 TORRENT_SEEDERS      INTEGER,
 TORRENT_LEECHERS     INTEGER,
 TORRENT_COMPLETED    INTEGER,
+TORRENT_LINK		 VARCHAR(1000)					not null,
 TORRENT_CREATED_AT   DATE                           not null,
+foreign key(SOURCE_ID)
+	  references SOURCE (SOURCE_ID),
 foreign key (MOVIE_ID)
       references MOVIE (MOVIE_ID),
 foreign key (CATEGORY_ID)

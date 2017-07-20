@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using batch.Services.Torrents.Cpasbien;
 using batch.Services.Torrents.Lientorrent;
 using batch.Services.Torrents.Nextorrent;
 using batch.Services.Torrents.Omgtorrent;
@@ -17,6 +18,7 @@ namespace batch.Services.Torrents
         private readonly Torrent9Service _torrent9;
         private readonly OmgtorrentService _omgtorrent;
         private readonly LientorrentService _lientorrent;
+        private readonly CpasbienService _cpasbien;
 
         private readonly Dictionary<string, Language> _languages = new Dictionary<string, Language>
         {
@@ -38,13 +40,14 @@ namespace batch.Services.Torrents
             { "4k", Quality.VeryHigh }
         };
 
-	    public MovieTorrentsService(string next, string torrent9, string omg, string lien)
+	    public MovieTorrentsService(string next, string torrent9, string omg, string lien, string cpasbien)
 	    {
 	        _nextorrent = new NextorrentService(next);
             _torrent9 = new Torrent9Service(torrent9);
             _omgtorrent = new OmgtorrentService(omg);
 	        _lientorrent = new LientorrentService(lien);
-        }
+	        _cpasbien = new CpasbienService(cpasbien);
+	    }
 
 	    public IEnumerable<Torrent> GetMovies()
 	    {
@@ -52,8 +55,13 @@ namespace batch.Services.Torrents
 	        var torrent9 = _torrent9.GetMovieTorrents();
 	        var omg = _omgtorrent.GetMovieTorrents();
 	        var lien = _lientorrent.GetMovieTorrents();
+	        var cpasbien = _cpasbien.GetMovieTorrents();
 
-	        var result = next.Concat(torrent9).Concat(omg).Concat(lien).ToList();
+	        var result = next.Concat(torrent9)
+                .Concat(omg)
+                .Concat(lien)
+                .Concat(cpasbien)
+                .ToList();
 	        return GetExtractTorrents(result);
 	    }
 

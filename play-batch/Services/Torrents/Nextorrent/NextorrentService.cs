@@ -10,8 +10,6 @@ namespace batch.Services.Torrents.Nextorrent
 {
     public class NextorrentService : ABaseTorrentsService
     {
-        private readonly string _url;
-
         public NextorrentService(string url)
         {
             _url = url;
@@ -19,21 +17,21 @@ namespace batch.Services.Torrents.Nextorrent
 
         public override List<Torrent> GetMovieTorrents()
         {
-            var nbOfPages = GetNumberOfPages(_url);
+            var nbOfPages = GetNumberOfPages();
             var pages = GetPageNumbers(1, nbOfPages);
             var torrents = new List<Torrent>();
             Parallel.ForEach(pages, new ParallelOptions { MaxDegreeOfParallelism = 25 }, nb =>
             {
-                var page = GetPageNumber(_url, nb);
-                var table = Parser.GetTag(page, "table");
+                var page = GetPageNumber(nb);
+                var table = _parser.GetTag(page, "table");
                 if (!table.Success) return;
 
-                var trs = Parser.GetTags(table.Value, "tr");
+                var trs = _parser.GetTags(table.Value, "tr");
                 if (!trs.Success) return;
 
                 foreach (var tr in trs)
                 {
-                    var tds = Parser.GetTags(tr.Value, "td");
+                    var tds = _parser.GetTags(tr.Value, "td");
                     if (tds.Count < 4) return;
 
                     lock (torrents)
@@ -53,17 +51,17 @@ namespace batch.Services.Torrents.Nextorrent
             return torrents;
         }
 
-        protected override int GetNumberOfPages(string url)
+        protected override int GetNumberOfPages()
         {
             var page = 1;
             while (true)
             {
-                var pageUrl = $"{url}/{page}";
+                var pageUrl = $"{_url}/{page}";
                 var content = WebService.Instance.GetContent(pageUrl);
-                var ul = Parser.GetTagsByClass(content, "ul", "pagination");
+                var ul = _parser.GetTagsByClass(content, "ul", "pagination");
                 if (!ul.Success) return 0;
 
-                var lis = Parser.GetTags(ul.First().Value, "li");
+                var lis = _parser.GetTags(ul.First().Value, "li");
                 if (!lis.Success) return 0;
 
                 var last = lis.Last();
@@ -95,9 +93,9 @@ namespace batch.Services.Torrents.Nextorrent
             return result;
         }
 
-        protected override string GetPageNumber(string url, int nb)
+        protected override string GetPageNumber(int nb)
         {
-            var searchUrl = $"{url}/{nb}";
+            var searchUrl = $"{_url}/{nb}";
             var content = WebService.Instance.GetContent(searchUrl);
             return content;
         }

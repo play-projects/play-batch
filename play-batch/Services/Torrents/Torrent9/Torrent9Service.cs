@@ -9,8 +9,6 @@ namespace play.Services.Torrents.Torrent9
 {
     public class Torrent9Service : ABaseTorrentsService
     {
-        private readonly string _url;
-
         public Torrent9Service(string url)
         {
             _url = url;
@@ -18,23 +16,23 @@ namespace play.Services.Torrents.Torrent9
 
         public override List<Torrent> GetMovieTorrents()
         {
-            var nbOfPages = GetNumberOfPages(_url);
+            var nbOfPages = GetNumberOfPages();
             var torrents = new List<Torrent>();
             Parallel.For(0, nbOfPages + 1, new ParallelOptions { MaxDegreeOfParallelism = 25 }, nb =>
             {
-                var page = GetPageNumber(_url, nb);
-                var table = Parser.GetTag(page, "table");
+                var page = GetPageNumber(nb);
+                var table = _parser.GetTag(page, "table");
                 if (!table.Success) return;
 
-                var tbody = Parser.GetTag(table.Value, "tbody");
+                var tbody = _parser.GetTag(table.Value, "tbody");
                 if (!tbody.Success) return;
 
-                var trs = Parser.GetTags(tbody.Value, "tr");
+                var trs = _parser.GetTags(tbody.Value, "tr");
                 if (!trs.Success) return;
 
                 foreach (var tr in trs)
                 {
-                    var tds = Parser.GetTags(tr.Value, "td");
+                    var tds = _parser.GetTags(tr.Value, "td");
                     if (tds.Count < 4) return;
 
                     lock (torrents)
@@ -56,7 +54,7 @@ namespace play.Services.Torrents.Torrent9
 
         protected override string GetName(string str)
         {
-            var a = Parser.GetTag(str, "a");
+            var a = _parser.GetTag(str, "a");
             if (!a.Success) return string.Empty;
 
             var title = a.Attributes.SingleOrDefault(attr => attr.Key == "title")?.Values.FirstOrDefault();
@@ -67,26 +65,26 @@ namespace play.Services.Torrents.Torrent9
             return title.Trim();
         }
 
-        protected override int GetNumberOfPages(string url)
+        protected override int GetNumberOfPages()
         {
-            var content = GetPageNumber(url, 0);
-            var ul = Parser.GetTagsByClass(content, "ul", "pagination");
+            var content = GetPageNumber(0);
+            var ul = _parser.GetTagsByClass(content, "ul", "pagination");
             if (!ul.Success) return 0;
 
-            var lis = Parser.GetTags(ul[0].Text, "li");
+            var lis = _parser.GetTags(ul[0].Text, "li");
             if (!lis.Success) return 0;
 
             var li = lis[lis.Count - 2];
-            var a = Parser.GetTag(li.Text, "a");
+            var a = _parser.GetTag(li.Text, "a");
             if (!a.Success) return 0;
 
             var nb = int.Parse(a.GetText());
             return nb - 1;
         }
 
-        protected override string GetPageNumber(string url, int nb)
+        protected override string GetPageNumber(int nb)
         {
-            var searchUrl = $"{url},page-{nb}";
+            var searchUrl = $"{_url},page-{nb}";
             var content = WebService.Instance.GetContent(searchUrl);
             return content;
         }

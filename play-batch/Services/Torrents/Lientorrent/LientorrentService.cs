@@ -10,8 +10,6 @@ namespace batch.Services.Torrents.Lientorrent
 {
     public class LientorrentService : ABaseTorrentsService
     {
-        private readonly string _url;
-
         public LientorrentService(string url)
         {
             _url = url;
@@ -19,30 +17,30 @@ namespace batch.Services.Torrents.Lientorrent
 
         public override List<Torrent> GetMovieTorrents()
         {
-            var nbOfPages = GetNumberOfPages(_url);
+            var nbOfPages = GetNumberOfPages();
             var torrents = new List<Torrent>();
             Parallel.For(1, nbOfPages + 1, new ParallelOptions { MaxDegreeOfParallelism = 25 }, nb =>
             {
-                var page = GetPageNumber(_url, nb);
-                var vignettes = Parser.GetTagById(page, "div", "contenuvignettes");
+                var page = GetPageNumber(nb);
+                var vignettes = _parser.GetTagById(page, "div", "contenuvignettes");
                 if (!vignettes.Success) return;
 
-                var divs = Parser.GetTagsByClass(vignettes.Text, "div", "blocvignette");
+                var divs = _parser.GetTagsByClass(vignettes.Text, "div", "blocvignette");
                 if (!divs.Success) return;
 
                 foreach (var div in divs)
                 {
-                    var title = Parser.GetTagsByClass(div.Text, "div", "titrefiche");
+                    var title = _parser.GetTagsByClass(div.Text, "div", "titrefiche");
                     if (!title.Success) return;
 
-                    var a = Parser.GetTag(title[0].Text, "a");
+                    var a = _parser.GetTag(title[0].Text, "a");
                     if (!a.Success) return;
 
                     var over = a.Attributes.SingleOrDefault(attr => attr.Key == "onmouseover")?.Values.FirstOrDefault();
                     if (over == null) return;
 
                     var txt = WebUtility.HtmlDecode(over);
-                    var spans = Parser.GetTags(txt, "span");
+                    var spans = _parser.GetTags(txt, "span");
                     if (!spans.Success || spans.Count < 3) return;
 
                     lock (torrents)
@@ -81,13 +79,13 @@ namespace batch.Services.Torrents.Lientorrent
             return sub.Substring(first + 1, last - first - 2);
         }
 
-        protected override int GetNumberOfPages(string url)
+        protected override int GetNumberOfPages()
         {
-            var content = GetPageNumber(url, 1);
-            var div = Parser.GetTagsByClass(content, "div", "pagination");
+            var content = GetPageNumber(1);
+            var div = _parser.GetTagsByClass(content, "div", "pagination");
             if (!div.Success) return 0;
 
-            var a = Parser.GetTags(div[0].Text, "a");
+            var a = _parser.GetTags(div[0].Text, "a");
             if (!a.Success) return 0;
 
             var href = a.Last().Attributes.SingleOrDefault(attr => attr.Key == "href")?.Values.FirstOrDefault();
@@ -101,9 +99,9 @@ namespace batch.Services.Torrents.Lientorrent
             return int.Parse(nb);
         }
 
-        protected override string GetPageNumber(string url, int nb)
+        protected override string GetPageNumber(int nb)
         {
-            var searchUrl = $"{url}/page-{nb}.html";
+            var searchUrl = $"{_url}/page-{nb}.html";
             var content = WebService.Instance.GetContent(searchUrl);
             return content;
         }

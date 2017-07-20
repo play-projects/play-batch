@@ -9,16 +9,17 @@ namespace batch.Services.Torrents
 {
     public abstract class ABaseTorrentsService
     {
-        protected readonly ParserFacade Parser = ParserFacade.Instance;
+        protected string _url;
+        protected readonly ParserFacade _parser = ParserFacade.Instance;
 
         public abstract List<Torrent> GetMovieTorrents();
 
-        protected abstract int GetNumberOfPages(string url);
-        protected abstract string GetPageNumber(string url, int nb);
+        protected abstract int GetNumberOfPages();
+        protected abstract string GetPageNumber(int nb);
 
         protected virtual string GetLink(string str)
         {
-            var a = Parser.GetTag(str, "a");
+            var a = _parser.GetTag(str, "a");
             if (!a.Success) return string.Empty;
 
             var href = a.Attributes.SingleOrDefault(attr => attr.Key == "href")?.Values.FirstOrDefault();
@@ -27,7 +28,7 @@ namespace batch.Services.Torrents
 
         protected virtual string GetName(string str)
         {
-            var a = Parser.GetTag(str, "a");
+            var a = _parser.GetTag(str, "a");
             if (!a.Success) return string.Empty;
             return a.GetText();
         }

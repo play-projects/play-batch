@@ -7,8 +7,6 @@ namespace batch.Services.Torrents.Omgtorrent
 {
     public class OmgtorrentService : ABaseTorrentsService
     {
-        private readonly string _url;
-
         public OmgtorrentService(string url)
         {
             _url = url;
@@ -16,15 +14,15 @@ namespace batch.Services.Torrents.Omgtorrent
 
         public override List<Torrent> GetMovieTorrents()
         {
-            var nbOfPages = GetNumberOfPages(_url);
+            var nbOfPages = GetNumberOfPages();
             var torrents = new List<Torrent>();
             Parallel.For(1, nbOfPages + 1, new ParallelOptions { MaxDegreeOfParallelism = 25 }, nb =>
             {
-                var page = GetPageNumber(_url, nb);
-                var table = Parser.GetTag(page, "table");
+                var page = GetPageNumber(nb);
+                var table = _parser.GetTag(page, "table");
                 if (!table.Success) return;
 
-                var trs = Parser.GetTags(table.Text, "tr");
+                var trs = _parser.GetTags(table.Text, "tr");
                 if (!trs.Success) return;
 
                 var idx = 0;
@@ -36,7 +34,7 @@ namespace batch.Services.Torrents.Omgtorrent
                         continue;
                     }
 
-                    var tds = Parser.GetTags(tr.Text, "td");
+                    var tds = _parser.GetTags(tr.Text, "td");
                     if (tds.Count < 6) return;
 
                     lock (torrents)
@@ -56,22 +54,22 @@ namespace batch.Services.Torrents.Omgtorrent
             return torrents;
         }
 
-        protected override int GetNumberOfPages(string url)
+        protected override int GetNumberOfPages()
         {
-            var content = WebService.Instance.GetContent(url);
-            var div = Parser.GetTagsByClass(content, "div", "pagination");
+            var content = WebService.Instance.GetContent(_url);
+            var div = _parser.GetTagsByClass(content, "div", "pagination");
             if (!div.Success) return 0;
 
-            var a = Parser.GetTags(div[0].Text, "a");
+            var a = _parser.GetTags(div[0].Text, "a");
             if (!a.Success) return 0;
 
             var nb = a[a.Count - 2];
             return int.Parse(nb.GetText());
         }
 
-        protected override string GetPageNumber(string url, int nb)
+        protected override string GetPageNumber(int nb)
         {
-            var searchUrl = $"{url}&page={nb}";
+            var searchUrl = $"{_url}&page={nb}";
             var content = WebService.Instance.GetContent(searchUrl);
             return content;
         }

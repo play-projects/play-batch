@@ -25,8 +25,6 @@ namespace batch.Services.Torrents.Cpasbien
 
                 var ligne0 = _parser.GetTagsByClass(gauche.Text, "div", "ligne0");
                 var ligne1 = _parser.GetTagsByClass(gauche.Text, "div", "ligne1");
-                if (!ligne0.Success || !ligne1.Success) return;
-
                 var lignes = ligne0.Concat(ligne1);
                 foreach (var ligne in lignes)
                 {

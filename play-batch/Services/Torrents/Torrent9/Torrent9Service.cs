@@ -28,8 +28,6 @@ namespace play.Services.Torrents.Torrent9
                 if (!tbody.Success) return;
 
                 var trs = _parser.GetTags(tbody.Value, "tr");
-                if (!trs.Success) return;
-
                 foreach (var tr in trs)
                 {
                     var tds = _parser.GetTags(tr.Value, "td");

@@ -27,7 +27,8 @@
         Yggtorrent,
         Omgtorrent,
         Lientorrent,
-        Cpasbien
+        Cpasbien,
+        Leetx
     }
 
     public class Torrent

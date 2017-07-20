@@ -26,8 +26,6 @@ namespace batch.Services.Torrents.Lientorrent
                 if (!vignettes.Success) return;
 
                 var divs = _parser.GetTagsByClass(vignettes.Text, "div", "blocvignette");
-                if (!divs.Success) return;
-
                 foreach (var div in divs)
                 {
                     var title = _parser.GetTagsByClass(div.Text, "div", "titrefiche");

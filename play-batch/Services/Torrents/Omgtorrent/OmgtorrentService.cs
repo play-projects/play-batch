@@ -23,7 +23,6 @@ namespace batch.Services.Torrents.Omgtorrent
                 if (!table.Success) return;
 
                 var trs = _parser.GetTags(table.Text, "tr");
-                if (!trs.Success) return;
 
                 var idx = 0;
                 foreach (var tr in trs)

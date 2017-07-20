@@ -8,8 +8,10 @@ namespace batch.Services.Database
     public class DBService
     {
         private readonly PlayContext _ctx;
-        public DBService(string db, string connection)
+        public DBService()
         {
+            var db = ConfigurationService.GetValue("db");
+            var connection = ConfigurationService.GetValue("connection_strings:play_db");
             _ctx = new PlayContext(db, connection);
         }
 

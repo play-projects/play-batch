@@ -1,36 +1,19 @@
 ﻿using System;
 using System.Diagnostics;
-using System.IO;
 using System.Linq;
+using batch.Services;
 using batch.Services.Database;
 using batch.Services.Torrents;
 using batch.Services.Tmdb;
-using Microsoft.Extensions.Configuration;
 
 namespace batch
 {
     class Program
     {
-        public static IConfigurationRoot Configuration { get; set; }
-
         public static void Main(string[] args)
         {
-            var builder = new ConfigurationBuilder()
-                .SetBasePath(Directory.GetCurrentDirectory())
-                .AddJsonFile("appsettings.json");
-
-            Configuration = builder.Build();
-
             var sw = Stopwatch.StartNew();
-            var next = Configuration["nextorrent_movies_url"];
-            var torrent9 = Configuration["torrent9_movies_url"];
-            var omg = Configuration["omgtorrent_movies_url"];
-            var lien = Configuration["lientorrent_movies_url"];
-            var cpasbien = Configuration["cpasbien_movies_url"];
-            var leets = Configuration["1337x_movies_url"];
-            var ygg = Configuration["yggtorrent_movies_url"];
-
-            var movieService = new MovieTorrentsService(next, torrent9, omg, lien, cpasbien, leets, ygg);
+            var movieService = new MovieTorrentsService();
             var torrents = movieService.GetMovies();
             sw.Stop();
             var swTorrents = sw.ElapsedMilliseconds;
@@ -46,9 +29,7 @@ namespace batch
             var swMovies = sw.ElapsedMilliseconds;
 
             sw.Restart();
-            var db = Configuration["db"];
-            var connection = Configuration["connection_strings:play_db"];
-            new DBService(db, connection).Insert(movies);
+            new DBService().Insert(movies);
             sw.Stop();
 
             Console.WriteLine($"torrents: {torrents.Count()}");

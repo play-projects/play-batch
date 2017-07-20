@@ -44,9 +44,17 @@ namespace batch.Services.Torrents
             { "4k", Quality.VeryHigh }
         };
 
-	    public MovieTorrentsService(string next, string torrent9, string omg, string lien, string cpasbien, string leetx, string ygg)
+	    public MovieTorrentsService()
 	    {
-	        _nextorrent = new NextorrentService(next);
+	        var next = ConfigurationService.GetValue("nextorrent_movies_url");
+	        var torrent9 = ConfigurationService.GetValue("torrent9_movies_url");
+	        var omg = ConfigurationService.GetValue("omgtorrent_movies_url");
+	        var lien = ConfigurationService.GetValue("lientorrent_movies_url");
+	        var cpasbien = ConfigurationService.GetValue("cpasbien_movies_url");
+	        var leetx = ConfigurationService.GetValue("1337x_movies_url");
+	        var ygg = ConfigurationService.GetValue("yggtorrent_movies_url");
+
+            _nextorrent = new NextorrentService(next);
             _torrent9 = new Torrent9Service(torrent9);
             _omgtorrent = new OmgtorrentService(omg);
 	        _lientorrent = new LientorrentService(lien);

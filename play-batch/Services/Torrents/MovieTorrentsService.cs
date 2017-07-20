@@ -54,18 +54,18 @@ namespace batch.Services.Torrents
 
 	    public IEnumerable<Torrent> GetMovies()
 	    {
-	        /*var next = _nextorrent.GetMovieTorrents();
+	        var next = _nextorrent.GetMovieTorrents();
 	        var torrent9 = _torrent9.GetMovieTorrents();
 	        var omg = _omgtorrent.GetMovieTorrents();
 	        var lien = _lientorrent.GetMovieTorrents();
-	        var cpasbien = _cpasbien.GetMovieTorrents();*/
+	        var cpasbien = _cpasbien.GetMovieTorrents();
 	        var leetx = _leetx.GetMovieTorrents();
 
-	        var result = /*next.Concat(torrent9)
+	        var result = next.Concat(torrent9)
                 .Concat(omg)
                 .Concat(lien)
                 .Concat(cpasbien)
-                .Concat(*/leetx//)
+                .Concat(leetx)
                 .ToList();
 	        return GetExtractTorrents(result);
 	    }

@@ -32,7 +32,7 @@ namespace batch.Services.Torrents.Nextorrent
                 foreach (var tr in trs)
                 {
                     var tds = _parser.GetTags(tr.Value, "td");
-                    if (tds.Count < 4) return;
+                    if (tds.Count < 4) continue;
 
                     lock (torrents)
                     {

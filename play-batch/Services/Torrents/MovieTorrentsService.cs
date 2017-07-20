@@ -8,6 +8,7 @@ using batch.Services.Torrents.Cpasbien;
 using batch.Services.Torrents.Lientorrent;
 using batch.Services.Torrents.Nextorrent;
 using batch.Services.Torrents.Omgtorrent;
+using batch.Services.Torrents.Yggtorrent;
 using batch.Services.Torrents._1337x;
 using play.Services.Torrents.Torrent9;
 
@@ -21,6 +22,7 @@ namespace batch.Services.Torrents
         private readonly LientorrentService _lientorrent;
         private readonly CpasbienService _cpasbien;
         private readonly LeetxService _leetx;
+        private readonly YggtorrentService _ygg;
 
         private readonly Dictionary<string, Language> _languages = new Dictionary<string, Language>
         {
@@ -42,7 +44,7 @@ namespace batch.Services.Torrents
             { "4k", Quality.VeryHigh }
         };
 
-	    public MovieTorrentsService(string next, string torrent9, string omg, string lien, string cpasbien, string leetx)
+	    public MovieTorrentsService(string next, string torrent9, string omg, string lien, string cpasbien, string leetx, string ygg)
 	    {
 	        _nextorrent = new NextorrentService(next);
             _torrent9 = new Torrent9Service(torrent9);
@@ -50,6 +52,7 @@ namespace batch.Services.Torrents
 	        _lientorrent = new LientorrentService(lien);
 	        _cpasbien = new CpasbienService(cpasbien);
             _leetx = new LeetxService(leetx);
+	        _ygg = new YggtorrentService(ygg);
 	    }
 
 	    public IEnumerable<Torrent> GetMovies()
@@ -60,12 +63,14 @@ namespace batch.Services.Torrents
 	        var lien = _lientorrent.GetMovieTorrents();
 	        var cpasbien = _cpasbien.GetMovieTorrents();
 	        var leetx = _leetx.GetMovieTorrents();
+	        var ygg = _ygg.GetMovieTorrents();
 
 	        var result = next.Concat(torrent9)
                 .Concat(omg)
                 .Concat(lien)
                 .Concat(cpasbien)
                 .Concat(leetx)
+                .Concat(ygg)
                 .ToList();
 	        return GetExtractTorrents(result);
 	    }

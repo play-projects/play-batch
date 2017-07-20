@@ -29,17 +29,17 @@ namespace batch.Services.Torrents.Lientorrent
                 foreach (var div in divs)
                 {
                     var title = _parser.GetTagsByClass(div.Text, "div", "titrefiche");
-                    if (!title.Success) return;
+                    if (!title.Success) continue;
 
                     var a = _parser.GetTag(title[0].Text, "a");
-                    if (!a.Success) return;
+                    if (!a.Success) continue;
 
                     var over = a.Attributes.SingleOrDefault(attr => attr.Key == "onmouseover")?.Values.FirstOrDefault();
-                    if (over == null) return;
+                    if (over == null) continue;
 
                     var txt = WebUtility.HtmlDecode(over);
                     var spans = _parser.GetTags(txt, "span");
-                    if (!spans.Success || spans.Count < 3) return;
+                    if (!spans.Success || spans.Count < 3) continue;
 
                     lock (torrents)
                     {

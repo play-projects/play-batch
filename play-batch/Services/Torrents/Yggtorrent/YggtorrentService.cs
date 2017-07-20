@@ -1,13 +1,14 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using batch.Models;
 using batch.Services.Web;
 
-namespace batch.Services.Torrents.Omgtorrent
+namespace batch.Services.Torrents.Yggtorrent
 {
-    public class OmgtorrentService : ABaseTorrentsService
+    public class YggtorrentService : ABaseTorrentsService
     {
-        public OmgtorrentService(string url)
+        public YggtorrentService(string url)
         {
             _url = url;
         }
@@ -23,26 +24,18 @@ namespace batch.Services.Torrents.Omgtorrent
                 if (!table.Success) return;
 
                 var trs = _parser.GetTags(table.Text, "tr");
-
-                var idx = 0;
                 foreach (var tr in trs)
                 {
-                    if (idx < 2)
-                    {
-                        idx += 1;
-                        continue;
-                    }
-
                     var tds = _parser.GetTags(tr.Text, "td");
-                    if (tds.Count < 6) continue;
+                    if (tds.Count < 5) continue;
 
                     lock (torrents)
                     {
                         torrents.Add(new Torrent
                         {
-                            Name = GetName(tds[1].Text),
-                            Link = GetLink(tds[1].Text),
-                            Source = Source.Omgtorrent,
+                            Name = GetName(tds[0].Text),
+                            Link = GetLink(tds[0].Text),
+                            Source = Source.Yggtorrent,
                             Size = GetSize(tds[2].Text),
                             Seeders = GetNumber(tds[3].Text),
                             Leechers = GetNumber(tds[4].Text)
@@ -55,20 +48,28 @@ namespace batch.Services.Torrents.Omgtorrent
 
         protected override int GetNumberOfPages()
         {
-            var content = WebService.Instance.GetContent(_url);
-            var div = _parser.GetTagsByClass(content, "div", "pagination");
-            if (!div.Success) return 0;
+            var content = GetPageNumber(1);
+            var ul = _parser.GetTagsByClass(content, "ul", "pagination");
+            if (!ul.Success) return 0;
 
-            var a = _parser.GetTags(div[0].Text, "a");
+            var lis = _parser.GetTags(ul[0].Text, "li");
+            if (!lis.Success) return 0;
+
+            var a = _parser.GetTag(lis.Last().Text, "a");
             if (!a.Success) return 0;
 
-            var nb = a[a.Count - 2];
-            return int.Parse(nb.GetText());
+            var data = a.Attributes
+                .SingleOrDefault(attr => attr.Key == "data-ci-pagination-page")?
+                .Values.FirstOrDefault();
+            if (data == null) return 0;
+
+            return int.Parse(data);
         }
 
         protected override string GetPageNumber(int nb)
         {
-            var searchUrl = $"{_url}&page={nb}";
+            var page = nb * 100 - 100;
+            var searchUrl = $"{_url}&page={page}";
             var content = WebService.Instance.GetContent(searchUrl);
             return content;
         }

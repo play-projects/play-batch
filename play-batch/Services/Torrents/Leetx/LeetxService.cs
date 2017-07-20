@@ -28,7 +28,7 @@ namespace batch.Services.Torrents._1337x
                 foreach (var tr in trs)
                 {
                     var tds = _parser.GetTags(tr.Text, "td");
-                    if (tds.Count < 6) return;
+                    if (tds.Count < 6) continue;
 
                     lock (torrents)
                     {

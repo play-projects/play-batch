@@ -33,7 +33,7 @@ namespace batch.Services.Torrents.Cpasbien
                     var down = _parser.GetTagsByClass(ligne.Text, "div", "down");
 
                     if (!poid.Success || !seed.Success || !down.Success)
-                        return;
+                        continue;
 
                     lock (torrents)
                     {

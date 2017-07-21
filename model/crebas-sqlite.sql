@@ -117,7 +117,7 @@ SOURCE_CREATED_AT	 DATE							not null
 
 create table TORRENT (
 TORRENT_ID           INTEGER PRIMARY KEY            AUTOINCREMENT,
-SOURCE_ID			 INTEGER,						not null,
+SOURCE_ID			 INTEGER						not null,
 MOVIE_ID             INTEGER,
 CATEGORY_ID          INTEGER                        not null,
 LANGUAGE_ID          INTEGER                        not null,

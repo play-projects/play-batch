@@ -114,18 +114,20 @@ namespace batch.Services.Torrents
             var name = "(?<name>.+)";
             var language = $"(?<lang>{string.Join("|", _languages.Keys.ToArray())})";
             var quality = $"(?<quality>{string.Join("|", _qualities.Keys.ToArray())})";
-            var year = @"(?<year>\d{4})";  
+            var year = @"(?<year>\d{4})";
+
+            var without = "[^a-zA-Z0-9]+";
 
             var patterns = new[]
             {
-                $@"{name}\s+{language}.+{quality}.+{year}",
-                $@"{name}\s+{language}.+{year}.+{quality}",
+                $@"{name}{without}{language}.+{quality}.+{year}",
+                $@"{name}{without}{language}.+{year}.+{quality}",
 
-                $@"{name}\s+{quality}.+{language}.+{year}",
-                $@"{name}\s+{quality}.+{year}.+{language}",
+                $@"{name}{without}{quality}.+{language}.+{year}",
+                $@"{name}{without}{quality}.+{year}.+{language}",
 
-                $@"{name}\s+{year}.+{language}.+{quality}",
-                $@"{name}\s+{year}.+{quality}.+{language}"
+                $@"{name}{without}{year}.+{language}.+{quality}",
+                $@"{name}{without}{year}.+{quality}.+{language}"
             };
 
             foreach (var pattern in patterns)

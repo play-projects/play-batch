@@ -132,8 +132,8 @@ TORRENT_LEECHERS     INTEGER,
 TORRENT_COMPLETED    INTEGER,
 TORRENT_LINK		 VARCHAR(1000)					not null,
 TORRENT_CREATED_AT   DATE                           not null,
-foreign key(SOURCE_ID)
-	  references SOURCE (SOURCE_ID),
+foreign key (SOURCE_ID)
+      references SOURCE (SOURCE_ID),
 foreign key (MOVIE_ID)
       references MOVIE (MOVIE_ID),
 foreign key (CATEGORY_ID)

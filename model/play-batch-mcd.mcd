@@ -1210,8 +1210,8 @@ NAMA 0 Arial,8,N</a:FontList>
 <o:RelationshipSymbol Id="o10">
 <a:CreationDate>1497046937</a:CreationDate>
 <a:ModificationDate>1497173164</a:ModificationDate>
-<a:Rect>((-31982,14871), (-24558,23064))</a:Rect>
-<a:ListOfPoints>((-28245,23064),(-28291,14871))</a:ListOfPoints>
+<a:Rect>((-31991,14871), (-24567,23064))</a:Rect>
+<a:ListOfPoints>((-28279,23064),(-28279,14871))</a:ListOfPoints>
 <a:CornerStyle>1</a:CornerStyle>
 <a:ArrowStyle>4371</a:ArrowStyle>
 <a:LineColor>11184640</a:LineColor>
@@ -1273,8 +1273,8 @@ NAMA 0 Arial,8,N</a:FontList>
 <o:RelationshipSymbol Id="o19">
 <a:CreationDate>1497046964</a:CreationDate>
 <a:ModificationDate>1497173164</a:ModificationDate>
-<a:Rect>((-24564,-4794), (2509,5983))</a:Rect>
-<a:ListOfPoints>((-20333,5983),(-20439,-4207),(2509,-4207))</a:ListOfPoints>
+<a:Rect>((-24458,-4794), (2509,5983))</a:Rect>
+<a:ListOfPoints>((-20333,5983),(-20333,-4207),(2509,-4207))</a:ListOfPoints>
 <a:CornerStyle>1</a:CornerStyle>
 <a:ArrowStyle>4882</a:ArrowStyle>
 <a:LineColor>11184640</a:LineColor>

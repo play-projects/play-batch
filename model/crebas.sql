@@ -209,7 +209,7 @@ go
 /*==============================================================*/
 create table SOURCE (
    SOURCE_ID            int              identity,
-   SOURCE_NAME          varchar(50)          null,
+   SOURCE_NAME          varchar(250)          null,
    SOURCE_CREATED_AT    datetime             null,
    constraint PK_SOURCE primary key nonclustered (SOURCE_ID)
 )

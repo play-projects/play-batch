@@ -111,7 +111,7 @@ QUALITY_CREATED_AT   DATE                           not null
 
 create table SOURCE (
 SOURCE_ID			 INTEGER PRIMARY KEY			AUTOINCREMENT,
-SOURCE_NAME			 VARCHAR(50)					not null,
+SOURCE_NAME			 VARCHAR(250)					not null,
 SOURCE_CREATED_AT	 DATE							not null
 );
 

@@ -19,7 +19,6 @@ namespace batch.Services.Database
         {
             var t = movies.SelectMany(m => m.Torrents).ToList();
             InsertTorrents(t);
-            InsertSources(t);
 
             var g = movies.SelectMany(m => m.Genres).ToList();
             InsertGenres(g);
@@ -133,10 +132,12 @@ namespace batch.Services.Database
             InsertCategories();
             InsertLanguages();
             InsertQualities();
+            InsertSources(torrents);
 
             var categories = _ctx.Category.Select(c => new Category { Id = c.Id, Name = c.Name });
             var languages = _ctx.Language.Select(l => new Language { Id = l.Id, Name = l.Name });
             var qualities = _ctx.Quality.Select(q => new Quality { Id = q.Id, Name = q.Name });
+            var sources = _ctx.Source.Select(s => new Source { Id = s.Id, Name = s.Name });
 
             foreach (var torrent in torrents)
             {
@@ -151,7 +152,7 @@ namespace batch.Services.Database
                     Seeders = torrent.Seeders,
                     Leechers = torrent.Leechers,
                     Completed = torrent.Completed,
-                    SourceId = (int)torrent.Source,
+                    SourceId = sources.SingleOrDefault(s => s.Name.Equals(torrent.Source.ToString(), StringComparison.CurrentCultureIgnoreCase))?.Id ?? 0,
                     CategoryId = categories.SingleOrDefault(c => c.Name.Equals(torrent.Category.ToString(), StringComparison.CurrentCultureIgnoreCase))?.Id ?? 0,
                     LanguageId = languages.SingleOrDefault(l => l.Name.Equals(torrent.Language.ToString(), StringComparison.CurrentCultureIgnoreCase))?.Id ?? 0,
                     QualityId = qualities.SingleOrDefault(q => q.Name.Equals(torrent.Quality.ToString(), StringComparison.CurrentCultureIgnoreCase))?.Id ?? 0,

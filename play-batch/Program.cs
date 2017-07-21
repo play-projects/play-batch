@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Linq;
-using batch.Services;
 using batch.Services.Database;
 using batch.Services.Torrents;
 using batch.Services.Tmdb;

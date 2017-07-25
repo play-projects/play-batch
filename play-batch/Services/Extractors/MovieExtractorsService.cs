@@ -12,10 +12,6 @@ namespace batch.Services.Tmdb
 {
     public class MovieExtractorsService
     {
-        private const string apiKey = "fa25d553584aac70e9db4d47d3636ae9";
-        private const string language = "fr-FR";
-        private const string baseUrl = "https://api.themoviedb.org/3";
-
         public static MovieExtractorsService Instance = new MovieExtractorsService();
         private MovieExtractorsService() { }
 
@@ -47,11 +43,12 @@ namespace batch.Services.Tmdb
 
         private Movie GetMovieIds(Torrent torrent)
         {
-            var url = $"https://api.trakt.tv/search/movie?query={torrent.Slug.Replace("-", " ")}";
+			var baseUrl = ConfigurationService.GetValue("trakt_url");
+			var url = $"{baseUrl}/search/movie?query={torrent.Slug.Replace("-", " ")}";
             var header = new Dictionary<string, string>
             {
-                { "trakt-api-version", "2" },
-                { "trakt-api-key", "9cec2a64b9ccc726e00c0f5b73aaaaaaf9f443e7131916307bef33b83b0a6b5e" }
+				{ "trakt-api-version", ConfigurationService.GetValue("trakt_version") },
+				{ "trakt-api-key", ConfigurationService.GetValue("trakt_key") }
             };
 
             var content = WebService.Instance.GetContent(url, header);
@@ -66,7 +63,7 @@ namespace batch.Services.Tmdb
 				if (torrent.Year != year) continue;
 
 				double.TryParse(token["score"].ToString(), out double score);
-				if (score <= 100) continue;
+				if (score <= 100) break;
 
                 var name = token["movie"]["title"].ToString();
                 var trakt = int.Parse(token["movie"]["ids"]["tmdb"].ToString());
@@ -105,7 +102,11 @@ namespace batch.Services.Tmdb
 
         private Movie GetMovie(Movie movie)
         {
-            var url = $"{baseUrl}/movie/{movie.TmdbId}?api_key={apiKey}&language={language}";
+			var baseUrl = ConfigurationService.GetValue("tmdb_url");
+			var key = ConfigurationService.GetValue("tmdb_key");
+			var lang = ConfigurationService.GetValue("tmdb_lang");
+
+            var url = $"{baseUrl}/movie/{movie.TmdbId}?api_key={key}&language={lang}";
             var content = WebService.Instance.GetContentTmdb(url);
             if (string.IsNullOrEmpty(content)) return Movie.NotFound;
 

@@ -63,8 +63,10 @@ namespace batch.Services.Tmdb
             foreach (var token in json)
             {
                 int.TryParse(token["movie"]["year"].ToString(), out int year);
-                if (torrent.Year != year)
-                    continue;
+				if (torrent.Year != year) continue;
+
+				double.TryParse(token["score"].ToString(), out double score);
+				if (score <= 100) continue;
 
                 var name = token["movie"]["title"].ToString();
                 var trakt = int.Parse(token["movie"]["ids"]["tmdb"].ToString());

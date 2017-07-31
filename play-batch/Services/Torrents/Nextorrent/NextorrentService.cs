@@ -68,17 +68,15 @@ namespace batch.Services.Torrents.Nextorrent
 
                 var last = lis.Last();
                 var txt = last.GetText();
-                if (txt.StartsWith("suivant", StringComparison.CurrentCultureIgnoreCase))
-                {
-                    var lastPage = lis[lis.Count - 2];
-                    var nbs = Regex.Matches(lastPage.GetText(), @"\d+");
-                    if (nbs.Count == 0) return 0;
+                
+                var lastPage = lis[lis.Count - 2];
+                var nbs = Regex.Matches(lastPage.GetText(), @"\d+");
+                if (nbs.Count == 0) return 0;
+                var nb = int.Parse(nbs[nbs.Count - 1].Value);
 
-                    var nb = int.Parse(nbs[nbs.Count - 1].Value);
-                    if (nb % 50 != 0)
-                        return int.Parse(nbs[0].Value);
+                if (txt.StartsWith("suivant", StringComparison.CurrentCultureIgnoreCase))
                     page = nb + 1;
-                }
+                else return page;
             }
         }
 

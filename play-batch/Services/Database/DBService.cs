@@ -75,7 +75,6 @@ namespace batch.Services.Database
                 {
                     var torr = torrents.Single(to => to.Guid == tor.Guid);
                     torr.MovieId = mov.Id;
-                    torr.SourceId = sources.Single(so => so.Name == ((Models.Source)torr.SourceId).ToString()).Id;
                 }
             }
             _ctx.SaveChanges();

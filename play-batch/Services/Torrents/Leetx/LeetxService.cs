@@ -37,7 +37,7 @@ namespace batch.Services.Torrents._1337x
                         Console.WriteLine($"{Source.Leetx} - {name}");
                         torrents.Add(new Torrent
                         {
-                            Name = GetName(name),
+                            Name = name,
                             Link = GetLink(tds[0].Text),
                             Source = Source.Leetx,
                             Size = GetSize(tds[4].Text),

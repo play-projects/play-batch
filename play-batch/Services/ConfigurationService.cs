@@ -1,4 +1,4 @@
-﻿using System.IO;
+﻿using System;
 using Microsoft.Extensions.Configuration;
 
 namespace batch.Services
@@ -10,7 +10,7 @@ namespace batch.Services
         static ConfigurationService()
         {
             var builder = new ConfigurationBuilder()
-                .SetBasePath(Directory.GetCurrentDirectory())
+                .SetBasePath(AppContext.BaseDirectory)
                 .AddJsonFile("appsettings.json");
 
             Configuration = builder.Build();

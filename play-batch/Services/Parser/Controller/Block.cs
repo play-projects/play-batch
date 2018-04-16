@@ -41,7 +41,10 @@ namespace batch.Services.Parser.Controller
             var value = str.Substring(tagMatch.Index, content);
             var index = idx ?? tagMatch.Index;
             var length = value.Length;
-            var text = str.Substring(tagMatch.Index + tagMatch.Length, length - tagMatch.Length - 3 - tag.Length);
+
+            var tagStart = tagMatch.Index + tagMatch.Length;
+            var tagEnd = length - tagMatch.Length - 3 - tag.Length;
+            var text = tagStart <= tagEnd ? str.Substring(tagStart, tagEnd) : str.Substring(tagStart);
             return new BlockModel(index, attributes, value, text);
         }
 

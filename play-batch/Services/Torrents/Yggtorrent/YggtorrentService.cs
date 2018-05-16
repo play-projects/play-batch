@@ -17,11 +17,30 @@ namespace batch.Services.Torrents.Yggtorrent
 
         public override List<Torrent> GetMovieTorrents()
         {
-            var nbOfPages = GetNumberOfPages();
+            var orders = new List<(string sort, string order)>
+            {
+                ("publish_date", "asc"),
+                ("publish_date", "desc"),
+                ("name", "asc"),
+                ("name", "desc")
+            };
+
+            var result = new List<Torrent>();
+            foreach (var order in orders)
+            {
+                var torrents = GetMovieTorrents(order.sort, order.order);
+                result.AddRange(torrents);
+            }
+            return result;
+        }
+
+        private IEnumerable<Torrent> GetMovieTorrents(string sort, string order)
+        {
+            var nbOfPages = GetNumberOfPages(sort, order);
             var torrents = new List<Torrent>();
             Parallel.For(1, nbOfPages + 1, new ParallelOptions { MaxDegreeOfParallelism = 25 }, nb =>
             {
-                var page = GetPageNumber(nb);
+                var page = GetPageNumber(sort, order, nb);
                 var tables = _parser.GetTags(page, "table");
                 if (!tables.Success || tables.Count != 2) return;
 
@@ -56,6 +75,17 @@ namespace batch.Services.Torrents.Yggtorrent
         protected override int GetNumberOfPages()
         {
             var content = GetPageNumber(1);
+            return GetNumberOfPages(content);
+        }
+
+        private int GetNumberOfPages(string sort, string order)
+        {
+            var content = GetPageNumber(sort, order, 1);
+            return GetNumberOfPages(content);
+        }
+
+        private int GetNumberOfPages(string content)
+        {
             var ul = _parser.GetTagsByClass(content, "ul", "pagination");
             if (!ul.Success) return 0;
 
@@ -82,7 +112,19 @@ namespace batch.Services.Torrents.Yggtorrent
         {
             var page = nb * 50;
             var searchUrl = $"{_url}&page={page}";
-            var content = WebService.Instance.GetContent(searchUrl);
+            return GetPageNumber(searchUrl);
+        }
+
+        private string GetPageNumber(string sort, string order, int nb)
+        {
+            var page = nb * 50;
+            var searchUrl = $"{_url}&order={order}&sort={sort}&page={page}";
+            return GetPageNumber(searchUrl);
+        }
+
+        private string GetPageNumber(string url)
+        {
+            var content = WebService.Instance.GetContent(url);
             return content;
         }
     }

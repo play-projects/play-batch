@@ -29,6 +29,9 @@ namespace batch.Services.Torrents
             { "french", Language.VF },
             { "truefrench", Language.VF },
             { "vff", Language.VF },
+            { "vf", Language.VF },
+            { "vfi", Language.VF },
+            { "multi", Language.VF },
             { "vostfr", Language.VOSTFR }
         };
         private readonly Dictionary<string, Quality> _qualities = new Dictionary<string, Quality>
@@ -37,11 +40,13 @@ namespace batch.Services.Torrents
             { "webrip", Quality.Low },
             { "web-dl", Quality.Low },
             { "bdrip", Quality.Low },
+            { "hdtv", Quality.Medium },
             { "hdrip", Quality.Medium },
             { "hdlight", Quality.Medium },
             { "720p", Quality.Medium },
             { "1080p", Quality.High },
-            { "4k", Quality.VeryHigh }
+            { "4k", Quality.VeryHigh },
+            { "uhd", Quality.VeryHigh }
         };
 
 	    public MovieTorrentsService()
